@@ -9,6 +9,12 @@
 @blanc: #fff;
 @noir: #000;
 @grisTexte: #373a3f;
+@bleuFioulReduc: #2947a0;
+@bleuClairFioulReduc: #438ee4;
+@bleuClair2FioulReduc: #bad4e2;
+@grisBleuFioulReduc: #ebeef2;
+@orangeFioulReduc: #fb8206;
+@jauneFioulReduc: #ffcb00;
 
 /* @end */
 
@@ -303,6 +309,67 @@ html, body{
 	background-color: @blanc;
 }
 
+.bloc-gris{
+	background-color: @grisBleuFioulReduc;
+}
+
+.bloc-degrade-bleu{
+	background-color: #071d63;
+	.lh-background-image(~"radial-gradient(65% 50%, 800px 800px, #457db7 0%, #071d63 100%)");
+	color: @blanc;
+}
+
+.grille{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url('../layoutImg/grille.png') repeat left top;
+	.lh-opacity(0.02);
+}
+
+h2{
+	.lato-bold(1.375em);
+	color: @bleuFioulReduc;
+	border-bottom: 1px solid #c0c2cc;
+	margin: 0 0 30px 0;
+	padding: 0 0 10px 0;
+}
+
+ol.liste-num{
+	list-style-type: none;
+	counter-reset: li-counter;
+	li{
+		display: block;
+		position: relative;
+		margin: 0 0 15px 0;
+		padding: 3px 0 0 35px;
+		.lato-italic(1.063em);
+		&:before{
+			content: counter(li-counter);
+			counter-increment: li-counter;
+			display: block;
+			width: 24px;
+			height: 24px;
+			text-align: center;
+			line-height: 24px;
+			background: @blanc;
+			.lh-border-radius(50%);
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: @bleuClairFioulReduc;
+			.lato-bold-italic(1em);
+		}
+		.detail-liste{
+			.lato(0.824em);
+			color: @bleuClair2FioulReduc;
+		}
+	}
+}
+
 /* @group Header */
 
 /* Pour ouvrir les dropdown au survol */
@@ -312,6 +379,8 @@ header{
 	position: fixed;
 	top: 0;
 	left: 0;
+	.lh-box-shadow(~"0 2px 0 rgba(0,0,0,.08)");
+	z-index: 3;
 }
 
 nav.navbar{
@@ -349,35 +418,166 @@ nav.navbar{
 		}
 	}
 }
-/*<nav class="navbar-responsive-collapse collapse nav-collapse">
-	<ul class="nav">
-		<li class="active">
-			<a href="#" class="home"></a>
-		</li>
-		<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-delay="0">Pourquoi FioulReduc ?</a>
-			<ul class="dropdown-menu">
-				<li><a href="#">Comment ça marche ?</a></li>
-				<li><a href="#">Des économies sur votre facture de fioul</a></li>
-				<li><a href="#">Distributeur de proximité, produit de qualité</a></li>
-				<li><a href="#">Choix du créneau de livraison</a></li>
-				<li><a href="#">Paiement à la livraison</a></li>
-				<li><a href="#">Paiement en 3 fois par carte bancaire</a></li>
-				<li><a href="#">Commande groupée de fioul</a></li>
-				<li><a href="#">Avis clients</a></li>
-			</ul>
-		</li>
-		<li>*/
+
+a.logo{
+	display: inline-block;
+	vertical-align: top;
+	width: 309px;
+	height: 38px;
+	margin: 5px 0 0 38px;
+	padding: 0;
+	background: url('../layoutImg/logo-bleu-orange.png') no-repeat left top;
+	.bloc-degrade-bleu &{
+		background: url('../layoutImg/logo-blanc-orange.png') no-repeat left top;
+	}
+}
+
+/* @end */
+
+/* @group Top bar */
+
+#top-bar{
+	display: block;
+	width: 100%;
+	height: 60px;
+	padding: 0;
+	margin: 0;
+}
+
+ul#menu-top-bar{
+	display: block;
+	list-style: none;
+	float: right;
+	width: 800px;
+	text-align: right;
+	li{
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+		margin: 0 0 0 50px;
+		padding: 0;
+		a{
+			.lato-bold(1.375em);
+			color: @bleuFioulReduc;
+			.illus-menu{
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+				margin: 0 16px 0 0;
+				padding: 0;
+				width: 56px;
+				height: 56px;
+				.lh-border-radius(50%);
+				background: @blanc;
+				.visu-menu{
+					display: block;
+					position: absolute;
+					.lh-transition(all 0.1s ease-in-out);
+					.lh-backface-visibility(hidden);
+					.lh-transform-style(preserve-3d);
+					&.mascotte{
+						width: 55px;
+						height: 56px;
+						background: url('../layoutImg/illus-menu/mascotte.png') no-repeat center center;
+						bottom: 3px;
+						left: 4px;
+						.lh-transform-origin(45% 55%);
+					}
+					&.adresse{
+						width: 56px;
+						height: 49px;
+						background: url('../layoutImg/illus-menu/adresse.png') no-repeat center center;
+						bottom: 3px;
+						left: 3px;
+						.lh-transform-origin(41% 52%);
+					}
+					&.cadenas{
+						width: 40px;
+						height: 49px;
+						background: url('../layoutImg/illus-menu/cadenas.png') no-repeat center center;
+						bottom: 3px;
+						left: 9px;
+						.lh-transform-origin(45% 53%);
+					}
+				}
+				
+			}
+			&:hover{
+				.visu-menu{
+					.lh-transform(rotate(10deg) translate3d( 0, 0, 0));
+				}
+			}
+			.zone-texte-menu{
+				display: inline-block;
+				vertical-align: top;
+				margin: 0;
+				padding: 10px 0 0 0;
+				.indic-menu{
+					display: inline-block;
+					.lato-italic(0.682em);
+					color: @orangeFioulReduc;
+					line-height: 1.1em;
+					&.underline{
+						border-bottom: 1px solid @orangeFioulReduc;			
+					}
+				}
+				.bloc-degrade-bleu &{
+					color: @blanc;
+					.indic-menu{
+						color: @jauneFioulReduc;
+						&.underline{
+							border-bottom-color: @jauneFioulReduc;					
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 /* @end */
 
 /* @group Top home */
 
 #top-home{
+	padding: 100px 0 125px 0;
+}
+
+/* @end */
+
+/* @group Bloc Commande / Graph */
+
+#bloc-commande-graph{
 	display: block;
-	width: 100%;
-	height: 2000px;
-	background: #0b2166;
+	margin: 0;
+	padding: 50px 0 0 0;
+}
+
+.part-commande{
+	display: inline-block;
+	vertical-align: top;
+	width: 428px;
+	position: relative;
+	#bloc-commande{
+		display: block;
+		width: 100%;
+		padding: 20px 40px;
+		.lh-border-radius(6px);
+		.lh-box-sizing(border-box);
+		position: absolute;
+		top: 0;
+		left: 0;
+		h2{
+			width: 75%;
+		}
+	}
+	ol.liste-num{
+		margin: 282px 0 0 0;
+	}
+}
+
+.part-graph{
+
 }
 
 /* @end */

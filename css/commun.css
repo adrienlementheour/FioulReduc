@@ -204,6 +204,87 @@ body {
 .bloc-blanc {
   background-color: #ffffff;
 }
+.bloc-gris {
+  background-color: #ebeef2;
+}
+.bloc-degrade-bleu {
+  background-color: #071d63;
+  background-image: 8121991;
+  background-image: -webkit-radial-gradient(65% 50%, 800px 800px, #457db7 0%, #071d63 100%);
+  background-image: -moz-radial-gradient(65% 50%, 800px 800px, #457db7 0%, #071d63 100%);
+  background-image: -o-radial-gradient(65% 50%, 800px 800px, #457db7 0%, #071d63 100%);
+  background-image: radial-gradient(65% 50%, 800px 800px, #457db7 0%, #071d63 100%);
+  color: #ffffff;
+}
+.grille {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../layoutImg/grille.png') repeat left top;
+  zoom: 1;
+  filter: alpha(opacity=2);
+  -webkit-opacity: 0.02;
+  -moz-opacity: 0.02;
+  opacity: 0.02;
+}
+h2 {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.375em;
+  text-rendering: optimizeLegibility;
+  color: #2947a0;
+  border-bottom: 1px solid #c0c2cc;
+  margin: 0 0 30px 0;
+  padding: 0 0 10px 0;
+}
+ol.liste-num {
+  list-style-type: none;
+  counter-reset: li-counter;
+}
+ol.liste-num li {
+  display: block;
+  position: relative;
+  margin: 0 0 15px 0;
+  padding: 3px 0 0 35px;
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1.063em;
+  text-rendering: optimizeLegibility;
+}
+ol.liste-num li:before {
+  content: counter(li-counter);
+  counter-increment: li-counter;
+  display: block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  background: #ffffff;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #438ee4;
+  font-family: 'lato-bold-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
+ol.liste-num li .detail-liste {
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 0.824em;
+  text-rendering: optimizeLegibility;
+  color: #bad4e2;
+}
 /* @group Header */
 /* Pour ouvrir les dropdown au survol */
 header {
@@ -211,6 +292,10 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  -webkit-box-shadow: 0 2px 0 rgba(0,0,0,.08);
+  -moz-box-shadow: 0 2px 0 rgba(0,0,0,.08);
+  box-shadow: 0 2px 0 rgba(0,0,0,.08);
+  z-index: 3;
 }
 nav.navbar {
   display: block;
@@ -246,32 +331,192 @@ nav.navbar ul.nav li a {
   padding: 0;
   margin: 0;
 }
-/*<nav class="navbar-responsive-collapse collapse nav-collapse">
-	<ul class="nav">
-		<li class="active">
-			<a href="#" class="home"></a>
-		</li>
-		<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-delay="0">Pourquoi FioulReduc ?</a>
-			<ul class="dropdown-menu">
-				<li><a href="#">Comment ça marche ?</a></li>
-				<li><a href="#">Des économies sur votre facture de fioul</a></li>
-				<li><a href="#">Distributeur de proximité, produit de qualité</a></li>
-				<li><a href="#">Choix du créneau de livraison</a></li>
-				<li><a href="#">Paiement à la livraison</a></li>
-				<li><a href="#">Paiement en 3 fois par carte bancaire</a></li>
-				<li><a href="#">Commande groupée de fioul</a></li>
-				<li><a href="#">Avis clients</a></li>
-			</ul>
-		</li>
-		<li>*/
+a.logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 309px;
+  height: 38px;
+  margin: 5px 0 0 38px;
+  padding: 0;
+  background: url('../layoutImg/logo-bleu-orange.png') no-repeat left top;
+}
+.bloc-degrade-bleu a.logo {
+  background: url('../layoutImg/logo-blanc-orange.png') no-repeat left top;
+}
+/* @end */
+/* @group Top bar */
+#top-bar {
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+}
+ul#menu-top-bar {
+  display: block;
+  list-style: none;
+  float: right;
+  width: 800px;
+  text-align: right;
+}
+ul#menu-top-bar li {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  margin: 0 0 0 50px;
+  padding: 0;
+}
+ul#menu-top-bar li a {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.375em;
+  text-rendering: optimizeLegibility;
+  color: #2947a0;
+}
+ul#menu-top-bar li a .illus-menu {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 0 16px 0 0;
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  background: #ffffff;
+}
+ul#menu-top-bar li a .illus-menu .visu-menu {
+  display: block;
+  position: absolute;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+ul#menu-top-bar li a .illus-menu .visu-menu.mascotte {
+  width: 55px;
+  height: 56px;
+  background: url('../layoutImg/illus-menu/mascotte.png') no-repeat center center;
+  bottom: 3px;
+  left: 4px;
+  -webkit-transform-origin: 45% 55%;
+  -moz-transform-origin: 45% 55%;
+  -ms-transform-origin: 45% 55%;
+  -o-transform-origin: 45% 55%;
+  transform-origin: 45% 55%;
+}
+ul#menu-top-bar li a .illus-menu .visu-menu.adresse {
+  width: 56px;
+  height: 49px;
+  background: url('../layoutImg/illus-menu/adresse.png') no-repeat center center;
+  bottom: 3px;
+  left: 3px;
+  -webkit-transform-origin: 41% 52%;
+  -moz-transform-origin: 41% 52%;
+  -ms-transform-origin: 41% 52%;
+  -o-transform-origin: 41% 52%;
+  transform-origin: 41% 52%;
+}
+ul#menu-top-bar li a .illus-menu .visu-menu.cadenas {
+  width: 40px;
+  height: 49px;
+  background: url('../layoutImg/illus-menu/cadenas.png') no-repeat center center;
+  bottom: 3px;
+  left: 9px;
+  -webkit-transform-origin: 45% 53%;
+  -moz-transform-origin: 45% 53%;
+  -ms-transform-origin: 45% 53%;
+  -o-transform-origin: 45% 53%;
+  transform-origin: 45% 53%;
+}
+ul#menu-top-bar li a:hover .visu-menu {
+  -webkit-transform: rotate(10deg) translate3d(0, 0, 0);
+  -moz-transform: rotate(10deg) translate3d(0, 0, 0);
+  -ms-transform: rotate(10deg) translate3d(0, 0, 0);
+  -o-transform: rotate(10deg) translate3d(0, 0, 0);
+  transform: rotate(10deg) translate3d(0, 0, 0);
+}
+ul#menu-top-bar li a .zone-texte-menu {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+ul#menu-top-bar li a .zone-texte-menu .indic-menu {
+  display: inline-block;
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 0.682em;
+  text-rendering: optimizeLegibility;
+  color: #fb8206;
+  line-height: 1.1em;
+}
+ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
+  border-bottom: 1px solid #fb8206;
+}
+.bloc-degrade-bleu ul#menu-top-bar li a .zone-texte-menu {
+  color: #ffffff;
+}
+.bloc-degrade-bleu ul#menu-top-bar li a .zone-texte-menu .indic-menu {
+  color: #ffcb00;
+}
+.bloc-degrade-bleu ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
+  border-bottom-color: #ffcb00;
+}
 /* @end */
 /* @group Top home */
 #top-home {
+  padding: 100px 0 125px 0;
+}
+/* @end */
+/* @group Bloc Commande / Graph */
+#bloc-commande-graph {
+  display: block;
+  margin: 0;
+  padding: 50px 0 0 0;
+}
+.part-commande {
+  display: inline-block;
+  vertical-align: top;
+  width: 428px;
+  position: relative;
+}
+.part-commande #bloc-commande {
   display: block;
   width: 100%;
-  height: 2000px;
-  background: #0b2166;
+  padding: 20px 40px;
+  -webkit-border-radius: 6px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 6px;
+  -moz-background-clip: padding;
+  border-radius: 6px;
+  background-clip: padding-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.part-commande #bloc-commande h2 {
+  width: 75%;
+}
+.part-commande ol.liste-num {
+  margin: 282px 0 0 0;
 }
 /* @end */
 /* @end */
