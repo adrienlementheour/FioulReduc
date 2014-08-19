@@ -1,6 +1,6 @@
 /* @group import */
 
-@import "lesshat.less";
+@import "lesshat-prefixed.less";
 
 /* @end */
 
@@ -8,6 +8,7 @@
 
 @blanc: #fff;
 @noir: #000;
+@grisTexte: #373a3f;
 
 /* @end */
 
@@ -112,6 +113,17 @@
     font-style: normal;
 }
 
+@font-face {
+	font-family: 'fioulreduc';
+	src:url('../fonts/fioulreduc.eot?e76zua');
+	src:url('../fonts/fioulreduc.eot?#iefixe76zua') format('embedded-opentype'),
+		url('../fonts/fioulreduc.woff?e76zua') format('woff'),
+		url('../fonts/fioulreduc.ttf?e76zua') format('truetype'),
+		url('../fonts/fioulreduc.svg?e76zua#fioulreduc') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 .lato-bold(@size){
 	font-family: 'lato-bold', sans-serif;
 	font-weight: normal;
@@ -174,6 +186,48 @@
 	font-size: @size;
 }
 
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'fioulreduc';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-bottom:before {
+	content: "\e600";
+}
+.icon-arrow-left:before {
+	content: "\e601";
+}
+.icon-arrow-right:before {
+	content: "\e602";
+}
+.icon-arrow-top:before {
+	content: "\e603";
+}
+.icon-fleche-rond:before {
+	content: "\e604";
+}
+.icon-icon-plus:before {
+	content: "\e605";
+}
+.icon-maison:before {
+	content: "\e606";
+}
+.icon-play:before {
+	content: "\e607";
+}
+.icon-sousligne:before {
+	content: "\e608";
+}
+
 /* @end */
 
 /* @group Boilerplate */
@@ -223,10 +277,112 @@ textarea {
 	text-shadow: none; 
 }
 
+html, body{
+	.lato(1em);
+	background: @blanc;
+	position: relative;
+}
+
+.container{
+	display: block;
+	position: relative;
+	width: 1200px;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;
+	
+}
+
+.bloc-full{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.bloc-blanc{
+	background-color: @blanc;
+}
+
+/* @group Header */
+
+/* Pour ouvrir les dropdown au survol */
+
+header{
+	height: 54px;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+nav.navbar{
+	display: block;
+	width: 100%;
+	height: 54px;
+	margin: 0;
+	padding: 0;
+	ul.nav{
+		margin: 0;
+		padding: 0;
+		li{
+			padding: 0 30px;
+			&.first{
+				padding: 0 20px 0 0;
+			}
+			&.last{
+				padding: 0 0 0 30px;
+			}
+			&.dropdown{
+				&:hover{
+					> ul.dropdown-menu {
+					    display: block;    
+					}
+				}
+			}
+			a{
+				.lato-bold(0.75em);
+				text-transform: uppercase;
+				color: @grisTexte;
+				letter-spacing: 1px;
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+}
+/*<nav class="navbar-responsive-collapse collapse nav-collapse">
+	<ul class="nav">
+		<li class="active">
+			<a href="#" class="home"></a>
+		</li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-delay="0">Pourquoi FioulReduc ?</a>
+			<ul class="dropdown-menu">
+				<li><a href="#">Comment ça marche ?</a></li>
+				<li><a href="#">Des économies sur votre facture de fioul</a></li>
+				<li><a href="#">Distributeur de proximité, produit de qualité</a></li>
+				<li><a href="#">Choix du créneau de livraison</a></li>
+				<li><a href="#">Paiement à la livraison</a></li>
+				<li><a href="#">Paiement en 3 fois par carte bancaire</a></li>
+				<li><a href="#">Commande groupée de fioul</a></li>
+				<li><a href="#">Avis clients</a></li>
+			</ul>
+		</li>
+		<li>*/
+
 /* @end */
 
+/* @group Top home */
 
+#top-home{
+	display: block;
+	width: 100%;
+	height: 2000px;
+	background: #0b2166;
+}
 
+/* @end */
+
+/* @end */
 
 /* @end */
   
