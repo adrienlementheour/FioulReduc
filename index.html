@@ -24,10 +24,11 @@
 		<link rel="stylesheet" href="ie7/ie7.css">
 		<!--<![endif]-->
 		<script src="js/libs/modernizr.js" type="text/javascript" charset="utf-8"></script>
+		<link href='http://fonts.googleapis.com/css?family=Dancing+Script&text=Prixbasgnt!*' rel='stylesheet' type='text/css'>
 		
 	</head>
 
-	<body>
+	<body class="home">
 	  	<header class="bloc-full bloc-blanc">
 	  		<div class="container">
 				<nav class="navbar">
@@ -92,7 +93,46 @@
 	  			<div id="bloc-commande-graph">
 	  				<div class="part-commande">
 	  					<div id="bloc-commande" class="bloc-gris">
+	  						<a href="#" id="fil-commande"><span id="fil"></span><span id="boule"></span></a>
+	  						<div class="prix-bas"><span class="icon-sousligne"></span>Prix bas <span class="decal">garantis !!*</span></div>
 	  						<h2>Commandez votre fioul</h2>
+	  						<form class="form-horizontal" action="" method="post">
+	  							<fieldset>
+	  								<div id="masque-form-home">
+										 <div class="control-group">
+											<label class="control-label" for="order-zipcode">Mon code postal : </label>
+											<div class="controls">
+												<input id="order-zipcode" name="order-zipcode" class="taille1" type="text" value="" title="">
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="order-quantity">Quantité : </label>
+											<div class="controls">
+												<input id="order-quantity" name="order-quantity" class="taille1" type="number" step="1" value="" title=""> litres
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="order-product">Produit</label>
+											<div class="controls">
+												<select id="order-product" name="order-product" class="taille2" title="">
+													<option value="1">Fioul Ordinaire</option>
+													<option value="2">Fioul Supérieur</option>
+													<option value="3">GNR Ordinaire</option>
+													<option value="4">GNR Supérieur</option>
+												</select>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="order-email">Mon email</label>
+											<div class="controls">
+												<input id="order-email" name="order-email" class="taille2" type="text" value="" title="">
+												
+											</div>
+										</div>
+									</div>
+									<button type="submit" class="btn btn-block">Voir les prix<span class="icon-fleche-rond"></span></button>
+								</fieldset>
+							</form>
 	  					</div>
 	  					<ol class="liste-num">
 	  						<li>

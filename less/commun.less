@@ -12,8 +12,10 @@
 @bleuFioulReduc: #2947a0;
 @bleuClairFioulReduc: #438ee4;
 @bleuClair2FioulReduc: #bad4e2;
+@bleuFonceFioulReduc: #0c1a4c;
 @grisBleuFioulReduc: #ebeef2;
 @orangeFioulReduc: #fb8206;
+@orange2FioulReduc: #f86708;
 @jauneFioulReduc: #ffcb00;
 
 /* @end */
@@ -370,9 +372,110 @@ ol.liste-num{
 	}
 }
 
-/* @group Header */
+/* @group Formulaires */
 
-/* Pour ouvrir les dropdown au survol */
+/* masquer les spin boutons sur les inputs number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+form{
+	color: @bleuFonceFioulReduc;
+	&.form-horizontal{
+		label{
+			&.control-label{
+				width: 125px;
+				.lato-italic(1em);
+				.lh-box-sizing(border-box);
+				height: 40px;
+				margin: 0;
+				padding: 10px 0 0 0;
+			}
+		}
+		.controls{
+			margin: 0 0 0 140px;
+			input, select{
+				border: 2px solid #cccdd3;
+				.lh-box-sizing(border-box);
+				height: 40px;
+				.lato(0.938em);
+				color: @bleuFioulReduc;
+				&.taille1{
+					width: 100px;
+				}
+				&.taille2{
+					width: 210px;
+				}
+				&:focus{
+					border-color: @bleuFioulReduc;
+					outline: none;
+				}
+			}
+		}
+	}
+	button{
+		&.btn{
+			position: relative;
+			.lato-bold(0.938em);
+			text-transform: uppercase;
+			text-shadow: none;
+			background: @orangeFioulReduc;
+			.lh-box-shadow(~"0 2px 0 #ba4a00");
+			.lh-background-image(~"linear-gradient(bottom, rgba(242,84,15,.56) 0%, rgba(242,84,15,0) 100%)");
+			border: none;
+			color: @blanc;
+			letter-spacing: 1px;
+			padding: 14px 0;
+			margin: 30px 0 0 0;
+			.lh-transition(background-color 0.15s ease-in-out);
+			.icon-fleche-rond{
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+				width: 23px;
+				height: 23px;
+				margin: 0 0 0 5px;
+				padding: 0;
+				border: none;
+				&:before{
+					font-size: 2.5em;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 23px;
+					height: 23px;
+					line-height: 23px;
+				}
+			}
+			&:hover{
+				color: @blanc;
+				background: @orange2FioulReduc;
+				.lh-transition(background-color 0.15s ease-in-out);
+				.lh-background-image(~"linear-gradient(bottom, rgba(242,84,15,.56) 0%, rgba(242,84,15,0) 100%)");
+			}
+			&:focus{
+				color: @blanc;
+				outline: none;
+				background: @orange2FioulReduc;
+				.lh-transition(background-color 0.15s ease-in-out);
+				.lh-background-image(~"linear-gradient(bottom, rgba(242,84,15,.56) 0%, rgba(242,84,15,0) 100%)");
+			}
+			&:active{
+				color: @blanc;
+				background: @orange2FioulReduc;
+				.lh-transition(background-color 0.15s ease-in-out);
+				.lh-background-image(~"linear-gradient(bottom, rgba(242,84,15,.56) 0%, rgba(242,84,15,0) 100%)");
+				.lh-box-shadow(none);
+			}
+		}
+	}
+}
+
+/* @end */
+
+/* @group Header */
 
 header{
 	height: 54px;
@@ -553,13 +656,75 @@ ul#menu-top-bar{
 	padding: 50px 0 0 0;
 }
 
+.prix-bas{
+	font-family: 'Dancing Script', cursive;
+	color: @orangeFioulReduc;
+	font-size: 1.375em;
+	display: block;
+	width: 120px;
+	height: auto;
+	position: absolute;
+	top: 30px;
+	right: 5px;
+	.lh-rotate(-8.2deg);
+	color: #ffa800;
+	line-height: 0.8em;
+	.icon-sousligne{
+		&:before{
+			font-size: 3.5em;
+			color: #ffa800;
+			.lh-rotate(8.2deg);
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+	}
+	.decal{
+		display: block;
+		margin-left: 12px;
+	}
+}
+
+a#fil-commande{
+	display: block;
+	width: 12px;
+	height: 106px;
+	position: absolute;
+	bottom: -106px;
+	left: 50%;
+	margin-left: -6px;
+	#fil{
+		display: block;
+		width: 1px;
+		height: 100%;
+		margin: 0 auto;
+		.lh-opacity(0.5);
+		background-color: #ebedf1;
+		.lh-box-shadow(~"0 5px 1px rgba(7,23,58,.75)");
+	}
+	#boule{
+		display: block;
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		.lh-border-radius(50%);
+		background-color: @orange2FioulReduc;
+		.lh-box-shadow(~"0 5px 1px rgba(7,23,58,.75)");
+	}
+}
+
 .part-commande{
 	display: inline-block;
 	vertical-align: top;
 	width: 428px;
 	position: relative;
+	.lh-backface-visibility(hidden);
+	.lh-transform(translate3d(0, 0, 0));
 	#bloc-commande{
 		display: block;
+		z-index: 2;
 		width: 100%;
 		padding: 20px 40px;
 		.lh-border-radius(6px);
@@ -567,13 +732,30 @@ ul#menu-top-bar{
 		position: absolute;
 		top: 0;
 		left: 0;
+		.lh-box-shadow(~"0 5px 1px rgba(7,23,58,.75)");
 		h2{
 			width: 75%;
 		}
 	}
 	ol.liste-num{
-		margin: 282px 0 0 0;
+		margin: 285px 0 0 10px;
 	}
+	form{
+		button{
+			&.btn{
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+#masque-form-home{
+	display: block;
+	position: relative;
+	margin: 0 0 10px 0;
+	padding: 0;
+	height: 50px;
+	overflow: hidden;
 }
 
 .part-graph{
