@@ -764,6 +764,71 @@ a#fil-commande{
 
 /* @end */
 
+/* @group Bloc points */
+	
+ul#points-illus{
+	display: block;
+	width: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0 0 10px 0;
+	li{
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		width: 25%;
+		margin: 0;
+		padding: 20px 0 12px 105px;
+		.lh-box-sizing(border-box);
+		position: relative;
+		.point-illus{
+			display: block;
+			position: absolute;
+			&.illus-paiement-souple{
+				width: 135px;
+				height: 148px;
+				left: -20px;
+				bottom: 0;
+				background: url('../layoutImg/illus-points/illus-paiement-souple.png') no-repeat left top;
+			}
+			&.illus-prix-bas{
+				width: 192px;
+				height: 204px;
+				left: 0;
+				bottom: 0;
+				background: url('../layoutImg/illus-points/illus-prix-bas.png') no-repeat left top;
+			}
+			&.illus-commande-groupee{
+				width: 109px;
+				height: 212px;
+				left: -15px;
+				bottom: 4px;
+				background: url('../layoutImg/illus-points/illus-commande-groupee.png') no-repeat left top;
+			}
+			&.illus-livraison-adaptable{
+				width: 130px;
+				height: 166px;
+				left: -22px;
+				bottom: 0px;
+				background: url('../layoutImg/illus-points/illus-livraison-adaptable.png') no-repeat left top;
+			}
+		}
+		
+		.titre-point{
+			.lato-bold(1.063em);
+			color: @bleuFioulReduc;
+			margin-bottom: 2px;
+		}
+		p{
+			.lato(0.813em);
+			color: @bleuFonceFioulReduc;
+			line-height: 1.3em;
+		}
+	}
+}
+
+/* @end */
+
 /* @end */
 
 /* @end */
