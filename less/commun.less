@@ -1,6 +1,10 @@
 /* @group import */
 
 @import "lesshat-prefixed.less";
+@import "_ionicons-variables";
+@import "_ionicons-font";
+@import "_ionicons-icons";
+
 
 /* @end */
 
@@ -886,6 +890,202 @@ a.logo{
 
 /* @end */
 
+/* @group Footer */
+
+footer{
+	padding: 66px 0 20px 0;
+	overflow: hidden;
+	.lh-backface-visibility(hidden);
+	ul#menu-footer{
+		display: block;
+		width: auto;
+		margin: 0 0 100px 0;
+		padding: 0;
+		list-style-type: none;
+		li.col-menu-footer{
+			display: inline-block;
+			vertical-align: top;
+			width: 20%;
+			height: auto;
+			margin: 0;
+			padding: 0;
+			.lh-box-sizing(border-box);
+			padding: 0 35px;
+			ul.cb{
+				display: block;
+				width: 130px;
+				height: auto;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				text-align: center;
+				li{
+					display: inline-block;
+					vertical-align: top;
+					margin: 0;
+					padding: 0;
+					width: 50px;
+					height: 34px;
+					&.visa{
+						background: url('../layoutImg/visa.png') no-repeat left top;
+					}
+					&.mastercard{
+						background: url('../layoutImg/mastercard.png') no-repeat left top;
+						margin: 0 0 0 5px;
+					}
+				}
+			}
+			.paiement{
+				display: block;
+				width: 130px;
+				margin: 25px 0 0 0;
+				text-align: center;
+				.lato(0.875em);
+				line-height: 1.2em;
+			}
+			ul.paiements{
+				display: block;
+				list-style-type: none;
+				margin: 25px 0 0 0;
+				padding: 0;
+				li{
+					display: inline-block;
+					vertical-align: top;
+					background-color: #c0cfe4;
+					.lh-background-image(~"linear-gradient(left, #172f6f 0%, rgba(24,48,111,0) 100%)");
+					.lato-bold(1.25em);
+					margin: 0 0 5px 0;
+					color: #071d63;
+					padding-top: 2px;
+					padding-right: 5px;
+					padding-bottom: 2px;
+					.lh-border-top-right-radius(3px);
+					.lh-border-bottom-right-radius(3px);
+					&.trois{
+						padding-left: 20px;
+					}
+					&.cinq{
+						padding-left: 45px;
+					}
+					&.sept{
+						padding-left: 73px;
+					}
+					&.dix{
+						padding-left: 85px;
+					}
+					span{
+						.lato-bold(0.650em);
+					}
+				}
+			}
+			.titre-footer{
+				.lato-italic(1.125em);
+				padding: 0;
+				margin: 0 0 15px 0;
+			}
+			ul.liste-footer{
+				display: block;
+				margin: 0 0 40px 0;
+				padding: 0;
+				list-style-type: none;
+				li{
+					display: block;
+					margin: 0;
+					padding: 0;
+					line-height: 1.1em;
+					a{
+						.lato(0.813em);
+						color: #b9cce6;
+						&:hover{
+							text-decoration: none;
+							color: @orangeFioulReduc;
+						}
+					}
+				}
+			}
+		}
+	}
+	.energie{
+		display: block;
+		text-align: center;
+		width: 70%;
+		.lato-italic(0.813em);
+		color: #9ca6c0;
+	}
+	.journal{
+		display: block;
+		width: 396px;
+		height: 402px;
+		background: url('../layoutImg/journal.png') no-repeat left top;
+		position: absolute;
+		right: 80px;
+		bottom: -150px;
+		.lh-rotate(12deg);
+		ul.social-footer{
+			display: block;
+			width: 195px;
+			height: 55px;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 143px;
+			right: 27px;
+			li{
+				display: inline-block;
+				vertical-align: top;
+				width: 55px;
+				height: 55px;
+				margin: 0 5px;
+				padding: 0;
+				a{
+					display: block;
+					position: relative;
+					width: 100%;
+					height: 100%;
+					.lh-box-shadow(~"1px 2px 0 rgba(30,55,105,.21)");
+					.lh-transition(background-color 0.15s ease-in-out);
+					&:before{
+						color: @blanc;
+						display: block;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						text-align: center;
+						line-height: 55px;
+						font-size: 40px;
+					}
+					&.facebook{
+						background-color: #2d5391;
+						.lh-background-image(~"linear-gradient(bottom, rgba(41,71,160,.7) -30.51%, rgba(41,71,160,0) 69.49%)");
+						&:hover{
+							background-color: #172f72;
+						}
+					}
+					&.twitter{
+						background-color: #28a0d2;
+						.lh-background-image(~"linear-gradient(bottom, rgba(41,71,160,.31) -30.51%, rgba(41,71,160,0) 69.49%)");
+						&:hover{
+							background-color: #2888c5;
+						}
+					}
+					&.googleplus{
+						background-color: #dd4b39;
+						.lh-background-image(~"linear-gradient(bottom, rgba(0,0,0,.19) -30.51%, rgba(0,0,0,0) 69.49%)");
+						&:hover{
+							background-color: #b94030;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* @end */
+
 /* @group Top bar */
 
 #top-bar{
@@ -993,6 +1193,7 @@ ul#menu-top-bar{
 
 #top-home{
 	padding: 100px 0 125px 0;
+	position: relative;
 }
 
 /* @end */
