@@ -8,12 +8,13 @@
 
 @blanc: #fff;
 @noir: #000;
-@grisTexte: #373a3f;
+@grisTexte: #575757;
 @bleuFioulReduc: #2947a0;
 @bleuClairFioulReduc: #438ee4;
 @bleuClair2FioulReduc: #bad4e2;
 @bleuFonceFioulReduc: #0c1a4c;
 @grisBleuFioulReduc: #ebeef2;
+@grisOrangeFioulReduc: #faf3ed;
 @orangeFioulReduc: #fb8206;
 @orange2FioulReduc: #f86708;
 @jauneFioulReduc: #ffcb00;
@@ -311,8 +312,12 @@ html, body{
 	background-color: @blanc;
 }
 
-.bloc-gris{
+.bloc-gris-bleu{
 	background-color: @grisBleuFioulReduc;
+}
+
+.bloc-gris-orange{
+	background-color: @grisOrangeFioulReduc;
 }
 
 .bloc-degrade-bleu{
@@ -323,6 +328,10 @@ html, body{
 
 .small-padding{
 	padding: 25px 0;
+}
+
+.big-padding{
+	padding: 65px 0;
 }
 
 .grille{
@@ -347,6 +356,14 @@ h2{
 		padding: 0 0 0 50px;
 		border: none;
 		margin: 0 0 10px 0;
+	}
+}
+
+h3{
+	&.titre-item{
+		color: @blanc;
+		.lato-bold-italic(2em);
+		line-height: 1.1em;
 	}
 }
 
@@ -434,6 +451,7 @@ ol.liste-num{
 		border-bottom: 1px solid @orangeFioulReduc;
 		line-height: 1em;
 		text-decoration: none;
+		text-shadow: none;
 		&:hover{
 			text-decoration: none;
 			color: @orange2FioulReduc;
@@ -449,10 +467,259 @@ ol.liste-num{
 				font-size: 0.8em;
 				line-height: 1.1em;
 			}
+			
 		}
-		
+		&.btn-jaune{
+			color: @jauneFioulReduc;
+			border-bottom-color: @jauneFioulReduc;
+		}
+		&.btn-link-home{
+			margin: 10px 40px 0 0;
+		}
 	}
 }
+
+/* @group Actus */
+
+ul.actus{
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li.actu{
+		display: block;
+		width: 100%;
+		height: auto;
+		min-height: 92px;
+		margin: 13px 0;
+		padding: 0;
+		position: relative;
+		a.zone-visu-actu{
+			display: block;
+			width: 130px;
+			height: 92px;
+			.lh-box-sizing(border-box);
+			.lh-border-radius(6px);
+			border: 3px solid @blanc;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+		}
+		.zone-texte-actu{
+			display: block;
+			.lh-box-sizing(border-box);
+			width: 100%;
+			padding: 5px 0 0 160px;
+			.date-actu{
+				.lato-italic(0.813em);
+				color: @grisTexte;
+			}
+			a.titre-actu{
+				.lato-bold-italic(1.063em);
+				color: @bleuFioulReduc;
+				display: block;
+				margin: 0 0 5px 0;
+			}
+			p{
+				.lato(0.875em);
+				color: @grisTexte;
+				line-height: 1.3em;
+			}
+			a.icon-icon-plus{
+				font-size: 2em;
+				display: inline-block;
+				vertical-align: top;
+				color: @orangeFioulReduc;
+				line-height: 0.7em;
+				margin: 0 0 0 2px;
+				padding: 0;
+				&:hover{
+					color: @orange2FioulReduc;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+/* @end */
+
+/* @group Carousel */
+
+.carousel{
+	&.carousel-visu{
+		margin: -77px 0 0 0;
+		padding: 0;
+		ol.carousel-indicators{
+			top: inherit;
+			bottom: -50px;
+			left: 50%;
+			margin: 0 0 0 -42px;
+			display: block;
+			width: 84px;
+			li{
+				width: 12px;
+				height: 12px;
+				background-color: @blanc;
+				.lh-border-radius(50%);
+				.lh-box-shadow(~"0 -1px 0 rgba(227,217,208,.75)");
+				margin: 0 8px;
+				&.active{
+					background-color: @orangeFioulReduc;
+				}
+			}
+		}
+		
+		.carousel-inner{
+			.item{
+				width: 100%;
+				padding-top: 77px;
+				height: 327px;
+				&.item-vertical{
+					.zone-texte-item{
+						display: inline-block;
+						vertical-align: top;
+						width: 192px;
+						height: 100%;
+						.lh-border-top-left-radius(6px);
+						.lh-border-bottom-left-radius(6px);
+						.lh-box-sizing(border-box);
+						padding: 35px 0 0 0;
+						margin: 0;
+						h3{
+							padding: 10px 0 0 0;
+						}
+						p{
+							padding: 0;
+							margin: 30px 0 0 0;
+							.lato(1em);
+							line-height: 1.5em;
+							color: @blanc;
+						}
+					}
+					.zone-visu-item{
+						display: inline-block;
+						vertical-align: top;
+						width: 218px;
+						height: 100%;
+						.lh-border-top-right-radius(6px);
+						.lh-border-bottom-right-radius(6px);
+						&.visu-fond-item-commande-groupee{
+							background-image: url('../layoutImg/illus-carousel/visu-fond-item-commande-groupee.png');
+							background-repeat: no-repeat;
+							background-position: left top;
+							background-size: cover;
+						}
+						.visu-item{
+							&.visu-item-commande-groupee{
+								width: 178px;
+								height: 351px;
+								background: url('../layoutImg/illus-carousel/visu-item-commande-groupee.png') no-repeat left top;
+								left: 50%;
+								margin-left: -89px;
+								bottom: 37px;
+							}
+						}
+					}
+				}
+				&.item-horizontal{
+					.zone-visu-item{
+						display: block;
+						height: 224px;
+						width: 100%;
+						.lh-border-top-left-radius(6px);
+						.lh-border-top-right-radius(6px);
+						&.visu-fond-item-entretien-chaudiere{
+							background-image: url('../layoutImg/illus-carousel/visu-fond-item-entretien-chaudiere.png');
+							background-repeat: no-repeat;
+							background-position: left top;
+							background-size: cover;
+						}
+						.visu-item{
+							&.visu-item-entretien-chaudiere{
+								width: 391px;
+								height: 258px;
+								background: url('../layoutImg/illus-carousel/visu-item-entretien-chaudiere.png') no-repeat left top;
+								left: 50%;
+								margin-left: -195px;
+								bottom: 0px;
+							}
+							&.visu-item-paiement{
+								width: 405px;
+								height: 297px;
+								background: url('../layoutImg/illus-carousel/visu-item-paiement.png') no-repeat left top;
+								left: 50%;
+								margin-left: -203px;
+								bottom: 0px;
+							}
+						}
+					}
+					.zone-texte-item{
+						display: block;
+						height: 103px;
+						width: 100%;
+						.lh-border-bottom-left-radius(6px);
+						.lh-border-bottom-right-radius(6px);
+						h3{
+							padding: 10px 0 0 0;
+						}
+						p{
+							padding: 0;
+							margin: 0 0 0 0;
+							.lato(1em);
+							line-height: 1.5em;
+							color: @blanc;
+						}
+					}
+				}
+				.zone-texte-item{
+					text-align: center;
+					background-color: #fd7c01;
+					.lh-background-image(~"linear-gradient(bottom, rgba(242,84,15,.7) -30.51%, rgba(242,84,15,0) 69.49%)");
+					margin: 0;
+					padding: 0;
+					h3{
+						margin: 0;
+					}
+				}
+				.zone-visu-item{
+					background-color: @blanc;
+					position: relative;
+					margin: 0;
+					padding: 0;
+					.visu-item{
+						position: absolute;
+						display: block;
+					}
+				}
+			}
+		}
+		
+		.carousel-control{
+			background: none;
+			border: none;
+			.lh-opacity(1);
+			color: @orangeFioulReduc;
+			top: 225px;
+			margin-top: 0;
+			.lh-border-radius(none);
+			&.left{
+				left: -50px;
+			}
+			&.right{
+				right: -50px;
+			}
+		}
+	}
+}
+
+
+/* @end */
 
 /* @group Formulaires */
 
@@ -1012,14 +1279,10 @@ ul#points-illus{
 			.commentaire-client{
 				.lato(0.813em);
 				line-height: 1.2em;
-				color: #575757;
+				color: @grisTexte;
 			}
 		}
 	}
-}
-
-a#btn-tous-avis{
-	margin: 10px 40px 0 0;
 }
 
 /* @end */
