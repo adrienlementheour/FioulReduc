@@ -929,6 +929,7 @@ nav.navbar{
 				letter-spacing: 1px;
 				padding: 0;
 				margin: 0;
+				line-height: 1.3em;
 				&:hover{
 					color: @orangeFioulReduc;
 					background: none;
@@ -959,6 +960,7 @@ nav.navbar{
 }
 
 a.logo{
+	float: left;
 	display: inline-block;
 	vertical-align: top;
 	width: 309px;
@@ -1185,6 +1187,8 @@ ul#menu-top-bar{
 	float: right;
 	width: 800px;
 	text-align: right;
+	margin: 0;
+	padding: ;
 	li{
 		display: inline-block;
 		vertical-align: top;
@@ -1239,7 +1243,7 @@ ul#menu-top-bar{
 			}
 			&:hover{
 				.visu-menu{
-					.lh-transform(rotate(10deg) translate3d( 0, 0, 0));
+					.lh-transform(rotate(-10deg) translate3d( 0, 0, 0));
 				}
 			}
 			.zone-texte-menu{
@@ -1421,28 +1425,28 @@ ul#points-illus{
 				width: 135px;
 				height: 148px;
 				left: -20px;
-				bottom: 0;
+				top: -35px;
 				background: url('../layoutImg/illus-points/illus-paiement-souple.png') no-repeat left top;
 			}
 			&.illus-prix-bas{
 				width: 192px;
 				height: 204px;
 				left: 0;
-				bottom: 0;
+				top: -93px;
 				background: url('../layoutImg/illus-points/illus-prix-bas.png') no-repeat left top;
 			}
 			&.illus-commande-groupee{
 				width: 109px;
 				height: 212px;
 				left: -15px;
-				bottom: 4px;
+				top: -103px;
 				background: url('../layoutImg/illus-points/illus-commande-groupee.png') no-repeat left top;
 			}
 			&.illus-livraison-adaptable{
 				width: 130px;
 				height: 166px;
 				left: -22px;
-				bottom: 0px;
+				top: -54px;
 				background: url('../layoutImg/illus-points/illus-livraison-adaptable.png') no-repeat left top;
 			}
 		}
@@ -1473,10 +1477,13 @@ ul.refs{
 	margin: 0;
 	padding: 25px 0;
 	text-align: center;
+	.lh-opacity(0.5);
+	.lh-transition(opacity 0.2s ease-in-out);
 	.js &{
 		cursor: pointer;
 	}
 	&:hover{
+		.lh-opacity(1);
 		li.ref{
 			&:after{
 				.lh-opacity(0);
@@ -1794,19 +1801,192 @@ ul.refs{
 
 
 /* mes resolutions responsives "classiques" */
-@media (max-width: 1150px) {
-
+@media (max-width: 1250px) {
+	.container{
+		width: 90%;
+	}
+	nav.navbar{
+		ul.nav{
+			li{
+				width: 16%;
+				.lh-box-sizing(border-box);
+				&.first{
+					width: 1%;
+				}
+			}
+		}
+	}
+	ul#menu-top-bar {
+		width: auto;
+		li{
+			margin: 0 0 0 15px;
+			a{
+				.illus-menu{
+					margin: 0 8px 0 0;
+				}
+			}
+		}
+	}
+	
+	/* @group responsive Home */
+	ul#points-illus{
+		li{
+			padding: 20px 0 12px 115px;
+			p{
+				br{
+					display: none;
+				}
+			}
+			.point-illus{
+				&.illus-commande-groupee {
+					left: 0;
+				}
+			}
+		}
+	}
+	/* @end */
 }
 
+@media (max-width: 1200px) {
+	a.logo {
+		margin: 5px 0 0 20px;
+	}
+}
+
+@media (max-width: 1150px) {
+	footer{
+		.energie{
+			width: 60%;
+		}
+	}
+	a.logo {
+		width: 248px;
+		margin: 5px 0 0 0;
+		background: url('../layoutImg/logo-bleu-orange-responsive.png') no-repeat left top;
+		.bloc-degrade-bleu &{
+			background: url('../layoutImg/logo-blanc-orange-responsive.png') no-repeat left top;
+		}
+	}
+	ul#menu-top-bar {
+		width: auto;
+		li{
+			margin: 0 0 0 10px;
+		}
+	}
+	
+	/* @group responsive Home */
+	ul#points-illus{
+		width: 80%;
+		margin: 0 auto;
+		padding: 20px 0;
+		li{
+			.lh-box-sizing(border-box);
+			width: 50%;
+			margin: 0;
+			padding: 20px 30px 12px 100px;
+			&.illus-ligne1-responsive{
+				margin-bottom: 40px;
+			}
+			.point-illus{
+				&.illus-paiement-souple {
+					width: 81px;
+					height: 89px;
+					left: 0;
+					top: 50%;
+					margin-top: -45px;
+					background: url('../layoutImg/illus-points/illus-paiement-souple-responsive.png') no-repeat left top;
+				}
+				&.illus-prix-bas{
+					width: 116px;
+					height: 123px;
+					left: 0;
+					top: 50%;
+					margin-top: -61px;
+					background: url('../layoutImg/illus-points/illus-prix-bas-responsive.png') no-repeat left top;
+				}
+				&.illus-commande-groupee{
+					width: 66px;
+					height: 128px;
+					left: 0;
+					top: 50%;
+					margin-top: -64px;
+					background: url('../layoutImg/illus-points/illus-commande-groupee-responsive.png') no-repeat left top;
+				}
+				&.illus-livraison-adaptable{
+					width: 78px;
+					height: 100px;
+					left: 0;
+					top: 50%;
+					margin-top: -50px;
+					background: url('../layoutImg/illus-points/illus-livraison-adaptable-responsive.png') no-repeat left top;
+				}
+			}
+		}
+	}
+	/* @end */
+}
+
+@media (max-width: 1024px) {
+	#top-bar{
+		height: auto;
+	}
+	a.logo{
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+		float: none;
+	}
+	ul#menu-top-bar {
+		display: block;
+		margin: 25px auto 0 auto;
+		text-align: center;
+		float: none;
+		li{
+			margin: 0 7px 15px 7px;
+			width: 222px;
+			a{
+				.illus-menu{
+					margin: 0 16px 0 0;
+				}
+			}
+		}
+	}
+	
+	
+}
 
 @media (max-width: 979px) {
-
+	/* @group responsive Home */
+	ul#points-illus{
+		width: 100%;
+	}
+	/* @end */
 }
 
-
-
 @media (max-width: 767px) {
-
+	body {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	/* @group responsive Home */
+	ul#points-illus{
+		width: 90%;
+		li{
+			width: 100%;
+			margin: 20px 0;
+			padding: 20px 0 12px 100px;
+			&.illus-ligne1-responsive{
+				margin-bottom: 0;
+			}
+			.point-illus{
+				&.illus-prix-bas{
+					margin-top: -76px;
+				}
+			}
+		}
+	}
+	
+	/* @end */
 }
 
 
