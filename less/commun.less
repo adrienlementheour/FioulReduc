@@ -5,7 +5,6 @@
 @import "_ionicons-font";
 @import "_ionicons-icons";
 
-
 /* @end */
 
 /* @group global var */
@@ -280,12 +279,12 @@ textarea {
 
 /* selection */
 ::-moz-selection { 
-	background: @noir;  
+	background: @orangeFioulReduc;  
 	color: @blanc;
 	text-shadow: none; 
 }
 ::selection { 
-	background: @noir;  
+	background: @orangeFioulReduc;  
 	color: @blanc; 
 	text-shadow: none; 
 }
@@ -838,7 +837,6 @@ header{
 	.lh-box-shadow(~"0 2px 0 rgba(0,0,0,.08)");
 	z-index: 3;
 }
-
 nav.navbar{
 	display: block;
 	width: 100%;
@@ -847,19 +845,76 @@ nav.navbar{
 	padding: 0;
 	ul.nav{
 		margin: 0;
-		padding: 0;
+		padding: 12px 0 0 0;
+		&>.active>a, >.active>a:hover, &>.active>a:focus{
+			background: none;
+			.lh-box-shadow(none);
+		}
+		&>.active>a{
+			color: @bleuFioulReduc;
+		}
+		&>.active>a:hover, &>.active>a:focus{
+			color: @orangeFioulReduc;
+			outline: none;
+		}
 		li{
-			padding: 0 30px;
+			padding: 6px 20px 0 20px;
 			&.first{
 				padding: 0 20px 0 0;
 			}
 			&.last{
-				padding: 0 0 0 30px;
+				padding: 6px 0 0 20px;
 			}
 			&.dropdown{
+				&.open>.dropdown-toggle, &.active>.dropdown-toggle{
+					color: @orangeFioulReduc;
+					background: none;
+				}
 				&:hover{
-					> ul.dropdown-menu {
+					> .dropdown-menu {
 					    display: block;    
+					}
+				}
+				.dropdown-menu{
+					margin: 0;
+					padding: 25px 0 0 0;
+					background: none;
+					border: none;
+					width: 340px;
+					.lh-box-shadow(none);
+					&:before, &:after{
+						display: none;
+					}
+					.dropdown-menu-content{
+						background-color: @blanc;
+						.lh-box-sizing(border-box);
+						.lh-box-shadow(~"0 5px 0 rgba(0,0,0,.29)");
+						padding: 3px;
+						border: none;
+						margin: 0;
+						.lh-border-radius(6px);
+						display: block;
+						li{
+							padding: 0;
+							display: block;
+							a{
+								line-height: 1.3em;
+								display: block;
+								.lh-box-sizing(border-box);
+								padding: 5px;
+								.lh-border-radius(2px);
+								border: 1px solid @blanc;
+								.lato-bold(0.813em);
+								text-transform: none;
+								color: @bleuFonceFioulReduc;
+								
+								&:hover{
+									background:  @grisBleuFioulReduc;
+									border-color: #e8e8e8;
+									text-decoration: none;
+								}
+							}
+						}
 					}
 				}
 			}
@@ -870,6 +925,30 @@ nav.navbar{
 				letter-spacing: 1px;
 				padding: 0;
 				margin: 0;
+				&:hover{
+					color: @orangeFioulReduc;
+					background: none;
+					.lh-box-shadow(none);
+				}
+				&.home{
+					background: none;
+					.lh-box-shadow(none);
+					width: 24px;
+					height: 30px;
+					.icon-maison{
+						font-size: 2.5em;
+						width: 24px;
+						height: 30px;
+						line-height: 30px;
+						margin: 0;
+						padding: 0;
+						display: block;
+						&:before{
+							margin: 0;
+							padding: 0;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1373,6 +1452,127 @@ ul#points-illus{
 			.lato(0.813em);
 			color: @bleuFonceFioulReduc;
 			line-height: 1.3em;
+		}
+	}
+}
+
+/* @end */
+
+/* @group Bloc refs */
+
+ul.refs{
+	display: block;
+	width: 100%;
+	height: 92px;
+	line-height: 92px;
+	list-style-type: none;
+	margin: 0;
+	padding: 25px 0;
+	cursor: pointer;
+	text-align: center;
+	&:hover{
+		li.ref{
+			&:after{
+				.lh-opacity(0);
+			}
+		}
+	}
+	li.ref{
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		margin: 0;
+		padding: 0 23px;
+		&:after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin: 0;
+			padding: 0;
+			.lh-transition(opacity 0.2s ease-in-out);
+			.lh-opacity(1);
+		}
+		&.tf1{
+			background: url('../img/logos/tf1.png') no-repeat left top;
+			width: 99px;
+			height: 37px;
+			&:after{
+				width: 99px;
+				height: 37px;
+				background: url('../img/logos/tf1-nb.png') no-repeat left top;
+			}
+		}
+		&.m6{
+			background: url('../img/logos/m6.png') no-repeat left top;
+			width: 60px;
+			height: 46px;
+			&:after{
+				width: 60px;
+				height: 46px;
+				background: url('../img/logos/m6-nb.png') no-repeat left top;
+			}
+		}
+		&.le-figaro{
+			background: url('../img/logos/le-figaro.png') no-repeat left top;
+			width: 137px;
+			height: 30px;
+			&:after{
+				width: 137px;
+				height: 30px;
+				background: url('../img/logos/le-figaro-nb.png') no-repeat left top;
+			}
+		}
+		&.france-3{
+			background: url('../img/logos/france-3.png') no-repeat left top;
+			width: 53px;
+			height: 92px;
+			&:after{
+				width: 53px;
+				height: 92px;
+				background: url('../img/logos/france-3-nb.png') no-repeat left top;
+			}
+		}
+		&.l-express{
+			background: url('../img/logos/l-express.png') no-repeat left top;
+			width: 142px;
+			height: 34px;
+			&:after{
+				width: 142px;
+				height: 34px;
+				background: url('../img/logos/l-express-nb.png') no-repeat left top;
+			}
+		}
+		&.france-5{
+			background: url('../img/logos/france-5.png') no-repeat left top;
+			width: 54px;
+			height: 92px;
+			&:after{
+				width: 54px;
+				height: 92px;
+				background: url('../img/logos/france-5-nb.png') no-repeat left top;
+			}
+		}
+		&.les-echos{
+			background: url('../img/logos/les-echos.png') no-repeat left top;
+			width: 131px;
+			height: 35px;
+			&:after{
+				width: 131px;
+				height: 35px;
+				background: url('../img/logos/les-echos-nb.png') no-repeat left top;
+			}
+		}
+		&.la-tribune{
+			background: url('../img/logos/la-tribune.png') no-repeat left top;
+			width: 109px;
+			height: 49px;
+			&:after{
+				width: 109px;
+				height: 49px;
+				background: url('../img/logos/la-tribune-nb.png') no-repeat left top;
+			}
 		}
 	}
 }

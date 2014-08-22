@@ -24,12 +24,19 @@ function ouvertureFermetureBlocCommandeHome(type){
 
 $(document).ready(function(){
 	if($("body").hasClass("home")){
+		// Dépliage du bloc "commandez votre fioul"
 		$("a#fil-commande").click(function(){
 			ouvertureFermetureBlocCommandeHome();
 			return false;
 		});
 		$("#order-zipcode").focusin(function(){
 			ouvertureFermetureBlocCommandeHome("ouverture");
+			return false;
+		});
+		
+		// Clic sur le bandeau des références
+		$("ul.refs").click(function(){
+			window.location.href = "#";
 			return false;
 		});
 	}

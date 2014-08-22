@@ -2601,12 +2601,12 @@ textarea {
 /* @group General */
 /* selection */
 ::-moz-selection {
-  background: #000000;
+  background: #fb8206;
   color: #ffffff;
   text-shadow: none;
 }
 ::selection {
-  background: #000000;
+  background: #fb8206;
   color: #ffffff;
   text-shadow: none;
 }
@@ -3272,19 +3272,103 @@ nav.navbar {
 }
 nav.navbar ul.nav {
   margin: 0;
-  padding: 0;
+  padding: 12px 0 0 0;
+}
+nav.navbar ul.nav > .active > a,
+nav.navbar ul.nav > .active > a:hover,
+nav.navbar ul.nav > .active > a:focus {
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+nav.navbar ul.nav > .active > a {
+  color: #2947a0;
+}
+nav.navbar ul.nav > .active > a:hover,
+nav.navbar ul.nav > .active > a:focus {
+  color: #fb8206;
+  outline: none;
 }
 nav.navbar ul.nav li {
-  padding: 0 30px;
+  padding: 6px 20px 0 20px;
 }
 nav.navbar ul.nav li.first {
   padding: 0 20px 0 0;
 }
 nav.navbar ul.nav li.last {
-  padding: 0 0 0 30px;
+  padding: 6px 0 0 20px;
 }
-nav.navbar ul.nav li.dropdown:hover > ul.dropdown-menu {
+nav.navbar ul.nav li.dropdown.open > .dropdown-toggle,
+nav.navbar ul.nav li.dropdown.active > .dropdown-toggle {
+  color: #fb8206;
+  background: none;
+}
+nav.navbar ul.nav li.dropdown:hover > .dropdown-menu {
   display: block;
+}
+nav.navbar ul.nav li.dropdown .dropdown-menu {
+  margin: 0;
+  padding: 25px 0 0 0;
+  background: none;
+  border: none;
+  width: 340px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+nav.navbar ul.nav li.dropdown .dropdown-menu:before,
+nav.navbar ul.nav li.dropdown .dropdown-menu:after {
+  display: none;
+}
+nav.navbar ul.nav li.dropdown .dropdown-menu .dropdown-menu-content {
+  background-color: #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 5px 0 rgba(0,0,0,.29);
+  -moz-box-shadow: 0 5px 0 rgba(0,0,0,.29);
+  box-shadow: 0 5px 0 rgba(0,0,0,.29);
+  padding: 3px;
+  border: none;
+  margin: 0;
+  -webkit-border-radius: 6px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 6px;
+  -moz-background-clip: padding;
+  border-radius: 6px;
+  background-clip: padding-box;
+  display: block;
+}
+nav.navbar ul.nav li.dropdown .dropdown-menu .dropdown-menu-content li {
+  padding: 0;
+  display: block;
+}
+nav.navbar ul.nav li.dropdown .dropdown-menu .dropdown-menu-content li a {
+  line-height: 1.3em;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  border: 1px solid #ffffff;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.813em;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  color: #0c1a4c;
+}
+nav.navbar ul.nav li.dropdown .dropdown-menu .dropdown-menu-content li a:hover {
+  background: #ebeef2;
+  border-color: #e8e8e8;
+  text-decoration: none;
 }
 nav.navbar ul.nav li a {
   font-family: 'lato-bold', sans-serif;
@@ -3296,6 +3380,34 @@ nav.navbar ul.nav li a {
   letter-spacing: 1px;
   padding: 0;
   margin: 0;
+}
+nav.navbar ul.nav li a:hover {
+  color: #fb8206;
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+nav.navbar ul.nav li a.home {
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  width: 24px;
+  height: 30px;
+}
+nav.navbar ul.nav li a.home .icon-maison {
+  font-size: 2.5em;
+  width: 24px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+nav.navbar ul.nav li a.home .icon-maison:before {
+  margin: 0;
+  padding: 0;
 }
 a.logo {
   display: inline-block;
@@ -3902,6 +4014,131 @@ ul#points-illus li p {
   text-rendering: optimizeLegibility;
   color: #0c1a4c;
   line-height: 1.3em;
+}
+/* @end */
+/* @group Bloc refs */
+ul.refs {
+  display: block;
+  width: 100%;
+  height: 92px;
+  line-height: 92px;
+  list-style-type: none;
+  margin: 0;
+  padding: 25px 0;
+  cursor: pointer;
+  text-align: center;
+}
+ul.refs:hover li.ref:after {
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+ul.refs li.ref {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin: 0;
+  padding: 0 23px;
+}
+ul.refs li.ref:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+ul.refs li.ref.tf1 {
+  background: url('../img/logos/tf1.png') no-repeat left top;
+  width: 99px;
+  height: 37px;
+}
+ul.refs li.ref.tf1:after {
+  width: 99px;
+  height: 37px;
+  background: url('../img/logos/tf1-nb.png') no-repeat left top;
+}
+ul.refs li.ref.m6 {
+  background: url('../img/logos/m6.png') no-repeat left top;
+  width: 60px;
+  height: 46px;
+}
+ul.refs li.ref.m6:after {
+  width: 60px;
+  height: 46px;
+  background: url('../img/logos/m6-nb.png') no-repeat left top;
+}
+ul.refs li.ref.le-figaro {
+  background: url('../img/logos/le-figaro.png') no-repeat left top;
+  width: 137px;
+  height: 30px;
+}
+ul.refs li.ref.le-figaro:after {
+  width: 137px;
+  height: 30px;
+  background: url('../img/logos/le-figaro-nb.png') no-repeat left top;
+}
+ul.refs li.ref.france-3 {
+  background: url('../img/logos/france-3.png') no-repeat left top;
+  width: 53px;
+  height: 92px;
+}
+ul.refs li.ref.france-3:after {
+  width: 53px;
+  height: 92px;
+  background: url('../img/logos/france-3-nb.png') no-repeat left top;
+}
+ul.refs li.ref.l-express {
+  background: url('../img/logos/l-express.png') no-repeat left top;
+  width: 142px;
+  height: 34px;
+}
+ul.refs li.ref.l-express:after {
+  width: 142px;
+  height: 34px;
+  background: url('../img/logos/l-express-nb.png') no-repeat left top;
+}
+ul.refs li.ref.france-5 {
+  background: url('../img/logos/france-5.png') no-repeat left top;
+  width: 54px;
+  height: 92px;
+}
+ul.refs li.ref.france-5:after {
+  width: 54px;
+  height: 92px;
+  background: url('../img/logos/france-5-nb.png') no-repeat left top;
+}
+ul.refs li.ref.les-echos {
+  background: url('../img/logos/les-echos.png') no-repeat left top;
+  width: 131px;
+  height: 35px;
+}
+ul.refs li.ref.les-echos:after {
+  width: 131px;
+  height: 35px;
+  background: url('../img/logos/les-echos-nb.png') no-repeat left top;
+}
+ul.refs li.ref.la-tribune {
+  background: url('../img/logos/la-tribune.png') no-repeat left top;
+  width: 109px;
+  height: 49px;
+}
+ul.refs li.ref.la-tribune:after {
+  width: 109px;
+  height: 49px;
+  background: url('../img/logos/la-tribune-nb.png') no-repeat left top;
 }
 /* @end */
 /* @group Bloc comment ça marche / avis / nb litres de fioul */
