@@ -395,6 +395,10 @@ a.lien-video{
 	}
 }
 
+.orange{
+	color: @orangeFioulReduc;
+}
+
 ol.liste-num{
 	list-style-type: none;
 	counter-reset: li-counter;
@@ -1468,8 +1472,10 @@ ul.refs{
 	list-style-type: none;
 	margin: 0;
 	padding: 25px 0;
-	cursor: pointer;
 	text-align: center;
+	.js &{
+		cursor: pointer;
+	}
 	&:hover{
 		li.ref{
 			&:after{
@@ -1683,6 +1689,40 @@ ul.refs{
 				color: @grisTexte;
 			}
 		}
+	}
+}
+
+.bloc-litres-fioul{
+	display: block;
+	margin: 30px 0 30px 0;
+	.lato-bold(1.375em);
+	color: @bleuFioulReduc;
+	line-height: 53px;
+	.zone-chiffre{
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		height: 53px;
+		width: 33px;
+		line-height: 53px;
+		text-align: center;
+		.lh-border-radius(10px);
+		overflow: hidden;
+		background-color: @bleuFonceFioulReduc;
+		padding: 0;
+		margin: 0 3px;
+		color: @blanc;
+	}
+	.point{
+		display: inline-block;
+		vertical-align: top;
+		padding-top: 13px;
+		font-size: 1.5em;
+	}
+	.zone-texte-litres{
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 0 0 20px;
 	}
 }
 

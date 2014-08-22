@@ -2719,6 +2719,9 @@ a.lien-video .icon-play {
 a.lien-video:hover .icon-play {
   color: #fb8206;
 }
+.orange {
+  color: #fb8206;
+}
 ol.liste-num {
   list-style-type: none;
   counter-reset: li-counter;
@@ -4025,8 +4028,10 @@ ul.refs {
   list-style-type: none;
   margin: 0;
   padding: 25px 0;
-  cursor: pointer;
   text-align: center;
+}
+.js ul.refs {
+  cursor: pointer;
 }
 ul.refs:hover li.ref:after {
   zoom: 1;
@@ -4270,6 +4275,47 @@ ul.refs li.ref.la-tribune:after {
   text-rendering: optimizeLegibility;
   line-height: 1.2em;
   color: #575757;
+}
+.bloc-litres-fioul {
+  display: block;
+  margin: 30px 0 30px 0;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.375em;
+  text-rendering: optimizeLegibility;
+  color: #2947a0;
+  line-height: 53px;
+}
+.bloc-litres-fioul .zone-chiffre {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  height: 53px;
+  width: 33px;
+  line-height: 53px;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 10px;
+  -moz-background-clip: padding;
+  border-radius: 10px;
+  background-clip: padding-box;
+  overflow: hidden;
+  background-color: #0c1a4c;
+  padding: 0;
+  margin: 0 3px;
+  color: #ffffff;
+}
+.bloc-litres-fioul .point {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 13px;
+  font-size: 1.5em;
+}
+.bloc-litres-fioul .zone-texte-litres {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 20px;
 }
 /* @end */
 /* @end */
