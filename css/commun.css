@@ -2621,6 +2621,8 @@ body {
   text-rendering: optimizeLegibility;
   background: #ffffff;
   position: relative;
+}
+body {
   overflow-x: hidden;
 }
 .container {
