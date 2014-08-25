@@ -431,7 +431,7 @@ ol.liste-num{
 	}
 }
 
-.bloc-gauche{
+/*.bloc-gauche{
 	display: inline-block;
 	vertical-align: top;
 	width: 40%;
@@ -445,7 +445,30 @@ ol.liste-num{
 	vertical-align: top;
 	width: 60%;
 	height: auto;
+}*/
+
+
+.bloc-gauche{
+	display: inline-block;
+	vertical-align: top;
+	width: 480px;
+	height: auto;
+	.lh-box-sizing(border-box);
+	padding: 0 70px 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
+
+.bloc-droite{
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	height: auto;
+	.lh-box-sizing(border-box);
+	padding: 0 0 0 480px;
+}
+
 
 .btn{
 	&.btn-link{
@@ -1471,7 +1494,7 @@ ul#points-illus{
 ul.refs{
 	display: block;
 	width: 100%;
-	height: 92px;
+	height: auto;
 	line-height: 92px;
 	list-style-type: none;
 	margin: 0;
@@ -1844,6 +1867,22 @@ ul.refs{
 			}
 		}
 	}
+	#bloc-avis{
+		ul#avis{
+			padding: 0 0 0 250px;
+			li{
+				.nom-client{
+					padding: 2px 0 0 0;
+				}
+				.note {
+					position: relative;
+					top: inherit;
+					right: inherit;
+					margin: 0 0 8px 0;
+				}
+			}
+		}
+	}
 	/* @end */
 }
 
@@ -1932,6 +1971,38 @@ ul.refs{
 			}
 		}
 	}
+	#bloc-avis{
+		padding: 30px;
+		#moyenne-avis {
+			display: block;
+			width: 217px;
+			height: auto;
+			position: relative;
+			top: inherit;
+			margin: 0 auto;
+			left: inherit;
+		}
+		ul#avis{
+			padding: 0;
+			margin: 20px 0 0 0;
+			li{
+				display: inline-block;
+				vertical-align: top;
+				width: 100%;
+				margin: 0 0 20px 0;
+				padding: 0;
+				border: none;
+				.nom-client{
+					padding: 2px 120px 0 0;
+				}
+				.note {
+					position: absolute;
+					top: 0;
+					right: 0;
+				}
+			}
+		}
+	}
 	/* @end */
 }
 
@@ -1991,6 +2062,33 @@ ul.refs{
 	ul#points-illus{
 		width: 100%;
 	}
+	.bloc-gauche{
+		display: block;
+		width: 100%;
+		padding: 0;
+		position: relative;
+		top: inherit;
+		left: inherit;
+	}
+	
+	.bloc-droite{
+		display: block;
+		padding: 0;
+		margin: 20px 0 0 0;
+	}
+	#bloc-avis{
+		ul#avis {
+			li, li.last{
+				width: 50%;
+				padding: 0 20px;
+				.lh-box-sizing(border-box);
+				.note{
+					right: 20px;
+				}
+			}
+		}
+	} 
+	
 	/* @end */
 }
 
@@ -2063,6 +2161,20 @@ ul.refs{
 			}
 		}
 	}
+	
+	#bloc-avis{
+		ul#avis {
+			li, li.last{
+				width: 100%;
+				padding: 0;
+				.note{
+					position: relative;
+					right: inherit;
+					top: inherit;
+				}
+			}
+		}
+	} 
 	
 	/* @end */
 }
