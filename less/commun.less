@@ -1104,7 +1104,7 @@ footer{
 		background: url('../layoutImg/journal.png') no-repeat left top;
 		position: absolute;
 		right: 80px;
-		bottom: -150px;
+		bottom: -165px;
 		.lh-rotate(12deg);
 		ul.social-footer{
 			display: block;
@@ -1858,7 +1858,16 @@ ul.refs{
 		.energie{
 			width: 60%;
 		}
+		ul#menu-footer{
+			li.col-menu-footer{
+				padding: 0 25px;
+			}
+		}
+		.journal{
+			right: 40px;
+		}
 	}
+	
 	a.logo {
 		width: 248px;
 		margin: 5px 0 0 0;
@@ -1951,8 +1960,30 @@ ul.refs{
 			}
 		}
 	}
-	
-	
+	footer{
+		ul#menu-footer {
+			margin: 0;
+			text-align: right;
+			li.col-menu-footer {
+				padding: 0 15px;
+				width: 32%;
+				text-align: left;
+			}
+		}
+		.energie {
+			width: 100%;
+			margin: 0 0 20px 0;
+		}
+		.journal{
+			.lh-rotate(0deg);
+			right: inherit;
+			left: 50%;
+			margin-left: -198px;
+			position: relative;
+			margin-bottom: -165px;
+			bottom: inherit;
+		}
+	}
 }
 
 @media (max-width: 979px) {
@@ -1967,6 +1998,53 @@ ul.refs{
 	body {
 		padding-right: 0;
 		padding-left: 0;
+	}
+	footer{
+		.container{
+			width: 95%;
+		}
+		ul#menu-footer {
+			text-align: left;
+			li.col-menu-footer {
+				padding: 0 15px;
+				width: 50%;
+				margin: 0 0 15px 0;
+				&.first-col{
+					width: 100%;
+					ul.cb{
+						margin: 0 auto;
+					}
+					.paiement{
+						margin: 15px auto 25px auto;
+					}
+					ul.paiements{
+						width: 120px;
+						margin: 25px auto 0 auto;
+						display: none;
+					}
+				}
+				ul.liste-footer {
+					margin: 0 0 20px 0;
+				}
+				.titre-footer{
+					br{
+						display: none;
+					}
+				}
+			}
+		}
+		.journal{
+			width: 195px;
+			height: 55px;
+			background: none;
+			margin: 0 auto;
+			left: inherit;
+			ul.social-footer {
+				position: relative;
+				top: inherit;
+				right: inherit;
+			}
+		}
 	}
 	/* @group responsive Home */
 	ul#points-illus{

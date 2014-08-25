@@ -3591,7 +3591,7 @@ footer .journal {
   background: url('../layoutImg/journal.png') no-repeat left top;
   position: absolute;
   right: 80px;
-  bottom: -150px;
+  bottom: -165px;
   -webkit-transform: rotate(12deg);
   -moz-transform: rotate(12deg);
   -ms-transform: rotate(12deg);
@@ -4435,6 +4435,12 @@ ul.refs li.ref.la-tribune:after {
   footer .energie {
     width: 60%;
   }
+  footer ul#menu-footer li.col-menu-footer {
+    padding: 0 25px;
+  }
+  footer .journal {
+    right: 40px;
+  }
   a.logo {
     width: 248px;
     margin: 5px 0 0 0;
@@ -4523,6 +4529,32 @@ ul.refs li.ref.la-tribune:after {
   ul#menu-top-bar li a .illus-menu {
     margin: 0 16px 0 0;
   }
+  footer ul#menu-footer {
+    margin: 0;
+    text-align: right;
+  }
+  footer ul#menu-footer li.col-menu-footer {
+    padding: 0 15px;
+    width: 32%;
+    text-align: left;
+  }
+  footer .energie {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+  footer .journal {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    right: inherit;
+    left: 50%;
+    margin-left: -198px;
+    position: relative;
+    margin-bottom: -165px;
+    bottom: inherit;
+  }
 }
 @media (max-width: 979px) {
   /* @group responsive Home */
@@ -4535,6 +4567,49 @@ ul.refs li.ref.la-tribune:after {
   body {
     padding-right: 0;
     padding-left: 0;
+  }
+  footer .container {
+    width: 95%;
+  }
+  footer ul#menu-footer {
+    text-align: left;
+  }
+  footer ul#menu-footer li.col-menu-footer {
+    padding: 0 15px;
+    width: 50%;
+    margin: 0 0 15px 0;
+  }
+  footer ul#menu-footer li.col-menu-footer.first-col {
+    width: 100%;
+  }
+  footer ul#menu-footer li.col-menu-footer.first-col ul.cb {
+    margin: 0 auto;
+  }
+  footer ul#menu-footer li.col-menu-footer.first-col .paiement {
+    margin: 15px auto 25px auto;
+  }
+  footer ul#menu-footer li.col-menu-footer.first-col ul.paiements {
+    width: 120px;
+    margin: 25px auto 0 auto;
+    display: none;
+  }
+  footer ul#menu-footer li.col-menu-footer ul.liste-footer {
+    margin: 0 0 20px 0;
+  }
+  footer ul#menu-footer li.col-menu-footer .titre-footer br {
+    display: none;
+  }
+  footer .journal {
+    width: 195px;
+    height: 55px;
+    background: none;
+    margin: 0 auto;
+    left: inherit;
+  }
+  footer .journal ul.social-footer {
+    position: relative;
+    top: inherit;
+    right: inherit;
   }
   /* @group responsive Home */
   ul#points-illus {
