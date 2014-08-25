@@ -283,6 +283,7 @@ $(document).ready(function(){
                             // afficher la dernière bulle par défaut
                             this.chart.series[0].data[this.chart.series[0].data.length-1].setState('hover');
                             this.chart.tooltip.refresh(this.chart.series[0].data[this.chart.series[0].data.length-1]);
+                            this.series.chart.tooltip.show();
                         }
                     }
                 } 
