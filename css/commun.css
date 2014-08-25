@@ -4022,6 +4022,19 @@ a#fil-commande #boule {
   background: url('../layoutImg/expert-du-prix.png') no-repeat 60% 32%;
 }
 .graphTooltip {
+  height: 110px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: 0 15px 15px rgba(3,9,25,0.35);
+  -moz-box-shadow: 0 15px 15px rgba(3,9,25,0.35);
+  box-shadow: 0 15px 15px rgba(3,9,25,0.35);
+  -webkit-border-radius: 6px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 6px;
+  -moz-background-clip: padding;
+  border-radius: 6px;
+  background-clip: padding-box;
+  display: block;
   width: 190px;
   text-align: center;
   font-family: 'lato', sans-serif;
@@ -4066,6 +4079,13 @@ a#fil-commande #boule {
 }
 .graphTooltip a:hover {
   color: #2947a0;
+}
+.graphTooltip.today {
+  width: 105px;
+  height: 51px;
+}
+.graphTooltip.today strong {
+  padding: 4px 0;
 }
 /* @end */
 /* @group Bloc points */

@@ -83,26 +83,33 @@ $(document).ready(function(){
 	        }
 	    });   
 		// création du graphe
-		$('#part-graph').highcharts({
+		var myChart = new Highcharts.Chart({
 			title: {
 				text: ''
 			},
 			chart: {
 			    backgroundColor: '',
+			    renderTo: 'part-graph'
 			},
 			tooltip: {
-	            backgroundColor: 'rgba(255,255,255,0.95)',
+	            backgroundColor: '',
 	            borderWidth: 0,
 	            borderColor: null,
 	            useHTML:true,
+	            shadow:false,
 	            shape: 'square',
 	            style: {
 	            	padding: '0',
 	            	'border-radius': '5px',
 	            },
 	            formatter: function() {
-	        		var fioulVal = this.y;
-	                return '<div class="graphTooltip"><h5>'+Highcharts.dateFormat('Le %e %B %Y',new Date(this.x))+'</h5><strong>' + fioulVal.toString().replace(".",",") + ' <span>€/litre</span></strong><p>Prix moyen national fioulreduc <br />pour 1000 litres de fioul standard <a href="#">En savoir +</a></div>';
+		            var fioulVal = this.y;
+		            var dayVal = Highcharts.dateFormat('Le %e %B %Y',new Date(this.x));
+	            	if (this.key == 'last') {
+	            	    return '<div class="graphTooltip today"><h5>AUJOURD’HUI</h5><strong>' + fioulVal.toString().replace(".",",") + ' <span>€</span>';
+	            	} else {
+	            		return '<div class="graphTooltip"><h5>'+dayVal+'</h5><strong>' + fioulVal.toString().replace(".",",") + ' <span>€/litre</span></strong><p>Prix moyen national fioulreduc <br />pour 1000 litres de fioul standard <a href="#">En savoir +</a></div>';
+	            	}
                 }
 		    },
 		    xAxis: {
@@ -216,15 +223,36 @@ $(document).ready(function(){
 		        pointStart: Date.UTC(2013, 0, 01),
 		        data: [0.838, 0.848, 0.846, 0.855, 0.879, 0.899, 0.871, 0.888, 0.886, 0.857, 0.859, 0.857, 0.861, 0.868, 0.879, 0.877, 0.868, 0.877, 0.879, 0.899, 0.913, 0.914, 0.892, 0.877, 0.879, 0.877, 0.853, 0.858, 0.877, 0.875, 0.874, 
 		        	/* Dernier point avec Halo */ 
-		        	{y:0.895, marker:{enabled: true,radius:22,fillColor: {
-			            radialGradient: {cx: 0.5, cy: 0.5, r: 0.5},
-			            stops: [
-			                [0, 'rgba(255,255,255,1)'],
-			                [0.08, 'rgba(255,255,255,1)'],
-			                [0.15, 'rgba(255,255,255,0.2)'],
-			                [1, 'rgba(255,255,255,0)']
-			            ]
-			        }}}
+		        	{y:0.895, name: 'last', marker:{
+		        		enabled: true,
+		        		radius:15,
+		        		fillColor: {
+				            radialGradient: {cx: 0.5, cy: 0.5, r: 0.5},
+				            stops: [
+				                [0, 'rgba(255,255,255,1)'],
+				                [0.1, 'rgba(255,255,255,1)'],
+				                [0.18, 'rgba(255,255,255,0.2)'],
+				                [1, 'rgba(255,255,255,0)']
+				            ]
+			        	},
+			        	states: {
+			        	    hover: {
+			        	        radius: 22,
+			        	        lineWidth: 0,
+			        	        lineWidthPlus: 0,
+			        	        lineColor: 'null',
+			        	        fillColor: {
+			        	            radialGradient: {cx: 0.5, cy: 0.5, r: 0.5},
+			        	            stops: [
+			        	                [0, 'rgba(255,255,255,1)'],
+			        	                [0.08, 'rgba(255,255,255,1)'],
+			        	                [0.15, 'rgba(255,255,255,0.2)'],
+			        	                [1, 'rgba(255,255,255,0)']
+			        	            ]
+			        	        }
+			        	    }
+			        	}
+			        }}
 		        ]
 		    }],
 		    plotOptions: {
@@ -245,7 +273,19 @@ $(document).ready(function(){
 		        },
 		        series: {
                     allowPointSelect: false,
-                }
+                	events: {
+                		afterAnimate: function () {
+                		  	// afficher la dernière bulle par défaut
+                		  	this.chart.series[0].data[this.chart.series[0].data.length-1].setState('hover');
+                		  	this.chart.tooltip.refresh(this.chart.series[0].data[this.chart.series[0].data.length-1]);
+                		},
+                        mouseOut: function () {
+                            // afficher la dernière bulle par défaut
+                            this.chart.series[0].data[this.chart.series[0].data.length-1].setState('hover');
+                            this.chart.tooltip.refresh(this.chart.series[0].data[this.chart.series[0].data.length-1]);
+                        }
+                    }
+                } 
 		    },
 		    exporting: {
 		        enabled: false
