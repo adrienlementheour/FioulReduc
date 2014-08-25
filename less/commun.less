@@ -239,6 +239,9 @@
 .icon-sousligne:before {
 	content: "\e608";
 }
+.icon-navicon:before {
+	content: "\f0c9";
+}
 
 /* @end */
 
@@ -293,6 +296,7 @@ html, body{
 	.lato(1em);
 	background: @blanc;
 	position: relative;
+	overflow-x: hidden;
 }
 
 .container{
@@ -302,7 +306,6 @@ html, body{
 	height: auto;
 	margin: 0 auto;
 	padding: 0;
-	
 }
 
 .bloc-full{
@@ -866,15 +869,41 @@ header{
 	top: 0;
 	left: 0;
 	.lh-box-shadow(~"0 2px 0 rgba(0,0,0,.08)");
-	z-index: 3;
+	z-index: 6;
 }
-nav.navbar{
+
+a#bouton-menu-responsive{
+	display: block;
+	width: 54px;
+	height: 54px;
+	line-height: 54px;
+	text-align: center;
+	margin: 0 0 0 20px;
+	padding: 0;
+	display: none;
+	.icon-navicon{
+		display: block;
+		width: 100%;
+		height: 100%;
+		line-height: 54px;
+		margin: 0;
+		padding: 0;
+		font-size: 1.8em;
+		text-align: center;
+		color: @bleuFioulReduc;
+	}
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+nav{
 	display: block;
 	width: 100%;
 	height: 54px;
 	margin: 0;
 	padding: 0;
-	ul.nav{
+	ul{
 		margin: 0;
 		padding: 12px 0 0 0;
 		&>.active>a, >.active>a:hover, &>.active>a:focus{
@@ -889,6 +918,8 @@ nav.navbar{
 			outline: none;
 		}
 		li{
+			display: inline-block;
+			vertical-align: top;
 			padding: 6px 20px 0 20px;
 			&.first{
 				padding: 0 20px 0 0;
@@ -900,6 +931,7 @@ nav.navbar{
 				&.open>.dropdown-toggle, &.active>.dropdown-toggle{
 					color: @orangeFioulReduc;
 					background: none;
+					
 				}
 				&:hover{
 					> .dropdown-menu {
@@ -957,10 +989,12 @@ nav.navbar{
 				padding: 0;
 				margin: 0;
 				line-height: 1.3em;
+				text-decoration: none!important;
 				&:hover{
 					color: @orangeFioulReduc;
 					background: none;
 					.lh-box-shadow(none);
+					text-decoration: none;
 				}
 				&.home{
 					background: none;
@@ -979,6 +1013,9 @@ nav.navbar{
 							margin: 0;
 							padding: 0;
 						}
+					}
+					.txt-home{
+						display: none;
 					}
 				}
 			}
@@ -1837,13 +1874,15 @@ ul.refs{
 			padding: 0;
 		}
 	}
-	nav.navbar{
-		ul.nav{
+	nav{
+		ul{
 			li{
-				width: 16%;
-				.lh-box-sizing(border-box);
-				&.first{
-					width: 1%;
+				padding: 6px 9px 0 9px;
+				li.first {
+					padding: 0 9px 0 0;
+				}
+				&.last {
+					padding: 6px 0 0 9px
 				}
 			}
 		}
@@ -1902,6 +1941,80 @@ ul.refs{
 }
 
 @media (max-width: 1150px) {
+	header.bloc-full{
+		height: 54px;
+		.container{
+			width: 100%;
+		}
+	}
+	a#bouton-menu-responsive{
+		display: block;
+	}
+	nav{
+		position: fixed;
+		top: 0;
+		
+		////////////////
+		left: 0;
+		//left: -250px;
+		.lh-translateX(-250px);
+		////////////////
+		
+		width: 250px;
+		min-height: 100%;
+		background-color: @blanc;
+		height: auto;
+		ul{
+			margin: 0;
+			padding: 0;
+			display: block;
+			width: 100%;
+			li{
+				margin: 0;
+				padding: 0;
+				display: block;
+				width: 100%;
+				height: 58px;
+				&.first, &.last{
+					margin: 0;
+					padding: 0;
+					display: block;
+					width: 100%;
+				}
+				a{
+					display: block;
+					width: 100%;
+					height: 100%;
+					line-height: 60px;
+					.lh-box-sizing(border-box);
+					padding-left: 20px;
+					border-bottom: 1px solid #c0c2cc;
+					&.home{
+						display: block;
+						width: 100%;
+						height: 100%;
+						line-height: 60px;
+						.lh-box-sizing(border-box);
+						padding-left: 20px;
+						border-bottom: 1px solid #c0c2cc;
+						.icon-maison {
+						font-size: 2.5em;
+						width: 24px;
+						height: 100%;
+						line-height: 60px;
+						display: inline-block;
+						vertical-align: top;
+						}
+						.txt-home{
+							display: inline-block;
+							vertical-align: top;
+							margin: 0 0 0 5px;
+						}
+					}
+				}
+			}
+		}
+	}
 	footer{
 		.energie{
 			width: 60%;
