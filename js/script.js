@@ -3,6 +3,14 @@
 ///////////////
 
 /////////////////////////////////////////////////////////////////////////
+/////////// FONCTION POUR OUVRIR ET FERMER LE MENU RESPONSIVE //////////
+/////////////////////////////////////////////////////////////////////////
+function ouvertureFermetureMenuResponsive(){
+	TweenMax.to($("body"), 0.5, {x: "250px", ease:Cubic.easeInOut});
+	TweenMax.to($("nav"), 0.5, {x: "0", ease:Cubic.easeInOut});
+}
+
+/////////////////////////////////////////////////////////////////////////
 /////// FONCTION POUR OUVRIR ET FERMER LE BLOC COMMANDE DE LA HOME //////
 /////////////////////////////////////////////////////////////////////////
 function ouvertureFermetureBlocCommandeHome(type){
@@ -25,6 +33,10 @@ function ouvertureFermetureBlocCommandeHome(type){
 $(document).ready(function(){
 	if($("body").hasClass("home")){
 		// Dépliage du bloc "commandez votre fioul"
+		$("a#bouton-menu-responsive").click(function(){
+			ouvertureFermetureMenuResponsive();
+			return false;
+		});
 		$("a#fil-commande").click(function(){
 			ouvertureFermetureBlocCommandeHome();
 			return false;
