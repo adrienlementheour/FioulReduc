@@ -620,8 +620,8 @@ ul.actus{
 						height: 100%;
 						.lh-border-top-left-radius(6px);
 						.lh-border-bottom-left-radius(6px);
-						.lh-box-sizing(border-box);
-						padding: 35px 0 0 0;
+						
+						padding-top: 35px;
 						margin: 0;
 						h3{
 							padding: 10px 0 0 0;
@@ -669,14 +669,14 @@ ul.actus{
 						&.visu-fond-item-entretien-chaudiere{
 							background-image: url('../layoutImg/illus-carousel/visu-fond-item-entretien-chaudiere.png');
 							background-repeat: no-repeat;
-							background-position: left top;
+							background-position: center top;
 							background-size: cover;
 						}
 						.visu-item{
 							&.visu-item-entretien-chaudiere{
 								width: 391px;
 								height: 258px;
-								background: url('../layoutImg/illus-carousel/visu-item-entretien-chaudiere.png') no-repeat left top;
+								background: url('../layoutImg/illus-carousel/visu-item-entretien-chaudiere.png') no-repeat center top;
 								left: 50%;
 								margin-left: -195px;
 								bottom: 0px;
@@ -684,7 +684,7 @@ ul.actus{
 							&.visu-item-paiement{
 								width: 405px;
 								height: 297px;
-								background: url('../layoutImg/illus-carousel/visu-item-paiement.png') no-repeat left top;
+								background: url('../layoutImg/illus-carousel/visu-item-paiement.png') no-repeat center top;
 								left: 50%;
 								margin-left: -203px;
 								bottom: 0px;
@@ -697,6 +697,7 @@ ul.actus{
 						width: 100%;
 						.lh-border-bottom-left-radius(6px);
 						.lh-border-bottom-right-radius(6px);
+						
 						h3{
 							padding: 10px 0 0 0;
 						}
@@ -714,7 +715,8 @@ ul.actus{
 					background-color: #fd7c01;
 					.lh-background-image(~"linear-gradient(bottom, rgba(242,84,15,.7) -30.51%, rgba(242,84,15,0) 69.49%)");
 					margin: 0;
-					padding: 0;
+					padding: 10px;
+					.lh-box-sizing(border-box);
 					h3{
 						margin: 0;
 					}
@@ -2238,6 +2240,7 @@ ul.refs{
 				&.item-vertical{
 					.zone-texte-item{
 						width: 50%;
+						
 					}
 					.zone-visu-item{
 						width: 50%;
@@ -2249,6 +2252,38 @@ ul.refs{
 								bottom: 0;
 								left: inherit;
 								right: 0;
+								background-size: cover;
+							}
+						}
+					}
+				}
+				&.item-horizontal{
+					.zone-texte-item{
+						p{
+							font-size: 0.9em;
+						}
+					}
+					.zone-visu-item{
+						.visu-item{
+							&.visu-item.visu-item-paiement{
+								width: 100%;
+								height: 100%;
+								top: inherit;
+								bottom: 0;
+								left: 0;
+								right: inherit;
+								background-size: auto 100%;
+								margin: 0;
+							}
+							&.visu-item.visu-item-entretien-chaudiere{
+								width: 100%;
+								height: 100%;
+								top: inherit;
+								bottom: 0;
+								left: 0;
+								right: inherit;
+								background-size: auto 100%;
+								margin: 0;
 							}
 						}
 					}
@@ -2263,6 +2298,9 @@ ul.refs{
 				right: -35px;
 			}
 		}
+	}
+	h3.titre-item {
+		font-size: 1.4em;
 	}
 	/* @end */
 }
