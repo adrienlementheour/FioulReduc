@@ -39,6 +39,79 @@ $(document).ready(function(){
 			window.location.href = "#";
 			return false;
 		});
+		
+		// HighCharts
+		$('#part-graph').highcharts({
+			title: {
+				text: ''
+			},
+			chart: {
+			    backgroundColor: ''
+			},
+		    xAxis: {
+		        type: 'datetime',
+		        minRange: 364 * 24 * 3600000, 
+                tickmarkPlacement: 'on',
+                gridLineWidth: 1
+		    },
+		    yAxis: {
+		        title: {
+		            text: ''
+		        },
+		        plotLines: [{
+		            value: 0,
+		            width: 1,
+		            color: '#808080'
+		        }]
+		    },
+		    credits: {
+		           enabled: false
+		    },
+		    tooltip: {
+		        valueSuffix: '°C'
+		    },
+		    legend: {
+		        layout: 'vertical',
+		        align: 'right',
+		        verticalAlign: 'middle',
+		        borderWidth: 0
+		    },
+		    series: [{
+		    	color: {
+		    	    linearGradient: { x0: 0, x1: 0.2, x2: 0.6, x3: 1},
+		    	    stops: [
+		    	        [0, '#ef4d00'],
+		    	        [1, '#f78800'],
+		    	        [2, '#ffb700'],
+		    	        [3, '#ffffff']
+		    	    ]
+		    	},
+		    	lineWidth: 6,
+		    	shadow: {
+		    	    color: 'rgba(3,9,25,0.2)',
+		    	    width: 15,
+		    	    offsetX: 0,
+		    	    offsetY: 15
+		    	},
+		        name: 'Prix',
+		        pointInterval: 60 * 24 * 3600 * 1000,
+		        pointStart: Date.UTC(2013, 0, 01),
+		        data: [0.839, 0.858, 0.896, 0.915, 0.857, 0.839, 0.838, 0.879, 0.877, 0.858, 0.877]
+		    }],
+		    plotOptions: {
+		        line: {
+		            marker: {
+		                enabled: false
+		            }
+		        }
+		    },
+		    exporting: {
+		        enabled: false
+		    },
+		    legend: {
+		        enabled: false
+		    }
+		});
 	}
 });
 

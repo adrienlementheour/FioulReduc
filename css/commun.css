@@ -3977,6 +3977,9 @@ a#fil-commande #boule {
   height: 50px;
   overflow: hidden;
 }
+#part-graph {
+  width: 100%;
+}
 /* @end */
 /* @group Bloc points */
 ul#points-illus {
