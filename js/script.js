@@ -7,7 +7,7 @@
 /////////////////////////////////////////////////////////////////////////
 function ouvertureFermetureMenuResponsive(){
 	TweenMax.to($("body"), 0.5, {x: "250px", ease:Cubic.easeInOut});
-	TweenMax.to($("nav"), 0.5, {x: "0", ease:Cubic.easeInOut});
+	//TweenMax.to($("nav"), 0.5, {x: "0", ease:Cubic.easeInOut});
 }
 
 /////////////////////////////////////////////////////////////////////////
