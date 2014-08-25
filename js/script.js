@@ -158,38 +158,38 @@ $(document).ready(function(){
                 },
 		    	lineWidth: 6,
 		    	shadow: {
-		    	    color: 'rgba(3,9,25,0.2)',
+		    	    color: 'rgba(3,9,25,0.15)',
 		    	    width: 15,
 		    	    offsetX: 0,
 		    	    offsetY: 15
 		    	},
 		    	marker: {
                     fillColor: '#ffffff',
-                    lineWidth: 1,
+                    lineWidth: 0,
                     lineColor: null,
                     radius:4,
                     radiusPlus:0,
                     states: {
                         hover: {
-                            radiusPlus: 9,
-                            lineWidth: 1,
-                            lineWidthPlus: 1,
-                            fillColor: {
-                                radialGradient: {},
-                                stops: [
-                                    [0, 'rgba(255,255,255,1)'],
-                                    [0.2, 'rgba(255,255,255,1)'],
-                                    [0.35, 'rgba(255,255,255,0.6)'],
-                                    [1, 'rgba(255,255,255,0)']
-                                ]
-                            }
+                            radiusPlus: 0,
+                            lineWidth: 10,
+                            lineWidthPlus: 5,
+                            lineColor: 'rgba(255,255,255,0.2)',
                         }
                     }
 	            },
 		        // SAISIE DES POINTS ET DE L'INTERVALLE
 		        pointInterval: 15 * 24 * 3600 * 1000,
 		        pointStart: Date.UTC(2013, 0, 01),
-		        data: [0.838, 0.848, 0.846, 0.855, 0.879, 0.899, 0.871, 0.888, 0.886, 0.857, 0.859, 0.857, 0.861, 0.868, 0.879, 0.877, 0.868, 0.877, 0.879, 0.877, 0.909, 0.898, 0.892, 0.877, 0.879, 0.877, 0.853, 0.858, 0.877, 0.875, 0.874, 0.895]
+		        data: [0.838, 0.848, 0.846, 0.855, 0.879, 0.899, 0.871, 0.888, 0.886, 0.857, 0.859, 0.857, 0.861, 0.868, 0.879, 0.877, 0.868, 0.877, 0.879, 0.899, 0.913, 0.914, 0.892, 0.877, 0.879, 0.877, 0.853, 0.858, 0.877, 0.875, 0.874, {y:0.895, marker:{enabled: true,radius:22,fillColor: {
+		            radialGradient: {cx: 0.5, cy: 0.5, r: 0.5},
+		            stops: [
+		                [0, 'rgba(255,255,255,1)'],
+		                [0.08, 'rgba(255,255,255,1)'],
+		                [0.15, 'rgba(255,255,255,0.2)'],
+		                [1, 'rgba(255,255,255,0)']
+		            ]
+		        }}}]
 		    }],
 		    plotOptions: {
 		        line: {
