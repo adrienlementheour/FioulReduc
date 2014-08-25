@@ -3979,6 +3979,7 @@ a#fil-commande #boule {
 }
 #part-graph {
   width: 100%;
+  background: url('../layoutImg/expert-du-prix.png') no-repeat 60% 32%;
 }
 /* @end */
 /* @group Bloc points */

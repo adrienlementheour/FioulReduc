@@ -41,51 +41,109 @@ $(document).ready(function(){
 		});
 		
 		// HighCharts
+		// cercles sur les axes 
+		Highcharts.wrap(Highcharts.Tick.prototype, 'getMarkPath', function (prev, x, y, tickLength, tickWidth, horiz, renderer) {
+	        var path = renderer.arc(x, y, Math.round(tickLength / 2), 0, -Math.PI /2 , 3 * Math.PI / 2).d.split(' ');
+	        return path;
+	    });
+	    Highcharts.wrap(Highcharts.Tick.prototype, 'render', function (prev, index, old, opacity) {
+	        prev.apply(this, Array.prototype.slice.call(arguments, 1));
+	        if(this && this.mark) {
+	            this.mark.attr({
+	                fill: "#ffffff",
+	                opacity: 0.25
+	            });
+	        }
+	    });   
+		// création du graphe
 		$('#part-graph').highcharts({
 			title: {
 				text: ''
 			},
 			chart: {
-			    backgroundColor: ''
+			    backgroundColor: '',
 			},
 		    xAxis: {
+		    	labels: {
+	    	        style: {
+	    	            color: "#a6d8f2",
+	    	            font: '1em "lato-italic", sans-serif'
+	    	        }
+		    	},
+		    	/* SI ON VOULAIT UNE GRILLE FINE
+		    	 minorGridLineColor:"rgba(255,255,255,0.1)",
+		    	 minorGridLineWidth: 1,
+		    	 minorTickLength: 0,
+		    	 minorTickInterval: 10 * 24 * 3600000, */
 		        type: 'datetime',
 		        minRange: 364 * 24 * 3600000, 
                 tickmarkPlacement: 'on',
-                gridLineWidth: 1
+                gridLineWidth: 1,
+                endOnTick:true,
+                startOnTick:false,
+                gridLineWidth: 1,
+                gridLineColor:"rgba(255,255,255,0.1)",
+                lineColor:"rgba(255,255,255,0)",
+                tickWidth:3,
+                tickLength: 3,
+                tickPosition: 'inside',
+                // SAISIE DE L'INDEX DE DÉBUT
+                min: Date.UTC(2012, 11, 17)
+               
 		    },
 		    yAxis: {
 		        title: {
 		            text: ''
 		        },
-		        plotLines: [{
-		            value: 0,
-		            width: 1,
-		            color: '#808080'
-		        }]
+		        labels: {
+			        style: {
+			            color: "#a6d8f2",
+			            font: '1em "lato-italic", sans-serif'
+			        }
+		        },
+		        /* SI ON VOULAIT UNE GRILLE FINE
+		        minorGridLineColor:"rgba(255,255,255,0.1)",
+		        minorGridLineWidth: 1,
+		        minorTickLength: 0,
+		        minorTickInterval: 'auto', */
+		        tickmarkPlacement: 'on',
+		        gridLineWidth: 1,
+		        gridLineColor:"rgba(255,255,255,0.1)",
+		        lineColor:"rgba(255,255,255,0)",
+		        endOnTick:true,
+		        startOnTick:false,
+		        tickWidth:3,
+		        tickLength: 3,
+		        tickPosition: 'inside',
 		    },
 		    credits: {
 		           enabled: false
 		    },
-		    tooltip: {
-		        valueSuffix: '°C'
-		    },
 		    legend: {
-		        layout: 'vertical',
-		        align: 'right',
-		        verticalAlign: 'middle',
-		        borderWidth: 0
+		        enabled: false
 		    },
 		    series: [{
-		    	color: {
-		    	    linearGradient: { x0: 0, x1: 0.2, x2: 0.6, x3: 1},
+	    		color: {
+		    	    linearGradient: {},
 		    	    stops: [
-		    	        [0, '#ef4d00'],
-		    	        [1, '#f78800'],
-		    	        [2, '#ffb700'],
-		    	        [3, '#ffffff']
+		    	        [0.1, '#ef4d00'],
+		    	        [0.3, '#f78800'],
+		    	        [0.6, '#ffb700'],
+		    	        [0.9, '#ffffff']
 		    	    ]
 		    	},
+		    	states: {
+                    hover: {
+                        lineWidthPlus: 0,
+                        halo: {
+                        	size: 0,
+                        	attributes: {
+                        	    fill: '',
+                        	    stroke: ''
+                        	}
+                        }
+                    }
+                },
 		    	lineWidth: 6,
 		    	shadow: {
 		    	    color: 'rgba(3,9,25,0.2)',
@@ -93,28 +151,57 @@ $(document).ready(function(){
 		    	    offsetX: 0,
 		    	    offsetY: 15
 		    	},
-		        name: 'Prix',
-		        pointInterval: 60 * 24 * 3600 * 1000,
+		    	marker: {
+                    fillColor: '#ffffff',
+                    lineWidth: 1,
+                    lineColor: null,
+                    radius:4,
+                    radiusPlus:0,
+                    states: {
+                        hover: {
+                            radiusPlus: 9,
+                            lineWidth: 1,
+                            lineWidthPlus: 1,
+                            fillColor: {
+                                radialGradient: {},
+                                stops: [
+                                    [0, 'rgba(255,255,255,1)'],
+                                    [0.2, 'rgba(255,255,255,1)'],
+                                    [0.35, 'rgba(255,255,255,0.6)'],
+                                    [1, 'rgba(255,255,255,0)']
+                                ]
+                            }
+                        }
+                    }
+	            },
+		        // SAISIE DES POINTS ET DE L'INTERVALLE
+		        pointInterval: 15 * 24 * 3600 * 1000,
 		        pointStart: Date.UTC(2013, 0, 01),
-		        data: [0.839, 0.858, 0.896, 0.915, 0.857, 0.839, 0.838, 0.879, 0.877, 0.858, 0.877]
+		        data: [0.838, 0.848, 0.846, 0.855, 0.879, 0.899, 0.871, 0.888, 0.886, 0.857, 0.859, 0.857, 0.861, 0.868, 0.879, 0.877, 0.868, 0.877, 0.879, 0.877, 0.909, 0.898, 0.892, 0.877, 0.879, 0.877, 0.853, 0.858, 0.877, 0.875, 0.874, 0.895]
 		    }],
 		    plotOptions: {
 		        line: {
 		            marker: {
-		                enabled: false
+		                enabled: false,
+		                states: {
+		                    select: {
+		                    	enabled: false,
+		                    }
+		                }
+		            },
+		            states: {
+		                select: {
+		                	enabled: false,
+		                }
 		            }
-		        }
+		        },
+		        series: {
+                    allowPointSelect: false,
+                }
 		    },
 		    exporting: {
 		        enabled: false
 		    },
-		    legend: {
-		        enabled: false
-		    }
 		});
 	}
-});
-
-$( window ).resize(function() {
-
 });
