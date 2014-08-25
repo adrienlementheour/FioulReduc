@@ -225,13 +225,13 @@ $(document).ready(function(){
 		        	/* Dernier point avec Halo */ 
 		        	{y:0.895, name: 'last', marker:{
 		        		enabled: true,
-		        		radius:15,
+		        		radius:22,
 		        		fillColor: {
 				            radialGradient: {cx: 0.5, cy: 0.5, r: 0.5},
 				            stops: [
 				                [0, 'rgba(255,255,255,1)'],
-				                [0.1, 'rgba(255,255,255,1)'],
-				                [0.18, 'rgba(255,255,255,0.2)'],
+				                [0.08, 'rgba(255,255,255,1)'],
+				                [0.15, 'rgba(255,255,255,0.2)'],
 				                [1, 'rgba(255,255,255,0)']
 				            ]
 			        	},
@@ -276,12 +276,10 @@ $(document).ready(function(){
                 	events: {
                 		afterAnimate: function () {
                 		  	// afficher la dernière bulle par défaut
-                		  	this.chart.series[0].data[this.chart.series[0].data.length-1].setState('hover');
                 		  	this.chart.tooltip.refresh(this.chart.series[0].data[this.chart.series[0].data.length-1]);
                 		},
                         mouseOut: function () {
                             // afficher la dernière bulle par défaut
-                            this.chart.series[0].data[this.chart.series[0].data.length-1].setState('hover');
                             this.chart.tooltip.refresh(this.chart.series[0].data[this.chart.series[0].data.length-1]);
                             this.series.chart.tooltip.show();
                         }
