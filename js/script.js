@@ -2,6 +2,21 @@
 // variables //
 ///////////////
 
+//////////////////////////////////////////////////
+/////////// MOIS HIGHCHARTS EN FRANÇAIS //////////
+//////////////////////////////////////////////////
+Highcharts.setOptions({
+	lang: {
+	months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+	shortMonths: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aout', 'Sept', 'Oct', 'Nov', 'Déc'],
+	weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+	decimalPoint: ",",
+	loading: "Chargement en cours...",
+	thousandsSep: " "
+	}
+});
+
+
 /////////////////////////////////////////////////////////////////////////
 /////////// FONCTION POUR OUVRIR ET FERMER LE MENU RESPONSIVE //////////
 /////////////////////////////////////////////////////////////////////////
@@ -75,6 +90,21 @@ $(document).ready(function(){
 			chart: {
 			    backgroundColor: '',
 			},
+			tooltip: {
+	            backgroundColor: 'rgba(255,255,255,0.95)',
+	            borderWidth: 0,
+	            borderColor: null,
+	            useHTML:true,
+	            shape: 'square',
+	            style: {
+	            	padding: '0',
+	            	'border-radius': '5px',
+	            },
+	            formatter: function() {
+	        		var fioulVal = this.y;
+	                return '<div class="graphTooltip"><h5>'+Highcharts.dateFormat('Le %e %B %Y',new Date(this.x))+'</h5><strong>' + fioulVal.toString().replace(".",",") + ' <span>€/litre</span></strong><p>Prix moyen national fioulreduc <br />pour 1000 litres de fioul standard <a href="#">En savoir +</a></div>';
+                }
+		    },
 		    xAxis: {
 		    	labels: {
 	    	        style: {
@@ -88,6 +118,9 @@ $(document).ready(function(){
 		    	 minorTickLength: 0,
 		    	 minorTickInterval: 10 * 24 * 3600000, */
 		        type: 'datetime',
+		        dateTimeLabelFormats:{
+		           month: '%b %y'
+		        },
 		        minRange: 364 * 24 * 3600000, 
                 tickmarkPlacement: 'on',
                 gridLineWidth: 1,
@@ -181,15 +214,18 @@ $(document).ready(function(){
 		        // SAISIE DES POINTS ET DE L'INTERVALLE
 		        pointInterval: 15 * 24 * 3600 * 1000,
 		        pointStart: Date.UTC(2013, 0, 01),
-		        data: [0.838, 0.848, 0.846, 0.855, 0.879, 0.899, 0.871, 0.888, 0.886, 0.857, 0.859, 0.857, 0.861, 0.868, 0.879, 0.877, 0.868, 0.877, 0.879, 0.899, 0.913, 0.914, 0.892, 0.877, 0.879, 0.877, 0.853, 0.858, 0.877, 0.875, 0.874, {y:0.895, marker:{enabled: true,radius:22,fillColor: {
-		            radialGradient: {cx: 0.5, cy: 0.5, r: 0.5},
-		            stops: [
-		                [0, 'rgba(255,255,255,1)'],
-		                [0.08, 'rgba(255,255,255,1)'],
-		                [0.15, 'rgba(255,255,255,0.2)'],
-		                [1, 'rgba(255,255,255,0)']
-		            ]
-		        }}}]
+		        data: [0.838, 0.848, 0.846, 0.855, 0.879, 0.899, 0.871, 0.888, 0.886, 0.857, 0.859, 0.857, 0.861, 0.868, 0.879, 0.877, 0.868, 0.877, 0.879, 0.899, 0.913, 0.914, 0.892, 0.877, 0.879, 0.877, 0.853, 0.858, 0.877, 0.875, 0.874, 
+		        	/* Dernier point avec Halo */ 
+		        	{y:0.895, marker:{enabled: true,radius:22,fillColor: {
+			            radialGradient: {cx: 0.5, cy: 0.5, r: 0.5},
+			            stops: [
+			                [0, 'rgba(255,255,255,1)'],
+			                [0.08, 'rgba(255,255,255,1)'],
+			                [0.15, 'rgba(255,255,255,0.2)'],
+			                [1, 'rgba(255,255,255,0)']
+			            ]
+			        }}}
+		        ]
 		    }],
 		    plotOptions: {
 		        line: {
