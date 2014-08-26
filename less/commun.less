@@ -512,7 +512,19 @@ ol.liste-num{
 		}
 		&.btn-jaune{
 			color: @jauneFioulReduc;
-			border-bottom-color: @jauneFioulReduc;
+			border: none;
+			text-decoration: underline;
+			&:hover{
+				color: @orangeFioulReduc;
+			}
+		}
+		&.btn-jaune-orange{
+			color: #fcb702;
+			border: none;
+			text-decoration: underline;
+			&:hover{
+				color: @orangeFioulReduc;
+			}
 		}
 		&.btn-link-home{
 			margin: 10px 40px 0 0;
@@ -641,6 +653,10 @@ ul.actus{
 							.lato(1em);
 							line-height: 1.5em;
 							color: @blanc;
+						}
+						a{
+							border: none;
+							text-decoration: underline;
 						}
 					}
 					.zone-visu-item{
@@ -887,6 +903,7 @@ a#bouton-menu-responsive{
 	margin: 0 0 0 20px;
 	padding: 0;
 	display: none;
+	color: @bleuFioulReduc;
 	.icon-navicon{
 		display: inline-block;
 		vertical-align: top;
@@ -896,11 +913,11 @@ a#bouton-menu-responsive{
 		margin: 0 2px 0 0;
 		padding: 0;
 		font-size: 1.8em;
-		color: @bleuFioulReduc;
 	}
-	&:hover{
+	&.active, &:hover{
 		text-decoration: none;
 		cursor: pointer;
+		color: @orangeFioulReduc;
 	}
 }
 
@@ -1925,7 +1942,8 @@ ul.refs{
    ========================================================================== */
 
 
-/* mes resolutions responsives "classiques" */
+/* @group Responsive horizontal */
+
 @media (max-width: 1250px) {
 	.container{
 		width: 90%;
@@ -2591,9 +2609,29 @@ ul.refs{
 	}
 }
 
+/* @end */
 
+/* @group Responsive vertical */
 
+@media (max-height: 900px) {
+	#top-home {
+		padding: 100px 0 125px 0;
+	}
+	#bloc-commande-graph {
+		margin: 30px 0 0 0;
+	}
+}
 
+@media (max-height: 768px) {
+	#top-home {
+		padding: 80px 0 90px 0;
+	}
+	#bloc-commande-graph {
+		margin: 20px 0 0 0;
+	}
+}
+
+/* @end */
 
 /* retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {

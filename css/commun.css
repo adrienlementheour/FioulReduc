@@ -2850,7 +2850,19 @@ ol.liste-num li .detail-liste {
 }
 .btn.btn-link.btn-jaune {
   color: #ffcb00;
-  border-bottom-color: #ffcb00;
+  border: none;
+  text-decoration: underline;
+}
+.btn.btn-link.btn-jaune:hover {
+  color: #fb8206;
+}
+.btn.btn-link.btn-jaune-orange {
+  color: #fcb702;
+  border: none;
+  text-decoration: underline;
+}
+.btn.btn-link.btn-jaune-orange:hover {
+  color: #fb8206;
 }
 .btn.btn-link.btn-link-home {
   margin: 10px 40px 0 0;
@@ -3005,6 +3017,10 @@ ul.actus li.actu .zone-texte-actu a.icon-icon-plus:hover {
   text-rendering: optimizeLegibility;
   line-height: 1.5em;
   color: #ffffff;
+}
+.carousel.carousel-visu .carousel-inner .item.item-vertical .zone-texte-item a {
+  border: none;
+  text-decoration: underline;
 }
 .carousel.carousel-visu .carousel-inner .item.item-vertical .zone-visu-item {
   display: inline-block;
@@ -3312,6 +3328,7 @@ a#bouton-menu-responsive {
   margin: 0 0 0 20px;
   padding: 0;
   display: none;
+  color: #2947a0;
 }
 a#bouton-menu-responsive .icon-navicon {
   display: inline-block;
@@ -3322,11 +3339,12 @@ a#bouton-menu-responsive .icon-navicon {
   margin: 0 2px 0 0;
   padding: 0;
   font-size: 1.8em;
-  color: #2947a0;
 }
+a#bouton-menu-responsive.active,
 a#bouton-menu-responsive:hover {
   text-decoration: none;
   cursor: pointer;
+  color: #fb8206;
 }
 nav {
   display: block;
@@ -4517,7 +4535,7 @@ ul.refs li.ref.la-tribune:after {
 /* @end */
 /* ==|== media queries ======================================================
    ========================================================================== */
-/* mes resolutions responsives "classiques" */
+/* @group Responsive horizontal */
 @media (max-width: 1250px) {
   .container {
     width: 90%;
@@ -5112,6 +5130,25 @@ ul.refs li.ref.la-tribune:after {
     top: 68px;
   }
 }
+/* @end */
+/* @group Responsive vertical */
+@media (max-height: 900px) {
+  #top-home {
+    padding: 100px 0 125px 0;
+  }
+  #bloc-commande-graph {
+    margin: 30px 0 0 0;
+  }
+}
+@media (max-height: 768px) {
+  #top-home {
+    padding: 80px 0 90px 0;
+  }
+  #bloc-commande-graph {
+    margin: 20px 0 0 0;
+  }
+}
+/* @end */
 /* retina */
 /* ==|== print styles =======================================================
    ========================================================================== */

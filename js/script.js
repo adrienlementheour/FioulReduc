@@ -25,10 +25,12 @@ function ouvertureFermetureMenuResponsive(){
 		TweenMax.to($(".big-container"), 0.3, {x: "250px", ease:Cubic.easeInOut});
 		$("body").addClass("menu-ouvert");
 		TweenMax.fromTo ($("#masque-container"), 0.3, {opacity:0}, {opacity:1,display:'block', ease:Cubic.easeInOut});
+		$("a#bouton-menu-responsive").addClass("active");
 	}else{
 		TweenMax.to($(".big-container"), 0.3, {x: "0", ease:Cubic.easeInOut});
 		$("body").removeClass("menu-ouvert");
 		TweenMax.fromTo ($("#masque-container"), 0.3, {opacity:1}, {opacity:0,display:'none'});
+		$("a#bouton-menu-responsive").removeClass("active");
 	}
 }
 
@@ -90,6 +92,7 @@ $( window ).resize(function() {
 		TweenMax.to($(".big-container"), 0.5, {x: "0", ease:Cubic.easeInOut});
 		TweenMax.fromTo ($("#masque-container"), 0.3, {opacity:1}, {opacity:0,display:'none'});
 		$("body").removeClass("menu-ouvert");
+		$("a#bouton-menu-responsive").removeClass("active");
 	}
 	$("li.has-dropdown.dd-open").removeClass("dd-open");
 });
