@@ -22,12 +22,13 @@ Highcharts.setOptions({
 /////////////////////////////////////////////////////////////////////////
 function ouvertureFermetureMenuResponsive(){
 	if (!$("body").hasClass("menu-ouvert")){
-		TweenMax.to($("body"), 0.5, {x: "250px", ease:Cubic.easeInOut});
+		TweenMax.to($(".big-container"), 0.3, {x: "250px", ease:Cubic.easeInOut});
 		$("body").addClass("menu-ouvert");
-		//TweenMax.to($("nav"), 0.5, {x: "0", ease:Cubic.easeInOut});
+		TweenMax.fromTo ($("#masque-container"), 0.3, {opacity:0}, {opacity:1,display:'block', ease:Cubic.easeInOut});
 	}else{
-		TweenMax.to($("body"), 0.5, {x: "0", ease:Cubic.easeInOut});
+		TweenMax.to($(".big-container"), 0.3, {x: "0", ease:Cubic.easeInOut});
 		$("body").removeClass("menu-ouvert");
+		TweenMax.fromTo ($("#masque-container"), 0.3, {opacity:1}, {opacity:0,display:'none'});
 	}
 }
 
@@ -86,9 +87,11 @@ $( window ).resize(function() {
 	}
 	
 	if ($("body").hasClass("menu-ouvert")){
-		TweenMax.to($("body"), 0.5, {x: "0", ease:Cubic.easeInOut});
+		TweenMax.to($(".big-container"), 0.5, {x: "0", ease:Cubic.easeInOut});
+		TweenMax.fromTo ($("#masque-container"), 0.3, {opacity:1}, {opacity:0,display:'none'});
 		$("body").removeClass("menu-ouvert");
 	}
+	$("li.has-dropdown.dd-open").removeClass("dd-open");
 });
 
 $(document).ready(function(){
@@ -98,8 +101,18 @@ $(document).ready(function(){
 			ouvertureFermetureMenuResponsive();
 			return false;
 		});
+		$("#masque-container").click(function(){
+			ouvertureFermetureMenuResponsive();
+			return false;
+		});
 		$("#order-zipcode").focusin(function(){
 			ouvertureFermetureBlocCommandeHome("ouverture");
+			return false;
+		});
+		
+		// Clic sur les btn dropdown
+		$("a.btn-dropdown").click(function(){
+			$(this).parent().toggleClass("dd-open");
 			return false;
 		});
 		

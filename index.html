@@ -28,17 +28,18 @@
 	</head>
 	
 	<body class="home">
+		<div class="big-container">
 	  	<header class="bloc-full bloc-blanc">
 	  		<div class="container">
-	  			<a id="bouton-menu-responsive"><span class="icon-navicon"></span></a>
+	  			<a id="bouton-menu-responsive"><span class="icon-navicon"></span>Menu</a>
 				<nav>
 					<ul>
 						<li class="active first">
 							<a href="#" class="home"><span class="icon-maison"></span><span class="txt-home">Home</span></a>
 						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-delay="0">Pourquoi FioulReduc&nbsp;?</a>
-							<div class="dropdown-menu">
+						<li class="has-dropdown">
+							<a href="#" class="btn-dropdown">Pourquoi FioulReduc&nbsp;?</a>
+							<div class="dd-menu">
 								<ul class="dropdown-menu-content">
 									<li><a href="#">Comment ça marche&nbsp;?</a></li>
 									<li><a href="#">Des économies sur votre facture de fioul</a></li>
@@ -374,6 +375,8 @@
 	  			</div>
 	  		</div>
 	  	</footer>
+	  	<div id="masque-container"></div>
+	  	</div>
 		<!--[if lt IE 7 ]>
 			<script src="js/libs/dd_belatedpng.js"></script>
 			<script>DD_belatedPNG.fix("img, .png_bg");</script>

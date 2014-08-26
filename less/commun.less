@@ -296,10 +296,30 @@ html, body{
 	.lato(1em);
 	background: @blanc;
 	position: relative;
+	overflow-x: hidden;
+	min-height: 100%;
+	width: 100%;
 }
 
-body{
-	overflow-x: hidden;
+.big-container{
+	display: block;
+	position:relative;
+	height: 100%;
+}
+
+#masque-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.3);
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	cursor: pointer;
+	display: none;
+	.lh-opacity(0);
 }
 
 .container{
@@ -438,23 +458,6 @@ ol.liste-num{
 		}
 	}
 }
-
-/*.bloc-gauche{
-	display: inline-block;
-	vertical-align: top;
-	width: 40%;
-	height: auto;
-	.lh-box-sizing(border-box);
-	padding: 0 70px 0 0;
-}
-
-.bloc-droite{
-	display: inline-block;
-	vertical-align: top;
-	width: 60%;
-	height: auto;
-}*/
-
 
 .bloc-gauche{
 	display: inline-block;
@@ -877,7 +880,7 @@ header{
 
 a#bouton-menu-responsive{
 	display: block;
-	width: 54px;
+	width: 100px;
 	height: 54px;
 	line-height: 54px;
 	text-align: center;
@@ -885,18 +888,19 @@ a#bouton-menu-responsive{
 	padding: 0;
 	display: none;
 	.icon-navicon{
-		display: block;
-		width: 100%;
+		display: inline-block;
+		vertical-align: top;
+		width: auto;
 		height: 100%;
 		line-height: 54px;
-		margin: 0;
+		margin: 0 2px 0 0;
 		padding: 0;
 		font-size: 1.8em;
-		text-align: center;
 		color: @bleuFioulReduc;
 	}
 	&:hover{
 		text-decoration: none;
+		cursor: pointer;
 	}
 }
 
@@ -930,18 +934,26 @@ nav{
 			&.last{
 				padding: 6px 0 0 20px;
 			}
-			&.dropdown{
-				&.open>.dropdown-toggle, &.active>.dropdown-toggle{
+			&.has-dropdown{
+				position: relative;
+				&.dd-open>.btn-dropdown, &.active>.btn-dropdown{
 					color: @orangeFioulReduc;
 					background: none;
 					
 				}
-				&:hover{
-					> .dropdown-menu {
+				&.dd-open, &:hover{
+					> .dd-menu {
 					    display: block;    
 					}
 				}
-				.dropdown-menu{
+				.dd-menu{
+					position: absolute;
+					top: 100%;
+					left: 0;
+					z-index: 1000;
+					display: none;
+					float: left;
+					min-width: 160px;
 					margin: 0;
 					padding: 25px 0 0 0;
 					background: none;
@@ -1454,6 +1466,7 @@ ul#menu-top-bar{
 #part-graph{
 	width: 100%;
 	background: url('../layoutImg/expert-du-prix.png') no-repeat 60% 32%;
+	background-size: 90% auto;
 }
 
 .graphTooltip {
@@ -1998,16 +2011,31 @@ ul.refs{
 	a#bouton-menu-responsive{
 		display: block;
 	}
+	
+	/*nav ul li.has-dropdown .dd-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 160px;
+	margin: 0;
+	padding: 25px 0 0 0;
+	background: none;
+	border: none;
+	width: 340px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	}*/
+	
 	nav{
 		position: fixed;
 		top: 0;
-		
-		////////////////
 		left: 0;
-		//left: -250px;
 		.lh-translateX(-250px);
-		////////////////
-		
+
 		width: 250px;
 		min-height: 100%;
 		background-color: @blanc;
@@ -2022,36 +2050,85 @@ ul.refs{
 				padding: 0;
 				display: block;
 				width: 100%;
-				height: 58px;
+				height: auto;
 				&.first, &.last{
 					margin: 0;
 					padding: 0;
 					display: block;
 					width: 100%;
 				}
+				&.has-dropdown{
+					&:hover{
+						> .dd-menu {
+						    display: none;    
+						}
+					}
+					&.dd-open{
+						&:hover{
+							> .dd-menu {
+							    display: block;    
+							}
+						}
+					}
+					.dd-menu {
+						position: relative;
+						top: inherit;
+						left: inherit;
+						float: none;
+						min-width: inherit;
+						margin: 0;
+						padding: 0;
+						width: 100%;
+						.dropdown-menu-content {
+							.lh-box-shadow(none);
+							.lh-border-radius(none);
+							padding: 0;
+							margin: 0;
+							li{
+								a{
+									display: block;
+									width: 100%;
+									height: 100%;
+									.lh-box-sizing(border-box);
+									padding: 20px 0 20px 20px;
+									border-bottom: 1px solid #c0c2cc;
+									&:hover{
+										border-bottom: 1px solid #c0c2cc;
+										padding: 20px 0 20px 20px;
+										display: block;
+										width: 100%;
+										height: 100%;
+									}
+								}
+							}
+						}
+					}
+				}
 				a{
 					display: block;
 					width: 100%;
 					height: 100%;
-					line-height: 60px;
 					.lh-box-sizing(border-box);
-					padding-left: 20px;
+					padding: 20px 0 20px 20px;
 					border-bottom: 1px solid #c0c2cc;
 					&.home{
 						display: block;
 						width: 100%;
 						height: 100%;
-						line-height: 60px;
 						.lh-box-sizing(border-box);
-						padding-left: 20px;
+						padding: 20px 0 20px 42px;
 						border-bottom: 1px solid #c0c2cc;
+						position: relative;
 						.icon-maison {
-						font-size: 2.5em;
-						width: 24px;
-						height: 100%;
-						line-height: 60px;
-						display: inline-block;
-						vertical-align: top;
+							font-size: 2.5em;
+							width: 24px;
+							height: 30px;
+							display: inline-block;
+							vertical-align: top;
+							position: absolute;
+							top: 50%;
+							margin-top: -16px;
+							left: 20px;
 						}
 						.txt-home{
 							display: inline-block;
