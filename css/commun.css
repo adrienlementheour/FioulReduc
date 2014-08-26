@@ -2861,7 +2861,7 @@ ul.actus li.actu {
   width: 100%;
   height: auto;
   min-height: 92px;
-  margin: 13px 0;
+  margin: 25px 0;
   padding: 0;
   position: relative;
 }
@@ -2934,7 +2934,7 @@ ul.actus li.actu .zone-texte-actu a.icon-icon-plus:hover {
 /* @end */
 /* @group Carousel */
 .carousel.carousel-visu {
-  margin: -77px 0 0 0;
+  margin: -27px 0 0 0;
   padding: 0;
 }
 .carousel.carousel-visu ol.carousel-indicators {
@@ -3760,6 +3760,16 @@ ul#menu-top-bar li {
   margin: 0 0 0 50px;
   padding: 0;
 }
+ul#menu-top-bar li.tel a {
+  cursor: default;
+}
+ul#menu-top-bar li.tel a:hover .visu-menu {
+  -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+  -moz-transform: rotate(0deg) translate3d(0, 0, 0);
+  -ms-transform: rotate(0deg) translate3d(0, 0, 0);
+  -o-transform: rotate(0deg) translate3d(0, 0, 0);
+  transform: rotate(0deg) translate3d(0, 0, 0);
+}
 ul#menu-top-bar li a {
   font-family: 'lato-bold', sans-serif;
   font-weight: normal;
@@ -3874,15 +3884,19 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
 /* @end */
 /* @group Top home */
 #top-home {
-  padding: 100px 0 125px 0;
+  padding: 100px 0 145px 0;
   position: relative;
 }
 /* @end */
 /* @group Bloc Commande / Graph */
 #bloc-commande-graph {
   display: block;
-  margin: 0;
-  padding: 50px 0 0 0;
+  padding: 0;
+  margin: 50px 0 0 0;
+  position: relative;
+}
+#bloc-commande-graph .bloc-gauche {
+  padding: 0 52px 0 0;
 }
 .prix-bas {
   font-family: 'Dancing Script', cursive;
@@ -3917,48 +3931,6 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
 .prix-bas .decal {
   display: block;
   margin-left: 12px;
-}
-a#fil-commande {
-  display: block;
-  width: 12px;
-  height: 106px;
-  position: absolute;
-  bottom: -106px;
-  left: 50%;
-  margin-left: -6px;
-}
-a#fil-commande #fil {
-  display: block;
-  width: 1px;
-  height: 100%;
-  margin: 0 auto;
-  zoom: 1;
-  filter: alpha(opacity=50);
-  -webkit-opacity: 0.5;
-  -moz-opacity: 0.5;
-  opacity: 0.5;
-  background-color: #ebedf1;
-  -webkit-box-shadow: 0 5px 1px rgba(7,23,58,.75);
-  -moz-box-shadow: 0 5px 1px rgba(7,23,58,.75);
-  box-shadow: 0 5px 1px rgba(7,23,58,.75);
-}
-a#fil-commande #boule {
-  display: block;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  -webkit-border-radius: 50%;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 50%;
-  -moz-background-clip: padding;
-  border-radius: 50%;
-  background-clip: padding-box;
-  background-color: #f86708;
-  -webkit-box-shadow: 0 5px 1px rgba(7,23,58,.75);
-  -moz-box-shadow: 0 5px 1px rgba(7,23,58,.75);
-  box-shadow: 0 5px 1px rgba(7,23,58,.75);
 }
 .part-commande {
   display: inline-block;
@@ -4001,7 +3973,7 @@ a#fil-commande #boule {
   width: 75%;
 }
 .part-commande ol.liste-num {
-  margin: 285px 0 0 10px;
+  margin: 278px 0 0 10px;
 }
 .part-commande form button.btn {
   margin-top: 0;
@@ -4009,7 +3981,7 @@ a#fil-commande #boule {
 #masque-form-home {
   display: block;
   position: relative;
-  margin: 0 0 10px 0;
+  margin: 0 0 14px 0;
   padding: 0;
   height: 50px;
   overflow: hidden;
@@ -4309,7 +4281,7 @@ ul.refs li.ref.la-tribune:after {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
-  padding: 40px;
+  padding: 36px;
   -webkit-border-radius: 6px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 6px;
@@ -4389,8 +4361,8 @@ ul.refs li.ref.la-tribune:after {
   list-style-type: none;
 }
 #bloc-avis ul#avis li {
-  margin: 0 0 25px 0;
-  padding: 0 0 25px 0;
+  margin: 0 0 20px 0;
+  padding: 0 0 20px 0;
   border-bottom: 1px solid #ebeef2;
   position: relative;
 }
@@ -4816,6 +4788,16 @@ ul.refs li.ref.la-tribune:after {
 }
 @media (max-width: 979px) {
   /* @group responsive Home */
+  #bloc-commande-graph .bloc-gauche {
+    text-align: center;
+    padding: 0;
+  }
+  #bloc-commande-graph .bloc-gauche .part-commande {
+    text-align: left;
+  }
+  a#fil-commande {
+    display: none;
+  }
   ul#points-illus {
     width: 100%;
   }
@@ -4845,7 +4827,7 @@ ul.refs li.ref.la-tribune:after {
     right: 20px;
   }
   .carousel.carousel-visu {
-    margin: -77px auto 50px auto;
+    margin: -27px auto 50px auto;
     padding: 0;
     width: 410px;
   }
@@ -4874,6 +4856,15 @@ ul.refs li.ref.la-tribune:after {
   body {
     padding-right: 0;
     padding-left: 0;
+  }
+  .part-commande {
+    width: 100%;
+  }
+  .part-commande #bloc-commande {
+    position: relative;
+  }
+  .part-commande ol.liste-num {
+    margin: 30px 0 0 10px;
   }
   footer .container {
     width: 95%;
@@ -4964,7 +4955,7 @@ ul.refs li.ref.la-tribune:after {
     margin: 5px 0 0 0;
   }
   .carousel.carousel-visu {
-    margin: -77px auto 50px auto;
+    margin: -27px auto 50px auto;
     padding: 0;
     width: 90%;
   }
@@ -5016,6 +5007,24 @@ ul.refs li.ref.la-tribune:after {
     font-size: 1.4em;
   }
   /* @end */
+}
+@media (max-width: 480px) {
+  form.form-horizontal .controls {
+    margin: 0;
+  }
+  form.form-horizontal .control-group {
+    margin-bottom: 10px;
+  }
+  #masque-form-home {
+    height: 80px;
+  }
+  .part-commande #bloc-commande h2 {
+    width: 100%;
+    font-size: 1.25em;
+  }
+  .prix-bas {
+    top: 68px;
+  }
 }
 /* retina */
 /* ==|== print styles =======================================================

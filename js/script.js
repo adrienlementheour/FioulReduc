@@ -29,31 +29,62 @@ function ouvertureFermetureMenuResponsive(){
 /////// FONCTION POUR OUVRIR ET FERMER LE BLOC COMMANDE DE LA HOME //////
 /////////////////////////////////////////////////////////////////////////
 function ouvertureFermetureBlocCommandeHome(type){
-	if (type=="ouverture") {
-		if (!$("#bloc-commande").hasClass("bloc-ouvert")){
-			$("#bloc-commande").addClass("bloc-ouvert");
-			TweenMax.to($("#masque-form-home"), 0.5, {height: "240px", ease:Cubic.easeInOut});
+	if($(window).width()>480){
+		if (type=="ouverture") {
+			if (!$("#bloc-commande").hasClass("bloc-ouvert")){
+				$("#bloc-commande").addClass("bloc-ouvert");
+				TweenMax.to($("#masque-form-home"), 0.5, {height: "240px", ease:Cubic.easeInOut});
+			}
+		}else {
+			if (!$("#bloc-commande").hasClass("bloc-ouvert")){
+				$("#bloc-commande").addClass("bloc-ouvert");
+				TweenMax.to($("#masque-form-home"), 0.5, {height: "240px", ease:Cubic.easeInOut});
+			}else{
+				$("#bloc-commande").removeClass("bloc-ouvert");
+				TweenMax.to($("#masque-form-home"), 0.5, {height: "50px", ease:Cubic.easeInOut});
+			}
 		}
-	}else {
-		if (!$("#bloc-commande").hasClass("bloc-ouvert")){
-			$("#bloc-commande").addClass("bloc-ouvert");
-			TweenMax.to($("#masque-form-home"), 0.5, {height: "240px", ease:Cubic.easeInOut});
-		}else{
-			$("#bloc-commande").removeClass("bloc-ouvert");
-			TweenMax.to($("#masque-form-home"), 0.5, {height: "50px", ease:Cubic.easeInOut});
+	}else{
+		if (type=="ouverture") {
+			if (!$("#bloc-commande").hasClass("bloc-ouvert")){
+				$("#bloc-commande").addClass("bloc-ouvert");
+				TweenMax.to($("#masque-form-home"), 0.5, {height: "352px", ease:Cubic.easeInOut});
+			}
+		}else {
+			if (!$("#bloc-commande").hasClass("bloc-ouvert")){
+				$("#bloc-commande").addClass("bloc-ouvert");
+				TweenMax.to($("#masque-form-home"), 0.5, {height: "352px", ease:Cubic.easeInOut});
+			}else{
+				$("#bloc-commande").removeClass("bloc-ouvert");
+				TweenMax.to($("#masque-form-home"), 0.5, {height: "80px", ease:Cubic.easeInOut});
+			}
 		}
 	}
 }
+
+$( window ).resize(function() {
+	if($("body").hasClass("home")){
+		if($(window).width()>480) {
+			if ($("#bloc-commande").hasClass("bloc-ouvert")){
+				$("#masque-form-home").css("height","240px");
+			}else{
+				$("#masque-form-home").css("height","50px");
+			}
+		}else{
+			if ($("#bloc-commande").hasClass("bloc-ouvert")){
+				$("#masque-form-home").css("height","352px");
+			}else{
+				$("#masque-form-home").css("height","80px");
+			}
+		}
+	}
+});
 
 $(document).ready(function(){
 	if($("body").hasClass("home")){
 		// Dépliage du bloc "commandez votre fioul"
 		$("a#bouton-menu-responsive").click(function(){
 			ouvertureFermetureMenuResponsive();
-			return false;
-		});
-		$("a#fil-commande").click(function(){
-			ouvertureFermetureBlocCommandeHome();
 			return false;
 		});
 		$("#order-zipcode").focusin(function(){

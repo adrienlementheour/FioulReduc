@@ -531,7 +531,7 @@ ul.actus{
 		width: 100%;
 		height: auto;
 		min-height: 92px;
-		margin: 13px 0;
+		margin: 25px 0;
 		padding: 0;
 		position: relative;
 		a.zone-visu-actu{
@@ -591,7 +591,7 @@ ul.actus{
 
 .carousel{
 	&.carousel-visu{
-		margin: -77px 0 0 0;
+		margin: -27px 0 0 0;
 		padding: 0;
 		ol.carousel-indicators{
 			top: inherit;
@@ -1262,6 +1262,16 @@ ul#menu-top-bar{
 		text-align: left;
 		margin: 0 0 0 50px;
 		padding: 0;
+		&.tel{
+			a{
+				cursor: default;
+				&:hover{
+					.visu-menu{
+						.lh-transform(rotate(0deg) translate3d( 0, 0, 0));
+					}
+				}
+			}
+		}
 		a{
 			.lato-bold(1.375em);
 			color: @bleuFioulReduc;
@@ -1346,7 +1356,7 @@ ul#menu-top-bar{
 /* @group Top home */
 
 #top-home{
-	padding: 100px 0 125px 0;
+	padding: 100px 0 145px 0;
 	position: relative;
 }
 
@@ -1356,8 +1366,12 @@ ul#menu-top-bar{
 
 #bloc-commande-graph{
 	display: block;
-	margin: 0;
-	padding: 50px 0 0 0;
+	padding: 0;
+	margin: 50px 0 0 0;
+	position: relative;
+	.bloc-gauche{
+		padding: 0 52px 0 0;
+	}
 }
 
 .prix-bas{
@@ -1389,36 +1403,6 @@ ul#menu-top-bar{
 	}
 }
 
-a#fil-commande{
-	display: block;
-	width: 12px;
-	height: 106px;
-	position: absolute;
-	bottom: -106px;
-	left: 50%;
-	margin-left: -6px;
-	#fil{
-		display: block;
-		width: 1px;
-		height: 100%;
-		margin: 0 auto;
-		.lh-opacity(0.5);
-		background-color: #ebedf1;
-		.lh-box-shadow(~"0 5px 1px rgba(7,23,58,.75)");
-	}
-	#boule{
-		display: block;
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		.lh-border-radius(50%);
-		background-color: @orange2FioulReduc;
-		.lh-box-shadow(~"0 5px 1px rgba(7,23,58,.75)");
-	}
-}
-
 .part-commande{
 	display: inline-block;
 	vertical-align: top;
@@ -1442,7 +1426,7 @@ a#fil-commande{
 		}
 	}
 	ol.liste-num{
-		margin: 285px 0 0 10px;
+		margin: 278px 0 0 10px;
 	}
 	form{
 		button{
@@ -1456,7 +1440,7 @@ a#fil-commande{
 #masque-form-home{
 	display: block;
 	position: relative;
-	margin: 0 0 10px 0;
+	margin: 0 0 14px 0;
 	padding: 0;
 	height: 50px;
 	overflow: hidden;
@@ -1729,7 +1713,7 @@ ul.refs{
 	height: auto;
 	.lh-box-sizing(border-box);
 	margin: 0;
-	padding: 40px;
+	padding: 36px;
 	.lh-border-radius(6px);
 	background: @blanc;
 	#moyenne-avis{
@@ -1792,8 +1776,8 @@ ul.refs{
 		margin: 0;
 		list-style-type: none;		
 		li{
-			margin: 0 0 25px 0;
-			padding: 0 0 25px 0;
+			margin: 0 0 20px 0;
+			padding: 0 0 20px 0;
 			border-bottom: 1px solid @grisBleuFioulReduc;
 			position: relative;
 			&.last{
@@ -2245,6 +2229,18 @@ ul.refs{
 
 @media (max-width: 979px) {
 	/* @group responsive Home */
+	#bloc-commande-graph{
+		.bloc-gauche{
+			text-align: center;
+			padding: 0;
+			.part-commande{
+				text-align: left;
+			}
+		}
+	}
+	a#fil-commande{
+		display: none;
+	}
 	ul#points-illus{
 		width: 100%;
 	}
@@ -2275,7 +2271,7 @@ ul.refs{
 		}
 	}
 	.carousel.carousel-visu {
-		margin: -77px auto 50px auto;
+		margin: -27px auto 50px auto;
 		padding: 0;
 		width: 410px;
 		ol.carousel-indicators {
@@ -2307,6 +2303,17 @@ ul.refs{
 		padding-right: 0;
 		padding-left: 0;
 	}
+	
+	.part-commande{
+		width: 100%;
+		#bloc-commande{
+			position: relative;
+		}
+		ol.liste-num {
+			margin: 30px 0 0 10px;
+		}
+	}
+	
 	footer{
 		.container{
 			width: 95%;
@@ -2409,7 +2416,7 @@ ul.refs{
 	}
 	
 	.carousel.carousel-visu {
-		margin: -77px auto 50px auto;
+		margin: -27px auto 50px auto;
 		padding: 0;
 		width: 90%;
 		.carousel-inner{
@@ -2480,6 +2487,31 @@ ul.refs{
 		font-size: 1.4em;
 	}
 	/* @end */
+}
+
+@media (max-width: 480px) {
+	form.form-horizontal{
+		.controls {
+			margin: 0;
+		}
+		.control-group {
+			margin-bottom: 10px;
+		}
+	}
+	#masque-form-home {
+		height: 80px;
+	}
+	.part-commande{
+		#bloc-commande{
+			h2 {
+				width: 100%;
+				font-size: 1.25em;
+			}
+		}
+	}
+	.prix-bas{
+		top: 68px;
+	}
 }
 
 
