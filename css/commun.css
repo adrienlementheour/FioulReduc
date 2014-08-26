@@ -2528,8 +2528,8 @@ MIT License: https://github.com/driftyco/ionicons
   font-weight: normal;
   font-style: normal;
 }
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="ic-"],
+[class*=" ic-"] {
   font-family: 'fioulreduc';
   speak: none;
   font-style: normal;
@@ -2541,40 +2541,40 @@ MIT License: https://github.com/driftyco/ionicons
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-cadenas:before {
+.ic-cadenas:before {
   content: "\e60a";
 }
-.icon-fleche-rond-top:before {
+.ic-fleche-rond-top:before {
   content: "\e609";
 }
-.icon-arrow-bottom:before {
+.ic-arrow-bottom:before {
   content: "\e600";
 }
-.icon-arrow-left:before {
+.ic-arrow-left:before {
   content: "\e601";
 }
-.icon-arrow-right:before {
+.ic-arrow-right:before {
   content: "\e602";
 }
-.icon-arrow-top:before {
+.ic-arrow-top:before {
   content: "\e603";
 }
-.icon-fleche-rond:before {
+.ic-fleche-rond:before {
   content: "\e604";
 }
-.icon-icon-plus:before {
+.ic-icon-plus:before {
   content: "\e605";
 }
-.icon-maison:before {
+.ic-maison:before {
   content: "\e606";
 }
-.icon-play:before {
+.ic-play:before {
   content: "\e607";
 }
-.icon-sousligne:before {
+.ic-sousligne:before {
   content: "\e608";
 }
-.icon-navicon:before {
+.ic-navicon:before {
   content: "\f0c9";
 }
 /* @end */
@@ -2733,7 +2733,7 @@ h3.titre-item {
 a.lien-video {
   position: relative;
 }
-a.lien-video .icon-play {
+a.lien-video .ic-play {
   display: block;
   width: 140px;
   height: 140px;
@@ -2752,7 +2752,7 @@ a.lien-video .icon-play {
   -o-transition: color 0.15s ease-in-out;
   transition: color 0.15s ease-in-out;
 }
-a.lien-video:hover .icon-play {
+a.lien-video:hover .ic-play {
   color: #fb8206;
 }
 .orange {
@@ -2846,7 +2846,7 @@ ol.liste-num li .detail-liste {
 .btn.btn-link.btn-fleche {
   margin: 0 0 0 14px;
 }
-.btn.btn-link.btn-fleche .icon-arrow-right {
+.btn.btn-link.btn-fleche .ic-arrow-right {
   display: block;
   position: absolute;
   top: 0;
@@ -2944,7 +2944,7 @@ ul.actus li.actu .zone-texte-actu p {
   color: #575757;
   line-height: 1.3em;
 }
-ul.actus li.actu .zone-texte-actu a.icon-icon-plus {
+ul.actus li.actu .zone-texte-actu a.ic-icon-plus {
   font-size: 2em;
   display: inline-block;
   vertical-align: top;
@@ -2953,7 +2953,7 @@ ul.actus li.actu .zone-texte-actu a.icon-icon-plus {
   margin: 0 0 0 2px;
   padding: 0;
 }
-ul.actus li.actu .zone-texte-actu a.icon-icon-plus:hover {
+ul.actus li.actu .zone-texte-actu a.ic-icon-plus:hover {
   color: #f86708;
   text-decoration: none;
 }
@@ -3251,7 +3251,7 @@ form button.btn {
   -o-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
 }
-form button.btn .icon-fleche-rond {
+form button.btn .ic-fleche-rond {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -3261,7 +3261,7 @@ form button.btn .icon-fleche-rond {
   padding: 0;
   border: none;
 }
-form button.btn .icon-fleche-rond:before {
+form button.btn .ic-fleche-rond:before {
   font-size: 2.5em;
   position: absolute;
   top: 0;
@@ -3336,7 +3336,7 @@ a#bouton-menu-responsive {
   display: none;
   color: #2947a0;
 }
-a#bouton-menu-responsive .icon-navicon {
+a#bouton-menu-responsive .ic-navicon {
   display: inline-block;
   vertical-align: top;
   width: auto;
@@ -3501,7 +3501,7 @@ nav ul li a.home {
   width: 24px;
   height: 30px;
 }
-nav ul li a.home .icon-maison {
+nav ul li a.home .ic-maison {
   font-size: 2.5em;
   width: 24px;
   height: 30px;
@@ -3510,7 +3510,7 @@ nav ul li a.home .icon-maison {
   padding: 0;
   display: block;
 }
-nav ul li a.home .icon-maison:before {
+nav ul li a.home .ic-maison:before {
   margin: 0;
   padding: 0;
 }
@@ -3555,7 +3555,7 @@ footer a#btn-retour-haut {
   -o-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
 }
-footer a#btn-retour-haut .icon-fleche-rond-top {
+footer a#btn-retour-haut .ic-fleche-rond-top {
   display: block;
   width: 100%;
   height: 100%;
@@ -3627,7 +3627,7 @@ footer ul#menu-footer li.col-menu-footer .paiement {
   text-rendering: optimizeLegibility;
   line-height: 1.2em;
 }
-footer ul#menu-footer li.col-menu-footer .paiement .icon-cadenas {
+footer ul#menu-footer li.col-menu-footer .paiement .ic-cadenas {
   padding: 1px 2px 0 0;
 }
 footer ul#menu-footer li.col-menu-footer ul.paiements {
@@ -3995,7 +3995,7 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   color: #ffa800;
   line-height: 0.8em;
 }
-.prix-bas .icon-sousligne:before {
+.prix-bas .ic-sousligne:before {
   font-size: 3.5em;
   color: #ffa800;
   -webkit-transform: rotate(8.2deg);
@@ -4742,7 +4742,7 @@ ul.refs li.ref.la-tribune:after {
     border-bottom: 1px solid #c0c2cc;
     position: relative;
   }
-  nav ul li a.home .icon-maison {
+  nav ul li a.home .ic-maison {
     font-size: 2.5em;
     width: 24px;
     height: 30px;
