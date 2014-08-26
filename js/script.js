@@ -119,6 +119,12 @@ $(document).ready(function(){
 			return false;
 		});
 		
+		// Clic sur le bouton pour revenir en haut de la page
+		$("a#btn-retour-haut").click(function(){
+			$('html, body').animate({scrollTop : 0}, 300);
+			return false;
+		});
+		
 		// Clic sur le bandeau des références
 		$("ul.refs").click(function(){
 			window.location.href = "#";

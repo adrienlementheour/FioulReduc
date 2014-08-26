@@ -2541,6 +2541,12 @@ MIT License: https://github.com/driftyco/ionicons
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-cadenas:before {
+  content: "\e60a";
+}
+.icon-fleche-rond-top:before {
+  content: "\e609";
+}
 .icon-arrow-bottom:before {
   content: "\e600";
 }
@@ -3527,6 +3533,7 @@ a.logo {
 /* @end */
 /* @group Footer */
 footer {
+  position: relative;
   padding: 66px 0 20px 0;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
@@ -3534,6 +3541,37 @@ footer {
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+footer a#btn-retour-haut {
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  color: #ffffff;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+footer a#btn-retour-haut .icon-fleche-rond-top {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 60px;
+  text-align: center;
+  font-size: 78px;
+}
+footer a#btn-retour-haut:hover {
+  text-decoration: none;
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 footer ul#menu-footer {
   display: block;
@@ -3588,6 +3626,9 @@ footer ul#menu-footer li.col-menu-footer .paiement {
   font-size: 0.875em;
   text-rendering: optimizeLegibility;
   line-height: 1.2em;
+}
+footer ul#menu-footer li.col-menu-footer .paiement .icon-cadenas {
+  padding: 1px 2px 0 0;
 }
 footer ul#menu-footer li.col-menu-footer ul.paiements {
   display: block;
@@ -4600,23 +4641,6 @@ ul.refs li.ref.la-tribune:after {
   a#bouton-menu-responsive {
     display: block;
   }
-  /*nav ul li.has-dropdown .dd-menu {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	z-index: 1000;
-	display: none;
-	float: left;
-	min-width: 160px;
-	margin: 0;
-	padding: 25px 0 0 0;
-	background: none;
-	border: none;
-	width: 340px;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	}*/
   nav {
     position: fixed;
     top: 0;
@@ -4742,6 +4766,10 @@ ul.refs li.ref.la-tribune:after {
   }
   footer .journal {
     right: 40px;
+  }
+  footer a#btn-retour-haut {
+    bottom: 30px;
+    right: 30px;
   }
   a.logo {
     width: 248px;
@@ -4969,6 +4997,9 @@ ul.refs li.ref.la-tribune:after {
   }
   .part-commande ol.liste-num {
     margin: 30px 0 0 10px;
+  }
+  footer {
+    padding: 66px 0 120px 0;
   }
   footer .container {
     width: 95%;

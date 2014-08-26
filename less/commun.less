@@ -211,7 +211,12 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
+.icon-cadenas:before {
+	content: "\e60a";
+}
+.icon-fleche-rond-top:before {
+	content: "\e609";
+}
 .icon-arrow-bottom:before {
 	content: "\e600";
 }
@@ -1074,9 +1079,34 @@ a.logo{
 /* @group Footer */
 
 footer{
+	position: relative;
 	padding: 66px 0 20px 0;
 	overflow: hidden;
 	.lh-backface-visibility(hidden);
+	a#btn-retour-haut{
+		display: block;
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		bottom: 40px;
+		right: 40px;
+		color: @blanc;
+		.lh-transition(all 0.15s ease-in-out);
+		.icon-fleche-rond-top{
+			display: block;
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			line-height: 60px;
+			text-align: center;
+			font-size: 78px;
+		}
+		&:hover{
+			text-decoration: none;
+			.lh-translateY(-5px);
+		}
+	}
 	ul#menu-footer{
 		display: block;
 		width: auto;
@@ -1123,6 +1153,9 @@ footer{
 				text-align: center;
 				.lato(0.875em);
 				line-height: 1.2em;
+				.icon-cadenas{
+					padding: 1px 2px 0 0;
+				}
 			}
 			ul.paiements{
 				display: block;
@@ -2029,25 +2062,7 @@ ul.refs{
 	a#bouton-menu-responsive{
 		display: block;
 	}
-	
-	/*nav ul li.has-dropdown .dd-menu {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	z-index: 1000;
-	display: none;
-	float: left;
-	min-width: 160px;
-	margin: 0;
-	padding: 25px 0 0 0;
-	background: none;
-	border: none;
-	width: 340px;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	}*/
-	
+
 	nav{
 		position: fixed;
 		top: 0;
@@ -2169,6 +2184,10 @@ ul.refs{
 		}
 		.journal{
 			right: 40px;
+		}
+		a#btn-retour-haut {
+			bottom: 30px;
+			right: 30px;
 		}
 	}
 	
@@ -2410,6 +2429,7 @@ ul.refs{
 	}
 	
 	footer{
+		padding: 66px 0 120px 0;
 		.container{
 			width: 95%;
 		}
