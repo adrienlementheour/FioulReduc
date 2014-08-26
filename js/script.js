@@ -21,8 +21,14 @@ Highcharts.setOptions({
 /////////// FONCTION POUR OUVRIR ET FERMER LE MENU RESPONSIVE //////////
 /////////////////////////////////////////////////////////////////////////
 function ouvertureFermetureMenuResponsive(){
-	TweenMax.to($("body"), 0.5, {x: "250px", ease:Cubic.easeInOut});
-	//TweenMax.to($("nav"), 0.5, {x: "0", ease:Cubic.easeInOut});
+	if (!$("body").hasClass("menu-ouvert")){
+		TweenMax.to($("body"), 0.5, {x: "250px", ease:Cubic.easeInOut});
+		$("body").addClass("menu-ouvert");
+		//TweenMax.to($("nav"), 0.5, {x: "0", ease:Cubic.easeInOut});
+	}else{
+		TweenMax.to($("body"), 0.5, {x: "0", ease:Cubic.easeInOut});
+		$("body").removeClass("menu-ouvert");
+	}
 }
 
 /////////////////////////////////////////////////////////////////////////
@@ -77,6 +83,11 @@ $( window ).resize(function() {
 				$("#masque-form-home").css("height","80px");
 			}
 		}
+	}
+	
+	if ($("body").hasClass("menu-ouvert")){
+		TweenMax.to($("body"), 0.5, {x: "0", ease:Cubic.easeInOut});
+		$("body").removeClass("menu-ouvert");
 	}
 });
 
