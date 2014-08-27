@@ -24,6 +24,12 @@
 
 /* @end */
 
+.ie7-inline-block(){
+	.lt-ie8 &{
+		display: inline;
+	}
+}
+
 /* @group Font */
 
 @font-face {
@@ -474,6 +480,7 @@ ol.liste-num{
 	position: absolute;
 	top: 0;
 	left: 0;
+	.ie7-inline-block();
 }
 
 .bloc-droite{
@@ -483,6 +490,7 @@ ol.liste-num{
 	height: auto;
 	.lh-box-sizing(border-box);
 	padding: 0 0 0 480px;
+	.ie7-inline-block();
 }
 
 
@@ -498,6 +506,7 @@ ol.liste-num{
 		line-height: 1em;
 		text-decoration: none;
 		text-shadow: none;
+		.ie7-inline-block();
 		&:hover{
 			text-decoration: none;
 			color: @orange2FioulReduc;
@@ -566,7 +575,7 @@ ul.actus{
 			left: 0;
 			background-repeat: no-repeat;
 			background-position: center center;
-			background-size: cover;
+			.lh-background-size(cover);
 		}
 		.zone-texte-actu{
 			display: block;
@@ -596,6 +605,7 @@ ul.actus{
 				line-height: 0.7em;
 				margin: 0 0 0 2px;
 				padding: 0;
+				.ie7-inline-block();
 				&:hover{
 					color: @orange2FioulReduc;
 					text-decoration: none;
@@ -648,6 +658,7 @@ ul.actus{
 						.lh-border-bottom-left-radius(6px);
 						padding-top: 60px;
 						margin: 0;
+						.ie7-inline-block();
 						h3{
 							padding: 10px 0 0 0;
 						}
@@ -669,11 +680,12 @@ ul.actus{
 						height: 100%;
 						.lh-border-top-right-radius(6px);
 						.lh-border-bottom-right-radius(6px);
+						.ie7-inline-block();
 						&.visu-fond-item-commande-groupee{
 							background-image: url('../layoutImg/illus-carousel/visu-fond-item-commande-groupee.png');
 							background-repeat: no-repeat;
 							background-position: left top;
-							background-size: cover;
+							.lh-background-size(cover);
 						}
 						.visu-item{
 							&.visu-item-commande-groupee{
@@ -698,7 +710,7 @@ ul.actus{
 							background-image: url('../layoutImg/illus-carousel/visu-fond-item-entretien-chaudiere.png');
 							background-repeat: no-repeat;
 							background-position: center top;
-							background-size: cover;
+							.lh-background-size(cover);
 						}
 						.visu-item{
 							&.visu-item-entretien-chaudiere{
@@ -850,6 +862,7 @@ form{
 				margin: 0 0 0 5px;
 				padding: 0;
 				border: none;
+				.ie7-inline-block();
 				&:before{
 					font-size: 2.5em;
 					position: absolute;
@@ -921,6 +934,7 @@ a#bouton-menu-responsive{
 		margin: 0 2px 0 0;
 		padding: 0;
 		font-size: 1.8em;
+		.ie7-inline-block();
 	}
 	&.active, &:hover{
 		text-decoration: none;
@@ -953,6 +967,7 @@ nav{
 			display: inline-block;
 			vertical-align: top;
 			padding: 6px 20px 0 20px;
+			.ie7-inline-block();
 			&.first{
 				padding: 0 20px 0 0;
 			}
@@ -1072,6 +1087,7 @@ a.logo{
 	margin: 5px 0 0 38px;
 	padding: 0;
 	background: url('../layoutImg/logo-bleu-orange.png') no-repeat left top;
+	.ie7-inline-block();
 	.bloc-degrade-bleu &{
 		background: url('../layoutImg/logo-blanc-orange.png') no-repeat left top;
 	}
@@ -1125,6 +1141,7 @@ footer{
 			padding: 0;
 			.lh-box-sizing(border-box);
 			padding: 0 35px;
+			.ie7-inline-block();
 			ul.cb{
 				display: block;
 				width: 130px;
@@ -1140,6 +1157,7 @@ footer{
 					padding: 0;
 					width: 50px;
 					height: 34px;
+					.ie7-inline-block();
 					&.visa{
 						background: url('../layoutImg/visa.png') no-repeat left top;
 					}
@@ -1178,6 +1196,7 @@ footer{
 					padding-bottom: 2px;
 					.lh-border-top-right-radius(3px);
 					.lh-border-bottom-right-radius(3px);
+					.ie7-inline-block();
 					&.trois{
 						padding-left: 20px;
 					}
@@ -1255,6 +1274,7 @@ footer{
 				height: 55px;
 				margin: 0 5px;
 				padding: 0;
+				.ie7-inline-block();
 				a{
 					display: block;
 					position: relative;
@@ -1327,6 +1347,7 @@ ul#menu-top-bar{
 		text-align: left;
 		margin: 0 0 0 50px;
 		padding: 0;
+		.ie7-inline-block();
 		&.tel{
 			a{
 				cursor: default;
@@ -1350,6 +1371,7 @@ ul#menu-top-bar{
 				height: 56px;
 				.lh-border-radius(50%);
 				background: @blanc;
+				.ie7-inline-block();
 				.visu-menu{
 					display: block;
 					position: absolute;
@@ -1393,11 +1415,13 @@ ul#menu-top-bar{
 				vertical-align: top;
 				margin: 0;
 				padding: 10px 0 0 0;
+				.ie7-inline-block();
 				.indic-menu{
 					display: inline-block;
 					.lato-italic(0.682em);
 					color: @orangeFioulReduc;
 					line-height: 1.1em;
+					.ie7-inline-block();
 					&.underline{
 						border-bottom: 1px solid @orangeFioulReduc;			
 					}
@@ -1475,6 +1499,7 @@ ul#menu-top-bar{
 	position: relative;
 	.lh-backface-visibility(hidden);
 	.lh-transform(translate3d(0, 0, 0));
+	.ie7-inline-block();
 	#bloc-commande{
 		display: block;
 		z-index: 2;
@@ -1519,7 +1544,7 @@ ul#menu-top-bar{
 #part-graph{
 	width: 100%;
 	background: url('../layoutImg/expert-du-prix.png') no-repeat 60% 32%;
-	background-size: 90% auto;
+	.lh-background-size(90%, auto);
 	.lh-backface-visibility(hidden);
 	.lh-transform-style(preserve-3d);
 }
@@ -1598,6 +1623,7 @@ ul#points-illus{
 		padding: 20px 0 12px 105px;
 		.lh-box-sizing(border-box);
 		position: relative;
+		.ie7-inline-block();
 		.point-illus{
 			display: block;
 			position: absolute;
@@ -1676,6 +1702,7 @@ ul.refs{
 		position: relative;
 		margin: 0 23px;
 		padding: 0;
+		.ie7-inline-block();
 		&:after{
 			content: "";
 			display: block;
@@ -1898,17 +1925,20 @@ ul.refs{
 		padding: 0;
 		margin: 0 3px;
 		color: @blanc;
+		.ie7-inline-block();
 	}
 	.point{
 		display: inline-block;
 		vertical-align: top;
 		padding-top: 13px;
 		font-size: 1.5em;
+		.ie7-inline-block();
 	}
 	.zone-texte-litres{
 		display: inline-block;
 		vertical-align: top;
 		margin: 0 0 0 20px;
+		.ie7-inline-block();
 	}
 }
 
@@ -2059,9 +2089,15 @@ ul.refs{
 @media (max-width: 1150px) {
 	header.bloc-full{
 		height: 54px;
+		position: relative;
+		top: inherit;
+		left: inherit;
 		.container{
 			width: 100%;
 		}
+	}
+	#top-home {
+		padding: 46px 0 125px 0;
 	}
 	a#bouton-menu-responsive{
 		display: block;
@@ -2166,11 +2202,13 @@ ul.refs{
 							top: 50%;
 							margin-top: -16px;
 							left: 20px;
+							.ie7-inline-block();
 						}
 						.txt-home{
 							display: inline-block;
 							vertical-align: top;
 							margin: 0 0 0 5px;
+							.ie7-inline-block();
 						}
 					}
 				}
@@ -2280,6 +2318,7 @@ ul.refs{
 				margin: 0 0 20px 0;
 				padding: 0;
 				border: none;
+				.ie7-inline-block();
 				.nom-client{
 					padding: 2px 120px 0 0;
 				}
@@ -2557,7 +2596,7 @@ ul.refs{
 								bottom: 0;
 								left: inherit;
 								right: 0;
-								background-size: auto 100%;
+								.lh-background-size(auto, 100%);
 								background-position: center top;
 							}
 						}
@@ -2578,7 +2617,7 @@ ul.refs{
 								bottom: 0;
 								left: 0;
 								right: inherit;
-								background-size: auto 100%;
+								.lh-background-size(auto, 100%);
 								margin: 0;
 							}
 							&.visu-item.visu-item-entretien-chaudiere{
@@ -2588,7 +2627,7 @@ ul.refs{
 								bottom: 0;
 								left: 0;
 								right: inherit;
-								background-size: auto 100%;
+								.lh-background-size(auto, 100%);
 								margin: 0;
 							}
 						}
@@ -2651,7 +2690,7 @@ ul.refs{
 						.visu-item{
 							&.visu-item.visu-item-paiement{
 								background-position: center bottom;
-								background-size: auto 90%;
+								.lh-background-size(auto 90%);
 							}
 							&.visu-item.visu-item-entretien-chaudiere{
 								background-position: 90% top;
@@ -2675,6 +2714,11 @@ ul.refs{
 	#bloc-commande-graph {
 		margin: 30px 0 0 0;
 	}
+	@media (max-width: 1150px) {
+		#top-home {
+			padding: 46px 0 125px 0;
+		}
+	}
 }
 
 @media (max-height: 768px) {
@@ -2684,13 +2728,116 @@ ul.refs{
 	#bloc-commande-graph {
 		margin: 20px 0 0 0;
 	}
+	@media (max-width: 1150px) {
+		#top-home {
+			padding: 26px 0 90px 0;
+		}
+	}
 }
 
 /* @end */
 
 /* retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
-    
+   
+    a.logo {
+	    .lh-background-size(309px 38px);
+	    background-image: url('../layoutImg/logo-bleu-orange@2x.png');
+    }
+    .bloc-degrade-bleu a.logo {
+    	.lh-background-size(309px 38px);
+    	background-image: url('../layoutImg/logo-blanc-orange@2x.png');
+    }
+    ul#menu-top-bar{
+    	li{
+    		a{
+    			.illus-menu{
+    				.visu-menu.mascotte{
+    					.lh-background-size(55px 56px);
+    					background-image: url('../layoutImg/illus-menu/mascotte@2x.png');
+    				}
+    				.visu-menu.adresse {
+    					.lh-background-size(56px 49px);
+    					background-image: url('../layoutImg/illus-menu/adresse@2x.png');
+    				}
+    				.visu-menu.cadenas {
+    					.lh-background-size(40px 49px);
+    					background-image: url('../layoutImg/illus-menu/cadenas@2x.png');
+    				}
+    			}
+    		} 
+    	} 
+    }
+    ul#points-illus{
+    	li{
+    		.point-illus{
+    			&.illus-paiement-souple {
+    				.lh-background-size(135px 148px);
+    				background-image: url('../layoutImg/illus-points/illus-paiement-souple@2x.png');
+    			}
+    			&.illus-prix-bas {
+    				.lh-background-size(192px 204px);
+    				background-image: url('../layoutImg/illus-points/illus-prix-bas@2x.png');
+    			}
+    			&.illus-commande-groupee {
+					.lh-background-size(109px 212px);
+	    			background-image: url('../layoutImg/illus-points/illus-commande-groupee@2x.png');
+    			}
+    			&.illus-livraison-adaptable {
+	    			.lh-background-size(130px 166px);
+	    			background-image: url('../layoutImg/illus-points/illus-livraison-adaptable@2x.png');
+    			}
+    		}
+    	}
+    }
+    footer{
+    	ul#menu-footer{
+    		li.col-menu-footer{
+    			ul.cb{
+    				li{
+	    				&.visa{
+	    					background-image: url('../layoutImg/visa@2x.png');
+	    					.lh-background-size(50px 34px);
+	    				}
+	    				&.mastercard{
+	    					background-image: url('../layoutImg/mastercard@2x.png');
+	    					.lh-background-size(50px 34px);
+	    				}
+    				}
+    			} 
+    		}
+    	} 
+    	#journal {
+	    	.lh-background-size(396px 402px);
+	    	background-image: url('../layoutImg/journal@2x.png');
+    	}
+    }
+    /* @group Responsive retina */
+    @media (max-width: 1150px){
+    	ul#points-illus{
+    		li{
+    			.point-illus{
+    				&.illus-paiement-souple {
+    					.lh-background-size(81px 89px);
+    					background-image: url('../layoutImg/illus-points/illus-paiement-souple-responsive@2x.png');
+    				}
+    				&.illus-prix-bas {
+    					.lh-background-size(116px 123px);
+    					background-image: url('../layoutImg/illus-points/illus-prix-bas-responsive@2x.png');
+    				}
+    				&.illus-commande-groupee {
+    					.lh-background-size(66px 128px);
+    	    			background-image: url('../layoutImg/illus-points/illus-commande-groupee-responsive@2x.png');
+    				}
+    				&.illus-livraison-adaptable {
+    	    			.lh-background-size(78px 100px);
+    	    			background-image: url('../layoutImg/illus-points/illus-livraison-adaptable-responsive@2x.png');
+    				}
+    			}
+    		}
+    	}
+    }
+    /* @end */
 }
 
 

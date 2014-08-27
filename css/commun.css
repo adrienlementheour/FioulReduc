@@ -2816,6 +2816,9 @@ ol.liste-num li .detail-liste {
   top: 0;
   left: 0;
 }
+.lt-ie8 .bloc-gauche {
+  display: inline;
+}
 .bloc-droite {
   display: inline-block;
   vertical-align: top;
@@ -2825,6 +2828,9 @@ ol.liste-num li .detail-liste {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 0 0 480px;
+}
+.lt-ie8 .bloc-droite {
+  display: inline;
 }
 .btn.btn-link {
   margin: 0;
@@ -2837,6 +2843,9 @@ ol.liste-num li .detail-liste {
   line-height: 1em;
   text-decoration: none;
   text-shadow: none;
+}
+.lt-ie8 .btn.btn-link {
+  display: inline;
 }
 .btn.btn-link:hover {
   text-decoration: none;
@@ -2910,6 +2919,8 @@ ul.actus li.actu a.zone-visu-actu {
   left: 0;
   background-repeat: no-repeat;
   background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   background-size: cover;
 }
 ul.actus li.actu .zone-texte-actu {
@@ -2952,6 +2963,9 @@ ul.actus li.actu .zone-texte-actu a.ic-icon-plus {
   line-height: 0.7em;
   margin: 0 0 0 2px;
   padding: 0;
+}
+.lt-ie8 ul.actus li.actu .zone-texte-actu a.ic-icon-plus {
+  display: inline;
 }
 ul.actus li.actu .zone-texte-actu a.ic-icon-plus:hover {
   color: #f86708;
@@ -3011,6 +3025,9 @@ ul.actus li.actu .zone-texte-actu a.ic-icon-plus:hover {
   padding-top: 60px;
   margin: 0;
 }
+.lt-ie8 .carousel.carousel-visu .carousel-inner .item.item-vertical .zone-texte-item {
+  display: inline;
+}
 .carousel.carousel-visu .carousel-inner .item.item-vertical .zone-texte-item h3 {
   padding: 10px 0 0 0;
 }
@@ -3042,10 +3059,15 @@ ul.actus li.actu .zone-texte-actu a.ic-icon-plus:hover {
   border-bottom-right-radius: 6px;
   background-clip: padding-box;
 }
+.lt-ie8 .carousel.carousel-visu .carousel-inner .item.item-vertical .zone-visu-item {
+  display: inline;
+}
 .carousel.carousel-visu .carousel-inner .item.item-vertical .zone-visu-item.visu-fond-item-commande-groupee {
   background-image: url('../layoutImg/illus-carousel/visu-fond-item-commande-groupee.png');
   background-repeat: no-repeat;
   background-position: left top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   background-size: cover;
 }
 .carousel.carousel-visu .carousel-inner .item.item-vertical .zone-visu-item .visu-item.visu-item-commande-groupee {
@@ -3074,6 +3096,8 @@ ul.actus li.actu .zone-texte-actu a.ic-icon-plus:hover {
   background-image: url('../layoutImg/illus-carousel/visu-fond-item-entretien-chaudiere.png');
   background-repeat: no-repeat;
   background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   background-size: cover;
 }
 .carousel.carousel-visu .carousel-inner .item.item-horizontal .zone-visu-item .visu-item.visu-item-entretien-chaudiere {
@@ -3260,6 +3284,9 @@ form button.btn .ic-fleche-rond {
   padding: 0;
   border: none;
 }
+.lt-ie8 form button.btn .ic-fleche-rond {
+  display: inline;
+}
 form button.btn .ic-fleche-rond:before {
   font-size: 2.5em;
   position: absolute;
@@ -3353,6 +3380,9 @@ a#bouton-menu-responsive .ic-navicon {
   padding: 0;
   font-size: 1.8em;
 }
+.lt-ie8 a#bouton-menu-responsive .ic-navicon {
+  display: inline;
+}
 a#bouton-menu-responsive.active,
 a#bouton-menu-responsive:hover {
   text-decoration: none;
@@ -3390,6 +3420,9 @@ nav ul li {
   display: inline-block;
   vertical-align: top;
   padding: 6px 20px 0 20px;
+}
+.lt-ie8 nav ul li {
+  display: inline;
 }
 nav ul li.first {
   padding: 0 20px 0 0;
@@ -3534,6 +3567,9 @@ a.logo {
   padding: 0;
   background: url('../layoutImg/logo-bleu-orange.png') no-repeat left top;
 }
+.lt-ie8 a.logo {
+  display: inline;
+}
 .bloc-degrade-bleu a.logo {
   background: url('../layoutImg/logo-blanc-orange.png') no-repeat left top;
 }
@@ -3599,6 +3635,9 @@ footer ul#menu-footer li.col-menu-footer {
   box-sizing: border-box;
   padding: 0 35px;
 }
+.lt-ie8 footer ul#menu-footer li.col-menu-footer {
+  display: inline;
+}
 footer ul#menu-footer li.col-menu-footer ul.cb {
   display: block;
   width: 130px;
@@ -3615,6 +3654,9 @@ footer ul#menu-footer li.col-menu-footer ul.cb li {
   padding: 0;
   width: 50px;
   height: 34px;
+}
+.lt-ie8 footer ul#menu-footer li.col-menu-footer ul.cb li {
+  display: inline;
 }
 footer ul#menu-footer li.col-menu-footer ul.cb li.visa {
   background: url('../layoutImg/visa.png') no-repeat left top;
@@ -3670,6 +3712,9 @@ footer ul#menu-footer li.col-menu-footer ul.paiements li {
   -moz-background-clip: padding;
   border-bottom-right-radius: 3px;
   background-clip: padding-box;
+}
+.lt-ie8 footer ul#menu-footer li.col-menu-footer ul.paiements li {
+  display: inline;
 }
 footer ul#menu-footer li.col-menu-footer ul.paiements li.trois {
   padding-left: 20px;
@@ -3763,6 +3808,9 @@ footer #journal ul.social-footer li {
   margin: 0 5px;
   padding: 0;
 }
+.lt-ie8 footer #journal ul.social-footer li {
+  display: inline;
+}
 footer #journal ul.social-footer li a {
   display: block;
   position: relative;
@@ -3846,6 +3894,9 @@ ul#menu-top-bar li {
   margin: 0 0 0 50px;
   padding: 0;
 }
+.lt-ie8 ul#menu-top-bar li {
+  display: inline;
+}
 ul#menu-top-bar li.tel a {
   cursor: default;
 }
@@ -3878,6 +3929,9 @@ ul#menu-top-bar li a .illus-menu {
   border-radius: 50%;
   background-clip: padding-box;
   background: #ffffff;
+}
+.lt-ie8 ul#menu-top-bar li a .illus-menu {
+  display: inline;
 }
 ul#menu-top-bar li a .illus-menu .visu-menu {
   display: block;
@@ -3946,6 +4000,9 @@ ul#menu-top-bar li a .zone-texte-menu {
   margin: 0;
   padding: 10px 0 0 0;
 }
+.lt-ie8 ul#menu-top-bar li a .zone-texte-menu {
+  display: inline;
+}
 ul#menu-top-bar li a .zone-texte-menu .indic-menu {
   display: inline-block;
   font-family: 'lato-italic', sans-serif;
@@ -3954,6 +4011,9 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu {
   text-rendering: optimizeLegibility;
   color: #fb8206;
   line-height: 1.1em;
+}
+.lt-ie8 ul#menu-top-bar li a .zone-texte-menu .indic-menu {
+  display: inline;
 }
 ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   border-bottom: 1px solid #fb8206;
@@ -4034,6 +4094,9 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
+.lt-ie8 .part-commande {
+  display: inline;
+}
 .part-commande #bloc-commande {
   display: block;
   z-index: 2;
@@ -4078,6 +4141,8 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
 #part-graph {
   width: 100%;
   background: url('../layoutImg/expert-du-prix.png') no-repeat 60% 32%;
+  -webkit-background-size: 90% auto;
+  -moz-background-size: 90% auto;
   background-size: 90% auto;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -4176,6 +4241,9 @@ ul#points-illus li {
   box-sizing: border-box;
   position: relative;
 }
+.lt-ie8 ul#points-illus li {
+  display: inline;
+}
 ul#points-illus li .point-illus {
   display: block;
   position: absolute;
@@ -4268,6 +4336,9 @@ ul.refs li.ref {
   position: relative;
   margin: 0 23px;
   padding: 0;
+}
+.lt-ie8 ul.refs li.ref {
+  display: inline;
 }
 ul.refs li.ref:after {
   content: "";
@@ -4527,16 +4598,25 @@ ul.refs li.ref.la-tribune:after {
   margin: 0 3px;
   color: #ffffff;
 }
+.lt-ie8 .bloc-litres-fioul .zone-chiffre {
+  display: inline;
+}
 .bloc-litres-fioul .point {
   display: inline-block;
   vertical-align: top;
   padding-top: 13px;
   font-size: 1.5em;
 }
+.lt-ie8 .bloc-litres-fioul .point {
+  display: inline;
+}
 .bloc-litres-fioul .zone-texte-litres {
   display: inline-block;
   vertical-align: top;
   margin: 0 0 0 20px;
+}
+.lt-ie8 .bloc-litres-fioul .zone-texte-litres {
+  display: inline;
 }
 /* @end */
 /* @end */
@@ -4650,9 +4730,15 @@ ul.refs li.ref.la-tribune:after {
 @media (max-width: 1150px) {
   header.bloc-full {
     height: 54px;
+    position: relative;
+    top: inherit;
+    left: inherit;
   }
   header.bloc-full .container {
     width: 100%;
+  }
+  #top-home {
+    padding: 46px 0 125px 0;
   }
   a#bouton-menu-responsive {
     display: block;
@@ -4769,10 +4855,16 @@ ul.refs li.ref.la-tribune:after {
     margin-top: -16px;
     left: 20px;
   }
+  .lt-ie8 nav ul li a.home .ic-maison {
+    display: inline;
+  }
   nav ul li a.home .txt-home {
     display: inline-block;
     vertical-align: top;
     margin: 0 0 0 5px;
+  }
+  .lt-ie8 nav ul li a.home .txt-home {
+    display: inline;
   }
   footer .energie {
     width: 60%;
@@ -4873,6 +4965,9 @@ ul.refs li.ref.la-tribune:after {
     margin: 0 0 20px 0;
     padding: 0;
     border: none;
+  }
+  .lt-ie8 #bloc-avis ul#avis li {
+    display: inline;
   }
   #bloc-avis ul#avis li .nom-client {
     padding: 2px 120px 0 0;
@@ -5125,6 +5220,8 @@ ul.refs li.ref.la-tribune:after {
     bottom: 0;
     left: inherit;
     right: 0;
+    -webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
     background-size: auto 100%;
     background-position: center top;
   }
@@ -5138,6 +5235,8 @@ ul.refs li.ref.la-tribune:after {
     bottom: 0;
     left: 0;
     right: inherit;
+    -webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
     background-size: auto 100%;
     margin: 0;
   }
@@ -5148,6 +5247,8 @@ ul.refs li.ref.la-tribune:after {
     bottom: 0;
     left: 0;
     right: inherit;
+    -webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
     background-size: auto 100%;
     margin: 0;
   }
@@ -5184,6 +5285,8 @@ ul.refs li.ref.la-tribune:after {
   }
   .carousel.carousel-visu .carousel-inner .item.item-horizontal .zone-visu-item .visu-item.visu-item.visu-item-paiement {
     background-position: center bottom;
+    -webkit-background-size: auto 90%;
+    -moz-background-size: auto 90%;
     background-size: auto 90%;
   }
   .carousel.carousel-visu .carousel-inner .item.item-horizontal .zone-visu-item .visu-item.visu-item.visu-item-entretien-chaudiere {
@@ -5200,6 +5303,11 @@ ul.refs li.ref.la-tribune:after {
     margin: 30px 0 0 0;
   }
 }
+@media (max-height: 900px) and (max-width: 1150px) {
+  #top-home {
+    padding: 46px 0 125px 0;
+  }
+}
 @media (max-height: 768px) {
   #top-home {
     padding: 80px 0 90px 0;
@@ -5208,8 +5316,115 @@ ul.refs li.ref.la-tribune:after {
     margin: 20px 0 0 0;
   }
 }
+@media (max-height: 768px) and (max-width: 1150px) {
+  #top-home {
+    padding: 26px 0 90px 0;
+  }
+}
 /* @end */
 /* retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  a.logo {
+    -webkit-background-size: 309px 38px;
+    -moz-background-size: 309px 38px;
+    background-size: 309px 38px;
+    background-image: url('../layoutImg/logo-bleu-orange@2x.png');
+  }
+  .bloc-degrade-bleu a.logo {
+    -webkit-background-size: 309px 38px;
+    -moz-background-size: 309px 38px;
+    background-size: 309px 38px;
+    background-image: url('../layoutImg/logo-blanc-orange@2x.png');
+  }
+  ul#menu-top-bar li a .illus-menu .visu-menu.mascotte {
+    -webkit-background-size: 55px 56px;
+    -moz-background-size: 55px 56px;
+    background-size: 55px 56px;
+    background-image: url('../layoutImg/illus-menu/mascotte@2x.png');
+  }
+  ul#menu-top-bar li a .illus-menu .visu-menu.adresse {
+    -webkit-background-size: 56px 49px;
+    -moz-background-size: 56px 49px;
+    background-size: 56px 49px;
+    background-image: url('../layoutImg/illus-menu/adresse@2x.png');
+  }
+  ul#menu-top-bar li a .illus-menu .visu-menu.cadenas {
+    -webkit-background-size: 40px 49px;
+    -moz-background-size: 40px 49px;
+    background-size: 40px 49px;
+    background-image: url('../layoutImg/illus-menu/cadenas@2x.png');
+  }
+  ul#points-illus li .point-illus.illus-paiement-souple {
+    -webkit-background-size: 135px 148px;
+    -moz-background-size: 135px 148px;
+    background-size: 135px 148px;
+    background-image: url('../layoutImg/illus-points/illus-paiement-souple@2x.png');
+  }
+  ul#points-illus li .point-illus.illus-prix-bas {
+    -webkit-background-size: 192px 204px;
+    -moz-background-size: 192px 204px;
+    background-size: 192px 204px;
+    background-image: url('../layoutImg/illus-points/illus-prix-bas@2x.png');
+  }
+  ul#points-illus li .point-illus.illus-commande-groupee {
+    -webkit-background-size: 109px 212px;
+    -moz-background-size: 109px 212px;
+    background-size: 109px 212px;
+    background-image: url('../layoutImg/illus-points/illus-commande-groupee@2x.png');
+  }
+  ul#points-illus li .point-illus.illus-livraison-adaptable {
+    -webkit-background-size: 130px 166px;
+    -moz-background-size: 130px 166px;
+    background-size: 130px 166px;
+    background-image: url('../layoutImg/illus-points/illus-livraison-adaptable@2x.png');
+  }
+  footer ul#menu-footer li.col-menu-footer ul.cb li.visa {
+    background-image: url('../layoutImg/visa@2x.png');
+    -webkit-background-size: 50px 34px;
+    -moz-background-size: 50px 34px;
+    background-size: 50px 34px;
+  }
+  footer ul#menu-footer li.col-menu-footer ul.cb li.mastercard {
+    background-image: url('../layoutImg/mastercard@2x.png');
+    -webkit-background-size: 50px 34px;
+    -moz-background-size: 50px 34px;
+    background-size: 50px 34px;
+  }
+  footer #journal {
+    -webkit-background-size: 396px 402px;
+    -moz-background-size: 396px 402px;
+    background-size: 396px 402px;
+    background-image: url('../layoutImg/journal@2x.png');
+  }
+  /* @group Responsive retina */
+  /* @end */
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1150px), only screen and (min-resolution: 144dpi) and (max-width: 1150px) {
+  ul#points-illus li .point-illus.illus-paiement-souple {
+    -webkit-background-size: 81px 89px;
+    -moz-background-size: 81px 89px;
+    background-size: 81px 89px;
+    background-image: url('../layoutImg/illus-points/illus-paiement-souple-responsive@2x.png');
+  }
+  ul#points-illus li .point-illus.illus-prix-bas {
+    -webkit-background-size: 116px 123px;
+    -moz-background-size: 116px 123px;
+    background-size: 116px 123px;
+    background-image: url('../layoutImg/illus-points/illus-prix-bas-responsive@2x.png');
+  }
+  ul#points-illus li .point-illus.illus-commande-groupee {
+    -webkit-background-size: 66px 128px;
+    -moz-background-size: 66px 128px;
+    background-size: 66px 128px;
+    background-image: url('../layoutImg/illus-points/illus-commande-groupee-responsive@2x.png');
+  }
+  ul#points-illus li .point-illus.illus-livraison-adaptable {
+    -webkit-background-size: 78px 100px;
+    -moz-background-size: 78px 100px;
+    background-size: 78px 100px;
+    background-image: url('../layoutImg/illus-points/illus-livraison-adaptable-responsive@2x.png');
+  }
+}
 /* ==|== print styles =======================================================
    ========================================================================== */
 @media print {
