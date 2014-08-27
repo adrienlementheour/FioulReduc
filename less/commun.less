@@ -21,6 +21,7 @@
 @orangeFioulReduc: #fb8206;
 @orange2FioulReduc: #f86708;
 @jauneFioulReduc: #ffcb00;
+@rougeErreur: #e22a0c;
 
 /* @end */
 
@@ -216,6 +217,10 @@
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+.ic-error:before {
+	content: "\e60b";
 }
 .ic-cadenas:before {
 	content: "\e60a";
@@ -809,6 +814,26 @@ input[type=number] {
 
 form{
 	color: @bleuFonceFioulReduc;
+	.control-group.error .control-label, .control-group.error .help-block, .control-group.error .help-inline, .indic-form.error{
+		color: @rougeErreur;
+	}
+	.ic-error{
+		&:before{
+			color: @rougeErreur;
+			position: absolute;
+			top: 50%;
+			margin: -8px 0 0 0;
+			padding: 0;
+			right: -25px;
+			display: block;
+			width: 16px;
+			height: 16px;
+			font-size: 16px;
+		}
+	}
+	span{
+		position: relative;
+	}
 	&.form-horizontal{
 		label{
 			&.control-label{
@@ -820,14 +845,20 @@ form{
 				padding: 10px 0 0 0;
 			}
 		}
+		.control-group.error input, .control-group.error select, .control-group.error textarea {
+			.lh-box-shadow(inset 0 0 0 1px @rougeErreur);
+			background: #faf2eb;
+		}
 		.controls{
 			margin: 0 0 0 140px;
+			position: relative;
 			input, select{
 				border: 2px solid #cccdd3;
 				.lh-box-sizing(border-box);
 				height: 40px;
 				.lato(0.938em);
 				color: @bleuFioulReduc;
+				position: relative;
 				&.taille1{
 					width: 100px;
 				}
@@ -1405,6 +1436,22 @@ ul#menu-top-bar{
 						left: 9px;
 						.lh-transform-origin(45% 53%);
 					}
+					&.compte-f{
+						width: 44px;
+						height: 57px;
+						background: url('../layoutImg/illus-menu/compte-f.png') no-repeat center center;
+						bottom: 3px;
+						left: 7px;
+						.lh-transform-origin(45% 60%);
+					}
+					&.compte-h{
+						width: 45px;
+						height: 59px;
+						background: url('../layoutImg/illus-menu/compte-h.png') no-repeat center center;
+						bottom: 3px;
+						left: 7px;
+						.lh-transform-origin(45% 60%);
+					}
 				}
 				
 			}
@@ -1419,14 +1466,23 @@ ul#menu-top-bar{
 				margin: 0;
 				padding: 10px 0 0 0;
 				.ie7-inline-block();
+				.lh-backface-visibility(hidden);
+				.lh-transform-style(preserve-3d);
 				.indic-menu{
 					display: inline-block;
-					.lato-italic(0.682em);
+					.lato-italic(0.66em);
 					color: @orangeFioulReduc;
-					line-height: 1.1em;
+					line-height: 1.2em;
 					.ie7-inline-block();
+					width: auto;
+					max-width: 132px;
+					height: 17px;
+					overflow: hidden;
+					.lh-hyphens(auto);
+					position: relative;
 					&.underline{
-						border-bottom: 1px solid @orangeFioulReduc;			
+						//border-bottom: 1px solid @orangeFioulReduc;
+						text-decoration: underline;	
 					}
 				}
 				.bloc-degrade-bleu &{
@@ -1474,8 +1530,8 @@ ul#menu-top-bar{
 	width: 120px;
 	height: auto;
 	position: absolute;
-	top: 30px;
-	right: 5px;
+	top: 23px;
+	right: 0px;
 	.lh-rotate(-8.2deg);
 	color: #ffa800;
 	line-height: 0.8em;
@@ -1507,7 +1563,7 @@ ul#menu-top-bar{
 		display: block;
 		z-index: 2;
 		width: 100%;
-		padding: 20px 40px;
+		padding: 20px 0 20px 40px;
 		.lh-border-radius(6px);
 		.lh-box-sizing(border-box);
 		position: absolute;
@@ -1515,16 +1571,26 @@ ul#menu-top-bar{
 		left: 0;
 		.lh-box-shadow(~"0 5px 1px rgba(7,23,58,.75)");
 		h2{
-			width: 75%;
+			width: 66%;
 		}
 	}
 	ol.liste-num{
 		margin: 278px 0 0 10px;
 	}
 	form{
-		button{
-			&.btn{
-				margin-top: 0;
+		#bloc-bouton{
+			display: block;
+			margin: 0;
+			padding: 0 40px 0 0;
+			.lh-box-sizing(border-box);
+			width: 100%;
+			button{
+				&.btn{
+					margin-top: 0;
+					display: block;
+					position: relative;
+					.lh-box-sizing(border-box);
+				}
 			}
 		}
 	}
@@ -1534,9 +1600,10 @@ ul#menu-top-bar{
 	display: block;
 	position: relative;
 	margin: 0 0 10px 0;
-	padding: 0;
+	padding: 0 40px 0 0;
 	height: 50px;
 	overflow: hidden;
+	.lh-box-sizing(border-box);
 }
 
 
@@ -2669,7 +2736,7 @@ ul.refs{
 	.part-commande{
 		#bloc-commande{
 			h2 {
-				width: 100%;
+				width: 84%;
 				font-size: 1.25em;
 			}
 		}
@@ -2741,7 +2808,8 @@ ul.refs{
 
 /* @end */
 
-/* retina */
+/* @group Retina */
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
    
     a.logo {
@@ -2767,6 +2835,14 @@ ul.refs{
     				.visu-menu.cadenas {
     					.lh-background-size(40px 49px);
     					background-image: url('../layoutImg/illus-menu/cadenas@2x.png');
+    				}
+    				.visu-menu.compte-f {
+    					.lh-background-size(44px 57px);
+    					background-image: url('../layoutImg/illus-menu/compte-f@2x.png');
+    				}
+    				.visu-menu.compte-h {
+    					.lh-background-size(45px 59px);
+    					background-image: url('../layoutImg/illus-menu/compte-h@2x.png');
     				}
     			}
     		} 
@@ -2843,6 +2919,8 @@ ul.refs{
     }
     /* @end */
 }
+
+/* @end */
 
 
 

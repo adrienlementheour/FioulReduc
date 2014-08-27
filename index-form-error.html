@@ -97,16 +97,16 @@
 		  						<form class="form-horizontal" action="" method="post">
 		  							<fieldset>
 		  								<div id="masque-form-home">
-											 <div class="control-group">
+											 <div class="control-group error">
 												<label class="control-label" for="order-zipcode">Mon code postal : </label>
 												<div class="controls">
 													<input id="order-zipcode" name="order-zipcode" class="taille1" type="text" value="" title="">
 												</div>
 											</div>
-											<div class="control-group">
+											<div class="control-group error">
 												<label class="control-label" for="order-quantity">Quantité : </label>
 												<div class="controls">
-													<input id="order-quantity" name="order-quantity" class="taille1" type="number" step="1" value="" title=""> <span>litres</span>
+													<input id="order-quantity" name="order-quantity" class="taille1" type="number" step="1" value="" title=""> <span class="ic-error">litres</span>
 												</div>
 											</div>
 											<div class="control-group">
@@ -120,14 +120,13 @@
 													</select>
 												</div>
 											</div>
-											<div class="control-group">
+											<div class="control-group error">
 												<label class="control-label" for="order-email">Mon email</label>
-												<div class="controls">
+												<div class="controls ic-error">
 													<input id="order-email" name="order-email" class="taille2" type="text" value="" title="">
-													
 												</div>
 											</div>
-											<div class="indic-form">Tous les champs sont obligatoires</div>
+											<div class="indic-form error">Tous les champs sont obligatoires</div>
 										</div>
 										<div id="bloc-bouton">
 											<button type="submit" class="btn btn-block">Voir les prix<span class="ic-fleche-rond"></span></button>
