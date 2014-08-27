@@ -1,6 +1,16 @@
-///////////////
-// variables //
-///////////////
+//////////////////////////////////////////////////
+//////////////// REQUESTANIMFRAME ////////////////
+//////////////////////////////////////////////////
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       || 
+          window.webkitRequestAnimationFrame || 
+          window.mozRequestAnimationFrame    || 
+          window.oRequestAnimationFrame      || 
+          window.msRequestAnimationFrame     || 
+          function(callback){
+            window.setTimeout(callback, 1000/60);
+          };
+})();
 
 //////////////////////////////////////////////////
 /////////// MOIS HIGHCHARTS EN FRANÇAIS //////////
@@ -71,6 +81,21 @@ function ouvertureFermetureBlocCommandeHome(type){
 	}
 }
 
+function animer(myScroll){
+	if($(window).width()>480) {
+		if (myScroll>=$(document).height()-$(window).height()-471) {
+			var xPos = -(myScroll-$(document).height()+$(window).height());
+			TweenMax.set($("#journal"), {y:xPos});
+		} else {
+			TweenMax.set($("#journal"), {y:250});
+		}
+	}
+	requestAnimFrame(function(){
+		myScroll = $(document).scrollTop();
+		animer(myScroll);
+	});
+}
+
 $( window ).resize(function() {
 	if($("body").hasClass("home")){
 		if($(window).width()>480) {
@@ -98,6 +123,8 @@ $( window ).resize(function() {
 });
 
 $(document).ready(function(){
+	myScroll = $(document).scrollTop();
+	animer(myScroll);
 	if($("body").hasClass("home")){
 		// Dépliage du bloc "commandez votre fioul"
 		$("a#bouton-menu-responsive").click(function(){

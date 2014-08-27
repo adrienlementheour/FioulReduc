@@ -3723,7 +3723,7 @@ footer .energie {
   text-rendering: optimizeLegibility;
   color: #9ca6c0;
 }
-footer .journal {
+footer #journal {
   display: block;
   width: 396px;
   height: 402px;
@@ -3737,7 +3737,7 @@ footer .journal {
   -o-transform: rotate(12deg);
   transform: rotate(12deg);
 }
-footer .journal ul.social-footer {
+footer #journal ul.social-footer {
   display: block;
   width: 195px;
   height: 55px;
@@ -3748,7 +3748,7 @@ footer .journal ul.social-footer {
   top: 143px;
   right: 27px;
 }
-footer .journal ul.social-footer li {
+footer #journal ul.social-footer li {
   display: inline-block;
   vertical-align: top;
   width: 55px;
@@ -3756,7 +3756,7 @@ footer .journal ul.social-footer li {
   margin: 0 5px;
   padding: 0;
 }
-footer .journal ul.social-footer li a {
+footer #journal ul.social-footer li a {
   display: block;
   position: relative;
   width: 100%;
@@ -3769,7 +3769,7 @@ footer .journal ul.social-footer li a {
   -o-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
 }
-footer .journal ul.social-footer li a:before {
+footer #journal ul.social-footer li a:before {
   color: #ffffff;
   display: block;
   width: 100%;
@@ -3781,7 +3781,7 @@ footer .journal ul.social-footer li a:before {
   line-height: 55px;
   font-size: 40px;
 }
-footer .journal ul.social-footer li a.facebook {
+footer #journal ul.social-footer li a.facebook {
   background-color: #2d5391;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYig0MSw3MSwxNjApIiBzdG9wLW9wYWNpdHk9Ii43Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2IoNDEsNzEsMTYwKSIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
   background-image: -webkit-linear-gradient(bottom, rgba(41,71,160,.7) -30.51%, rgba(41,71,160,0) 69.49%);
@@ -3789,10 +3789,10 @@ footer .journal ul.social-footer li a.facebook {
   background-image: -o-linear-gradient(bottom, rgba(41,71,160,.7) -30.51%, rgba(41,71,160,0) 69.49%);
   background-image: linear-gradient(to top, rgba(41,71,160,.7) -30.51%, rgba(41,71,160,0) 69.49%);
 }
-footer .journal ul.social-footer li a.facebook:hover {
+footer #journal ul.social-footer li a.facebook:hover {
   background-color: #172f72;
 }
-footer .journal ul.social-footer li a.twitter {
+footer #journal ul.social-footer li a.twitter {
   background-color: #28a0d2;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYig0MSw3MSwxNjApIiBzdG9wLW9wYWNpdHk9Ii4zMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0icmdiKDQxLDcxLDE2MCkiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNsZXNzaGF0LWdlbmVyYXRlZCkiIC8+PC9zdmc+);
   background-image: -webkit-linear-gradient(bottom, rgba(41,71,160,.31) -30.51%, rgba(41,71,160,0) 69.49%);
@@ -3800,10 +3800,10 @@ footer .journal ul.social-footer li a.twitter {
   background-image: -o-linear-gradient(bottom, rgba(41,71,160,.31) -30.51%, rgba(41,71,160,0) 69.49%);
   background-image: linear-gradient(to top, rgba(41,71,160,.31) -30.51%, rgba(41,71,160,0) 69.49%);
 }
-footer .journal ul.social-footer li a.twitter:hover {
+footer #journal ul.social-footer li a.twitter:hover {
   background-color: #2888c5;
 }
-footer .journal ul.social-footer li a.googleplus {
+footer #journal ul.social-footer li a.googleplus {
   background-color: #dd4b39;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYigwLDAsMCkiIHN0b3Atb3BhY2l0eT0iLjE5Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2IoMCwwLDApIiBzdG9wLW9wYWNpdHk9IjAiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjbGVzc2hhdC1nZW5lcmF0ZWQpIiAvPjwvc3ZnPg==);
   background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.19) -30.51%, rgba(0,0,0,0) 69.49%);
@@ -3811,7 +3811,7 @@ footer .journal ul.social-footer li a.googleplus {
   background-image: -o-linear-gradient(bottom, rgba(0,0,0,.19) -30.51%, rgba(0,0,0,0) 69.49%);
   background-image: linear-gradient(to top, rgba(0,0,0,.19) -30.51%, rgba(0,0,0,0) 69.49%);
 }
-footer .journal ul.social-footer li a.googleplus:hover {
+footer #journal ul.social-footer li a.googleplus:hover {
   background-color: #b94030;
 }
 /* @end */
@@ -4764,7 +4764,7 @@ ul.refs li.ref.la-tribune:after {
   footer ul#menu-footer li.col-menu-footer {
     padding: 0 25px;
   }
-  footer .journal {
+  footer #journal {
     right: 40px;
   }
   footer a#btn-retour-haut {
@@ -4904,7 +4904,7 @@ ul.refs li.ref.la-tribune:after {
     width: 100%;
     margin: 0 0 20px 0;
   }
-  footer .journal {
+  footer #journal {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -5032,14 +5032,14 @@ ul.refs li.ref.la-tribune:after {
   footer ul#menu-footer li.col-menu-footer .titre-footer br {
     display: none;
   }
-  footer .journal {
+  footer #journal {
     width: 195px;
     height: 55px;
     background: none;
     margin: 0 auto;
     left: inherit;
   }
-  footer .journal ul.social-footer {
+  footer #journal ul.social-footer {
     position: relative;
     top: inherit;
     right: inherit;
