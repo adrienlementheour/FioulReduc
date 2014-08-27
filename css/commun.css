@@ -3202,6 +3202,9 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+input[type=number] {
+  -moz-appearance: textfield;
+}
 form {
   color: #0c1a4c;
 }
@@ -4158,6 +4161,7 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
 .graphTooltip {
   height: 110px;
   overflow: hidden;
+  background: #ffffff;
   background: rgba(255, 255, 255, 0.9);
   -webkit-box-shadow: 0 15px 15px rgba(3,9,25,0.35);
   -moz-box-shadow: 0 15px 15px rgba(3,9,25,0.35);
