@@ -3313,6 +3313,14 @@ form button.btn:active {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+form .indic-form {
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 0.875em;
+  text-rendering: optimizeLegibility;
+  color: #a2a9ba;
+  text-align: center;
+}
 /* @end */
 /* @group Header */
 header {
@@ -3744,9 +3752,9 @@ footer #journal ul.social-footer {
   list-style: none;
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: relative;
   top: 143px;
-  right: 27px;
+  left: 175px;
 }
 footer #journal ul.social-footer li {
   display: inline-block;
@@ -4060,7 +4068,7 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
 #masque-form-home {
   display: block;
   position: relative;
-  margin: 0 0 14px 0;
+  margin: 0 0 10px 0;
   padding: 0;
   height: 50px;
   overflow: hidden;
@@ -5043,6 +5051,8 @@ ul.refs li.ref.la-tribune:after {
     position: relative;
     top: inherit;
     right: inherit;
+    left: inherit;
+    bottom: inherit;
   }
   /* @group responsive Home */
   ul#points-illus {
