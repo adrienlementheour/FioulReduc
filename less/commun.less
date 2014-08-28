@@ -1,5 +1,8 @@
 /* @group import */
 
+@import "_ionicons-variables";
+@import "_ionicons-font";
+@import "_ionicons-icons";
 @import (reference) "lesshat-prefixed.less";
 @import (reference) "couleurs-fonts.less";
 
@@ -582,6 +585,7 @@ ul.actus{
 			display: block;
 			width: 84px;
 			li{
+				cursor: pointer;
 				width: 12px;
 				height: 12px;
 				background-color: @blanc;
@@ -590,6 +594,9 @@ ul.actus{
 				margin: 0 8px;
 				&.active{
 					background-color: @orangeFioulReduc;
+				}
+				&:hover{
+					background-color: @orange2FioulReduc;
 				}
 			}
 		}
@@ -738,6 +745,9 @@ ul.actus{
 			}
 			&.right{
 				right: -50px;
+			}
+			&:hover{
+				color: @orange2FioulReduc;
 			}
 		}
 	}
