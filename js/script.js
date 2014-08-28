@@ -26,6 +26,18 @@ Highcharts.setOptions({
 	}
 });
 
+///////////////////////////////////////////////////////
+/////////// FONCTION POUR ANIMER LE COMPTEUR //////////
+///////////////////////////////////////////////////////
+function compteur(){
+	window.odometerOptions = {
+
+	};
+	setTimeout(function(){
+	    odometer.innerHTML = 1456622466;
+	}, 200);
+}
+
 
 /////////////////////////////////////////////////////////////////////////
 /////////// FONCTION POUR OUVRIR ET FERMER LE MENU RESPONSIVE //////////
@@ -98,6 +110,23 @@ function animer(myScroll){
 			TweenMax.set($("#journal"), {y:250, rotation: 0});
 		}
 	}
+	
+	if($("body").hasClass("home")){
+		var hauteurPage = $(document).height();
+		var hauteurFenetre = $(window).height();
+		var positionTopCompteur = $("#odometer").offset().top;
+		var offset = hauteurFenetre/1.3;
+
+		if(((myScroll-positionTopCompteur+offset)>=0)){
+			// Compteur de la home
+			compteur();
+		}
+			
+		
+		
+		
+		
+	}
 	requestAnimFrame(function(){
 		myScroll = $(document).scrollTop();
 		animer(myScroll);
@@ -134,6 +163,7 @@ $(document).ready(function(){
 	myScroll = $(document).scrollTop();
 	animer(myScroll);
 	if($("body").hasClass("home")){
+	
 		// Dépliage du bloc "commandez votre fioul"
 		$("a#bouton-menu-responsive").click(function(){
 			ouvertureFermetureMenuResponsive();
