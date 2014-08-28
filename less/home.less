@@ -5,15 +5,6 @@
 
 /* @end */
 
-/* @group Top home */
-
-#top-home{
-	padding: 100px 0 145px 0;
-	position: relative;
-}
-
-/* @end */
-
 /* @group Bloc Commande / Graph */
 
 #bloc-commande-graph{
@@ -282,16 +273,80 @@ ul#points-illus{
 	.zone-texte-litres{
 		display: inline-block;
 		vertical-align: top;
-		margin: 0 0 0 20px;
+		margin: 0 0 0 25px;
 		.ie7-inline-block();
 		line-height: 1.3em;
-		padding: 13px 0 0 0 ;
+		padding: 16px 0 0 0 ;
 	}
 }
 
 /* @group odometer */
 
+.compteur.odometer-auto-theme, .odometer.odometer-theme-train-station {
+	.lato(1.1em);
+}
+
 .odometer-formatting-mark{
+	display: inline-block;
+	vertical-align: middle;
+	padding: 28px 0 0 0;
+	height: 10px;
+	line-height: 10px;
+	font-size: 1.3em;
+	color: #102462;
+}
+
+.compteur.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-train-station .odometer-digit {
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: middle;
+	*vertical-align: auto;
+	.lh-border-radius(10px);
+	.lh-background-image(none);
+	background-color: #041340;
+	width: 32px;
+	height: 53px;
+	margin: 0 3px;
+	padding: 0;
+	line-height: 53px;
+	text-align: center;
+	color: white;
+	.lato(1.4em);
+}
+
+.compteur.odometer-auto-theme .odometer-digit .odometer-digit-inner, .compteur.odometer-theme-train-station .odometer-digit .odometer-digit-inner {
+  text-align: left;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.compteur.odometer-auto-theme .odometer-digit .odometer-digit-spacer, .compteur.odometer-theme-train-station .odometer-digit .odometer-digit-spacer {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  visibility: hidden;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.compteur.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value, .compteur.odometer-theme-train-station .odometer-digit .odometer-value.odometer-last-value {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+/*.odometer-formatting-mark{
 	display: inline-block;
 	vertical-align: middle;
 	padding: 28px 0 0 0;
@@ -365,7 +420,7 @@ ul#points-illus{
   text-align: center;
 }
 .odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-theme-train-station.odometer-animating-up .odometer-ribbon-inner {
-  .lh-transition(transform 3s);
+  .lh-transition(transform 20s);
 }
 .odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-train-station.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
   -webkit-transform: translateY(-100%);
@@ -382,7 +437,7 @@ ul#points-illus{
   transform: translateY(-100%);
 }
 .odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-train-station.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
-  .lh-transition(transform 3s);
+  .lh-transition(transform 20s);
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -411,7 +466,7 @@ ul#points-illus{
 .odometer.odometer-auto-theme .odometer-digit + .odometer-digit, .odometer.odometer-theme-train-station .odometer-digit + .odometer-digit {
   margin-left: 0.1em;
   text-align: center;
-}
+}*/
 
 /* @end */
 

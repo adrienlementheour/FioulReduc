@@ -2692,6 +2692,16 @@ body {
 .big-padding {
   padding: 65px 0;
 }
+.bloc-top {
+  padding: 100px 0 50px 0;
+  position: relative;
+}
+.home .bloc-top {
+  padding: 100px 0 145px 0;
+}
+.home.alerte .bloc-top {
+  padding: 140px 0 145px 0;
+}
 .alert {
   padding: 0;
   margin: 0;
@@ -2708,9 +2718,6 @@ body {
   -moz-background-clip: padding;
   border-radius: 0;
   background-clip: padding-box;
-}
-.alert.alert-top .alert-content .container {
-  margin: 54px auto 0 auto;
 }
 .alert .alert-content {
   background-color: #ef5400;
@@ -4406,11 +4413,18 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
     top: inherit;
     left: inherit;
   }
-  header.bloc-full .container {
+  header.bloc-full > .container {
     width: 100%;
   }
-  #top-home {
+  .bloc-top {
+    padding: 100px 0 50px 0;
+    position: relative;
+  }
+  .home .bloc-top {
     padding: 46px 0 125px 0;
+  }
+  .home.alerte .bloc-top {
+    padding: 86px 0 125px 0;
   }
   a#bouton-menu-responsive {
     display: block;
@@ -4967,8 +4981,8 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   .bloc-litres-fioul .zone-texte-litres {
     margin: 0;
   }
-  .odometer.odometer-auto-theme .odometer-digit,
-  .odometer.odometer-theme-train-station .odometer-digit {
+  .compteur.odometer-auto-theme .odometer-digit,
+  .compteur.odometer-theme-train-station .odometer-digit {
     width: 20px;
     -webkit-border-radius: 5px;
     -webkit-background-clip: padding-box;
@@ -4981,29 +4995,46 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
 /* @end */
 /* @group Responsive vertical */
 @media (max-height: 900px) {
-  #top-home {
+  .home .bloc-top {
     padding: 100px 0 125px 0;
+  }
+  .home.alerte .bloc-top {
+    padding: 140px 0 125px 0;
   }
   #bloc-commande-graph {
     margin: 30px 0 0 0;
   }
 }
 @media (max-height: 900px) and (max-width: 1150px) {
-  #top-home {
+  .home .bloc-top {
     padding: 46px 0 125px 0;
+  }
+  .home.alerte .bloc-top {
+    padding: 86px 0 125px 0;
+  }
+}
+@media (max-height: 900px) and (max-width: 480px) {
+  .home.alerte .bloc-top {
+    padding: 106px 0 125px 0;
   }
 }
 @media (max-height: 768px) {
-  #top-home {
+  .home .bloc-top {
     padding: 80px 0 90px 0;
+  }
+  .home.alerte .bloc-top {
+    padding: 120px 0 90px 0;
   }
   #bloc-commande-graph {
     margin: 20px 0 0 0;
   }
 }
 @media (max-height: 768px) and (max-width: 1150px) {
-  #top-home {
+  .home .bloc-top {
     padding: 26px 0 90px 0;
+  }
+  .home.alerte .bloc-top {
+    padding: 66px 0 90px 0;
   }
 }
 /* @end */

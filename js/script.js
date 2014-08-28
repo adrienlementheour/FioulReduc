@@ -30,12 +30,18 @@ Highcharts.setOptions({
 /////////// FONCTION POUR ANIMER LE COMPTEUR //////////
 ///////////////////////////////////////////////////////
 function compteur(){
-	window.odometerOptions = {
+	// valeur max compteur
+	var valeurMaxCompteur = 1456622570;
+	// valeur compteur init
+	var valeurCompteur = 1456622470;
+    var compteur = new Odometer({ el: $('.compteur')[0], theme: 'train-station', value: valeurCompteur });
+    compteur.render();
 
-	};
-	setTimeout(function(){
-	    odometer.innerHTML = 1456622466;
-	}, 200);
+    setInterval(function(){
+    	if (valeurCompteur <= valeurMaxCompteur) {
+    		compteur.update(valeurCompteur++);	
+    	}
+    }, 3000);
 }
 
 
@@ -112,23 +118,6 @@ function animer(myScroll){
 	}else {
 		TweenMax.set($("#journal"), {y:0, rotation: 0});
 	}
-	
-	if($("body").hasClass("home")){
-		var hauteurPage = $(document).height();
-		var hauteurFenetre = $(window).height();
-		var positionTopCompteur = $("#odometer").offset().top;
-		var offset = hauteurFenetre/1.3;
-
-		if(((myScroll-positionTopCompteur+offset)>=0)){
-			// Compteur de la home
-			compteur();
-		}
-			
-		
-		
-		
-		
-	}
 	requestAnimFrame(function(){
 		myScroll = $(document).scrollTop();
 		animer(myScroll);
@@ -164,6 +153,10 @@ $( window ).resize(function() {
 $(document).ready(function(){
 	myScroll = $(document).scrollTop();
 	animer(myScroll);
+	compteur();
+	$(".alert .close").click(function(){
+		$("body").removeClass("alerte");
+	});
 	if($("body").hasClass("home")){
 	
 		// Dépliage du bloc "commandez votre fioul"
