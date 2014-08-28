@@ -16,6 +16,7 @@
 	  	<link rel="stylesheet" href="css/libs/normalize.css">
 	  	<link rel="stylesheet" media="screen" href="js/libs/bootstrap/bootstrap.min.css">
 	  	<link rel="stylesheet" media="screen" href="js/libs/bootstrap/bootstrap-responsive.min.css">
+	  	<link rel="stylesheet" href="js/libs/odometer/themes/odometer-theme-train-station.css" />
 	  	<link rel="stylesheet" href="css/home.css">
 	  	<link rel="stylesheet" href="css/commun.css">
 		<!--[if lt IE 7]>
@@ -213,7 +214,13 @@
 	  				</div>
 	  				<a class="btn btn-link btn-fleche pull-right btn-link-home" href="#"><span class="ic-arrow-right"></span>Voir tous les avis clients</a>
 	  			</div>
-	  			<div class="bloc-litres-fioul"><div id="odometer" class="odometer">1456621354</div> <div class="zone-texte-litres">litres de fioul ont été commandés sur <span class="orange">FioulReduc</span> depuis sa création en 2010.</div></div>
+	  			<script type="text/javascript">
+	  				window.odometerOptions = {
+	  					auto: false,
+	  					format: '(.ddd).dd',
+	  				};
+	  			</script>
+	  			<div class="bloc-litres-fioul"><div class="compteur"></div> <div class="zone-texte-litres">litres de fioul ont été commandés sur <span class="orange">FioulReduc</span> depuis sa création en 2010.</div></div>
 	  		</div>
 	  	</section>
 	  	<section class="bloc-full bloc-blanc">

@@ -2719,6 +2719,13 @@ body {
   border-radius: 0;
   background-clip: padding-box;
 }
+.alert .ic-error {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1px 0 0 0;
+  margin: 0 12px 0 0;
+  font-size: 1.2em;
+}
 .alert .alert-content {
   background-color: #ef5400;
   border-bottom: 3px solid #ffffff;
