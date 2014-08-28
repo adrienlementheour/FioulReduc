@@ -1,0 +1,545 @@
+/* @group import */
+
+@import (reference) "lesshat-prefixed.less";
+@import (reference) "couleurs-fonts.less";
+
+/* @end */
+
+/* @group Top home */
+
+#top-home{
+	padding: 100px 0 145px 0;
+	position: relative;
+}
+
+/* @end */
+
+/* @group Bloc Commande / Graph */
+
+#bloc-commande-graph{
+	display: block;
+	padding: 0;
+	margin: 50px 0 0 0;
+	position: relative;
+	.bloc-gauche{
+		padding: 0 52px 0 0;
+	}
+}
+
+.prix-bas{
+	font-family: 'Dancing Script', cursive;
+	color: @orangeFioulReduc;
+	font-size: 1.375em;
+	display: block;
+	width: 120px;
+	height: auto;
+	position: absolute;
+	top: 23px;
+	right: 0px;
+	.lh-rotate(-8.2deg);
+	color: #ffa800;
+	line-height: 0.8em;
+	.ic-sousligne{
+		&:before{
+			font-size: 3.5em;
+			color: #ffa800;
+			.lh-rotate(8.2deg);
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+	}
+	.decal{
+		display: block;
+		margin-left: 12px;
+	}
+}
+
+.part-commande{
+	display: inline-block;
+	vertical-align: top;
+	width: 428px;
+	position: relative;
+	.lh-backface-visibility(hidden);
+	.lh-transform(translate3d(0, 0, 0));
+	.ie7-inline-block();
+	#bloc-commande{
+		display: block;
+		z-index: 2;
+		width: 100%;
+		padding: 20px 0 20px 40px;
+		.lh-border-radius(6px);
+		.lh-box-sizing(border-box);
+		position: absolute;
+		top: 0;
+		left: 0;
+		.lh-box-shadow(~"0 5px 1px rgba(7,23,58,.75)");
+		h2{
+			width: 66%;
+		}
+	}
+	ol.liste-num{
+		margin: 278px 0 0 10px;
+	}
+	form{
+		#bloc-bouton{
+			display: block;
+			margin: 0;
+			padding: 0 40px 0 0;
+			.lh-box-sizing(border-box);
+			width: 100%;
+			button{
+				&.btn{
+					margin-top: 0;
+					display: block;
+					position: relative;
+					.lh-box-sizing(border-box);
+				}
+			}
+		}
+	}
+}
+
+#masque-form-home{
+	display: block;
+	position: relative;
+	margin: 0 0 10px 0;
+	padding: 0 40px 0 0;
+	height: 50px;
+	overflow: hidden;
+	.lh-box-sizing(border-box);
+}
+
+
+.highcharts-container {
+    overflow: visible!important;
+}
+
+#part-graph{
+	width: 100%;
+	background: url('../layoutImg/expert-du-prix.png') no-repeat 60% 32%;
+	.lh-background-size(90%, auto);
+	.lh-backface-visibility(hidden);
+	.lh-transform-style(preserve-3d);
+}
+
+.graphTooltip {
+	width:190px;
+	height: 110px;
+	overflow: hidden;
+	background: @blanc;
+	background:rgba(255,255,255,0.9);
+	.lh-box-shadow(~"0 15px 15 rgba(3,9,25,0.35)");
+	.lh-border-radius(6px);
+	display: block;
+	width: 190px;
+	text-align: center;
+	.lato(1em);
+	padding: 0;
+	h5 {
+		color: @bleuFonceFioulReduc;
+		margin: 0;
+		padding: 0;
+		background-color: #ffcb00;
+		text-transform: uppercase;
+		font-size: 0.8em;
+		letter-spacing: 1px;
+	}
+	strong {
+		color: @bleuFonceFioulReduc;
+		.lato-bold(1.5em);
+		text-transform: uppercase;
+		span {
+			font-size: 0.8em;
+		}
+		display: block;
+		padding: 9px 0 0;
+	}
+	p {
+		font-size: 0.95em;
+		color: #898e9f;
+		margin: 0;
+		padding: 6px 0 10px 8px;
+	}
+	a {
+		display: block;
+		margin-top: 3px;
+		color: @orangeFioulReduc;
+		text-decoration: underline;
+		&:hover {
+			color: @bleuFioulReduc;
+		}
+	}
+	&.today {
+		width: 105px;
+		height: 51px;
+		strong {
+			padding: 4px 0;
+		}
+	}
+}
+
+/* @end */
+
+/* @group Bloc points */
+	
+ul#points-illus{
+	display: block;
+	width: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0 0 10px 0;
+	li{
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		width: 25%;
+		margin: 0;
+		padding: 20px 0 12px 105px;
+		.lh-box-sizing(border-box);
+		position: relative;
+		.ie7-inline-block();
+		.point-illus{
+			display: block;
+			position: absolute;
+			&.illus-paiement-souple{
+				width: 135px;
+				height: 148px;
+				left: -20px;
+				top: -35px;
+				background: url('../layoutImg/illus-points/illus-paiement-souple.png') no-repeat left top;
+			}
+			&.illus-prix-bas{
+				width: 192px;
+				height: 204px;
+				left: 0;
+				top: -93px;
+				background: url('../layoutImg/illus-points/illus-prix-bas.png') no-repeat left top;
+			}
+			&.illus-commande-groupee{
+				width: 109px;
+				height: 212px;
+				left: -15px;
+				top: -103px;
+				background: url('../layoutImg/illus-points/illus-commande-groupee.png') no-repeat left top;
+			}
+			&.illus-livraison-adaptable{
+				width: 130px;
+				height: 166px;
+				left: -22px;
+				top: -54px;
+				background: url('../layoutImg/illus-points/illus-livraison-adaptable.png') no-repeat left top;
+			}
+		}
+		
+		.titre-point{
+			.lato-bold(1.063em);
+			color: @bleuFioulReduc;
+			margin-bottom: 2px;
+		}
+		p{
+			.lato(0.813em);
+			color: @bleuFonceFioulReduc;
+			line-height: 1.3em;
+		}
+	}
+}
+
+/* @end */
+
+/* Bloc litres fioul */
+
+.bloc-litres-fioul{
+	display: block;
+	margin: 50px 0 40px 0;
+	.lato-bold(1.375em);
+	color: @bleuFioulReduc;
+	line-height: 53px;
+	text-align: center;
+	.zone-chiffre{
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		height: 53px;
+		width: 33px;
+		line-height: 53px;
+		text-align: center;
+		.lh-border-radius(10px);
+		overflow: hidden;
+		background-color: @bleuFonceFioulReduc;
+		padding: 0;
+		margin: 0 3px;
+		color: @blanc;
+		.ie7-inline-block();
+	}
+	.point{
+		display: inline-block;
+		vertical-align: top;
+		padding-top: 13px;
+		font-size: 1.5em;
+		.ie7-inline-block();
+	}
+	.zone-texte-litres{
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 0 0 20px;
+		.ie7-inline-block();
+		line-height: 1.3em;
+		padding: 13px 0 0 0 ;
+	}
+}
+
+/* @group odometer */
+
+.odometer-formatting-mark{
+	display: inline-block;
+	vertical-align: middle;
+	padding: 28px 0 0 0;
+	height: 10px;
+	line-height: 10px;
+	font-size: 1.3em;
+	color: #102462;
+}
+.odometer.odometer-auto-theme, .odometer.odometer-theme-train-station {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  position: relative;
+}
+.odometer.odometer-auto-theme, .odometer.odometer-theme-train-station {
+  *display: inline;
+}
+.odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-train-station .odometer-digit {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  position: relative;
+}
+.odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-train-station .odometer-digit {
+  *display: inline;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer, .odometer.odometer-theme-train-station .odometer-digit .odometer-digit-spacer {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  visibility: hidden;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer, .odometer.odometer-theme-train-station .odometer-digit .odometer-digit-spacer {
+  *display: inline;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner, .odometer.odometer-theme-train-station .odometer-digit .odometer-digit-inner {
+  text-align: left;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  text-align: center;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon, .odometer.odometer-theme-train-station .odometer-digit .odometer-ribbon {
+  display: block;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner, .odometer.odometer-theme-train-station .odometer-digit .odometer-ribbon-inner {
+  display: block;
+  -webkit-backface-visibility: hidden;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-value, .odometer.odometer-theme-train-station .odometer-digit .odometer-value {
+  display: block;
+  -webkit-transform: translateZ(0);
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value, .odometer.odometer-theme-train-station .odometer-digit .odometer-value.odometer-last-value {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-theme-train-station.odometer-animating-up .odometer-ribbon-inner {
+  .lh-transition(transform 3s);
+}
+.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-train-station.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner, .odometer.odometer-theme-train-station.odometer-animating-down .odometer-ribbon-inner {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-train-station.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+  .lh-transition(transform 3s);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+.odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-train-station .odometer-digit {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  .lh-border-radius(10px);
+  .lh-background-image(none);
+  background-color: #222222;
+  width: 32px;
+  height: 53px;
+  margin: 0 3px;
+  line-height: 53px;
+  text-align: center;
+  color: white;
+}
+.odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-train-station .odometer-digit {
+  *display: inline;
+}
+.odometer.odometer-auto-theme .odometer-digit + .odometer-digit, .odometer.odometer-theme-train-station .odometer-digit + .odometer-digit {
+  margin-left: 0.1em;
+  text-align: center;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Bloc refs */
+
+ul.refs{
+	display: block;
+	width: 100%;
+	height: auto;
+	line-height: 92px;
+	list-style-type: none;
+	margin: 0;
+	padding: 25px 0;
+	text-align: center;
+	.lh-opacity(0.5);
+	.lh-transition(opacity 0.2s ease-in-out);
+	.js &{
+		cursor: pointer;
+	}
+	&:hover{
+		.lh-opacity(1);
+		li.ref{
+			&:after{
+				.lh-opacity(0);
+			}
+		}
+	}
+	li.ref{
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		margin: 0 23px;
+		padding: 0;
+		.ie7-inline-block();
+		&:after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin: 0;
+			padding: 0;
+			.lh-transition(opacity 0.2s ease-in-out);
+			.lh-opacity(1);
+		}
+		&.tf1{
+			background: url('../img/logos/tf1.png') no-repeat left top;
+			width: 99px;
+			height: 37px;
+			&:after{
+				width: 99px;
+				height: 37px;
+				background: url('../img/logos/tf1-nb.png') no-repeat left top;
+			}
+		}
+		&.m6{
+			background: url('../img/logos/m6.png') no-repeat left top;
+			width: 60px;
+			height: 46px;
+			&:after{
+				width: 60px;
+				height: 46px;
+				background: url('../img/logos/m6-nb.png') no-repeat left top;
+			}
+		}
+		&.le-figaro{
+			background: url('../img/logos/le-figaro.png') no-repeat left top;
+			width: 137px;
+			height: 30px;
+			&:after{
+				width: 137px;
+				height: 30px;
+				background: url('../img/logos/le-figaro-nb.png') no-repeat left top;
+			}
+		}
+		&.france-3{
+			background: url('../img/logos/france-3.png') no-repeat left top;
+			width: 53px;
+			height: 92px;
+			&:after{
+				width: 53px;
+				height: 92px;
+				background: url('../img/logos/france-3-nb.png') no-repeat left top;
+			}
+		}
+		&.l-express{
+			background: url('../img/logos/l-express.png') no-repeat left top;
+			width: 142px;
+			height: 34px;
+			&:after{
+				width: 142px;
+				height: 34px;
+				background: url('../img/logos/l-express-nb.png') no-repeat left top;
+			}
+		}
+		&.france-5{
+			background: url('../img/logos/france-5.png') no-repeat left top;
+			width: 54px;
+			height: 92px;
+			&:after{
+				width: 54px;
+				height: 92px;
+				background: url('../img/logos/france-5-nb.png') no-repeat left top;
+			}
+		}
+		&.les-echos{
+			background: url('../img/logos/les-echos.png') no-repeat left top;
+			width: 131px;
+			height: 35px;
+			&:after{
+				width: 131px;
+				height: 35px;
+				background: url('../img/logos/les-echos-nb.png') no-repeat left top;
+			}
+		}
+		&.la-tribune{
+			background: url('../img/logos/la-tribune.png') no-repeat left top;
+			width: 109px;
+			height: 49px;
+			&:after{
+				width: 109px;
+				height: 49px;
+				background: url('../img/logos/la-tribune-nb.png') no-repeat left top;
+			}
+		}
+	}
+}
+
+/* @end */

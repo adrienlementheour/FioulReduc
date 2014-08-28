@@ -109,6 +109,8 @@ function animer(myScroll){
 		} else {
 			TweenMax.set($("#journal"), {y:250, rotation: 0});
 		}
+	}else {
+		TweenMax.set($("#journal"), {y:0, rotation: 0});
 	}
 	
 	if($("body").hasClass("home")){
