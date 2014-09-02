@@ -16,7 +16,7 @@
 	  	<link rel="stylesheet" href="css/libs/normalize.css">
 	  	<link rel="stylesheet" media="screen" href="js/libs/bootstrap/bootstrap.min.css">
 	  	<link rel="stylesheet" media="screen" href="js/libs/bootstrap/bootstrap-responsive.min.css">
-	  	<link rel="stylesheet" href="css/home.css">
+	  	<link rel="stylesheet" href="css/cycle.css">
 	  	<link rel="stylesheet" href="css/commun.css">
 		<!--[if lt IE 7]>
 		<link rel="stylesheet" href="css/libs/ie6.css" />
@@ -90,6 +90,159 @@
 	  			</div>
 	  		</div>
 	  	</section>
+	  	<div class="bloc-full bloc-gris-bleu">
+		  	<div class="container">
+		  		<section id="bloc-cycle">
+		  			<section id="bloc-etapes-cycle" class="bloc-full">
+		  				<ul id="etapes-cycle">
+		  					<li class="etape-cycle active">
+		  						<div class="bloc-titre-etape">Devis</div>
+		  						<div class="bloc-num-etape first"><span class="num-etape">1</span></div>
+		  					</li><li class="etape-cycle">
+		  						<div class="bloc-titre-etape">Coordonnées</div>
+		  						<div class="bloc-num-etape"><span class="num-etape">2</span></div>
+		  					</li><li class="etape-cycle">
+		  						<div class="bloc-titre-etape">Récapitulatif</div>
+		  						<div class="bloc-num-etape"><span class="num-etape">3</span></div>
+		  					</li><li class="etape-cycle">
+		  						<div class="bloc-titre-etape">Paiement</div>
+		  						<div class="bloc-num-etape last"><span class="num-etape">4</span></div>
+		  					</li>
+		  				</ul>
+		  			</section>
+		  			<section class="bloc-formulaire bloc-full">
+		  				<form class="form-horizontal">
+			  				<div class="bloc-blanc-ombre bloc-full">
+			  					<div class="part-form">
+			  						<div class="titre-part-form">
+			  							<div class="picto-commande"></div>
+			  							<h2>Quelle est votre commande ?</h2>
+			  						</div>
+									<div class="control-group">
+										<label class="control-label" for="">Type:</label>
+										<div class="controls">
+											<label class="radio inline radio-block active" for="radio-individuelle">
+										      <input type="radio" name="radio-type" id="radio-individuelle" value="individuelle" checked="checked">
+										      Individuelle
+										    </label>
+										    <label class="radio radio-block inline" for="radio-groupee">
+										      <input type="radio" name="radio-type" id="radio-groupee" value="groupee">
+										      Groupée
+										    </label>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="order-quantity">Quantité:</label>
+										<div class="controls">
+											<input id="order-quantity" name="order-quantity" class="taille1" type="number" step="1" value="" title=""> <span class="suite-label">litres</span>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="">Fioul:</label>
+										<div class="controls">
+											<label class="radio inline radio-block active" for="radio-ordinaire">
+											  <input type="radio" name="radio-fioul" id="radio-ordinaire" value="ordinaire" checked="checked">
+											  Ordinaire
+											</label>
+											<label class="radio inline radio-block" for="radio-superieur">
+											  <input type="radio" name="radio-fioul" id="radio-superieur" value="superieur">
+											  Supérieur
+											</label>
+										</div>
+									</div>
+			  					</div>
+			  					<div class="part-details">
+			  						<div class="detail-cycle">
+			  							Quantité ajustable à la livraison<br />
+			  							<a class="btn btn-link btn-plus" href="#"><span class="txt-btn">En savoir</span><span class="ic-plus"></span></a>
+			  						</div>
+			  						<div class="detail-cycle">
+			  							Fioul de qualité<br />
+			  							<a class="btn btn-link btn-plus" href="#"><span class="txt-btn">En savoir</span><span class="ic-plus"></span></a>
+			  						</div>
+			  					</div>
+			  				</div>
+			  				<div class="bloc-blanc-ombre bloc-full">
+			  					<div class="part-form">
+			  						<div class="titre-part-form">
+			  							<div class="picto-livraison"></div>
+			  							<h2>Quelle est l’urgence de votre livraison ?</h2>
+			  						</div>
+									<div class="control-group">
+										<label class="control-label" for="radios">Délai de livraison:</label>
+										<div class="controls">
+											<label class="radio radio-block active" for="radio-economique">
+												<input type="radio" name="radio-livraison" id="radio-economique" value="Economique" checked="checked">
+												Économique – sous 5 jours
+												<ul class="jours">
+													<li class="jour"><div class="mois">juil.</div><div class="jour">4</div></li><li class="jour inactive"><div class="mois">juil.</div><div class="jour">5</div></li><li class="jour inactive"><div class="mois">juil.</div><div class="jour">6</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">7</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">8</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">9</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">10</div></li>
+												</ul>
+											</label>
+											<label class="radio radio-block" for="radio-standard">
+												<input type="radio" name="radio-livraison" id="radio-standard" value="Standard">
+												Standard – sous 3 jours
+												<ul class="jours">
+													<li class="jour"><div class="mois">juil.</div><div class="jour">4</div></li><li class="jour inactive"><div class="mois">juil.</div><div class="jour">5</div></li><li class="jour inactive"><div class="mois">juil.</div><div class="jour">6</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">7</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">8</div></li>
+												</ul>
+											</label>
+											<label class="radio radio-block" for="radio-express">
+												<input type="radio" name="radio-livraison" id="radio-express" value="Express">
+												Express – sous 24 heures
+												<ul class="jours">
+													<li class="jour"><div class="mois">juil.</div><div class="jour">4</div></li>
+												</ul>
+											</label>
+										</div>
+									</div>
+			  					</div>
+			  					<div class="part-details">
+									<div class="detail-cycle">
+										Votre distributeur vous appelle pour convenir d’un créneau de livraison qui vous convient<br />
+										<a class="btn btn-link btn-plus" href="#"><span class="txt-btn">En savoir</span><span class="ic-plus"></span></a>
+									</div>
+									<div class="detail-cycle">
+										Vous serez livré depuis <span class="ville">Poitiers</span>
+									</div>
+			  					</div>
+			  				</div>
+			  				<div class="bloc-blanc-ombre bloc-full">
+			  					<div class="part-form">
+			  						<div class="titre-part-form">
+			  							<div class="picto-reglement"></div>
+			  							<h2>Comment souhaitez-vous la régler ?</h2>
+			  						</div>
+									<div class="control-group">
+										<label class="control-label" for="">Paiement:</label>
+										<div class="controls">
+											<label class="radio radio-block active" for="radio-commande">
+											  <input type="radio" name="radio-paiement" id="radio-commande" value="Commande" checked="checked">
+											  À la commande – en une ou plusieurs fois par CB :
+												<select id="select-paiement" name="select-paiement">
+													<option>En 1x</option>
+													<option>En 3x</option>
+													<option>En 5x</option>
+													<option>En 7x</option>
+													<option>En 10x</option>
+												</select>
+											</label>
+											<label class="radio radio-block" for="radio-livraison">
+											  <input type="radio" name="radio-paiement" id="radio-livraison" value="Livraison">
+											  À la livraison – par chèque, cb ou espèces
+											</label>
+										</div>
+									</div>
+			  					</div>
+			  					<div class="part-details">
+			  					</div>
+			  				</div>
+		  				</form>
+		  			</section>
+		  		</section>
+		  		<aside id="ticket">
+		  			
+		  		</aside>
+		  	</div>
+	  	</div>
 	  	<footer class="bloc-full bloc-degrade-bleu">
 	  		<div class="container">
 	  			<ul id="menu-footer">
@@ -179,8 +332,6 @@
 		<!-- Highcharts -->
 		<script src="js/libs/highcharts/highcharts.js"></script>
 		<script src="js/libs/highcharts/modules/exporting.js"></script>
-		<!-- odometer -->
-		<script src="js/libs/odometer/odometer.js"></script>
 		
 		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 	</body>

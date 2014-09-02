@@ -153,12 +153,14 @@ $( window ).resize(function() {
 $(document).ready(function(){
 	myScroll = $(document).scrollTop();
 	animer(myScroll);
-	compteur();
+	
 	$(".alert .close").click(function(){
 		$("body").removeClass("alerte");
 	});
-	if($("body").hasClass("home")){
 	
+	if($("body").hasClass("home")){
+		// Animation du compteur - odometer
+		compteur();
 		// Dépliage du bloc "commandez votre fioul"
 		$("a#bouton-menu-responsive").click(function(){
 			ouvertureFermetureMenuResponsive();

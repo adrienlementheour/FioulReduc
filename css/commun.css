@@ -2578,6 +2578,9 @@ MIT License: https://github.com/driftyco/ionicons
 .ic-navicon:before {
   content: "\f0c9";
 }
+.ic-plus:before {
+  content: "\e60c";
+}
 /* @end */
 /* @group Boilerplate */
 html,
@@ -2685,6 +2688,24 @@ body {
   background-image: -o-radial-gradient(65% 50%, 800px 800px, #457db7 0%, #071d63 100%);
   background-image: radial-gradient(65% 50%, 800px 800px, #457db7 0%, #071d63 100%);
   color: #ffffff;
+}
+.bloc-blanc-ombre {
+  background-color: #ffffff;
+  -webkit-border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 10px;
+  -moz-background-clip: padding;
+  border-radius: 10px;
+  background-clip: padding-box;
+  padding: 2px;
+  margin: 0 0 32px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 2px 1px rgba(204,205,211,.75);
+  -moz-box-shadow: 0 2px 1px rgba(204,205,211,.75);
+  box-shadow: 0 2px 1px rgba(204,205,211,.75);
+  position: relative;
 }
 .small-padding {
   padding: 25px 0;
@@ -2919,6 +2940,19 @@ ol.liste-num li .detail-liste {
   left: -12px;
   font-size: 0.8em;
   line-height: 1.1em;
+}
+.btn.btn-link.btn-plus {
+  border: none;
+  padding: 4px 18px 0 0;
+}
+.btn.btn-link.btn-plus .txt-btn {
+  border-bottom: 1px solid #fb8206;
+}
+.btn.btn-link.btn-plus .ic-plus {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  font-size: 18px;
 }
 .btn.btn-link.btn-jaune {
   color: #ffcb00;
@@ -3302,9 +3336,15 @@ form.form-horizontal label.control-label {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: 40px;
+  height: 36px;
   margin: 0;
   padding: 10px 0 0 0;
+}
+#bloc-commande form.form-horizontal label.control-label {
+  height: 40px;
+}
+form.form-horizontal .suite-label {
+  margin: 0 0 0 8px;
 }
 form.form-horizontal .control-group.error input,
 form.form-horizontal .control-group.error select,
@@ -3318,13 +3358,15 @@ form.form-horizontal .controls {
   margin: 0 0 0 140px;
   position: relative;
 }
-form.form-horizontal .controls input,
+form.form-horizontal .controls input[type=number],
+form.form-horizontal .controls [type=text],
+form.form-horizontal .controls [type=text],
 form.form-horizontal .controls select {
   border: 2px solid #cccdd3;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: 40px;
+  height: 36px;
   font-family: 'lato', sans-serif;
   font-weight: normal;
   font-size: 0.938em;
@@ -3332,18 +3374,136 @@ form.form-horizontal .controls select {
   color: #2947a0;
   position: relative;
 }
-form.form-horizontal .controls input.taille1,
+#bloc-commande form.form-horizontal .controls input[type=number],
+#bloc-commande form.form-horizontal .controls [type=text],
+#bloc-commande form.form-horizontal .controls [type=text],
+#bloc-commande form.form-horizontal .controls select {
+  height: 40px;
+}
+form.form-horizontal .controls input[type=number].taille1,
+form.form-horizontal .controls [type=text].taille1,
+form.form-horizontal .controls [type=text].taille1,
 form.form-horizontal .controls select.taille1 {
   width: 100px;
 }
-form.form-horizontal .controls input.taille2,
+form.form-horizontal .controls input[type=number].taille2,
+form.form-horizontal .controls [type=text].taille2,
+form.form-horizontal .controls [type=text].taille2,
 form.form-horizontal .controls select.taille2 {
   width: 210px;
 }
-form.form-horizontal .controls input:focus,
+form.form-horizontal .controls input[type=number]:focus,
+form.form-horizontal .controls [type=text]:focus,
+form.form-horizontal .controls [type=text]:focus,
 form.form-horizontal .controls select:focus {
   border-color: #2947a0;
   outline: none;
+}
+form.form-horizontal .controls .radio.radio-block {
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 8px 10px 8px 10px;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 0.938em;
+  text-rendering: optimizeLegibility;
+}
+form.form-horizontal .controls .radio.radio-block input[type=radio] {
+  margin: 3px 10px 0 0;
+}
+form.form-horizontal .controls .radio.radio-block ul.jours {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+form.form-horizontal .controls .radio.radio-block ul.jours li.jour {
+  display: inline-block;
+  vertical-align: top;
+  width: 46px;
+  height: auto;
+  text-align: center;
+  margin: 0 2px;
+  padding: 0;
+  border: 1px solid #f4f4f6;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+form.form-horizontal .controls .radio.radio-block ul.jours li.jour .mois {
+  display: block;
+  height: 18px;
+  line-height: 18px;
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 0.813em;
+  text-rendering: optimizeLegibility;
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius-topright: 3px;
+  -moz-background-clip: padding;
+  border-top-right-radius: 3px;
+  background-clip: padding-box;
+  background-color: #7c8395;
+  color: #ffffff;
+}
+form.form-horizontal .controls .radio.radio-block ul.jours li.jour .jour {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.875em;
+  text-rendering: optimizeLegibility;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius-bottomright: 3px;
+  -moz-background-clip: padding;
+  border-bottom-right-radius: 3px;
+  background-clip: padding-box;
+  background-color: #ffffff;
+  color: #7c8395;
+}
+form.form-horizontal .controls .radio.radio-block ul.jours li.jour.inactive .mois {
+  background-color: #cccdd3;
+}
+form.form-horizontal .controls .radio.radio-block ul.jours li.jour.inactive .jour {
+  color: #cccdd3;
+}
+form.form-horizontal .controls .radio.radio-block.active {
+  background-color: #f5f5f6;
+}
+form.form-horizontal .controls .radio.radio-block.active ul.jours li.jour {
+  border: none;
+}
+form.form-horizontal .controls .radio.radio-block.active ul.jours li.jour .mois {
+  background-color: #2947a0;
+  color: #ffffff;
+}
+form.form-horizontal .controls .radio.radio-block.active ul.jours li.jour .jour {
+  background-color: #ffffff;
+  color: #0c1a4c;
+}
+form.form-horizontal .controls .radio.radio-block.active ul.jours li.jour.inactive .mois {
+  background-color: #cccdd3;
+}
+form.form-horizontal .controls .radio.radio-block.active ul.jours li.jour.inactive .jour {
+  color: #cccdd3;
 }
 form button.btn {
   position: relative;
