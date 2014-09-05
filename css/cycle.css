@@ -248,6 +248,21 @@
   border: 3px solid #ffffff;
   margin: 10px 0 0 0;
 }
+.supp-prix {
+  font-family: 'lato-bold-italic', sans-serif;
+  font-weight: normal;
+  font-size: 0.75em;
+  text-rendering: optimizeLegibility;
+  color: #c34603;
+  margin: 0 0 0 5px;
+  text-align: right;
+}
+.supp-prix.margin-top {
+  margin-top: 8px;
+}
+.supp-prix.block {
+  display: block;
+}
 /* @end */
 /* @group Ticket */
 #ticket {

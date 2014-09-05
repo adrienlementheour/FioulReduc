@@ -147,6 +147,7 @@
 											<label class="radio inline radio-block" for="radio-superieur">
 											  <input type="radio" name="radio-fioul" id="radio-superieur" value="superieur">
 											  Supérieur
+											  <span class="supp-prix block">+100&nbsp;€</span>
 											</label>
 										</div>
 									</div>
@@ -180,14 +181,14 @@
 											</label>
 											<label class="radio radio-block" for="radio-standard">
 												<input type="radio" name="radio-livraison" id="radio-standard" value="Standard">
-												Standard – sous 3 jours
+												Standard – sous 3 jours <span class="supp-prix">+100&nbsp;€</span>
 												<ul class="jours">
 													<li class="jour"><div class="mois">juil.</div><div class="jour">4</div></li><li class="jour inactive"><div class="mois">juil.</div><div class="jour">5</div></li><li class="jour inactive"><div class="mois">juil.</div><div class="jour">6</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">7</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">8</div></li>
 												</ul>
 											</label>
 											<label class="radio radio-block" for="radio-express">
 												<input type="radio" name="radio-livraison" id="radio-express" value="Express">
-												Express – sous 24 heures
+												Express – sous 24 heures <span class="supp-prix">+200&nbsp;€</span>
 												<ul class="jours">
 													<li class="jour"><div class="mois">juil.</div><div class="jour">4</div></li>
 												</ul>
@@ -222,36 +223,55 @@
 											  À la commande – en une ou plusieurs fois par CB :
 												<select id="select-paiement-custom" class="select-customisable" name="select-paiement">
 													<option>En 1x</option>
-													<option>En 3x</option>
-													<option>En 5x</option>
-													<option>En 7x</option>
-													<option>En 10x</option>
+													<option>En 3x (+10€)</option>
+													<option>En 5x (+15€)</option>
+													<option>En 7x (+20€)</option>
+													<option>En 10x (+25€)</option>
 												</select>
 												<ul id="select-paiement" class="select-customise">
 													<li class="selected">
 														<div class="content-input-select-custom">
 															<div class="icon-checked"></div>
-															<a href="#">en <div class="nb-fois">1<span>x</span></div></a>
+															<a class="clearfix" href="#">
+																en 
+																<span class="nb-fois">1<span>x</span></span>
+															</a>
 														</div>
 													</li><li>
 														<div class="content-input-select-custom">
 															<div class="icon-checked"></div>
-															<a href="#">en <div class="nb-fois">3<span>x</span></div></a>
+															<a class="clearfix" href="#">
+																en 
+																<span class="nb-fois">3<span>x</span></span>
+																<span class="supp-prix pull-right margin-top">+10&nbsp;€</span>
+															</a>
 														</div>
 													</li><li>
 														<div class="content-input-select-custom">
 															<div class="icon-checked"></div>
-															<a href="#">en <div class="nb-fois">5<span>x</span></div></a>
+															<a class="clearfix" href="#">
+																en 
+																<div class="nb-fois">5<span>x</span></div>
+																<span class="supp-prix pull-right margin-top">+15&nbsp;€</span>
+															</a>
 														</div>
 													</li><li>
 														<div class="content-input-select-custom">
 															<div class="icon-checked"></div>
-															<a href="#">en <div class="nb-fois">7<span>x</span></div></a>
+															<a class="clearfix" href="#">
+																en 
+																<span class="nb-fois">7<span>x</span></span>
+																<span class="supp-prix pull-right margin-top">+20&nbsp;€</span>
+															</a>
 														</div>
 													</li><li>
 														<div class="content-input-select-custom">
 															<div class="icon-checked"></div>
-															<a href="#">en <div class="nb-fois decal">10<span>x</span></div></a>
+															<a class="clearfix" href="#">
+																en 
+																<span class="nb-fois decal">10<span>x</span></span>
+																<span class="supp-prix pull-right margin-top">+25&nbsp;€</span>
+															</a>
 														</div>
 													</li>
 												</ul>
