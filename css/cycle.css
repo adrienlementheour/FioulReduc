@@ -3,12 +3,11 @@
 /* @group Bloc cycle */
 #bloc-cycle {
   display: block;
-  width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 370px 0 0;
   margin: 0;
+  width: 70%;
   float: left;
 }
 #bloc-etapes-cycle ul#etapes-cycle {
@@ -222,12 +221,444 @@
   text-rendering: optimizeLegibility;
   color: #0c1a4c;
 }
+.detail-cycle ul.liste-detail-cycle {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 10px 0 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+.detail-cycle ul.liste-detail-cycle li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0 8px 0 0;
+}
+.detail-cycle ul.liste-detail-cycle li .ic-cadenas {
+  font-size: 1.5em;
+}
+.map-livraison {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 3px solid #ffffff;
+  margin: 10px 0 0 0;
+}
 /* @end */
 /* @group Ticket */
 #ticket {
   display: block;
-  width: 310px;
+  width: 334px;
   height: auto;
   float: right;
+}
+#ticket #trou-ticket {
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: relative;
+}
+#ticket #trou-ticket:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #616161;
+}
+#ticket #trou-ticket:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background-color: #939394;
+}
+#ticket .prix-bas-ticket {
+  font-family: 'Dancing Script', cursive;
+  color: #fb8206;
+  font-size: 1.2em;
+  display: block;
+  width: 120px;
+  height: auto;
+  position: absolute;
+  top: 44px;
+  right: -15px;
+  -webkit-transform: rotate(-15deg);
+  -moz-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -o-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  line-height: 0.8em;
+}
+#ticket .prix-bas-ticket .ic-sousligne:before {
+  font-size: 3.5em;
+  color: #fb8206;
+  -webkit-transform: rotate(8.2deg);
+  -moz-transform: rotate(8.2deg);
+  -ms-transform: rotate(8.2deg);
+  -o-transform: rotate(8.2deg);
+  transform: rotate(8.2deg);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#ticket .prix-bas-ticket .decal {
+  display: block;
+}
+#ticket #masque-ticket {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#ticket #masque-ticket #body-ticket {
+  display: block;
+  width: 302px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+}
+#ticket #masque-ticket #body-ticket #top-body-ticket {
+  display: block;
+  width: 100%;
+  height: 12px;
+  background-color: #ffffff;
+  margin: 0 0 2px 8px;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: rotate(1.5deg);
+  -moz-transform: rotate(1.5deg);
+  -ms-transform: rotate(1.5deg);
+  -o-transform: rotate(1.5deg);
+  transform: rotate(1.5deg);
+  margin-top: -20px;
+}
+#ticket #masque-ticket #body-ticket #top-body-ticket.ticket-here {
+  margin-top: -4px;
+}
+#ticket #masque-ticket #body-ticket #top-body-ticket:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: url('../layoutImg/ticket/tirets-ticket.png') repeat-x left top;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed {
+  display: block;
+  width: 302px;
+  height: auto;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #content-ticket-fixed {
+  -webkit-transform: rotate(1.5deg);
+  -moz-transform: rotate(1.5deg);
+  -ms-transform: rotate(1.5deg);
+  -o-transform: rotate(1.5deg);
+  transform: rotate(1.5deg);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-box-shadow: -6px 6px 0 rgba(0,0,0,.07);
+  -moz-box-shadow: -6px 6px 0 rgba(0,0,0,.07);
+  box-shadow: -6px 6px 0 rgba(0,0,0,.07);
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .trait-fin {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #1a2654;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .trait-fin.dessus {
+  margin: 0 0 1px 0;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .trait-gras {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #1a2654;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .trait-gras.dessus {
+  margin: 0 0 1px 0;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .traits-ticket-left {
+  display: block;
+  width: 112px;
+  height: 4px;
+  position: absolute;
+  top: 33px;
+  left: 16px;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .traits-ticket-right {
+  display: block;
+  width: 90px;
+  height: 4px;
+  position: absolute;
+  top: 33px;
+  right: 0;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .ic-camion {
+  font-size: 25px;
+  color: #1a2654;
+  display: block;
+  width: 19px;
+  height: 25px;
+  position: absolute;
+  top: 24px;
+  left: 138px;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .padding-ticket {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0;
+  background: #ffffff;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .prix-ticket {
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 3em;
+  text-rendering: optimizeLegibility;
+  display: inline-block;
+  vertical-align: top;
+  height: 50px;
+  line-height: 50px;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .devise-taxes {
+  display: inline-block;
+  vertical-align: top;
+  padding: 8px 0 0 2px;
+  text-align: left;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .devise-taxes .devise {
+  display: block;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.875em;
+  text-rendering: optimizeLegibility;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .devise-taxes .taxes {
+  display: block;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.688em;
+  text-rendering: optimizeLegibility;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .indic-ticket {
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 0.813em;
+  text-rendering: optimizeLegibility;
+  color: #0c1a4c;
+  text-align: right;
+  position: relative;
+  width: 130px;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .indic-ticket strong {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .indic-ticket.gris {
+  color: #9ca1b1;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .indic-ticket .fond-blanc-pointilles {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #ffffff;
+  position: relative;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .pointilles-ticket {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: url('../layoutImg/ticket/pointilles-ticket.png') repeat-x left top;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .barre {
+  position: relative;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .barre:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #0c1a4c;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: rotate(-12deg);
+  -moz-transform: rotate(-12deg);
+  -ms-transform: rotate(-12deg);
+  -o-transform: rotate(-12deg);
+  transform: rotate(-12deg);
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #top-ticket-fixed {
+  display: block;
+  width: 100%;
+  height: 53px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 45px 0 0;
+  margin: 0;
+  position: relative;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #top-ticket-fixed #part-left-top-ticket-fixed {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  position: relative;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #top-ticket-fixed #coin-ticket {
+  display: block;
+  width: 45px;
+  height: 53px;
+  background: url('../layoutImg/ticket/coin-ticket.png') no-repeat left top;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-prix-ticket {
+  color: #fb8206;
+  padding-bottom: 10px;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-details-ticket {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-details-ticket ul.details-ticket {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-details-ticket ul.details-ticket li {
+  display: block;
+  margin: 0 0 10px 0;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-details-ticket ul.details-ticket li.margin-bottom {
+  margin: 0 0 25px 0;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-details-ticket ul.details-ticket li .ligne-detail {
+  position: relative;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-details-ticket ul.details-ticket li .titre-detail {
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 0.938em;
+  text-rendering: optimizeLegibility;
+  color: #9ca1b1;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #ffffff;
+  position: relative;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-details-ticket ul.details-ticket li .texte-detail {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.063em;
+  text-rendering: optimizeLegibility;
+  color: #2c355c;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #ffffff;
+  position: relative;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-total-ticket {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: #1a2654;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-total-ticket #total-ticket {
+  text-transform: uppercase;
+  padding: 10px 0 0 0;
+  margin: 0;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-total-ticket #prix-total-ticket {
+  text-align: right;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bottom-ticket-fixed {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-color: #ffffff;
+  padding: 0 0 7px 0;
+  position: relative;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bottom-ticket-fixed:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 7px;
+  background: url('../layoutImg/ticket/bottom-ticket.png') repeat-x left top;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bottom-ticket-fixed:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 7px;
+  background: url('../layoutImg/ticket/bottom-ticket-ombre.png') repeat-x left top;
+  position: absolute;
+  bottom: -13px;
+  left: -6px;
 }
 /* @end */

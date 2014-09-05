@@ -13,6 +13,24 @@ window.requestAnimFrame = (function(){
 })();
 
 //////////////////////////////////////////////////
+////////// FONCTION POUR FIXER UN BLOC ///////////
+//////////////////////////////////////////////////
+function fixBloc(id_string, scrollBegin, scrollEnd) {
+	var myScroll = $(document).scrollTop();
+	if (myScroll>=scrollBegin && myScroll<scrollEnd && $(window).width()>979) {
+		$(id_string).css("position","fixed");
+		$(id_string).css("top","0px");
+	} else {
+		$(id_string).css("position","absolute");
+		if (myScroll<scrollBegin) {
+			$(id_string).css("top",scrollBegin+"px");
+		} else {
+			$(id_string).css("top",scrollEnd+"px");
+		}
+	}
+}
+
+//////////////////////////////////////////////////
 /////////// MOIS HIGHCHARTS EN FRANÇAIS //////////
 //////////////////////////////////////////////////
 Highcharts.setOptions({
@@ -25,6 +43,29 @@ Highcharts.setOptions({
 	thousandsSep: " "
 	}
 });
+
+///////////////////////////////////////////////////////
+////////// FONCTION AFFICHER LE SELECT CUSTOM /////////
+///////////////////////////////////////////////////////
+function customSelect(){
+	if(($("html").hasClass("no-touch"))&&($(".select-customisable").length)){
+		TweenMax.set($(".select-customisable"), {opacity: "0"});
+		TweenMax.set($("ul.select-customise"), {display: "block"});
+		$("ul.select-customise li a").click(function(){
+			var liClique = $(this).closest("li");
+			var ulClique = $(this).closest("ul.select-customise");
+			var idUlClique = ulClique.attr("id");
+			var selectCusto = $("#"+idUlClique+"-custom");
+			if(!liClique.hasClass("selected")){
+				$("li.selected", ulClique).removeClass("selected");
+				liClique.addClass("selected");
+				var indexLi = liClique.index();
+				$("option:eq("+indexLi+")", selectCusto).prop("selected", true);
+			}
+			return false;
+		});
+	}
+}
 
 ///////////////////////////////////////////////////////
 /////////// FONCTION POUR ANIMER LE COMPTEUR //////////
@@ -44,6 +85,27 @@ function compteur(){
     }, 3000);
 }
 
+///////////////////////////////////////////////////////
+////// FONCTION POUR FAIRE INITIALISER LE TICKET //////
+///////////////////////////////////////////////////////
+function bodyTicket(){
+	var heightBodyTicket = $("#ticket-fixed").height();
+	TweenMax.set($("#content-ticket-fixed"), {y: "-"+heightBodyTicket+"px", rotation: 1.5});
+	bodyTicketScroll();
+}
+
+///////////////////////////////////////////////////////
+////// FONCTION POUR FAIRE APPARAITRE LE TICKET ///////
+///////////////////////////////////////////////////////
+function bodyTicketScroll(){
+	TweenMax.to($("#content-ticket-fixed"), 1.5, {y: "-6px", ease:Cubic.easeInOut});
+	TweenMax.to($("#top-body-ticket"), 2, {className:"ticket-here", ease:Cubic.easeInOut});
+}
+
+function heightTicket(){
+	var heightBlocCycle = $("#bloc-cycle").height();
+	$("#ticket").css("height",heightBlocCycle+"px");
+}
 
 /////////////////////////////////////////////////////////////////////////
 /////////// FONCTION POUR OUVRIR ET FERMER LE MENU RESPONSIVE //////////
@@ -118,10 +180,31 @@ function animer(myScroll){
 	}else {
 		TweenMax.set($("#journal"), {y:0, rotation: 0});
 	}
+	
+	if($("body").hasClass("cycle")){
+		//154
+		var debutScroll = ($("#top-body-ticket").offset().top)-($("header").height());
+		var finScroll = debutScroll+$("#bloc-cycle").height()-$(window).height();
+		console.log("fin scroll : "+finScroll);
+		console.log(" myScroll : "+myScroll);
+		if (myScroll>=debutScroll && myScroll<finScroll && $(window).width()>979) {
+			TweenMax.set($("#ticket-fixed"), {position: "fixed", top: "70px"});
+		} else {
+			$("#ticket-fixed").css("position","absolute");
+			TweenMax.set($("#ticket-fixed"), {position: "absolute"});
+			if (myScroll<debutScroll) {
+				TweenMax.set($("#ticket-fixed"), {top: "15px"});
+			} else {
+				TweenMax.set($("#ticket-fixed"), {top: finScroll+"px"});
+			}
+		}
+	}
+	
 	requestAnimFrame(function(){
 		myScroll = $(document).scrollTop();
 		animer(myScroll);
 	});
+	
 }
 
 $( window ).resize(function() {
@@ -148,15 +231,26 @@ $( window ).resize(function() {
 		$("a#bouton-menu-responsive").removeClass("active");
 	}
 	$("li.has-dropdown.dd-open").removeClass("dd-open");
+	
+	if($("body").hasClass("cycle")){
+		heightTicket();
+	}
 });
 
 $(document).ready(function(){
 	myScroll = $(document).scrollTop();
 	animer(myScroll);
 	
+	customSelect();
+	
 	$(".alert .close").click(function(){
 		$("body").removeClass("alerte");
 	});
+	
+	if($("body").hasClass("cycle")){
+		heightTicket();
+		bodyTicket();
+	}
 	
 	if($("body").hasClass("home")){
 		// Animation du compteur - odometer

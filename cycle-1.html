@@ -28,7 +28,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Dancing+Script&text=Prixbasgnt!*' rel='stylesheet' type='text/css'>
 	</head>
 	
-	<body>
+	<body class="cycle">
 		<div class="big-container">
 	  	<header class="bloc-full bloc-blanc">
 	  		<div class="container">
@@ -91,7 +91,7 @@
 	  		</div>
 	  	</section>
 	  	<div class="bloc-full bloc-gris-bleu">
-		  	<div class="container">
+		  	<div class="container no-relative">
 		  		<section id="bloc-cycle">
 		  			<section id="bloc-etapes-cycle" class="bloc-full">
 		  				<ul id="etapes-cycle">
@@ -201,7 +201,10 @@
 										<a class="btn btn-link btn-plus" href="#"><span class="txt-btn">En savoir</span><span class="ic-plus"></span></a>
 									</div>
 									<div class="detail-cycle">
-										Vous serez livré depuis <span class="ville">Poitiers</span>
+										Vous serez livré depuis <a target="_blank" href="https://www.google.com/maps/place/Poitiers/" class="ville">Poitiers</a>
+										<div class="map-livraison">
+											<a target="_blank" href="https://www.google.com/maps/place/Poitiers/"><img src="http://maps.googleapis.com/maps/api/staticmap?center=46.632608, -1.152499&zoom=6&scale=false&size=180x164&maptype=roadmap&sensor=false&format=png&visual_refresh=true&markers=size:mid%7Ccolor:red%7Clabel:%7CPoitiers&markers=size:mid%7Ccolor:gray%7Clabel:%7CNantes" alt="Google Map of Poitiers"></a>
+										</div>
 									</div>
 			  					</div>
 			  				</div>
@@ -217,13 +220,41 @@
 											<label class="radio radio-block active" for="radio-commande">
 											  <input type="radio" name="radio-paiement" id="radio-commande" value="Commande" checked="checked">
 											  À la commande – en une ou plusieurs fois par CB :
-												<select id="select-paiement" name="select-paiement">
+												<select id="select-paiement-custom" class="select-customisable" name="select-paiement">
 													<option>En 1x</option>
 													<option>En 3x</option>
 													<option>En 5x</option>
 													<option>En 7x</option>
 													<option>En 10x</option>
 												</select>
+												<ul id="select-paiement" class="select-customise">
+													<li class="selected">
+														<div class="content-input-select-custom">
+															<div class="icon-checked"></div>
+															<a href="#">en <div class="nb-fois">1<span>x</span></div></a>
+														</div>
+													</li><li>
+														<div class="content-input-select-custom">
+															<div class="icon-checked"></div>
+															<a href="#">en <div class="nb-fois">3<span>x</span></div></a>
+														</div>
+													</li><li>
+														<div class="content-input-select-custom">
+															<div class="icon-checked"></div>
+															<a href="#">en <div class="nb-fois">5<span>x</span></div></a>
+														</div>
+													</li><li>
+														<div class="content-input-select-custom">
+															<div class="icon-checked"></div>
+															<a href="#">en <div class="nb-fois">7<span>x</span></div></a>
+														</div>
+													</li><li>
+														<div class="content-input-select-custom">
+															<div class="icon-checked"></div>
+															<a href="#">en <div class="nb-fois decal">10<span>x</span></div></a>
+														</div>
+													</li>
+												</ul>
 											</label>
 											<label class="radio radio-block" for="radio-livraison">
 											  <input type="radio" name="radio-paiement" id="radio-livraison" value="Livraison">
@@ -233,13 +264,63 @@
 									</div>
 			  					</div>
 			  					<div class="part-details">
+			  						<div class="detail-cycle">
+			  							Paiement sécurisé<br />
+			  							<ul class="liste-detail-cycle">
+			  								<li><span class="ic-cadenas"></span></li>
+			  								<li><img src="layoutImg/ticket/mastercard.png" alt="MasterCard" /></li>
+			  								<li><img src="layoutImg/ticket/visa.png" alt="Visa" /></li>
+			  							</ul>
+			  						</div>
+			  						<div class="detail-cycle">
+			  							Transaction assurée par<br />
+			  							<ul class="liste-detail-cycle">
+			  								<li><img src="layoutImg/ticket/cic.png" alt="CIC" /></li>
+			  								<li><img src="layoutImg/ticket/hipay.png" alt="hipay" /></li>
+			  							</ul>
+			  						</div>
 			  					</div>
 			  				</div>
 		  				</form>
 		  			</section>
 		  		</section>
 		  		<aside id="ticket">
-		  			
+		  			<div id="trou-ticket"></div>
+		  			<div id="masque-ticket">
+			  			<div id="body-ticket">
+			  				<div id="top-body-ticket"></div>
+			  				<div id="ticket-fixed">
+			  					<div id="content-ticket-fixed">
+			  					<div id="top-ticket-fixed">
+			  						<div id="part-left-top-ticket-fixed">
+			  							<div class="traits-ticket-left"><div class="trait-fin dessus"></div><div class="trait-gras"></div></div>
+			  							<div class="ic-camion"></div>
+			  							<div class="traits-ticket-right"><div class="trait-fin dessus"></div><div class="trait-gras"></div></div>
+			  						</div>
+			  						<div id="coin-ticket"></div>
+			  					</div>
+			  					<div id="bloc-prix-ticket" class="padding-ticket"><span class="prix-ticket">0,836</span><div class="devise-taxes"><span class="devise">€</span><span class="taxes">TTC/Litre</span></div></div>
+			  					<div class="prix-bas-ticket"><span class="ic-sousligne"></span>Prix bas <span class="decal">garantis !!*</span></div>
+			  					<div class="bloc-traits padding-ticket"><div class="trait-gras dessus"></div><div class="trait-fin"></div></div>
+			  					<div id="bloc-details-ticket" class="padding-ticket">
+			  						<ul class="details-ticket">
+			  							<li class="margin-bottom clearfix"><div class="ligne-detail clearfix"><div class="pointilles-ticket"></div><div class="titre-detail pull-left">Fioul ordinaire</div><div class="texte-detail pull-right">1 000 litres</div></div></li>
+			  							<li class="clearfix"><div class="ligne-detail clearfix"><div class="pointilles-ticket"></div><div class="titre-detail pull-left">Code postal</div><div class="texte-detail pull-right">86 120</div></div></li>
+			  							<li class="margin-bottom clearfix"><div class="ligne-detail clearfix"><div class="pointilles-ticket"></div><div class="titre-detail pull-left">Livraison sous</div><div class="texte-detail pull-right">5 jours</div></div><div class="indic-ticket pull-right">au plus tard le <strong>10/07/14</strong></div></li>
+			  							<li class="margin-bottom clearfix"><div class="ligne-detail clearfix"><div class="pointilles-ticket"></div><div class="titre-detail pull-left">Règlement</div><div class="texte-detail pull-right">À la commande, en 3x</div></div><div class="indic-ticket pull-right"><div class="pointilles-ticket"></div><div class="fond-blanc-pointilles"><strong>356,05€</strong> le 10/07/14</div></div><br /><div class="indic-ticket pull-right"><div class="pointilles-ticket"></div><div class="fond-blanc-pointilles"><strong>356,05€</strong> le 10/08/14</div></div><br /><div class="indic-ticket pull-right"><div class="pointilles-ticket"></div><div class="fond-blanc-pointilles"><strong>356,05€</strong> le 10/09/14</div></div></li>
+			  							<li><div class="ligne-detail clearfix"><div class="pointilles-ticket"></div><div class="titre-detail pull-left">Code de réduction</div><div class="texte-detail pull-right">-100€</div></div></li>
+			  						</ul>
+			  					</div>
+			  					<div class="bloc-traits"><div class="trait-fin dessus"></div><div class="trait-gras"></div></div>
+			  					<div id="bloc-total-ticket" class="padding-ticket clearfix">
+			  						<div id="total-ticket" class="pull-left">Total</div>
+			  						<div id="prix-total-ticket" class="pull-right"><div class="prix-total"><span class="prix-ticket">928,15</span><div class="devise-taxes"><span class="devise">€</span><span class="taxes">TTC</span></div><div class="prix-sans-reduc">au lieu de <span class="barre">1028,15€</span></div><div class="indic-ticket gris pull-right">Frais de livraison inclus</div>
+			  					</div>
+			  				</div>
+			  			</div>
+			  			<div id="bottom-ticket-fixed"></div>
+			  			</div>
+		  			</div>
 		  		</aside>
 		  	</div>
 	  	</div>

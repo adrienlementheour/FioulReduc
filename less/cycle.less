@@ -9,10 +9,11 @@
 
 #bloc-cycle{
 	display: block;
-	width: 100%;
+	//width: 100%;
 	.lh-box-sizing(border-box);
-	padding: 0 370px 0 0;
+	//padding: 0 370px 0 0;
 	margin: 0;
+	width: 70%;
 	float: left;
 }
 
@@ -199,6 +200,32 @@
 		.lato-bold-italic(1em);
 		color: @bleuFonceFioulReduc;
 	}
+	ul.liste-detail-cycle{
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 10px 0 0 0;
+		padding: 0;
+		list-style-type: none;
+		li{
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0;
+			margin: 0 8px 0 0;
+			.ic-cadenas{
+				font-size: 1.5em;
+			}
+		}
+	}
+}
+
+.map-livraison{
+	display: block;
+	width: 100%;
+	height: auto;
+	.lh-box-sizing(border-box);
+	border: 3px solid @blanc;
+	margin: 10px 0 0 0;
 }
 
 
@@ -209,9 +236,346 @@
 
 #ticket{
 	display: block;
-	width: 310px;
+	width: 334px;
 	height: auto;
 	float: right;
+	#trou-ticket{
+		display: block;
+		width: 100%;
+		height: 1px;
+		position: relative;
+		&:before{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #616161;
+		}
+		&:after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			background-color: #939394;
+		}
+	}
+	.prix-bas-ticket{
+		font-family: 'Dancing Script', cursive;
+		color: @orangeFioulReduc;
+		font-size: 1.2em;
+		display: block;
+		width: 120px;
+		height: auto;
+		position: absolute;
+		top: 44px;
+		right: -15px;
+		.lh-rotate(-15deg);
+		line-height: 0.8em;
+		.ic-sousligne{
+			&:before{
+				font-size: 3.5em;
+				color: @orangeFioulReduc;
+				.lh-rotate(8.2deg);
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			}
+		}
+		.decal{
+			display: block;
+		}
+	}
+	#masque-ticket{
+		display: block;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		.lh-backface-visibility(hidden);
+		#body-ticket{
+			display: block;
+			width: 302px;
+			height: auto;
+			margin: 0 auto;
+			padding: 0;
+			#top-body-ticket{
+				display: block;
+				width: 100%;
+				height: 12px;
+				background-color: @blanc;
+				margin: 0 0 2px 8px;
+				position: relative;
+				.lh-backface-visibility(hidden);
+				.lh-rotate(1.5deg);
+				margin-top: -20px;
+				&.ticket-here{
+					margin-top: -4px;
+				}
+				&:after{
+					content: "";
+					display: block;
+					width: 100%;
+					height: 2px;
+					background: url('../layoutImg/ticket/tirets-ticket.png') repeat-x left top;
+					position: absolute;
+					bottom: -2px;
+					left: 0;
+				}
+			}
+			#ticket-fixed{
+				display: block;
+				width: 302px;
+				height: auto;
+				.lh-translateZ(0);
+				.lh-backface-visibility(hidden);
+				#content-ticket-fixed{
+					.lh-rotate(1.5deg);
+					.lh-backface-visibility(hidden);
+					.lh-box-shadow(~"-6px 6px 0 rgba(0,0,0,.07)");
+				}
+				.trait-fin{
+					display: block;
+					width: 100%;
+					height: 1px;
+					background-color: #1a2654;
+					&.dessus{
+						margin: 0 0 1px 0;
+					}
+				}
+				.trait-gras{
+					display: block;
+					width: 100%;
+					height: 2px;
+					background-color: #1a2654;
+					&.dessus{
+						margin: 0 0 1px 0;
+					}
+				}
+				.traits-ticket-left{
+					display: block;
+					width: 112px;
+					height: 4px;
+					position: absolute;
+					top: 33px;
+					left: 16px;
+				}
+				.traits-ticket-right{
+					display: block;
+					width: 90px;
+					height: 4px;
+					position: absolute;
+					top: 33px;
+					right: 0;
+				}
+				.ic-camion{
+					display: block;
+					font-size: 25px;
+					color: #1a2654;
+					display: block;
+					width: 19px;
+					height: 25px;
+					position: absolute;
+					top: 24px;
+					left: 138px;
+				}
+				.padding-ticket{
+					display: block;
+					width: 100%;
+					.lh-box-sizing(border-box);
+					position: relative;
+					padding-left: 16px;
+					padding-right: 16px;
+					margin: 0;
+					background: @blanc;
+				}
+				.prix-ticket{
+					.lato(3em);
+					display: inline-block;
+					vertical-align: top;
+					height: 50px;
+					line-height: 50px;
+				}
+				.devise-taxes{
+					display: inline-block;
+					vertical-align: top;
+					padding: 8px 0 0 2px;
+					text-align: left;
+					.devise{
+						display: block;
+						.lato-bold(1.875em);
+					}
+					.taxes{
+						display: block;
+						.lato-bold(0.688em);
+					}
+				}
+				.indic-ticket{
+					.lato-italic(0.813em);
+					color: #0c1a4c;
+					text-align: right;
+					position: relative;
+					width: 130px;
+					strong{
+						.lato-bold(1em);
+					}
+					&.gris{
+						color: #9ca1b1;
+					}
+					.fond-blanc-pointilles{
+						display: inline-block;
+						vertical-align: top;
+						background-color: @blanc;
+						position: relative;
+					}
+				}
+				.pointilles-ticket{
+					display: block;
+					width: 100%;
+					height: 2px;
+					background: url('../layoutImg/ticket/pointilles-ticket.png') repeat-x left top;
+					position: absolute;
+					bottom: 4px;
+					left: 0;
+				}
+				.barre{
+					position: relative;
+					.lato-bold(1em);
+					&:after{
+						content: "";
+						display: block;
+						width: 100%;
+						height: 1px;
+						background-color: #0c1a4c;
+						position: absolute;
+						top: 50%;
+						left: 0;
+						.lh-rotate(-12deg);
+					}
+				}
+				#top-ticket-fixed{
+					display: block;
+					width: 100%;
+					height: 53px;
+					.lh-box-sizing(border-box);
+					padding: 0 45px 0 0;
+					margin: 0;
+					position: relative;
+					#part-left-top-ticket-fixed{
+						display: block;
+						width: 100%;
+						height: 100%;
+						background: @blanc;
+						position: relative;
+					}
+					#coin-ticket{
+						display: block;
+						width: 45px;
+						height: 53px;
+						background: url('../layoutImg/ticket/coin-ticket.png') no-repeat left top;
+						position: absolute;
+						top: 0;
+						right: 0;
+					}
+				}
+				#bloc-prix-ticket{
+					color: @orangeFioulReduc;
+					padding-bottom: 10px;
+				}
+				#bloc-details-ticket{
+					padding-top: 10px;
+					padding-bottom: 20px;
+					ul.details-ticket{
+						display: block;
+						width: 100%;
+						height: auto;
+						margin: 0;
+						padding: 0;
+						list-style-type: none;
+						position: relative;
+						li{
+							display: block;
+							margin: 0 0 10px 0;
+							&.margin-bottom{
+								margin: 0 0 25px 0;
+							}
+							.ligne-detail{
+								position: relative;
+							
+							}
+							.titre-detail{
+								.lato-italic(0.938em);
+								color: #9ca1b1;
+								display: inline-block;
+								vertical-align: top;
+								background-color: @blanc;
+								position: relative;
+							}
+							.texte-detail{
+								.lato-bold(1.063em);
+								color: #2c355c;
+								display: inline-block;
+								vertical-align: top;
+								background-color: @blanc;
+								position: relative;
+							}
+						}
+					}
+				}
+				#bloc-total-ticket{
+					display: block;
+					width: 100%;
+					height: auto;
+					color: #1a2654;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					#total-ticket{
+						text-transform: uppercase;
+						padding: 10px 0 0 0;
+						margin: 0;
+						.lato-bold(1em);
+					}
+					#prix-total-ticket{
+						text-align: right;
+					}
+				}
+				#bottom-ticket-fixed{
+					display: block;
+					width: 100%;
+					height: 40px;
+					background-color: @blanc;
+					padding: 0 0 7px 0;
+					position: relative;
+					&:after{
+						content: "";
+						display: block;
+						width: 100%;
+						height: 7px;
+						background: url('../layoutImg/ticket/bottom-ticket.png') repeat-x left top;
+						position: absolute;
+						bottom: -7px;
+						left: 0;
+					}
+					&:before{
+						content: "";
+						display: block;
+						width: 100%;
+						height: 7px;
+						background: url('../layoutImg/ticket/bottom-ticket-ombre.png') repeat-x left top;
+						position: absolute;
+						bottom: -13px;
+						left: -6px;
+					}
+				}
+			}
+			
+		}
+	}
 }
 
 /* @end */
