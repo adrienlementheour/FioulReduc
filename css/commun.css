@@ -3554,11 +3554,59 @@ form.form-horizontal .controls .radio.radio-block input[type=radio] {
   margin: 3px 10px 0 0;
 }
 form.form-horizontal .controls .radio.radio-block ul.jours {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: auto;
   height: auto;
   margin: 10px 0 0 0;
   padding: 0;
+}
+form.form-horizontal .controls .radio.radio-block ul.jours .curseur-duree {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #c5c7cd;
+  color: #c5c7cd;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2M0YzdjZCIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
+  background-image: -webkit-linear-gradient(left, #fff 0%, #c4c7cd 100%);
+  background-image: -moz-linear-gradient(left, #fff 0%, #c4c7cd 100%);
+  background-image: -o-linear-gradient(left, #fff 0%, #c4c7cd 100%);
+  background-image: linear-gradient(to right, #fff 0%, #c4c7cd 100%);
+  margin: 0 0 10px 0;
+  position: relative;
+}
+form.form-horizontal .controls .radio.radio-block ul.jours .curseur-duree span {
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 0.625em;
+  text-rendering: optimizeLegibility;
+}
+form.form-horizontal .controls .radio.radio-block ul.jours .curseur-duree span.indic-top {
+  position: absolute;
+  top: -27px;
+  right: 0;
+  text-align: right;
+}
+form.form-horizontal .controls .radio.radio-block ul.jours .curseur-duree span.indic-right {
+  position: absolute;
+  top: -8px;
+  right: -95px;
+  text-align: right;
+}
+form.form-horizontal .controls .radio.radio-block ul.jours .curseur-duree span strong {
+  font-family: 'lato-bold-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
+form.form-horizontal .controls .radio.radio-block ul.jours .curseur-duree:after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 8px;
+  background: #c5c7cd;
+  position: absolute;
+  top: -2px;
+  right: 0;
 }
 form.form-horizontal .controls .radio.radio-block ul.jours li.jour {
   display: inline-block;
@@ -3621,6 +3669,18 @@ form.form-horizontal .controls .radio.radio-block ul.jours li.jour.inactive .jou
 }
 form.form-horizontal .controls .radio.radio-block.active {
   background-color: #f5f5f6;
+}
+form.form-horizontal .controls .radio.radio-block.active ul.jours .curseur-duree {
+  background: #fb8206;
+  color: #fb8206;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmNWY1ZjUiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y5NzkwNyIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
+  background-image: -webkit-linear-gradient(left, #f5f5f5 0%, #f97907 100%);
+  background-image: -moz-linear-gradient(left, #f5f5f5 0%, #f97907 100%);
+  background-image: -o-linear-gradient(left, #f5f5f5 0%, #f97907 100%);
+  background-image: linear-gradient(to right, #f5f5f5 0%, #f97907 100%);
+}
+form.form-horizontal .controls .radio.radio-block.active ul.jours .curseur-duree:after {
+  background: #fb8206;
 }
 form.form-horizontal .controls .radio.radio-block.active ul.jours li.jour {
   border: none;
