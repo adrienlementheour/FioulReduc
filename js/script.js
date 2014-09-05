@@ -67,6 +67,7 @@ function customSelect(){
 	}
 }
 
+
 ///////////////////////////////////////////////////////
 /////////// FONCTION POUR ANIMER LE COMPTEUR //////////
 ///////////////////////////////////////////////////////
@@ -250,6 +251,12 @@ $(document).ready(function(){
 	if($("body").hasClass("cycle")){
 		heightTicket();
 		bodyTicket();
+		$("label.radio").click(function(){
+			if (!$(this).hasClass("active")) {
+				$(".active", $(this).closest(".controls")).removeClass("active");
+				$(this).addClass("active");
+			}
+		});
 	}
 	
 	if($("body").hasClass("home")){
