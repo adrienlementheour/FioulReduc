@@ -3614,7 +3614,7 @@ form.form-horizontal .controls .radio.radio-block ul.jours li.jour {
   width: 46px;
   height: auto;
   text-align: center;
-  margin: 0 2px;
+  margin: 0 2px 5px 2px;
   padding: 0;
   border: 1px solid #f4f4f6;
   -webkit-box-sizing: border-box;

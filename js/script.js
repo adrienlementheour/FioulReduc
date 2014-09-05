@@ -91,7 +91,7 @@ function compteur(){
 ///////////////////////////////////////////////////////
 function bodyTicket(){
 	var heightBodyTicket = $("#ticket-fixed").height();
-	TweenMax.set($("#content-ticket-fixed"), {y: "-"+heightBodyTicket+"px", rotation: 1.5});
+	TweenMax.set($("#content-ticket-fixed"), {y: "-"+heightBodyTicket+"px"});
 	bodyTicketScroll();
 }
 
@@ -185,10 +185,11 @@ function animer(myScroll){
 	if($("body").hasClass("cycle")){
 		//154
 		var debutScroll = ($("#top-body-ticket").offset().top)-($("header").height());
-		var finScroll = debutScroll+$("#bloc-cycle").height()-$(window).height();
+		//var finScroll = debutScroll+$("#bloc-cycle").height()-$(window).height();
+		var finScroll = 800;
 		console.log("fin scroll : "+finScroll);
 		console.log(" myScroll : "+myScroll);
-		if (myScroll>=debutScroll && myScroll<finScroll && $(window).width()>979) {
+		if (myScroll>=debutScroll && myScroll<finScroll+$("header").height() && $(window).width()>979) {
 			TweenMax.set($("#ticket-fixed"), {position: "fixed", top: "70px"});
 		} else {
 			$("#ticket-fixed").css("position","absolute");
@@ -196,7 +197,7 @@ function animer(myScroll){
 			if (myScroll<debutScroll) {
 				TweenMax.set($("#ticket-fixed"), {top: "15px"});
 			} else {
-				TweenMax.set($("#ticket-fixed"), {top: finScroll+"px"});
+				TweenMax.set($("#ticket-fixed"), {top: finScroll-$("header").height()+"px"});
 			}
 		}
 	}
@@ -244,6 +245,15 @@ $(document).ready(function(){
 	
 	customSelect();
 	
+	$("a#bouton-menu-responsive").click(function(){
+		ouvertureFermetureMenuResponsive();
+		return false;
+	});
+	$("#masque-container").click(function(){
+		ouvertureFermetureMenuResponsive();
+		return false;
+	});
+	
 	$(".alert .close").click(function(){
 		$("body").removeClass("alerte");
 	});
@@ -263,14 +273,6 @@ $(document).ready(function(){
 		// Animation du compteur - odometer
 		compteur();
 		// Dépliage du bloc "commandez votre fioul"
-		$("a#bouton-menu-responsive").click(function(){
-			ouvertureFermetureMenuResponsive();
-			return false;
-		});
-		$("#masque-container").click(function(){
-			ouvertureFermetureMenuResponsive();
-			return false;
-		});
 		$("#order-zipcode").focusin(function(){
 			ouvertureFermetureBlocCommandeHome("ouverture");
 			return false;
