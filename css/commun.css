@@ -3320,7 +3320,6 @@ ul.select-customise {
   vertical-align: top;
 }
 ul#select-paiement {
-  display: block;
   width: 100%;
   height: auto;
   padding: 0;
@@ -4732,6 +4731,17 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   ul#menu-top-bar li a .illus-menu {
     margin: 0 8px 0 0;
   }
+  form.form-horizontal .controls .radio.radio-block ul.jours .curseur-duree {
+    margin-top: 20px;
+  }
+  form.form-horizontal .controls .radio.radio-block ul.jours .curseur-duree span.indic-top {
+    top: -20px;
+  }
+  form.form-horizontal .controls .radio.radio-block ul.jours .curseur-duree span.indic-right {
+    top: -20px;
+    right: 0;
+    text-align: right;
+  }
   /* @group responsive Home */
   ul#points-illus li {
     padding: 20px 0 12px 115px;
@@ -4778,7 +4788,7 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
     width: 100%;
   }
   .bloc-top {
-    padding: 100px 0 50px 0;
+    padding: 46px 0 50px 0;
     position: relative;
   }
   .home .bloc-top {

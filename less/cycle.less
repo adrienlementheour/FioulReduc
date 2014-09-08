@@ -46,7 +46,7 @@
 			}
 			.bloc-titre-etape{
 				display: block;
-				width: 160px;
+				width: 90%;
 				height: auto;
 				margin: 0 auto 27px auto;
 				padding: 12px;
@@ -66,6 +66,12 @@
 					bottom: -18px;
 					left: 50%;
 					margin-left: -1px;
+				}
+				.titre-etape{
+					display: block;
+					width: 100%;
+					height: 100%;
+					position: relative;
 				}
 			}
 			.bloc-num-etape{
@@ -345,10 +351,35 @@
 				height: auto;
 				.lh-translateZ(0);
 				.lh-backface-visibility(hidden);
+				position: relative;
 				#content-ticket-fixed{
 					.lh-rotate(1.5deg);
 					.lh-backface-visibility(hidden);
-					.lh-box-shadow(~"-6px 6px 0 rgba(0,0,0,.07)");
+					//.lh-box-shadow(~"-6px 6px 0 rgba(0,0,0,.07)");
+					#ombre-ticket-fixed{
+						display: block;
+						width: 100%;
+						height: auto;
+						position: absolute;
+						top: 5px;
+						bottom: -5px;
+						left: -5px;
+						background: #ededed;
+						background: rgba(0,0,0,.07);
+						&:after{
+							content: "";
+							display: block;
+							width: 100%;
+							height: 7px;
+							background: url('../layoutImg/ticket/bottom-ticket-ombre.png') repeat-x left top;
+							position: absolute;
+							bottom: -7px;
+							left: 0;
+						}
+					}
+					#content-bloc-ticket-fixed{
+						.lh-transform-origin(0 0);
+					}
 				}
 				.trait-fin{
 					display: block;
@@ -572,16 +603,7 @@
 						bottom: -7px;
 						left: 0;
 					}
-					&:before{
-						content: "";
-						display: block;
-						width: 100%;
-						height: 7px;
-						background: url('../layoutImg/ticket/bottom-ticket-ombre.png') repeat-x left top;
-						position: absolute;
-						bottom: -13px;
-						left: -6px;
-					}
+					
 				}
 			}
 			
@@ -618,6 +640,7 @@
 		padding: 30px 0 0 0;
 		font-size: 0.8em;
 	}
+	
 }
 
 @media (max-width: 1150px) {
@@ -707,17 +730,62 @@
 		.part-details {
 			display: none;
 		}
-	} 
+	}
+	#bloc-etapes-cycle{
+		ul#etapes-cycle{
+			li.etape-cycle{
+				.bloc-titre-etape{
+					padding: 12px 0;
+					font-size: 0.85em;
+				}	
+			}
+		}	
+	}
 }
 
 @media (max-width: 767px) {
 	#bloc-cycle {
 		width: 100%;
+		float: none;
+	}
+	.bloc-formulaire{
+		.part-form {
+			padding: 20px;
+			.titre-part-form {
+				padding: 0 0 0 65px;
+			}
+		}	
+	}
+	#ticket{
+		float: none;
+		margin: 20px auto 40px auto;
 	}
 }
 
 @media (max-width: 480px) {
-
+	#bloc-etapes-cycle{
+		ul#etapes-cycle{
+			li.etape-cycle{
+				.bloc-titre-etape{
+					.titre-etape{
+						-o-text-overflow: ellipsis;
+						text-overflow: ellipsis;
+						overflow: hidden;
+					}
+				}
+			}
+		}	
+	}
+	#bloc-cycle{
+		form.form-horizontal{
+			label.control-label {
+				width: auto;
+			}
+			.controls {
+				margin: 0;
+			}	
+		}
+	}
 }
 
 /* @end */

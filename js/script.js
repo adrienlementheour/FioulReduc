@@ -12,6 +12,23 @@ window.requestAnimFrame = (function(){
           };
 })();
 
+///////////////////////////////////////////////////////////////////////
+////////// FONCTION POUR ANIMER UN CHANGEMENT SUR LE TICKET ///////////
+///////////////////////////////////////////////////////////////////////
+function animTicket(){	
+	if($(window).width()>=768){
+		var tlAnimTicket;
+		tlAnimTicket = new TimelineMax();
+		tlAnimTicket.to($("#content-bloc-ticket-fixed"), 0.3, {rotationX: 10, rotationY: 3, skewX:"1deg", delay: 0.5, ease:Cubic.easeOut});
+		tlAnimTicket.to($("#content-bloc-ticket-fixed"), 0.7, {rotationX: 0, rotationY: 0, skewX:"0deg", ease:Back.easeOut});
+		
+		var tlAnimOmbreTicket;
+		tlAnimOmbreTicket = new TimelineMax();
+		tlAnimOmbreTicket.to($("#ombre-ticket-fixed"), 0.3, {opacity: 0.6, delay: 0.5, ease:Cubic.easeOut});
+		tlAnimOmbreTicket.to($("#ombre-ticket-fixed"), 0.7, {opacity: 1, ease:Back.easeOut});
+	}
+}
+
 //////////////////////////////////////////////////
 ////////// FONCTION POUR FIXER UN BLOC ///////////
 //////////////////////////////////////////////////
@@ -50,6 +67,7 @@ Highcharts.setOptions({
 function customSelect(){
 	if(($("html").hasClass("no-touch"))&&($(".select-customisable").length)){
 		TweenMax.set($(".select-customisable"), {opacity: "0"});
+		TweenMax.set($(".select-customise"), {opacity: "1"});
 		TweenMax.set($("ul.select-customise"), {display: "block"});
 		$("ul.select-customise li a").click(function(){
 			var liClique = $(this).closest("li");
@@ -104,8 +122,12 @@ function bodyTicketScroll(){
 }
 
 function heightTicket(){
-	var heightBlocCycle = $("#bloc-cycle").height();
-	$("#ticket").css("height",heightBlocCycle+"px");
+	if($(window).width()>=768){
+		var heightBlocCycle = $("#bloc-cycle").height();
+		$("#ticket").css("height",heightBlocCycle+"px");
+	}else {
+		$("#ticket").css("height", "auto");
+	}
 }
 
 /////////////////////////////////////////////////////////////////////////
@@ -183,22 +205,28 @@ function animer(myScroll){
 	}
 	
 	if($("body").hasClass("cycle")){
-		//154
-		var debutScroll = ($("#top-body-ticket").offset().top)-($("header").height());
-		//var finScroll = debutScroll+$("#bloc-cycle").height()-$(window).height();
-		var finScroll = 800;
-		console.log("fin scroll : "+finScroll);
-		console.log(" myScroll : "+myScroll);
-		if (myScroll>=debutScroll && myScroll<finScroll+$("header").height() && $(window).width()>979) {
-			TweenMax.set($("#ticket-fixed"), {position: "fixed", top: "70px"});
-		} else {
-			$("#ticket-fixed").css("position","absolute");
-			TweenMax.set($("#ticket-fixed"), {position: "absolute"});
-			if (myScroll<debutScroll) {
-				TweenMax.set($("#ticket-fixed"), {top: "15px"});
+		if($(window).width()>=768){
+			var debutScroll = ($("#top-body-ticket").offset().top)-($("header").height());
+			var finScroll = 800;
+			if (myScroll>=debutScroll && myScroll<finScroll+$("header").height() && $(window).width()>979) {
+				TweenMax.set($("#ticket-fixed"), {position: "fixed", top: "70px"});
 			} else {
-				TweenMax.set($("#ticket-fixed"), {top: finScroll-$("header").height()+"px"});
+				$("#ticket-fixed").css("position","absolute");
+				TweenMax.set($("#ticket-fixed"), {position: "absolute"});
+				if (myScroll<debutScroll) {
+					TweenMax.set($("#ticket-fixed"), {top: "15px"});
+				} else {
+					TweenMax.set($("#ticket-fixed"), {top: finScroll-$("header").height()+"px"});
+				}
 			}
+			if($(window).width()>1150){
+				TweenMax.set($("#content-ticket-fixed"), {rotation: 1.5});
+			}else{
+				TweenMax.set($("#content-ticket-fixed"), {rotation: 0});
+			}
+		}else{
+			TweenMax.set($("#ticket-fixed"), {position: "relative", top: 0});
+			TweenMax.set($("#content-ticket-fixed"), {rotation: 0});
 		}
 	}
 	
@@ -265,6 +293,9 @@ $(document).ready(function(){
 			if (!$(this).hasClass("active")) {
 				$(".active", $(this).closest(".controls")).removeClass("active");
 				$(this).addClass("active");
+				
+				///////////// A ENLEVER DANS LE FUTUR, SERT À MONTRER L'ANIMATION SUR LE TICKET /////////////
+				animTicket();
 			}
 		});
 	}
