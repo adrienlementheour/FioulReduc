@@ -10,6 +10,15 @@
   width: 70%;
   float: left;
 }
+.bloc-btn-cycle {
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 0px 45px 40px 45px;
+}
 #bloc-etapes-cycle ul#etapes-cycle {
   display: block;
   width: 100%;
@@ -722,6 +731,9 @@
     padding: 30px 0 0 0;
     font-size: 0.8em;
   }
+  .bloc-btn-cycle {
+    padding: 0px 35px 30px 35px;
+  }
 }
 @media (max-width: 1150px) {
   #bloc-cycle {
@@ -816,6 +828,9 @@
   #ticket {
     float: none;
     margin: 20px auto 40px auto;
+  }
+  .bloc-btn-cycle {
+    padding: 0 20px 20px 20px;
   }
 }
 @media (max-width: 480px) {

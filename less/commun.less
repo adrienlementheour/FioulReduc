@@ -479,6 +479,11 @@ ol.liste-num{
 
 
 .btn{
+	&.btn-form{
+		padding: 20px 70px 16px 70px;
+		.lato(1.125em);
+		letter-spacing: 1px;
+	}
 	&.btn-link{
 		margin: 0;
 		padding: 0;
@@ -519,6 +524,13 @@ ol.liste-num{
 				top: 2px;
 				right: 0;
 				font-size: 18px;
+			}
+			&.left{
+				padding: 4px 0 0 18px;
+				.ic-plus{
+					left: 0;
+					right: inherit;
+				}
 			}
 			
 		}
@@ -827,6 +839,23 @@ ul#select-paiement{
 	padding: 0;
 	margin: -30px 0 10px 0;
 	list-style-type: none;
+	.radio.radio-block.active &{
+		li{
+			&.selected{
+				.content-input-select-custom{
+					.icon-checked{
+						background-image: url('../layoutImg/check-paiement.png');
+					}
+					a{
+						color: @orangeFioulReduc;
+						.lh-box-shadow(~"0 2px 0 #dddada");
+						border: 4px solid @bleuFioulReduc;
+						background-color: @blanc;
+					}
+				}
+			}
+		}
+	}
 	li{
 		display: inline-block;
 		vertical-align: top;
@@ -842,12 +871,12 @@ ul#select-paiement{
 					display: block;
 				}
 				a{
-					color: @orangeFioulReduc;
+					color: #5b6274;
 					top: 0;
 					padding-top: 2px;
-					background-color: @blanc;
+					background-color: #dde0e6;
 					.lh-box-shadow(~"0 2px 0 #dddada");
-					border: 4px solid @bleuFioulReduc;
+					border: 4px solid #5b6274;
 				}
 			}
 		}
@@ -867,7 +896,9 @@ ul#select-paiement{
 				display: none;
 				width: 23px;
 				height: 25px;
-				background: url('../layoutImg/check.png') no-repeat center center;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-image: url('../layoutImg/check-paiement-gris.png');
 				z-index: 2;
 			}
 			a{
@@ -905,7 +936,11 @@ ul#select-paiement{
 					color: @orangeFioulReduc;
 					background-color: @blanc;
 					top: 3px;
+					border-color: @bleuFioulReduc;
 					.lh-box-shadow(~"0 2px 0 #dddada");
+					.icon-checked{
+						background-image: url('../layoutImg/check-paiement.png');
+					}
 				}
 			}
 		}
@@ -1748,6 +1783,33 @@ ul#menu-top-bar{
 	padding: 36px;
 	.lh-border-radius(6px);
 	background: @blanc;
+	&.avis-inline{
+		padding: 30px;
+		#moyenne-avis{
+			margin-top: -78px;
+		}
+		ul#avis{
+			li{
+				display: inline-block;
+				width: 50%;
+				.lh-box-sizing(border-box);
+				padding: 0 20px;
+				border: none;
+				.nom-client{
+					margin: 0 0 10px 0;
+				}
+				.note{
+					right: 20px;
+				}
+			}
+		}
+	}
+	
+	.desc-eKomi{
+		.lato(0.688em);
+		line-height: 1.5em;
+		color: #9399ad;
+	}
 	#moyenne-avis{
 		display: block;
 		width: 217px;
@@ -1793,10 +1855,16 @@ ul#menu-top-bar{
 			width: 209px;
 			height: 34px;
 		}
+		
+	}
+	.infos-avis{
+		display: block;
+		width: 100%;
+		.lh-box-sizing(border-box);
+		padding: 0 0 0 340px;
+		margin: 0;
 		.desc-eKomi{
-			.lato(0.688em);
-			line-height: 1.5em;
-			color: #9399ad;
+			margin: 10px 0 0 0;
 		}
 	}
 	ul#avis{
@@ -1805,7 +1873,7 @@ ul#menu-top-bar{
 		.lh-box-sizing(border-box);
 		padding: 0 0 0 320px;
 		margin: 0;
-		list-style-type: none;		
+		list-style-type: none;
 		li{
 			margin: 0 0 20px 0;
 			padding: 0 0 20px 0;
@@ -1983,7 +2051,10 @@ ul#menu-top-bar{
 			}
 		}
 	}
-	#bloc-avis{
+	#bloc-avis, #bloc-avis.avis-inline{
+		.infos-avis {
+			padding: 0 0 0 270px;
+		}
 		ul#avis{
 			padding: 0 0 0 250px;
 			li{
@@ -2240,8 +2311,11 @@ ul#menu-top-bar{
 			}
 		}
 	}
-	#bloc-avis{
+	#bloc-avis, #bloc-avis.avis-inline{
 		padding: 30px;
+		.infos-avis {
+			padding: 0;
+		}
 		#moyenne-avis {
 			display: block;
 			width: 217px;
@@ -2358,7 +2432,7 @@ ul#menu-top-bar{
 		padding: 0;
 		margin: 20px 0 0 0;
 	}
-	#bloc-avis{
+	#bloc-avis, #bloc-avis.avis-inline{
 		ul#avis {
 			li, li.last{
 				width: 50%;
@@ -2483,7 +2557,7 @@ ul#menu-top-bar{
 		}
 	}
 	
-	#bloc-avis{
+	#bloc-avis, #bloc-avis.avis-inline{
 		ul#avis {
 			li, li.last{
 				width: 100%;

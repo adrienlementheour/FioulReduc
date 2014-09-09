@@ -220,7 +220,7 @@
 										<label class="control-label" for="">Paiement:</label>
 										<div class="controls">
 											<label class="radio radio-block active" for="radio-commande">
-											  <input type="radio" name="radio-paiement" id="radio-commande" value="Commande" checked="checked">
+											  <input type="radio" name="radio-paiement" id="radio-commande" class="radio-paiement" value="Commande" checked="checked">
 											  À la commande – en une ou plusieurs fois par CB :<br />
 												<select id="select-paiement-custom" class="select-customisable" name="select-paiement">
 													<option>En 1x</option>
@@ -232,40 +232,40 @@
 												<ul id="select-paiement" class="select-customise">
 													<li class="selected">
 														<div class="content-input-select-custom">
-															<div class="icon-checked"></div>
 															<a class="clearfix" href="#">
+																<div class="icon-checked"></div>
 																en 
 																<span class="nb-fois">1<span>x</span></span>
 															</a>
 														</div>
 													</li><li>
 														<div class="content-input-select-custom">
-															<div class="icon-checked"></div>
 															<a class="clearfix" href="#">
+																<div class="icon-checked"></div>
 																en 
 																<span class="nb-fois">3<span>x</span></span>
 															</a>
 														</div>
 													</li><li>
 														<div class="content-input-select-custom">
-															<div class="icon-checked"></div>
 															<a class="clearfix" href="#">
+																<div class="icon-checked"></div>
 																en 
 																<div class="nb-fois">5<span>x</span></div>
 															</a>
 														</div>
 													</li><li>
 														<div class="content-input-select-custom">
-															<div class="icon-checked"></div>
 															<a class="clearfix" href="#">
+																<div class="icon-checked"></div>
 																en 
 																<span class="nb-fois">7<span>x</span></span>
 															</a>
 														</div>
 													</li><li>
 														<div class="content-input-select-custom">
-															<div class="icon-checked"></div>
 															<a class="clearfix" href="#">
+																<div class="icon-checked"></div>
 																en 
 																<span class="nb-fois decal">10<span>x</span></span>
 															</a>
@@ -297,6 +297,12 @@
 			  							</ul>
 			  						</div>
 			  					</div>
+			  				</div>
+			  				<div class="bloc-btn-cycle">
+				  				<div class="controls">
+				  					<a class="btn btn-link btn-plus left" href="#"><span class="ic-plus"></span><span class="txt-btn">Cliquez ici si vous avez un code de réduction</span></a><br />
+				  					<button type="submit" class="btn btn-form">Continuer<span class="ic-fleche-rond"></span></button>
+				  				</div>
 			  				</div>
 		  				</form>
 		  			</section>
@@ -333,17 +339,44 @@
 					  					<div class="bloc-traits"><div class="trait-fin dessus"></div><div class="trait-gras"></div></div>
 					  					<div id="bloc-total-ticket" class="padding-ticket clearfix">
 					  						<div id="total-ticket" class="pull-left">Total</div>
-					  						<div id="prix-total-ticket" class="pull-right"><div class="prix-total"><span class="prix-ticket">928,15</span><div class="devise-taxes"><span class="devise">€</span><span class="taxes">TTC</span></div><div class="prix-sans-reduc">au lieu de <span class="barre">1028,15€</span></div><div class="indic-ticket gris pull-right">Frais de livraison inclus</div>
-					  					</div>
+					  						<div id="prix-total-ticket" class="pull-right"><div class="prix-total"><span class="prix-ticket">928,15</span><div class="devise-taxes"><span class="devise">€</span><span class="taxes">TTC</span></div><div class="prix-sans-reduc">au lieu de <span class="barre">1028,15€</span></div><div class="indic-ticket gris pull-right">Frais de livraison inclus</div></div>
+				  							</div>
+				  						</div>
 				  					</div>
+				  					<div id="bottom-ticket-fixed"></div>
 				  				</div>
-				  				<div id="bottom-ticket-fixed"></div>
-				  			</div>
+			  				</div>
 			  			</div>
 		  			</div>
 		  		</aside>
 		  	</div>
 	  	</div>
+	  	<section class="bloc-full bloc-blanc small-padding">
+	  		<div class="container">
+		  		<div id="bloc-avis" class="avis-inline">
+		  			<div id="moyenne-avis">
+		  				<div class="note-moyenne-chiffre">4,9/5</div>
+		  				<div class="nombre-avis"><span>4891 avis clients</span></div>
+		  				<div class="note-moyenne"><img src="layoutImg/etoiles/big-etoiles-4,5.png" alt="" /></div>
+		  			</div>
+		  			<ul id="avis">
+		  				<li>
+		  					<div class="nom-client">Jean-Pierre (49000)</div>
+		  					<div class="note"><img src="layoutImg/etoiles/small-etoiles-5.png" alt="" /></div>
+		  					<div class="commentaire-client">Livraison à l'heure. Livreur très professionnel et sympathique. Continuez ainsi !</div>
+		  				</li><li>
+		  					<div class="nom-client">Marie (67200)</div>
+		  					<div class="note"><img src="layoutImg/etoiles/small-etoiles-4,5.png" alt="" /></div>
+		  					<div class="commentaire-client">Rien a dire tout a été super: de la cde, à la livraison en passant par la prise de rv</div>
+		  				</li>
+		  			</ul>
+		  			<div class="infos-avis">
+			  			<div class="desc-eKomi pull-left">eKomi© fournit un service de récolte d'avis clients indépendant et transparent.</div>
+			  			<a class="btn btn-link btn-fleche pull-right btn-link-home" href="#"><span class="ic-arrow-right"></span>Voir tous les avis clients</a>
+		  			</div>
+		  		</div>
+	  		</div>
+	  	</section>
 	  	<footer class="bloc-full bloc-degrade-bleu">
 	  		<div class="container">
 	  			<ul id="menu-footer">

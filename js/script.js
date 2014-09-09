@@ -70,6 +70,10 @@ function customSelect(){
 		TweenMax.set($(".select-customise"), {opacity: "1"});
 		TweenMax.set($("ul.select-customise"), {display: "block"});
 		$("ul.select-customise li a").click(function(){
+			$(".radio-paiement")[0].checked = true;
+			var controls = $(this).closest(".controls");
+			$("> .active", controls).removeClass("active");
+			$(this).closest(".radio-block").addClass("active");
 			var liClique = $(this).closest("li");
 			var ulClique = $(this).closest("ul.select-customise");
 			var idUlClique = ulClique.attr("id");

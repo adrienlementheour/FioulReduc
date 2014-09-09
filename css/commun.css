@@ -2916,6 +2916,14 @@ ol.liste-num li .detail-liste {
 .lt-ie8 .bloc-droite {
   display: inline;
 }
+.btn.btn-form {
+  padding: 20px 70px 16px 70px;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 1.125em;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 1px;
+}
 .btn.btn-link {
   margin: 0;
   padding: 0;
@@ -2959,6 +2967,13 @@ ol.liste-num li .detail-liste {
   top: 2px;
   right: 0;
   font-size: 18px;
+}
+.btn.btn-link.btn-plus.left {
+  padding: 4px 0 0 18px;
+}
+.btn.btn-link.btn-plus.left .ic-plus {
+  left: 0;
+  right: inherit;
 }
 .btn.btn-link.btn-jaune {
   color: #ffcb00;
@@ -3326,6 +3341,17 @@ ul#select-paiement {
   margin: -30px 0 10px 0;
   list-style-type: none;
 }
+.radio.radio-block.active ul#select-paiement li.selected .content-input-select-custom .icon-checked {
+  background-image: url('../layoutImg/check-paiement.png');
+}
+.radio.radio-block.active ul#select-paiement li.selected .content-input-select-custom a {
+  color: #fb8206;
+  -webkit-box-shadow: 0 2px 0 #dddada;
+  -moz-box-shadow: 0 2px 0 #dddada;
+  box-shadow: 0 2px 0 #dddada;
+  border: 4px solid #2947a0;
+  background-color: #ffffff;
+}
 ul#select-paiement li {
   display: inline-block;
   vertical-align: top;
@@ -3344,14 +3370,14 @@ ul#select-paiement li.selected .content-input-select-custom .icon-checked {
   display: block;
 }
 ul#select-paiement li.selected .content-input-select-custom a {
-  color: #fb8206;
+  color: #5b6274;
   top: 0;
   padding-top: 2px;
-  background-color: #ffffff;
+  background-color: #dde0e6;
   -webkit-box-shadow: 0 2px 0 #dddada;
   -moz-box-shadow: 0 2px 0 #dddada;
   box-shadow: 0 2px 0 #dddada;
-  border: 4px solid #2947a0;
+  border: 4px solid #5b6274;
 }
 ul#select-paiement li .content-input-select-custom {
   display: block;
@@ -3372,7 +3398,9 @@ ul#select-paiement li .content-input-select-custom .icon-checked {
   display: none;
   width: 23px;
   height: 25px;
-  background: url('../layoutImg/check.png') no-repeat center center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../layoutImg/check-paiement-gris.png');
   z-index: 2;
 }
 ul#select-paiement li .content-input-select-custom a {
@@ -3432,9 +3460,13 @@ ul#select-paiement li .content-input-select-custom a:hover {
   color: #fb8206;
   background-color: #ffffff;
   top: 3px;
+  border-color: #2947a0;
   -webkit-box-shadow: 0 2px 0 #dddada;
   -moz-box-shadow: 0 2px 0 #dddada;
   box-shadow: 0 2px 0 #dddada;
+}
+ul#select-paiement li .content-input-select-custom a:hover .icon-checked {
+  background-image: url('../layoutImg/check-paiement.png');
 }
 form {
   color: #0c1a4c;
@@ -4541,6 +4573,35 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   background-clip: padding-box;
   background: #ffffff;
 }
+#bloc-avis.avis-inline {
+  padding: 30px;
+}
+#bloc-avis.avis-inline #moyenne-avis {
+  margin-top: -78px;
+}
+#bloc-avis.avis-inline ul#avis li {
+  display: inline-block;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 20px;
+  border: none;
+}
+#bloc-avis.avis-inline ul#avis li .nom-client {
+  margin: 0 0 10px 0;
+}
+#bloc-avis.avis-inline ul#avis li .note {
+  right: 20px;
+}
+#bloc-avis .desc-eKomi {
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 0.688em;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5em;
+  color: #9399ad;
+}
 #bloc-avis #moyenne-avis {
   display: block;
   width: 217px;
@@ -4592,13 +4653,17 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   width: 209px;
   height: 34px;
 }
-#bloc-avis #moyenne-avis .desc-eKomi {
-  font-family: 'lato', sans-serif;
-  font-weight: normal;
-  font-size: 0.688em;
-  text-rendering: optimizeLegibility;
-  line-height: 1.5em;
-  color: #9399ad;
+#bloc-avis .infos-avis {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0 0 340px;
+  margin: 0;
+}
+#bloc-avis .infos-avis .desc-eKomi {
+  margin: 10px 0 0 0;
 }
 #bloc-avis ul#avis {
   display: block;
@@ -4752,13 +4817,20 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   ul#points-illus li .point-illus.illus-commande-groupee {
     left: 0;
   }
-  #bloc-avis ul#avis {
+  #bloc-avis .infos-avis,
+  #bloc-avis.avis-inline .infos-avis {
+    padding: 0 0 0 270px;
+  }
+  #bloc-avis ul#avis,
+  #bloc-avis.avis-inline ul#avis {
     padding: 0 0 0 250px;
   }
-  #bloc-avis ul#avis li .nom-client {
+  #bloc-avis ul#avis li .nom-client,
+  #bloc-avis.avis-inline ul#avis li .nom-client {
     padding: 2px 0 0 0;
   }
-  #bloc-avis ul#avis li .note {
+  #bloc-avis ul#avis li .note,
+  #bloc-avis.avis-inline ul#avis li .note {
     position: relative;
     top: inherit;
     right: inherit;
@@ -4999,10 +5071,16 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
     margin-top: -50px;
     background: url('../layoutImg/illus-points/illus-livraison-adaptable-responsive.png') no-repeat left top;
   }
-  #bloc-avis {
+  #bloc-avis,
+  #bloc-avis.avis-inline {
     padding: 30px;
   }
-  #bloc-avis #moyenne-avis {
+  #bloc-avis .infos-avis,
+  #bloc-avis.avis-inline .infos-avis {
+    padding: 0;
+  }
+  #bloc-avis #moyenne-avis,
+  #bloc-avis.avis-inline #moyenne-avis {
     display: block;
     width: 217px;
     height: auto;
@@ -5011,11 +5089,13 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
     margin: 0 auto;
     left: inherit;
   }
-  #bloc-avis ul#avis {
+  #bloc-avis ul#avis,
+  #bloc-avis.avis-inline ul#avis {
     padding: 0;
     margin: 20px 0 0 0;
   }
-  #bloc-avis ul#avis li {
+  #bloc-avis ul#avis li,
+  #bloc-avis.avis-inline ul#avis li {
     display: inline-block;
     vertical-align: top;
     width: 100%;
@@ -5023,13 +5103,16 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
     padding: 0;
     border: none;
   }
-  .lt-ie8 #bloc-avis ul#avis li {
+  .lt-ie8 #bloc-avis ul#avis li,
+  .lt-ie8 #bloc-avis.avis-inline ul#avis li {
     display: inline;
   }
-  #bloc-avis ul#avis li .nom-client {
+  #bloc-avis ul#avis li .nom-client,
+  #bloc-avis.avis-inline ul#avis li .nom-client {
     padding: 2px 120px 0 0;
   }
-  #bloc-avis ul#avis li .note {
+  #bloc-avis ul#avis li .note,
+  #bloc-avis.avis-inline ul#avis li .note {
     position: absolute;
     top: 0;
     right: 0;
@@ -5115,7 +5198,9 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
     margin: 20px 0 0 0;
   }
   #bloc-avis ul#avis li,
-  #bloc-avis ul#avis li.last {
+  #bloc-avis.avis-inline ul#avis li,
+  #bloc-avis ul#avis li.last,
+  #bloc-avis.avis-inline ul#avis li.last {
     width: 50%;
     padding: 0 20px;
     -webkit-box-sizing: border-box;
@@ -5123,7 +5208,9 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
     box-sizing: border-box;
   }
   #bloc-avis ul#avis li .note,
-  #bloc-avis ul#avis li.last .note {
+  #bloc-avis.avis-inline ul#avis li .note,
+  #bloc-avis ul#avis li.last .note,
+  #bloc-avis.avis-inline ul#avis li.last .note {
     right: 20px;
   }
   .carousel.carousel-visu {
@@ -5230,16 +5317,22 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
     margin-top: -76px;
   }
   #bloc-avis ul#avis li,
-  #bloc-avis ul#avis li.last {
+  #bloc-avis.avis-inline ul#avis li,
+  #bloc-avis ul#avis li.last,
+  #bloc-avis.avis-inline ul#avis li.last {
     width: 100%;
     padding: 0;
   }
   #bloc-avis ul#avis li .nom-client,
-  #bloc-avis ul#avis li.last .nom-client {
+  #bloc-avis.avis-inline ul#avis li .nom-client,
+  #bloc-avis ul#avis li.last .nom-client,
+  #bloc-avis.avis-inline ul#avis li.last .nom-client {
     padding: 2px 0 0 0;
   }
   #bloc-avis ul#avis li .note,
-  #bloc-avis ul#avis li.last .note {
+  #bloc-avis.avis-inline ul#avis li .note,
+  #bloc-avis ul#avis li.last .note,
+  #bloc-avis.avis-inline ul#avis li.last .note {
     position: relative;
     right: inherit;
     top: inherit;
