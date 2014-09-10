@@ -361,6 +361,7 @@
 				#content-ticket-fixed{
 					.lh-rotate(1.5deg);
 					.lh-backface-visibility(hidden);
+					.lh-transform-origin(50%  51%);
 					//.lh-box-shadow(~"-6px 6px 0 rgba(0,0,0,.07)");
 					#ombre-ticket-fixed{
 						display: block;
@@ -387,24 +388,7 @@
 						.lh-transform-origin(0 0);
 					}
 				}
-				.trait-fin{
-					display: block;
-					width: 100%;
-					height: 1px;
-					background-color: #1a2654;
-					&.dessus{
-						margin: 0 0 1px 0;
-					}
-				}
-				.trait-gras{
-					display: block;
-					width: 100%;
-					height: 2px;
-					background-color: #1a2654;
-					&.dessus{
-						margin: 0 0 1px 0;
-					}
-				}
+				
 				.traits-ticket-left{
 					display: block;
 					width: 112px;
@@ -441,6 +425,10 @@
 					padding-right: 16px;
 					margin: 0;
 					background: @blanc;
+				}
+				.margin-negatif-top{
+					padding-top: 1px;
+					margin-top: -1px;
 				}
 				.prix-ticket{
 					.lato(3em);
@@ -614,6 +602,24 @@
 			}
 			
 		}
+	}
+}
+
+#code-reduction{
+	.lato-italic(1em);
+	color: @bleuFioulReduc;
+	a.btn.btn-link.btn-moins {
+		display: inline-block;
+		vertical-align: top;
+		height: 32px;
+		line-height: 32px;
+		.ic-moins{
+			top: 50%;
+			margin-top: -9px;
+		}
+	}
+	.txt-code-reduction{
+		margin-right: 10px;
 	}
 }
 

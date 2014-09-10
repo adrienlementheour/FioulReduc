@@ -422,6 +422,11 @@
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
+  -webkit-transform-origin: 50% 51%;
+  -moz-transform-origin: 50% 51%;
+  -ms-transform-origin: 50% 51%;
+  -o-transform-origin: 50% 51%;
+  transform-origin: 50% 51%;
 }
 #ticket #masque-ticket #body-ticket #ticket-fixed #content-ticket-fixed #ombre-ticket-fixed {
   display: block;
@@ -450,24 +455,6 @@
   -ms-transform-origin: 0 0;
   -o-transform-origin: 0 0;
   transform-origin: 0 0;
-}
-#ticket #masque-ticket #body-ticket #ticket-fixed .trait-fin {
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #1a2654;
-}
-#ticket #masque-ticket #body-ticket #ticket-fixed .trait-fin.dessus {
-  margin: 0 0 1px 0;
-}
-#ticket #masque-ticket #body-ticket #ticket-fixed .trait-gras {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #1a2654;
-}
-#ticket #masque-ticket #body-ticket #ticket-fixed .trait-gras.dessus {
-  margin: 0 0 1px 0;
 }
 #ticket #masque-ticket #body-ticket #ticket-fixed .traits-ticket-left {
   display: block;
@@ -506,6 +493,10 @@
   padding-right: 16px;
   margin: 0;
   background: #ffffff;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed .margin-negatif-top {
+  padding-top: 1px;
+  margin-top: -1px;
 }
 #ticket #masque-ticket #body-ticket #ticket-fixed .prix-ticket {
   font-family: 'lato', sans-serif;
@@ -706,6 +697,26 @@
   position: absolute;
   bottom: -7px;
   left: 0;
+}
+#code-reduction {
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+  color: #2947a0;
+}
+#code-reduction a.btn.btn-link.btn-moins {
+  display: inline-block;
+  vertical-align: top;
+  height: 32px;
+  line-height: 32px;
+}
+#code-reduction a.btn.btn-link.btn-moins .ic-moins {
+  top: 50%;
+  margin-top: -9px;
+}
+#code-reduction .txt-code-reduction {
+  margin-right: 10px;
 }
 /* @end */
 /* @group Responsive horizontal */

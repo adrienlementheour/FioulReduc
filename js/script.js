@@ -13,13 +13,22 @@ window.requestAnimFrame = (function(){
 })();
 
 ///////////////////////////////////////////////////////////////////////
+////////// FONCTION POUR GERER LES TOOLTIPS ///////////
+///////////////////////////////////////////////////////////////////////
+function tooltip(){	
+	$(".has-tooltip-ticket").tooltip({
+		template: '<div class="tooltip tooltip-ticket"><div class="tooltip-inner"></div><div class="traits-tooltip"><div class="trait-fin dessus"></div><div class="trait-gras"></div></div></div>'
+	});
+}
+
+///////////////////////////////////////////////////////////////////////
 ////////// FONCTION POUR ANIMER UN CHANGEMENT SUR LE TICKET ///////////
 ///////////////////////////////////////////////////////////////////////
 function animTicket(){	
 	if($(window).width()>=768){
 		var tlAnimTicket;
 		tlAnimTicket = new TimelineMax();
-		tlAnimTicket.to($("#content-bloc-ticket-fixed"), 0.3, {rotationX: 10, rotationY: 3, skewX:"1deg", delay: 0.5, ease:Cubic.easeOut});
+		tlAnimTicket.to($("#content-bloc-ticket-fixed"), 0.3, {rotationX: 10, rotationY: 3, skewX:"1deg", delay: 0.2, ease:Cubic.easeOut});
 		tlAnimTicket.to($("#content-bloc-ticket-fixed"), 0.7, {rotationX: 0, rotationY: 0, skewX:"0deg", ease:Back.easeOut});
 		
 		var tlAnimOmbreTicket;
@@ -133,6 +142,26 @@ function heightTicket(){
 		$("#ticket").css("height", "auto");
 	}
 }
+
+//////////////////////////////////////////////////////////////////
+////// FONCTION POUR OUVRIR ET FERMER LE CODE DE REDUCTION ///////
+//////////////////////////////////////////////////////////////////
+function codeReduction(){
+	TweenMax.set($("#code-reduction"), {display: "none"});
+	
+	$("a#btn-code-reduction").click(function() {
+		TweenMax.set($("#code-reduction"), {display: "block"});
+		TweenMax.set($("a#btn-code-reduction"), {display: "none"});
+		return false;
+	});
+	
+	$("#btn-code-reduction-retour").click(function() {
+		TweenMax.set($("a#btn-code-reduction"), {display: "block"});
+		TweenMax.set($("#code-reduction"), {display: "none"});
+		return false;
+	});
+}
+
 
 /////////////////////////////////////////////////////////////////////////
 /////////// FONCTION POUR OUVRIR ET FERMER LE MENU RESPONSIVE //////////
@@ -276,6 +305,8 @@ $(document).ready(function(){
 	animer(myScroll);
 	
 	customSelect();
+	tooltip();
+	
 	
 	$("a#bouton-menu-responsive").click(function(){
 		ouvertureFermetureMenuResponsive();
@@ -293,6 +324,7 @@ $(document).ready(function(){
 	if($("body").hasClass("cycle")){
 		heightTicket();
 		bodyTicket();
+		codeReduction();
 		$("label.radio").click(function(){
 			if (!$(this).hasClass("active")) {
 				$(".active", $(this).closest(".controls")).removeClass("active");

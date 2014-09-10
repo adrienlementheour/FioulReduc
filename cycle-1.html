@@ -144,7 +144,7 @@
 											  <input type="radio" name="radio-fioul" id="radio-ordinaire" value="ordinaire" checked="checked">
 											  Ordinaire
 											</label>
-											<label class="radio inline radio-block" for="radio-superieur">
+											<label class="radio inline radio-block has-tooltip-ticket" for="radio-superieur" data-toggle="tooltip" data-placement="bottom" data-original-title="+ 100&nbsp;€">
 											  <input type="radio" name="radio-fioul" id="radio-superieur" value="superieur">
 											  Supérieur
 											</label>
@@ -176,7 +176,7 @@
 												Économique – sous 5 jours<br />
 												<ul class="jours">
 													<div class="curseur-duree"><span class="indic-top">Au plus tard le <strong>10 juillet</strong></span></div>
-													<li class="jour"><div class="mois">juil.</div><div class="jour">4</div></li><li class="jour inactive"><div class="mois">juil.</div><div class="jour">5</div></li><li class="jour inactive"><div class="mois">juil.</div><div class="jour">6</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">7</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">8</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">9</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">10</div></li>
+													<li class="jour"><div class="mois">juil.</div><div class="jour">4</div></li><li class="jour inactive"><div class="mois">juil.</div><div class="jour">5</div></li><li class="jour inactive"><div class="mois">juil.</div><div class="jour">6</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">7</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">8</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">9</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">10</div></li><li class="jour"><div class="mois">juil.</div><div class="jour">11</div></li>
 												</ul>
 											</label>
 											<label class="radio radio-block" for="radio-standard">
@@ -191,6 +191,7 @@
 												<input type="radio" name="radio-livraison" id="radio-express" value="Express">
 												Express – sous 24 heures<br />
 												<ul class="jours">
+													<div class="curseur-duree"><span class="indic-right">Au plus tard le <strong>4 juillet</strong></span></div>
 													<li class="jour"><div class="mois">juil.</div><div class="jour">4</div></li>
 												</ul>
 											</label>
@@ -300,12 +301,12 @@
 			  				</div>
 			  				<div class="bloc-btn-cycle">
 				  				<div class="controls">
-				  					<a class="btn btn-link btn-plus left" href="#"><span class="ic-plus"></span><span class="txt-btn">Cliquez ici si vous avez un code de réduction</span></a><br />
-				  					<div class="code-reduction">
-					  					<a href="#"><span class="ic-moins"></span></a> Code de réduction: 
+				  					<a class="btn btn-link btn-plus left" id="btn-code-reduction" href="#"><span class="ic-plus"></span><span class="txt-btn">Cliquez ici si vous avez un code de réduction</span></a><br />
+				  					<div id="code-reduction">
+					  					<a href="#" class="btn btn-link btn-moins left" id="btn-code-reduction-retour"><span class="ic-moins"></span></a> <span class="txt-code-reduction">Code de réduction:</span> 
 					  					<input type="text" class="input-medium input-inline-form"><button type="submit" class="btn-inline-form">OK</button><br />
-					  					<button type="submit" class="btn btn-form">Continuer<span class="ic-fleche-rond"></span></button>
 				  					</div>
+				  					<button type="submit" class="btn btn-form">Continuer<span class="ic-fleche-rond"></span></button>
 				  				</div>
 			  				</div>
 		  				</form>
@@ -328,26 +329,26 @@
 					  						</div>
 					  						<div id="coin-ticket"></div>
 					  					</div>
-					  					<div id="bloc-prix-ticket" class="padding-ticket"><span class="prix-ticket">0,836</span><div class="devise-taxes"><span class="devise">€</span><span class="taxes">TTC/Litre</span></div></div>
+					  					<div id="bloc-prix-ticket" class="padding-ticket margin-negatif-top"><span class="prix-ticket">0,836</span><div class="devise-taxes"><span class="devise">€</span><span class="taxes">TTC/Litre</span></div></div>
 					  					<div class="prix-bas-ticket"><span class="ic-sousligne"></span>Prix bas <span class="decal">garantis !!*</span></div>
-					  					<div class="bloc-traits padding-ticket"><div class="trait-gras dessus"></div><div class="trait-fin"></div></div>
-					  					<div id="bloc-details-ticket" class="padding-ticket">
+					  					<div class="bloc-traits padding-ticket margin-negatif-top"><div class="trait-gras dessus"></div><div class="trait-fin"></div></div>
+					  					<div id="bloc-details-ticket" class="padding-ticket margin-negatif-top">
 					  						<ul class="details-ticket">
 					  							<li class="margin-bottom clearfix"><div class="ligne-detail clearfix"><div class="pointilles-ticket"></div><div class="titre-detail pull-left">Fioul ordinaire</div><div class="texte-detail pull-right">1 000 litres</div></div></li>
-					  							<li class="clearfix"><div class="ligne-detail clearfix"><div class="pointilles-ticket"></div><div class="titre-detail pull-left">Code postal</div><div class="texte-detail pull-right">86 120</div></div></li>
+					  							<li class="clearfix"><div class="ligne-detail clearfix"><div class="pointilles-ticket"></div><div class="titre-detail pull-left">Code postal</div><div class="texte-detail pull-right">86120</div></div></li>
 					  							<li class="margin-bottom clearfix"><div class="ligne-detail clearfix"><div class="pointilles-ticket"></div><div class="titre-detail pull-left">Livraison sous</div><div class="texte-detail pull-right">5 jours</div></div><div class="indic-ticket pull-right">au plus tard le <strong>10/07/14</strong></div></li>
 					  							<li class="margin-bottom clearfix"><div class="ligne-detail clearfix"><div class="pointilles-ticket"></div><div class="titre-detail pull-left">Règlement</div><div class="texte-detail pull-right">À la commande, en 3x</div></div><div class="indic-ticket pull-right"><div class="pointilles-ticket"></div><div class="fond-blanc-pointilles"><strong>356,05€</strong> le 10/07/14</div></div><br /><div class="indic-ticket pull-right"><div class="pointilles-ticket"></div><div class="fond-blanc-pointilles"><strong>356,05€</strong> le 10/08/14</div></div><br /><div class="indic-ticket pull-right"><div class="pointilles-ticket"></div><div class="fond-blanc-pointilles"><strong>356,05€</strong> le 10/09/14</div></div></li>
 					  							<li><div class="ligne-detail clearfix"><div class="pointilles-ticket"></div><div class="titre-detail pull-left">Code de réduction</div><div class="texte-detail pull-right">-100€</div></div></li>
 					  						</ul>
 					  					</div>
-					  					<div class="bloc-traits"><div class="trait-fin dessus"></div><div class="trait-gras"></div></div>
-					  					<div id="bloc-total-ticket" class="padding-ticket clearfix">
+					  					<div class="bloc-traits margin-negatif-top"><div class="trait-fin dessus"></div><div class="trait-gras"></div></div>
+					  					<div id="bloc-total-ticket" class="padding-ticket margin-negatif-top clearfix">
 					  						<div id="total-ticket" class="pull-left">Total</div>
 					  						<div id="prix-total-ticket" class="pull-right"><div class="prix-total"><span class="prix-ticket">928,15</span><div class="devise-taxes"><span class="devise">€</span><span class="taxes">TTC</span></div><div class="prix-sans-reduc">au lieu de <span class="barre">1028,15€</span></div><div class="indic-ticket gris pull-right">Frais de livraison inclus</div></div>
 				  							</div>
 				  						</div>
+				  						<div id="bottom-ticket-fixed" class="margin-negatif-top"></div>
 				  					</div>
-				  					<div id="bottom-ticket-fixed"></div>
 				  				</div>
 			  				</div>
 			  			</div>
@@ -372,7 +373,12 @@
 		  					<div class="nom-client">Marie (67200)</div>
 		  					<div class="note"><img src="layoutImg/etoiles/small-etoiles-4,5.png" alt="" /></div>
 		  					<div class="commentaire-client">Rien a dire tout a été super: de la cde, à la livraison en passant par la prise de rv</div>
+		  				</li><li>
+		  					<div class="nom-client">Michel (37100)</div>
+		  					<div class="note"><img src="layoutImg/etoiles/small-etoiles-5.png" alt="" /></div>
+		  					<div class="commentaire-client">Parfait !</div>
 		  				</li>
+		  				
 		  			</ul>
 		  			<div class="infos-avis">
 			  			<div class="desc-eKomi pull-left">eKomi© fournit un service de récolte d'avis clients indépendant et transparent.</div>
