@@ -832,14 +832,71 @@ ul.actus{
 
 /* @end */
 
+/* @group Modals */
+
+.modal{
+	&.in{
+		.lh-opacity(1);
+	}
+	h3{
+		color: @bleuFioulReduc;
+		padding: 0 0 10px 0;
+		border-bottom: 1px solid @bleuFioulReduc;
+	}
+	.modal-header {
+		padding: 40px 45px 10px 45px;
+		border: none;
+		.lh-box-sizing(border-box);
+		width: 100%;
+	}
+	.modal-body {
+		padding: 20px 45px 20px 45px;
+		.lato(0.9em);
+	}
+	.modal-footer {
+		padding: 20px 45px 20px 45px;
+		.lh-box-shadow(none);
+		background-color: #f8f9fa;
+		border: 2px solid @blanc;
+		.lh-box-sizing(border-box);
+		width: 100%;
+	}
+}
+
+
+/* @end */
+
 /* @group Tooltips */
 
 .tooltip{
+	&.in{
+		.lh-opacity(1);
+	}
+	&.bottom{
+		padding: 5px 0 5px 0;
+		margin-top: 8px;
+		
+	}
+	.tooltip-inner{
+		.lh-box-shadow(~"0 5px 1px rgba(7,23,58,.75)");
+		background-color: @grisBleuFioulReduc;
+		color: @bleuFioulReduc;
+		.lato(1.2em);
+		&:after{
+			content: "";
+			.triangle(top, 6, 5, @grisBleuFioulReduc);
+			display: block;
+			width: 5px;
+			height: 5px;
+			position: absolute;
+			top: -5px;
+			left: 50%;
+			margin-left: -3px;
+			border: none;
+		}
+	}
 	&.tooltip-ticket{
 		background-color: #f8f9fa;
-		&.in{
-			.lh-opacity(1);
-		}
 		&:after{
 			content: "";
 			display: block;
@@ -857,6 +914,7 @@ ul.actus{
 			background: none;
 			position: relative;
 			max-width: inherit;
+			.lh-box-shadow(none);
 		}
 		.traits-tooltip{
 			display: block;

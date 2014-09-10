@@ -3334,16 +3334,91 @@ ul.actus li.actu .zone-texte-actu a.ic-icon-plus:hover {
   color: #f86708;
 }
 /* @end */
-/* @group Tooltips */
-.tooltip.tooltip-ticket {
-  background-color: #f8f9fa;
-}
-.tooltip.tooltip-ticket.in {
+/* @group Modals */
+.modal.in {
   zoom: 1;
   filter: alpha(opacity=100);
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
+}
+.modal h3 {
+  color: #2947a0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #2947a0;
+}
+.modal .modal-header {
+  padding: 40px 45px 10px 45px;
+  border: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+.modal .modal-body {
+  padding: 20px 45px 20px 45px;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 0.9em;
+  text-rendering: optimizeLegibility;
+}
+.modal .modal-footer {
+  padding: 20px 45px 20px 45px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: #f8f9fa;
+  border: 2px solid #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+/* @end */
+/* @group Tooltips */
+.tooltip.in {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.tooltip.bottom {
+  padding: 5px 0 5px 0;
+  margin-top: 8px;
+}
+.tooltip .tooltip-inner {
+  -webkit-box-shadow: 0 5px 1px rgba(7,23,58,.75);
+  -moz-box-shadow: 0 5px 1px rgba(7,23,58,.75);
+  box-shadow: 0 5px 1px rgba(7,23,58,.75);
+  background-color: #ebeef2;
+  color: #2947a0;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 1.2em;
+  text-rendering: optimizeLegibility;
+}
+.tooltip .tooltip-inner:after {
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  content: "";
+  border-width: 0 3 5 3;
+  border-bottom-color: #ebeef2;
+  border-left-color: rgba(235, 238, 242, 0);
+  border-right-color: rgba(235, 238, 242, 0);
+  display: block;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  margin-left: -3px;
+  border: none;
+}
+.tooltip.tooltip-ticket {
+  background-color: #f8f9fa;
 }
 .tooltip.tooltip-ticket:after {
   content: "";
@@ -3370,6 +3445,9 @@ ul.actus li.actu .zone-texte-actu a.ic-icon-plus:hover {
   background: none;
   position: relative;
   max-width: inherit;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 .tooltip.tooltip-ticket .traits-tooltip {
   display: block;

@@ -12,12 +12,16 @@ window.requestAnimFrame = (function(){
           };
 })();
 
-///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
 ////////// FONCTION POUR GERER LES TOOLTIPS ///////////
-///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
 function tooltip(){	
 	$(".has-tooltip-ticket").tooltip({
 		template: '<div class="tooltip tooltip-ticket"><div class="tooltip-inner"></div><div class="traits-tooltip"><div class="trait-fin dessus"></div><div class="trait-gras"></div></div></div>'
+	});
+	
+	$(".has-tooltip").tooltip({
+		template: '<div class="tooltip"><div class="tooltip-inner"></div></div>'
 	});
 }
 
@@ -307,7 +311,6 @@ $(document).ready(function(){
 	customSelect();
 	tooltip();
 	
-	
 	$("a#bouton-menu-responsive").click(function(){
 		ouvertureFermetureMenuResponsive();
 		return false;
@@ -333,6 +336,11 @@ $(document).ready(function(){
 				///////////// A ENLEVER DANS LE FUTUR, SERT À MONTRER L'ANIMATION SUR LE TICKET /////////////
 				animTicket();
 			}
+		});
+		$("#radio-a-la-livraison").click(function(){
+			$("ul#select-paiement li").removeClass("selected");
+			$("ul#select-paiement li").first().addClass("selected");
+			$("#select-paiement-custom option:eq(0)").prop("selected", true);
 		});
 	}
 	
