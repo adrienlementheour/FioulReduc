@@ -2715,6 +2715,7 @@ body {
   -moz-box-shadow: 0 2px 1px rgba(204,205,211,.75);
   box-shadow: 0 2px 1px rgba(204,205,211,.75);
   position: relative;
+  display: table;
 }
 .small-padding {
   padding: 25px 0;

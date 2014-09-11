@@ -146,6 +146,11 @@
 		width: 100%;
 		margin: 0;
 		padding: 40px 268px 40px 45px;
+		
+		display: table-cell;
+		vertical-align: top;
+		width: 73%;
+		padding: 40px 45px 40px 45px;
 		.titre-part-form{
 			display: block;
 			width: 100%;
@@ -183,18 +188,28 @@
 		}
 	}
 	.part-details{
-		display: block;
+		display: inline-block;
 		.lh-box-sizing(border-box);
-		width: 223px;
-		height: auto;
-		position: absolute;
-		right: 2px;
-		top: 2px;
-		bottom: 2px;
-		background-color: #f8f9fa;
 		padding: 70px 20px;
-		.lh-border-top-right-radius(10px);
-		.lh-border-bottom-right-radius(10px);
+		display: table-cell;
+		vertical-align: top;
+		width: 27%;
+		position: relative;
+		min-height:100%;
+		height:auto !important;
+		height:100%;
+		&:before{
+			content: "";
+			display: block;
+			width: 100%;
+			position: absolute;
+			top: 2px;
+			bottom: 2px;
+			right: 2px;
+			background-color: #f8f9fa;
+			.lh-border-top-right-radius(10px);
+			.lh-border-bottom-right-radius(10px);
+		}
 	}
 }
 
@@ -208,6 +223,7 @@
 	color: @bleuFioulReduc;
 	line-height: 1.2em;
 	background: url('../layoutImg/check.png') no-repeat left top;
+	position: relative;
 	.ville{
 		.lato-bold-italic(1em);
 		color: @bleuFonceFioulReduc;
@@ -250,6 +266,93 @@
 	}
 	&.block{
 		display: block;
+	}
+}
+.echeancier{
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	.echeances{
+		display: block;
+		width: 100%;
+		height: auto;
+		padding: 4px 0;
+		margin: 0 0 4px 0;
+		border-top: 1px solid #a3a4ad;
+		border-bottom: 1px solid #a3a4ad;
+		.echeance{
+			display: block;
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 0;
+			.echeancier-date{
+				background-color: #f8f9fa;
+				position: relative;
+				color: #9d9ea8;
+				.lato(0.75em);
+			}
+			.echeancier-prix{
+				background-color: #f8f9fa;
+				position: relative;
+				color: @bleuFioulReduc;
+				.lato-bold-italic(0.938em);
+			}
+		}
+	}
+	.indic-echeance{
+		display: block;
+		width: 100%;
+		height: auto;
+		text-align: right;
+		.lato(0.625em);
+		color: #9d9ea8;
+		strong{
+			.lato(1em);
+			color: @bleuFioulReduc;
+		}
+	}
+	.pointilles {
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: url('../layoutImg/ticket/pointilles-ticket.png') repeat-x left top;
+		position: absolute;
+		bottom: 4px;
+		left: 0;
+	}
+	.total{
+		display: block;
+		width: 100%;
+		height: auto;
+		.echeancier-total{
+			color: #9d9ea8;
+			.lato(0.75em);
+		}
+		.echeancier-total-prix{
+			color: @bleuFioulReduc;
+			.lato-bold-italic(1.125em);
+		}
+	}
+}
+.assurance{
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 15px 0;
+	.assurance-txt{
+		display: inline-block;
+		vertical-align: top;
+		.lato-italic(0.688em);
+		color: #9d9ea8;
+		margin: 0 10px 0 0;
+	}
+	.assurance-logo{
+		display: inline-block;
+		vertical-align: top;
 	}
 }
 
@@ -641,7 +744,7 @@
 	}
 	.bloc-formulaire{
 		.part-form {
-		padding: 30px 198px 30px 35px;
+		padding: 30px 35px 30px 35px;
 		}
 		.part-details {
 			width: 153px;
@@ -696,7 +799,7 @@
 	}
 	.bloc-formulaire{
 		.part-form {
-		padding: 30px 178px 30px 35px;
+		padding: 30px 35px 30px 35px;
 		}
 		.part-details {
 			width: 133px;

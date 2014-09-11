@@ -152,6 +152,10 @@
   width: 100%;
   margin: 0;
   padding: 40px 268px 40px 45px;
+  display: table-cell;
+  vertical-align: top;
+  width: 73%;
+  padding: 40px 45px 40px 45px;
 }
 .bloc-formulaire .part-form .titre-part-form {
   display: block;
@@ -191,18 +195,28 @@
   left: 0;
 }
 .bloc-formulaire .part-details {
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 223px;
-  height: auto;
+  padding: 70px 20px;
+  display: table-cell;
+  vertical-align: top;
+  width: 27%;
+  position: relative;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+.bloc-formulaire .part-details:before {
+  content: "";
+  display: block;
+  width: 100%;
   position: absolute;
-  right: 2px;
   top: 2px;
   bottom: 2px;
+  right: 2px;
   background-color: #f8f9fa;
-  padding: 70px 20px;
   -webkit-border-top-right-radius: 10px;
   -moz-border-radius-topright: 10px;
   border-top-right-radius: 10px;
@@ -228,6 +242,7 @@
   color: #2947a0;
   line-height: 1.2em;
   background: url('../layoutImg/check.png') no-repeat left top;
+  position: relative;
 }
 .detail-cycle .ville {
   font-family: 'lato-bold-italic', sans-serif;
@@ -277,6 +292,114 @@
 }
 .supp-prix.block {
   display: block;
+}
+.echeancier {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.echeancier .echeances {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 4px 0;
+  margin: 0 0 4px 0;
+  border-top: 1px solid #a3a4ad;
+  border-bottom: 1px solid #a3a4ad;
+}
+.echeancier .echeances .echeance {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.echeancier .echeances .echeance .echeancier-date {
+  background-color: #f8f9fa;
+  position: relative;
+  color: #9d9ea8;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 0.75em;
+  text-rendering: optimizeLegibility;
+}
+.echeancier .echeances .echeance .echeancier-prix {
+  background-color: #f8f9fa;
+  position: relative;
+  color: #2947a0;
+  font-family: 'lato-bold-italic', sans-serif;
+  font-weight: normal;
+  font-size: 0.938em;
+  text-rendering: optimizeLegibility;
+}
+.echeancier .indic-echeance {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: right;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 0.625em;
+  text-rendering: optimizeLegibility;
+  color: #9d9ea8;
+}
+.echeancier .indic-echeance strong {
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+  color: #2947a0;
+}
+.echeancier .pointilles {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: url('../layoutImg/ticket/pointilles-ticket.png') repeat-x left top;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+}
+.echeancier .total {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.echeancier .total .echeancier-total {
+  color: #9d9ea8;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 0.75em;
+  text-rendering: optimizeLegibility;
+}
+.echeancier .total .echeancier-total-prix {
+  color: #2947a0;
+  font-family: 'lato-bold-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1.125em;
+  text-rendering: optimizeLegibility;
+}
+.assurance {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 15px 0;
+}
+.assurance .assurance-txt {
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 0.688em;
+  text-rendering: optimizeLegibility;
+  color: #9d9ea8;
+  margin: 0 10px 0 0;
+}
+.assurance .assurance-logo {
+  display: inline-block;
+  vertical-align: top;
 }
 /* @end */
 /* @group Ticket */
@@ -733,7 +856,7 @@
     font-size: 1.2em;
   }
   .bloc-formulaire .part-form {
-    padding: 30px 198px 30px 35px;
+    padding: 30px 35px 30px 35px;
   }
   .bloc-formulaire .part-details {
     width: 153px;
@@ -783,7 +906,7 @@
     margin: 0 0 0 100px;
   }
   .bloc-formulaire .part-form {
-    padding: 30px 178px 30px 35px;
+    padding: 30px 35px 30px 35px;
   }
   .bloc-formulaire .part-details {
     width: 133px;
