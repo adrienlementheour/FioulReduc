@@ -154,14 +154,14 @@ function codeReduction(){
 	TweenMax.set($("#code-reduction"), {display: "none"});
 	
 	$("a#btn-code-reduction").click(function() {
-		TweenMax.set($("#code-reduction"), {display: "block"});
+		TweenMax.set($("#code-reduction"), {display: "inline-block"});
 		TweenMax.set($("a#btn-code-reduction"), {display: "none"});
 		return false;
 	});
 	
 	$("#btn-code-reduction-retour").click(function() {
-		TweenMax.set($("a#btn-code-reduction"), {display: "block"});
 		TweenMax.set($("#code-reduction"), {display: "none"});
+		TweenMax.set($("a#btn-code-reduction"), {display: "inline-block"});
 		return false;
 	});
 }
