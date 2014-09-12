@@ -365,6 +365,67 @@
 	}
 }
 
+ul#cuves{
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 40px 0 0 0;
+	padding: 0;
+	list-style-type: none;
+	li.cuve{
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+		.lh-box-sizing(border-box);
+		margin: 0;
+		padding: 0 5px;
+		.header-cuve{
+			display: block;
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 10px 0;
+			text-align: center;
+			color: @blanc;
+			background-color: @bleuFioulReduc;
+			.lh-border-radius(~"5px 5px 0 0");
+			position: relative;
+			.lato-bold(0.75em);
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			.picto-cuve{
+				display: block;
+				width: 55px;
+				height: 47px;
+				position: absolute;
+				top: -20px;
+				left: -3px;
+				background: url('../layoutImg/picto-cuve.png') no-repeat left top;
+			}
+			.num-cuve{
+				display: block;
+				width: 20px;
+				height: 20px;
+				color: @orangeFioulReduc;
+				text-align: center;
+				line-height: 20px;
+				position: absolute;
+				top: -5px;
+				left: 4px;
+			}
+		}
+		.body-cuve{
+			display: block;
+			width: 100%;
+			margin: 0;
+			.lh-box-sizing(border-box);
+			.lh-border-radius(~"0 0 5px 5px");
+			padding: 20px 15px;
+			background-color: #f8f9fa;
+		}
+	}
+}
+
 /* @end */
 
 /* @group Ticket */

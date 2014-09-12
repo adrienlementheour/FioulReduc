@@ -413,6 +413,83 @@
   display: inline-block;
   vertical-align: top;
 }
+ul#cuves {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 40px 0 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+ul#cuves li.cuve {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 5px;
+}
+ul#cuves li.cuve .header-cuve {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  color: #ffffff;
+  background-color: #2947a0;
+  -webkit-border-radius: 5px 5px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px 5px 0 0;
+  -moz-background-clip: padding;
+  border-radius: 5px 5px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.75em;
+  text-rendering: optimizeLegibility;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+ul#cuves li.cuve .header-cuve .picto-cuve {
+  display: block;
+  width: 55px;
+  height: 47px;
+  position: absolute;
+  top: -20px;
+  left: -3px;
+  background: url('../layoutImg/picto-cuve.png') no-repeat left top;
+}
+ul#cuves li.cuve .header-cuve .num-cuve {
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: #fb8206;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  top: -5px;
+  left: 4px;
+}
+ul#cuves li.cuve .body-cuve {
+  display: block;
+  width: 100%;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 0 0 5px 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0 5px 5px;
+  -moz-background-clip: padding;
+  border-radius: 0 0 5px 5px;
+  background-clip: padding-box;
+  padding: 20px 15px;
+  background-color: #f8f9fa;
+}
 /* @end */
 /* @group Ticket */
 #ticket {
