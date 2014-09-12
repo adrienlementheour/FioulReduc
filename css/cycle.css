@@ -97,7 +97,7 @@
   height: 100%;
   background-color: #cccdd3;
   color: #ffffff;
-  font-family: 'lato-italic', sans-serif;
+  font-family: 'lato', sans-serif;
   font-weight: normal;
   font-size: 0.938em;
   text-rendering: optimizeLegibility;
@@ -243,6 +243,18 @@
   line-height: 1.2em;
   background: url('../layoutImg/check.png') no-repeat left top;
   position: relative;
+}
+.detail-cycle.optionnel {
+  display: none;
+}
+.detail-cycle.optionnel.active {
+  display: block;
+}
+.detail-cycle strong {
+  font-family: 'lato-bold-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
 }
 .detail-cycle .ville {
   font-family: 'lato-bold-italic', sans-serif;

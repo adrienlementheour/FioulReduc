@@ -93,7 +93,7 @@
 					height: 100%;
 					background-color: #cccdd3;
 					color: @blanc;
-					.lato-italic(0.938em);
+					.lato(0.938em);
 					.lh-border-radius(50%);
 					margin: 0 auto;
 					position: relative;
@@ -224,6 +224,15 @@
 	line-height: 1.2em;
 	background: url('../layoutImg/check.png') no-repeat left top;
 	position: relative;
+	&.optionnel{
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+	strong{
+		.lato-bold-italic(1em);
+	}
 	.ville{
 		.lato-bold-italic(1em);
 		color: @bleuFonceFioulReduc;

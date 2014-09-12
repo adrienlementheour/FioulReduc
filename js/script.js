@@ -15,13 +15,21 @@ window.requestAnimFrame = (function(){
 ///////////////////////////////////////////////////////
 ////////// FONCTION POUR GERER LES TOOLTIPS ///////////
 ///////////////////////////////////////////////////////
-function tooltip(){	
-	$(".has-tooltip-ticket").tooltip({
-		template: '<div class="tooltip tooltip-ticket"><div class="tooltip-inner"></div><div class="traits-tooltip"><div class="trait-fin dessus"></div><div class="trait-gras"></div></div></div>'
-	});
-	
-	$(".has-tooltip").tooltip({
-		template: '<div class="tooltip"><div class="tooltip-inner"></div></div>'
+function tooltip(){
+	$(".has-tooltip").tooltip();
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+// FONCTION POUR GERER LES ZONES DE FORMULAIRE QUI FONT APPARAITRE DES DETAILS SPECIFIQUES EN SIDEBAR //
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+function details(){
+	$(".has-detail").click(function(){
+		var blocParent = $(this).closest(".bloc-blanc-ombre");
+		// on enlève les details optionnels déjà affichés dans la sidebar
+		$(".part-details .detail-cycle.optionnel.active", blocParent).removeClass("active")
+		// on affiche les details correspondant à l'option de formulaire active
+		var classDetail = ".detail-"+$(this).attr("id");
+		$(".part-details .detail-cycle.optionnel"+classDetail).addClass("active");
 	});
 }
 
@@ -32,7 +40,7 @@ function animTicket(){
 	if($(window).width()>=768){
 		var tlAnimTicket;
 		tlAnimTicket = new TimelineMax();
-		tlAnimTicket.to($("#content-bloc-ticket-fixed"), 0.3, {rotationX: 10, rotationY: 3, skewX:"1deg", delay: 0.2, ease:Cubic.easeOut});
+		tlAnimTicket.to($("#content-bloc-ticket-fixed"), 0.3, {rotationX: 5, rotationY: 3, skewX:"1deg", delay: 0.2, ease:Cubic.easeOut});
 		tlAnimTicket.to($("#content-bloc-ticket-fixed"), 0.7, {rotationX: 0, rotationY: 0, skewX:"0deg", ease:Back.easeOut});
 		
 		var tlAnimOmbreTicket;
@@ -40,6 +48,18 @@ function animTicket(){
 		tlAnimOmbreTicket.to($("#ombre-ticket-fixed"), 0.3, {opacity: 0.6, delay: 0.5, ease:Cubic.easeOut});
 		tlAnimOmbreTicket.to($("#ombre-ticket-fixed"), 0.7, {opacity: 1, ease:Back.easeOut});
 	}
+	
+	// Animer le prix du ticket //
+	var currentTicketPrice = parseFloat($("#prix-total-ticket-anim").text());
+	var newTicketPrice = currentTicketPrice-100;
+	
+	$("#prix-total-ticket-anim").prop("number", currentTicketPrice).animateNumber(
+	  {
+	    number: newTicketPrice,
+	    easing: 'easeInQuad',
+	  },
+	  800
+	);
 }
 
 //////////////////////////////////////////////////
@@ -79,7 +99,7 @@ Highcharts.setOptions({
 ///////////////////////////////////////////////////////
 function customSelect(){
 	if(($("html").hasClass("no-touch"))&&($(".select-customisable").length)){
-		TweenMax.set($(".select-customisable"), {opacity: "0"});
+		TweenMax.set($(".select-customisable"), {opacity: "0", "pointer-events": "none"});
 		TweenMax.set($(".select-customise"), {opacity: "1"});
 		TweenMax.set($("ul.select-customise"), {display: "block"});
 		$("ul.select-customise li a").click(function(){
@@ -96,6 +116,48 @@ function customSelect(){
 				liClique.addClass("selected");
 				var indexLi = liClique.index();
 				$("option:eq("+indexLi+")", selectCusto).prop("selected", true);
+				animTicket();
+				
+				// mettre à jour les valeurs de tooltip
+				var indexLiPaiement = liClique.index();
+				switch (indexLiPaiement) {
+					case 0:
+						$(".has-tooltip-commande").eq(0).attr("data-original-title", "");
+						$(".has-tooltip-commande").eq(1).attr("data-original-title", "+ 10€");
+						$(".has-tooltip-commande").eq(2).attr("data-original-title", "+ 15€");
+						$(".has-tooltip-commande").eq(3).attr("data-original-title", "+ 20€");
+						$(".has-tooltip-commande").eq(4).attr("data-original-title", "+ 25€");
+						break;
+					case 1:
+						$(".has-tooltip-commande").eq(0).attr("data-original-title", "- 10€");
+						$(".has-tooltip-commande").eq(1).attr("data-original-title", "");
+						$(".has-tooltip-commande").eq(2).attr("data-original-title", "+ 5€");
+						$(".has-tooltip-commande").eq(3).attr("data-original-title", "+ 10€");
+						$(".has-tooltip-commande").eq(4).attr("data-original-title", "+ 15€");
+						break;
+					case 2:
+						$(".has-tooltip-commande").eq(0).attr("data-original-title", "- 15€");
+						$(".has-tooltip-commande").eq(1).attr("data-original-title", "- 5€");
+						$(".has-tooltip-commande").eq(2).attr("data-original-title", "");
+						$(".has-tooltip-commande").eq(3).attr("data-original-title", "+ 5€");
+						$(".has-tooltip-commande").eq(4).attr("data-original-title", "+ 10€");
+						break;
+					case 3:
+						$(".has-tooltip-commande").eq(0).attr("data-original-title", "- 20€");
+						$(".has-tooltip-commande").eq(1).attr("data-original-title", "- 10€");
+						$(".has-tooltip-commande").eq(2).attr("data-original-title", "- 5€");
+						$(".has-tooltip-commande").eq(3).attr("data-original-title", "");
+						$(".has-tooltip-commande").eq(4).attr("data-original-title", "+ 5€");
+						break;
+					case 4:
+						$(".has-tooltip-commande").eq(0).attr("data-original-title", "- 25€");
+						$(".has-tooltip-commande").eq(1).attr("data-original-title", "- 15€");
+						$(".has-tooltip-commande").eq(2).attr("data-original-title", "- 10€");
+						$(".has-tooltip-commande").eq(3).attr("data-original-title", "- 5€");
+						$(".has-tooltip-commande").eq(4).attr("data-original-title", "");
+						break;
+				}
+				liClique.tooltip("hide");
 			}
 			return false;
 		});
@@ -243,8 +305,8 @@ function animer(myScroll){
 	
 	if($("body").hasClass("cycle")){
 		if($(window).width()>=768){
-			var debutScroll = ($("#top-body-ticket").offset().top)-($("header").height());
-			var finScroll = 800;
+			var debutScroll = ($("#top-body-ticket").offset().top)-($("header").height())+4;
+			var finScroll = $(document).height()-$(window).height()-$("footer").height()-$("#avis-footer").height();
 			if (myScroll>=debutScroll && myScroll<finScroll+$("header").height() && $(window).width()>979) {
 				TweenMax.set($("#ticket-fixed"), {position: "fixed", top: "70px"});
 			} else {
@@ -253,7 +315,7 @@ function animer(myScroll){
 				if (myScroll<debutScroll) {
 					TweenMax.set($("#ticket-fixed"), {top: "15px"});
 				} else {
-					TweenMax.set($("#ticket-fixed"), {top: finScroll-$("header").height()+"px"});
+					TweenMax.set($("#ticket-fixed"), {top: finScroll-33-$("header").height()+"px"}); /* Je ne sais pas d'où viens le 33 :) */
 				}
 			}
 			if($(window).width()>1150){
@@ -307,8 +369,6 @@ $( window ).resize(function() {
 $(document).ready(function(){
 	myScroll = $(document).scrollTop();
 	animer(myScroll);
-	
-	customSelect();
 	tooltip();
 	
 	$("a#bouton-menu-responsive").click(function(){
@@ -324,14 +384,116 @@ $(document).ready(function(){
 		$("body").removeClass("alerte");
 	});
 	
+	$(".has-tooltip-fioul").mouseenter(function() {
+		if(!$(this).hasClass("active")){
+			if($(this).attr("data-original-title").charAt(0) == "-"){
+				// Tooltip orange si chiffre negatif
+				$(".has-tooltip-fioul").tooltip('destroy');
+				$(".has-tooltip-fioul").tooltip({
+					template: '<div class="tooltip tooltip-ticket"><div class="tooltip-negatif"><div class="tooltip-inner"></div></div><div class="traits-tooltip"><div class="trait-fin dessus"></div><div class="trait-gras"></div></div></div>',
+					trigger: "manual"
+				});
+			}else{
+				$(".has-tooltip-fioul").tooltip('destroy');
+				$(".has-tooltip-fioul").tooltip({
+					template: '<div class="tooltip tooltip-ticket"><div class="tooltip-inner"></div><div class="traits-tooltip"><div class="trait-fin dessus"></div><div class="trait-gras"></div></div></div>',
+					trigger: "manual"
+				});
+			}
+			$(this).tooltip('show');
+		}else {
+			$(this).tooltip('hide');
+		}
+	})
+	.mouseleave(function() {
+		$(this).tooltip('hide');
+	});
+	
+	$(".has-tooltip-livraison").mouseenter(function() {
+		if(!$(this).hasClass("active")){
+			if($(this).attr("data-original-title").charAt(0) == "-"){
+				// Tooltip orange si chiffre negatif
+				$(".has-tooltip-livraison").tooltip('destroy');
+				$(".has-tooltip-livraison").tooltip({
+					template: '<div class="tooltip tooltip-ticket"><div class="tooltip-negatif"><div class="tooltip-inner"></div></div><div class="traits-tooltip"><div class="trait-fin dessus"></div><div class="trait-gras"></div></div></div>',
+					trigger: "manual"
+				});
+			}else {
+				$(".has-tooltip-livraison").tooltip('destroy');
+				$(".has-tooltip-livraison").tooltip({
+					template: '<div class="tooltip tooltip-ticket"><div class="tooltip-inner"></div><div class="traits-tooltip"><div class="trait-fin dessus"></div><div class="trait-gras"></div></div></div>',
+					trigger: "manual"
+				});
+			}
+			$(this).tooltip('show');
+		}else {
+			$(this).tooltip('hide');
+		}
+	})
+	.mouseleave(function() {
+		$(this).tooltip('hide');
+	});
+	
+	$(".has-tooltip-commande").mouseenter(function() {
+		if(!$(this).hasClass("selected")){
+			if($(this).attr("data-original-title").charAt(0) == "-"){
+				// Tooltip orange si chiffre negatif
+				$(".has-tooltip-commande").tooltip('destroy');
+				$(".has-tooltip-commande").tooltip({
+					template: '<div class="tooltip tooltip-ticket"><div class="tooltip-negatif"><div class="tooltip-inner"></div></div><div class="traits-tooltip"><div class="trait-fin dessus"></div><div class="trait-gras"></div></div></div>',
+					trigger: "manual"
+				});
+			}else{
+				$(".has-tooltip-commande").tooltip('destroy');
+				$(".has-tooltip-commande").tooltip({
+					template: '<div class="tooltip tooltip-ticket"><div class="tooltip-inner"></div><div class="traits-tooltip"><div class="trait-fin dessus"></div><div class="trait-gras"></div></div></div>',
+					trigger: "manual"
+				});
+			}
+			$(this).tooltip('show');
+		}else {
+			$(this).tooltip('hide');
+		}
+	})
+	.mouseleave(function() {
+		$(this).tooltip('hide');
+	});
+	
 	if($("body").hasClass("cycle")){
 		heightTicket();
 		bodyTicket();
 		codeReduction();
+		details();
+		customSelect();
 		$("label.radio").click(function(){
 			if (!$(this).hasClass("active")) {
 				$(".active", $(this).closest(".controls")).removeClass("active");
 				$(this).addClass("active");
+				if($(this).hasClass("has-tooltip-fioul")){
+					$(this).tooltip('hide');
+				}
+				if($(this).hasClass("has-tooltip-livraison")){
+					// mettre à jour les valeurs de tooltip
+					var indexRadioLivraison = $(this).index();
+					switch (indexRadioLivraison) {
+						case 0:
+							$(".has-tooltip-livraison").eq(0).attr("data-original-title", "");
+							$(".has-tooltip-livraison").eq(1).attr("data-original-title", "+ 100€");
+							$(".has-tooltip-livraison").eq(2).attr("data-original-title", "+ 200€");
+							break;
+						case 1:
+							$(".has-tooltip-livraison").eq(0).attr("data-original-title", "- 100€");
+							$(".has-tooltip-livraison").eq(1).attr("data-original-title", "");
+							$(".has-tooltip-livraison").eq(2).attr("data-original-title", "+ 100€");
+							break;
+						case 2:
+							$(".has-tooltip-livraison").eq(0).attr("data-original-title", "- 200€");
+							$(".has-tooltip-livraison").eq(1).attr("data-original-title", "- 100€");
+							$(".has-tooltip-livraison").eq(2).attr("data-original-title", "");
+							break;
+					}
+					$(this).tooltip('hide');
+				}
 				
 				///////////// A ENLEVER DANS LE FUTUR, SERT À MONTRER L'ANIMATION SUR LE TICKET /////////////
 				animTicket();
