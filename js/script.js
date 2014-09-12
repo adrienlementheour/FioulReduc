@@ -159,6 +159,15 @@ function customSelect(){
 				}
 				liClique.tooltip("hide");
 			}
+			// afficher detail specifique
+			if (liClique.hasClass("has-detail")){
+				var blocParent = $(this).closest(".bloc-blanc-ombre");
+				// on enlève les details optionnels déjà affichés dans la sidebar
+				$(".part-details .detail-cycle.optionnel.active", blocParent).removeClass("active")
+				// on affiche les details correspondant à l'option de formulaire active
+				var classDetail = ".detail-"+liClique.attr("id");
+				$(".part-details .detail-cycle.optionnel"+classDetail).addClass("active");
+			}
 			return false;
 		});
 	}
