@@ -2539,6 +2539,12 @@ MIT License: https://github.com/driftyco/ionicons
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.ic-bottom:before {
+  content: "\e60f";
+}
+.ic-top:before {
+  content: "\e610";
+}
 .ic-moins:before {
   content: "\e60e";
 }
@@ -2980,6 +2986,26 @@ ul.liste-puces {
   left: 0;
   right: inherit;
 }
+.btn.btn-link.btn-bottom {
+  border: none;
+  padding: 4px 18px 0 0;
+}
+.btn.btn-link.btn-bottom .txt-btn {
+  border-bottom: 1px solid #fb8206;
+}
+.btn.btn-link.btn-bottom .ic-bottom {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  font-size: 18px;
+}
+.btn.btn-link.btn-bottom.left {
+  padding: 4px 0 0 18px;
+}
+.btn.btn-link.btn-bottom.left .ic-bottom {
+  left: 0;
+  right: inherit;
+}
 .btn.btn-link.btn-plus {
   border: none;
   padding: 4px 18px 0 0;
@@ -3007,6 +3033,18 @@ ul.liste-puces {
 }
 .btn.btn-link.btn-jaune:hover {
   color: #fcb702;
+}
+.btn.btn-link.btn-bleu {
+  color: #2947a0;
+}
+.btn.btn-link.btn-bleu:hover {
+  color: #0c1a4c;
+}
+.btn.btn-link.btn-bleu:hover .txt-btn {
+  border-color: #0c1a4c;
+}
+.btn.btn-link.btn-bleu .txt-btn {
+  border-color: #2947a0;
 }
 .btn.btn-link.btn-jaune-orange {
   color: #fcb702;

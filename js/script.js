@@ -173,6 +173,29 @@ function customSelect(){
 	}
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////
+/////////// FONCTION POUR DECTECTER SI IL Y A PLUS DE DEUX CUVES DANS LE TICKET //////////
+//////////////////////////////////////////////////////////////////////////////////////////
+function overflowCuvesTicket(){
+	var nbLiCuves = $("#cuves-ticket li.cuve-ticket").size();
+	if(nbLiCuves > 2){
+		// si il y a plus de deux cuves dans le ticket, on affiche le bouton pour voir le détail
+		TweenMax.set($("#overflow-cuves"), {display: "block"});
+	}else {
+		TweenMax.set($("#overflow-cuves"), {display: "none"});
+	}
+	
+	$("a#btn-overflow-cuves").click(function() {
+		if (!$("#cuves-ticket").hasClass("open")) {
+			$("#cuves-ticket").addClass("open");
+			TweenMax.to($(".ic-bottom", this), 0.3, {rotation: -180, ease:Cubic.easeOut});
+		}else{
+			$("#cuves-ticket").removeClass("open");
+			TweenMax.to($(".ic-bottom", this), 0.3, {rotation: 0, ease:Cubic.easeOut});
+		}
+		return false;
+	});
+}
 
 ///////////////////////////////////////////////////////
 /////////// FONCTION POUR ANIMER LE COMPTEUR //////////
@@ -474,6 +497,7 @@ $(document).ready(function(){
 		codeReduction();
 		details();
 		customSelect();
+		overflowCuvesTicket();
 		$("label.radio").click(function(){
 			if (!$(this).hasClass("active")) {
 				$(".active", $(this).closest(".controls")).removeClass("active");

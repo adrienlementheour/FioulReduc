@@ -134,6 +134,12 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.ic-bottom:before {
+	content: "\e60f";
+}
+.ic-top:before {
+	content: "\e610";
+}
 .ic-moins:before {
 	content: "\e60e";
 }
@@ -539,6 +545,26 @@ ul.liste-puces{
 				}
 			}
 		}
+		&.btn-bottom{
+			border: none;
+			padding: 4px 18px 0 0;
+			.txt-btn{
+				border-bottom: 1px solid @orangeFioulReduc;
+			}
+			.ic-bottom{
+				position: absolute;
+				top: 2px;
+				right: 0;
+				font-size: 18px;
+			}
+			&.left{
+				padding: 4px 0 0 18px;
+				.ic-bottom{
+					left: 0;
+					right: inherit;
+				}
+			}
+		}
 		&.btn-plus{
 			border: none;
 			padding: 4px 18px 0 0;
@@ -566,6 +592,18 @@ ul.liste-puces{
 			text-decoration: underline;
 			&:hover{
 				color: #fcb702;
+			}
+		}
+		&.btn-bleu{
+			color: @bleuFioulReduc;
+			&:hover{
+				color: @bleuFonceFioulReduc;
+				.txt-btn{
+					border-color: @bleuFonceFioulReduc;
+				}
+			}
+			.txt-btn{
+				border-color: @bleuFioulReduc;
 			}
 		}
 		&.btn-jaune-orange{
