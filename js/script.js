@@ -19,6 +19,15 @@ function tooltip(){
 	$(".has-tooltip").tooltip();
 }
 
+///////////////////////////////////////////////////////
+/////////// FONCTION POUR GERER LES MODALS ////////////
+///////////////////////////////////////////////////////
+function modal(){
+	$(".has-modal").click(function() {
+		$(".modal").modal('toggle');
+	});
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // FONCTION POUR GERER LES ZONES DE FORMULAIRE QUI FONT APPARAITRE DES DETAILS SPECIFIQUES EN SIDEBAR //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -402,6 +411,7 @@ $(document).ready(function(){
 	myScroll = $(document).scrollTop();
 	animer(myScroll);
 	tooltip();
+	modal();
 	
 	$("a#bouton-menu-responsive").click(function(){
 		ouvertureFermetureMenuResponsive();
