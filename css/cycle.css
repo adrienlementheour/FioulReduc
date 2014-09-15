@@ -207,15 +207,6 @@
   min-height: 100%;
   height: auto !important;
   height: 100%;
-}
-.bloc-formulaire .part-details:before {
-  content: "";
-  display: block;
-  width: 100%;
-  position: absolute;
-  top: 2px;
-  bottom: 2px;
-  right: 2px;
   background-color: #f8f9fa;
   -webkit-border-top-right-radius: 10px;
   -moz-border-radius-topright: 10px;
@@ -428,8 +419,49 @@ ul#cuves li.cuve {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 0;
+  margin: 15px 0;
   padding: 0 5px;
+  height: 192px;
+}
+ul#cuves li.cuve.add-cuve a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px dashed #fb8206;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+ul#cuves li.cuve.add-cuve a .txt-add-cuve {
+  display: block;
+  width: 100%;
+  height: 58px;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 0.875em;
+  text-rendering: optimizeLegibility;
+  color: #fb8206;
+  position: absolute;
+  top: 50%;
+  margin-top: -29px;
+  left: 0;
+  text-align: center;
+}
+ul#cuves li.cuve.add-cuve a .txt-add-cuve .txt {
+  border-bottom: 1px solid #fb8206;
+}
+ul#cuves li.cuve.add-cuve a .txt-add-cuve .ic-plus {
+  display: block;
+  font-size: 40px;
 }
 ul#cuves li.cuve .header-cuve {
   display: block;
@@ -489,6 +521,18 @@ ul#cuves li.cuve .body-cuve {
   background-clip: padding-box;
   padding: 20px 15px;
   background-color: #f8f9fa;
+}
+ul#cuves li.cuve .body-cuve .control-label {
+  width: 67px;
+}
+ul#cuves li.cuve .body-cuve .controls {
+  margin: 0 0 0 80px;
+}
+ul#cuves li.cuve .body-cuve .controls .taille1 {
+  width: 85px;
+}
+ul#cuves li.cuve .body-cuve .controls .taille2 {
+  width: 135px;
 }
 /* @end */
 /* @group Ticket */
@@ -992,7 +1036,7 @@ ul#cuves li.cuve .body-cuve {
     font-size: 1.2em;
   }
   .bloc-formulaire .part-form {
-    padding: 30px 35px 30px 35px;
+    padding: 30px;
   }
   .bloc-formulaire .part-details {
     width: 153px;
@@ -1042,7 +1086,7 @@ ul#cuves li.cuve .body-cuve {
     margin: 0 0 0 100px;
   }
   .bloc-formulaire .part-form {
-    padding: 30px 35px 30px 35px;
+    padding: 25px;
   }
   .bloc-formulaire .part-details {
     width: 133px;
@@ -1074,7 +1118,7 @@ ul#cuves li.cuve .body-cuve {
     width: 58%;
   }
   .bloc-formulaire .part-form {
-    padding: 30px 35px 30px 35px;
+    padding: 28px;
   }
   .bloc-formulaire .part-details {
     display: none;

@@ -313,6 +313,7 @@ html, body{
 	.lh-box-shadow(~"0 2px 1px rgba(204,205,211,.75)");
 	position: relative;
 	display: table;
+	table-layout: fixed;
 }
 
 .small-padding{
@@ -2243,17 +2244,41 @@ ul#menu-top-bar{
 	form.form-horizontal{
 		.controls{
 			.radio.radio-block{
+				&.active{
+					ul.jours{
+						.curseur-duree{
+							background: none;
+							.lh-background-image(none);
+						}
+					}
+				}
 				ul.jours{
 					.curseur-duree{
-						margin-top: 20px;
+						background: none;
+						.lh-background-image(none);
+						height: auto;
+						margin: 0 0 5px 0;
+						&:after{
+							display: none;
+						}
 						span{
+							width: 100%;
+							
 							&.indic-top{
-								top: -20px;
+								top: inherit;
+								bottom: inherit;
+								left: inherit;
+								right: inherit;
+								text-align: left;
+								position: relative;
 							}
 							&.indic-right{
-								top: -20px;
-								right: 0;
-								text-align: right;
+								top: inherit;
+								bottom: inherit;
+								left: inherit;
+								right: inherit;
+								text-align: left;
+								position: relative;
 							}
 						}
 					}

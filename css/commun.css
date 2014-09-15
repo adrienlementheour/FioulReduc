@@ -2722,6 +2722,7 @@ body {
   box-shadow: 0 2px 1px rgba(204,205,211,.75);
   position: relative;
   display: table;
+  table-layout: fixed;
 }
 .small-padding {
   padding: 25px 0;
@@ -5069,16 +5070,37 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   ul#menu-top-bar li a .illus-menu {
     margin: 0 8px 0 0;
   }
+  form.form-horizontal .controls .radio.radio-block.active ul.jours .curseur-duree {
+    background: none;
+    background-image: none;
+  }
   form.form-horizontal .controls .radio.radio-block ul.jours .curseur-duree {
-    margin-top: 20px;
+    background: none;
+    background-image: none;
+    height: auto;
+    margin: 0 0 5px 0;
+  }
+  form.form-horizontal .controls .radio.radio-block ul.jours .curseur-duree:after {
+    display: none;
+  }
+  form.form-horizontal .controls .radio.radio-block ul.jours .curseur-duree span {
+    width: 100%;
   }
   form.form-horizontal .controls .radio.radio-block ul.jours .curseur-duree span.indic-top {
-    top: -20px;
+    top: inherit;
+    bottom: inherit;
+    left: inherit;
+    right: inherit;
+    text-align: left;
+    position: relative;
   }
   form.form-horizontal .controls .radio.radio-block ul.jours .curseur-duree span.indic-right {
-    top: -20px;
-    right: 0;
-    text-align: right;
+    top: inherit;
+    bottom: inherit;
+    left: inherit;
+    right: inherit;
+    text-align: left;
+    position: relative;
   }
   /* @group responsive Home */
   ul#points-illus li {
