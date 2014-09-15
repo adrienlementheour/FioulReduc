@@ -59,7 +59,8 @@ function animTicket(){
 	}
 	
 	// Animer le prix du ticket //
-	var currentTicketPrice = parseFloat($("#prix-total-ticket-anim").text());
+	var currentTicketPrice = parseFloat($("#prix-total-ticket-anim").text().replace(",", "."));
+	//var currentTicketPrice = parseInt($("#prix-total-ticket-anim").text());
 	var newTicketPrice = currentTicketPrice-100;
 	
 	$("#prix-total-ticket-anim").prop("number", currentTicketPrice).animateNumber(
