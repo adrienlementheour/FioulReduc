@@ -216,9 +216,11 @@ function overflowCuvesTicket(){
 	$("a#btn-overflow-cuves").click(function() {
 		if (!$("#cuves-ticket").hasClass("open")) {
 			$("#cuves-ticket").addClass("open");
+			$(".txt-btn", this).text("Masquer le détail");
 			TweenMax.to($(".ic-bottom", this), 0.3, {rotation: -180, ease:Cubic.easeOut});
 		}else{
 			$("#cuves-ticket").removeClass("open");
+			$(".txt-btn", this).text("Voir le détail");
 			TweenMax.to($(".ic-bottom", this), 0.3, {rotation: 0, ease:Cubic.easeOut});
 		}
 		return false;
