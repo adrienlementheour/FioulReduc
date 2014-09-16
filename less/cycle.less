@@ -370,7 +370,7 @@ ul#cuves{
 		.lh-box-sizing(border-box);
 		margin: 15px 0;
 		padding: 0 5px;
-		height: 192px;
+		height: auto;
 		&.add-cuve{
 			a{
 				display: block;
@@ -382,6 +382,7 @@ ul#cuves{
 				position: relative;
 				margin: 0;
 				padding: 0;
+				height: 192px;
 				.txt-add-cuve{
 					display: block;
 					width: 100%;
@@ -880,6 +881,24 @@ ul#cuves{
 	#bloc-cycle {
 		width: 68%;
 	}
+	ul#cuves{
+		li.cuve{
+			.body-cuve{
+				.suite-label {
+					margin: 0 0 0 5px;
+				}
+				.controls{
+					margin: 0 0 0 75px;
+					.taille1 {
+						width: 65px;
+					}
+					.taille2 {
+						width: 108px;
+					}
+				}	
+			}	
+		}
+	}
 }
 
 @media (max-width: 1200px) {
@@ -904,7 +923,6 @@ ul#cuves{
 	.bloc-btn-cycle{
 		padding: 0px 35px 30px 35px;
 	}
-	
 }
 
 @media (max-width: 1150px) {
@@ -931,6 +949,27 @@ ul#cuves{
 				}	
 			}	
 		}	
+	}
+	ul#cuves{
+		li.cuve{
+			display: block;
+			width: 100%;
+			margin: 25px 0;
+			.body-cuve{
+				.control-label{
+					width: 70px;
+				}
+				.controls{
+					margin: 0 0 0 84px;
+					.taille1{
+						width: 100px;
+					}
+					.taille2{
+						width: 135px;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -1051,6 +1090,18 @@ ul#cuves{
 			.controls {
 				margin: 0;
 			}	
+		}
+	}
+	ul#cuves{
+		li.cuve{
+			.body-cuve{
+				.control-label{
+					width: 70px;
+				}
+				.controls{
+					margin: 0;
+				}
+			}
 		}
 	}
 }

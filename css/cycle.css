@@ -421,7 +421,7 @@ ul#cuves li.cuve {
   box-sizing: border-box;
   margin: 15px 0;
   padding: 0 5px;
-  height: 192px;
+  height: auto;
 }
 ul#cuves li.cuve.add-cuve a {
   display: block;
@@ -440,6 +440,7 @@ ul#cuves li.cuve.add-cuve a {
   position: relative;
   margin: 0;
   padding: 0;
+  height: 192px;
 }
 ul#cuves li.cuve.add-cuve a .txt-add-cuve {
   display: block;
@@ -1027,6 +1028,18 @@ ul#cuves li.cuve .body-cuve .controls .taille2 {
   #bloc-cycle {
     width: 68%;
   }
+  ul#cuves li.cuve .body-cuve .suite-label {
+    margin: 0 0 0 5px;
+  }
+  ul#cuves li.cuve .body-cuve .controls {
+    margin: 0 0 0 75px;
+  }
+  ul#cuves li.cuve .body-cuve .controls .taille1 {
+    width: 65px;
+  }
+  ul#cuves li.cuve .body-cuve .controls .taille2 {
+    width: 108px;
+  }
 }
 @media (max-width: 1200px) {
   #bloc-cycle {
@@ -1073,6 +1086,23 @@ ul#cuves li.cuve .body-cuve .controls .taille2 {
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
+  }
+  ul#cuves li.cuve {
+    display: block;
+    width: 100%;
+    margin: 25px 0;
+  }
+  ul#cuves li.cuve .body-cuve .control-label {
+    width: 70px;
+  }
+  ul#cuves li.cuve .body-cuve .controls {
+    margin: 0 0 0 84px;
+  }
+  ul#cuves li.cuve .body-cuve .controls .taille1 {
+    width: 100px;
+  }
+  ul#cuves li.cuve .body-cuve .controls .taille2 {
+    width: 135px;
   }
 }
 @media (max-width: 1024px) {
@@ -1157,6 +1187,12 @@ ul#cuves li.cuve .body-cuve .controls .taille2 {
     width: auto;
   }
   #bloc-cycle form.form-horizontal .controls {
+    margin: 0;
+  }
+  ul#cuves li.cuve .body-cuve .control-label {
+    width: 70px;
+  }
+  ul#cuves li.cuve .body-cuve .controls {
     margin: 0;
   }
 }
