@@ -157,6 +157,19 @@
   width: 73%;
   padding: 40px 45px 40px 45px;
 }
+.bloc-formulaire .part-form p {
+  color: #0c1a4c;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 0.938em;
+  text-rendering: optimizeLegibility;
+}
+.bloc-formulaire .part-form p strong {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
 .bloc-formulaire .part-form .titre-part-form {
   display: block;
   width: 100%;
@@ -871,6 +884,49 @@ ul#cuves li.cuve .body-cuve .controls .taille2 {
 #ticket #masque-ticket #body-ticket #ticket-fixed #bloc-prix-ticket {
   color: #fb8206;
   padding-bottom: 10px;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-prix-ticket ul.details-ticket {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-prix-ticket ul.details-ticket li {
+  margin: 0;
+  padding: 0;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-prix-ticket ul.details-ticket li .ligne-detail {
+  position: relative;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-prix-ticket ul.details-ticket li .titre-detail {
+  padding-top: 22px;
+  background: #ffffff;
+  position: relative;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-prix-ticket ul.details-ticket li .texte-detail {
+  background: #ffffff;
+  position: relative;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-prix-ticket ul.details-ticket li .prix-ticket {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 2.25em;
+  text-rendering: optimizeLegibility;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-prix-ticket ul.details-ticket li .pointilles-ticket {
+  bottom: 11px;
+  background: url('../layoutImg/ticket/pointilles-ticket-orange.png') repeat-x left top;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-prix-ticket ul.details-ticket li .devise-taxes .devise {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.3em;
+  text-rendering: optimizeLegibility;
+}
+#ticket #masque-ticket #body-ticket #ticket-fixed #bloc-prix-ticket ul.details-ticket li .devise-taxes .taxes {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.6em;
+  text-rendering: optimizeLegibility;
 }
 #ticket #masque-ticket #body-ticket #ticket-fixed #overflow-cuves {
   display: block;

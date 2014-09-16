@@ -146,11 +146,17 @@
 		width: 100%;
 		margin: 0;
 		padding: 40px 268px 40px 45px;
-		
 		display: table-cell;
 		vertical-align: top;
 		width: 73%;
 		padding: 40px 45px 40px 45px;
+		p{
+			color: @bleuFonceFioulReduc;
+			.lato(0.938em);
+			strong{
+				.lato-bold(1em);
+			}
+		}
 		.titre-part-form{
 			display: block;
 			width: 100%;
@@ -731,6 +737,42 @@ ul#cuves{
 				#bloc-prix-ticket{
 					color: @orangeFioulReduc;
 					padding-bottom: 10px;
+					ul.details-ticket{
+						list-style-type: none;
+						margin: 0;
+						padding: 0;
+						li{
+							margin: 0;
+							padding: 0;
+							.ligne-detail{
+								position: relative;
+							}
+							.titre-detail{
+								padding-top: 22px;
+								background: @blanc;
+								position: relative;
+							}
+							.texte-detail{
+								background: @blanc;
+								position: relative;
+							}
+							.prix-ticket{
+								.lato-bold(2.25em);
+							}
+							.pointilles-ticket{
+								bottom: 11px;
+								background: url('../layoutImg/ticket/pointilles-ticket-orange.png') repeat-x left top;
+							}
+							.devise-taxes{
+								.devise {
+									.lato-bold(1.3em);
+								}
+								.taxes {
+									.lato-bold(0.6em);
+								}
+							}
+						}
+					}
 				}
 				#overflow-cuves{
 					display: block;
