@@ -60,16 +60,34 @@ function animTicket(){
 	
 	// Animer le prix du ticket //
 	var currentTicketPrice = parseFloat($("#prix-total-ticket-anim").text().replace(",", "."));
-	//var currentTicketPrice = parseInt($("#prix-total-ticket-anim").text());
+	var currentTicketPriceComma = (currentTicketPrice.toString()).replace(".", ",");
 	var newTicketPrice = currentTicketPrice-100;
+	var newTicketPriceComma = (newTicketPrice.toString()).replace(".", ",");
 	
-	$("#prix-total-ticket-anim").prop("number", currentTicketPrice).animateNumber(
-	  {
-	    number: newTicketPrice,
-	    easing: 'easeInQuad',
-	  },
-	  800
-	);
+	// how many decimal places allows
+	var decimal_places = 2;
+	var decimal_factor = decimal_places === 0 ? 1 : decimal_places * 10;
+	
+	$("#prix-total-ticket-anim").prop("number", currentTicketPriceComma).animateNumber({
+	      number: newTicketPrice * decimal_factor,
+	
+	      numberStep: function(now, tween) {
+	        var floored_number = Math.floor(now) / decimal_factor,
+	            target = $(tween.elem);
+	
+	        if (decimal_places > 0) {
+	          // force decimal places even if they are 0
+	          floored_number = floored_number.toFixed(decimal_places);
+	
+	          // replace '.' separator with ','
+	          floored_number = floored_number.toString().replace('.', ',');
+	        }
+	
+	        target.text(floored_number);
+	      }
+	    },
+	    800
+	  );
 }
 
 //////////////////////////////////////////////////
@@ -348,7 +366,8 @@ function animer(myScroll){
 	if($("body").hasClass("cycle")){
 		if($(window).width()>=768){
 			var debutScroll = ($("#top-body-ticket").offset().top)-($("header").height())+4;
-			var finScroll = $(document).height()-$(window).height()-$("footer").height()-$("#avis-footer").height();
+			var offsetBottomTicket = 310;
+			var finScroll = $("#avis-footer").offset().top-$("#ticket-fixed").height()-offsetBottomTicket;
 			if (myScroll>=debutScroll && myScroll<finScroll+$("header").height() && $(window).width()>979) {
 				TweenMax.set($("#ticket-fixed"), {position: "fixed", top: "70px"});
 			} else {
