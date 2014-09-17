@@ -48,6 +48,26 @@
 					.num-etape{
 						background-color: @bleuFioulReduc;
 					}
+					&:before{
+						background-color: @bleuFioulReduc;
+					}
+				}
+			}
+			&.done{
+				.bloc-titre-etape{
+					padding: 0;
+					.lh-border-radius(0);
+					&:after{
+						.lh-box-shadow(~"0 2px 0 #cbcdd3");
+					}
+				}
+				.bloc-num-etape{
+					.num-etape{
+						background: @bleuFioulReduc url('../layoutImg/check-nu.png') no-repeat center center;
+					}
+					&:after{
+						background-color: @bleuFioulReduc;
+					}
 				}
 			}
 			.bloc-titre-etape{
@@ -78,6 +98,21 @@
 					width: 100%;
 					height: 100%;
 					position: relative;
+					a{
+						display: block;
+						width: 100%;
+						height: 100%;
+						background-color: @blanc;
+						color: @bleuFioulReduc;
+						.lh-box-sizing(border-box);
+						padding: 12px;
+						.lh-box-shadow(~"0 2px 0 #cbcdd3");
+						.lh-border-radius(3px);
+						&:hover{
+							text-decoration: none;
+							color: @orangeFioulReduc;
+						}
+					}
 				}
 			}
 			.bloc-num-etape{
@@ -198,6 +233,24 @@
 				background: url('../layoutImg/pictos-form/picto-perso.png') no-repeat center center;
 				position: absolute;
 				top: -20px;
+				left: 0;
+			}
+			.picto-adresse{
+				display: block;
+				width: 58px;
+				height: 48px;
+				background: url('../layoutImg/pictos-form/picto-adresse.png') no-repeat center center;
+				position: absolute;
+				top: -8px;
+				left: 0;
+			}
+			.picto-dispo{
+				display: block;
+				width: 50px;
+				height: 48px;
+				background: url('../layoutImg/pictos-form/picto-dispo.png') no-repeat center center;
+				position: absolute;
+				top: -8px;
 				left: 0;
 			}
 		}

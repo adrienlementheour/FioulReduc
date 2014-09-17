@@ -98,10 +98,10 @@
 		  		<section id="bloc-cycle">
 		  			<section id="bloc-etapes-cycle" class="bloc-full">
 		  				<ul id="etapes-cycle">
-		  					<li class="etape-cycle active">
-		  						<div class="bloc-titre-etape"><div class="titre-etape">Devis</div></div>
-		  						<div class="bloc-num-etape first"><span class="num-etape">1</span></div>
-		  					</li><li class="etape-cycle">
+		  					<li class="etape-cycle done">
+		  						<div class="bloc-titre-etape"><div class="titre-etape"><a href="#">Devis</a></div></div>
+		  						<div class="bloc-num-etape first"><span class="num-etape"></span></div>
+		  					</li><li class="etape-cycle active">
 		  						<div class="bloc-titre-etape"><div class="titre-etape">Coordonnées</div></div>
 		  						<div class="bloc-num-etape"><span class="num-etape">2</span></div>
 		  					</li><li class="etape-cycle">
@@ -124,13 +124,13 @@
 			  						<div class="control-group">
 			  							<label class="control-label" for="order-email">E-mail:</label>
 			  							<div class="controls">
-			  								<input id="order-email" name="order-email" class="taille1" type="email" value="" title="">
+			  								<input id="order-email" name="order-email" class="taille5" type="email" value="" title="">
 			  							</div>
 			  						</div>
 			  						<div class="control-group">
 			  							<label class="control-label" for="order-mdp">Mot de passe:</label>
 			  							<div class="controls">
-			  								<input id="order-mdp" name="order-mdp" class="taille1" type="password" value="" title="">
+			  								<input id="order-mdp" name="order-mdp" class="taille4" type="password" value="" title="">
 			  							</div>
 			  						</div>
 									<div class="control-group">
@@ -149,31 +149,31 @@
 									<div class="control-group">
 										<label class="control-label" for="order-prenom">Prénom:</label>
 										<div class="controls">
-											<input id="order-prenom" name="order-prenom" class="taille1" type="text" value="" title="">
+											<input id="order-prenom" name="order-prenom" class="taille4" type="text" value="" title="">
 										</div>
 									</div>
 									<div class="control-group">
 										<label class="control-label" for="order-nom">Nom:</label>
 										<div class="controls">
-											<input id="order-nom" name="order-nom" class="taille1" type="text" value="" title="">
+											<input id="order-nom" name="order-nom" class="taille4" type="text" value="" title="">
 										</div>
 									</div>
 									<div class="control-group">
 										<label class="control-label" for="order-societe">Société:</label>
 										<div class="controls">
-											<input id="order-societe" name="order-societe" class="taille1" type="text" value="" title="">
+											<input id="order-societe" name="order-societe" class="taille5" type="text" value="" title="">
 										</div>
 									</div>
 									<div class="control-group">
 										<label class="control-label" for="order-tel1">Téléphone 1:</label>
 										<div class="controls">
-											<input id="order-tel1" name="order-tel1" class="taille1" type="text" value="" title="">
+											<input id="order-tel1" name="order-tel1" class="taille3" type="text" value="" title="">
 										</div>
 									</div>
 									<div class="control-group">
 										<label class="control-label" for="order-tel2">Téléphone 2:</label>
 										<div class="controls">
-											<input id="order-tel2" name="order-tel2" class="taille1" type="text" value="" title="">
+											<input id="order-tel2" name="order-tel2" class="taille3" type="text" value="" title="">
 										</div>
 									</div>
 			  					</div><div class="part-details">
@@ -196,7 +196,7 @@
 									<div class="control-group">
 									  <label class="control-label" for="order-adresse-livraison">Adresse de livraison:</label>
 									  <div class="controls">                     
-									    <textarea id="order-adresse-livraison" name="order-adresse-livraison"></textarea>
+									    <textarea id="order-adresse-livraison" name="order-adresse-livraison" class="taille5"></textarea>
 									  </div>
 									</div>
 									<div class="control-group">
@@ -223,22 +223,31 @@
 			  					</div><div class="part-details">
 			  						<div class="fond-part-details"></div>
 									<div class="detail-cycle">
-										Votre distributeur vous appelle pour convenir d’un créneau de livraison qui vous convient<br />
-										<a class="btn btn-link btn-plus has-tooltip" href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Lorem ipsum"><span class="txt-btn">En savoir</span><span class="ic-plus"></span></a>
-									</div>
-									<div class="detail-cycle">
-										Vous serez livré depuis <a target="_blank" href="https://www.google.com/maps/place/Poitiers/" class="ville">Poitiers</a>
-										<div class="map-livraison">
-											<a target="_blank" href="https://www.google.com/maps/place/Poitiers/"><img src="http://maps.googleapis.com/maps/api/staticmap?center=46.632608, -1.152499&zoom=6&scale=false&size=180x164&maptype=roadmap&sensor=false&format=png&visual_refresh=true&markers=size:mid%7Ccolor:red%7Clabel:%7CPoitiers&markers=size:mid%7Ccolor:gray%7Clabel:%7CNantes" alt="Google Map of Poitiers"></a>
-										</div>
+										Indiquez ici les informations utiles pour <strong>aider le livreur à organiser la livraison.</strong><br /> Vous pourrez compléter ces informations lorsque le chauffeur vous appellera pour prendre rendez-vous.
 									</div>
 			  					</div>
 			  				</div>
 			  				<div class="bloc-blanc-ombre bloc-full">
 			  					<div class="part-form">
 			  						<div class="titre-part-form">
-			  							<div class="picto-reglement"></div>
+			  							<div class="picto-adresse"></div>
 			  							<h2>Votre adresse de facturation</h2>
+			  						</div>
+			  						<div class="control-group">
+			  						  <div class="controls">
+			  						    <label class="checkbox" for="order-checkbox-adresse-livraison">
+			  						      <input type="checkbox" name="checkboxes" id="order-checkbox-adresse-livraison" value="Adresse differente">
+			  						      Mon adresse de facturation est différente de mon adresse de livraison
+			  						    </label>
+			  						  </div>
+			  						</div>
+			  					</div>
+			  				</div>
+			  				<div class="bloc-blanc-ombre bloc-full">
+			  					<div class="part-form">
+			  						<div class="titre-part-form">
+			  							<div class="picto-dispo"></div>
+			  							<h2>Vos disponibilités pour la livraison</h2>
 			  						</div>
 			  					</div>
 			  				</div>

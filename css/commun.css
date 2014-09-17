@@ -3742,7 +3742,8 @@ form.form-horizontal .controls [type=text],
 form.form-horizontal .controls [type=text],
 form.form-horizontal .controls [type=password],
 form.form-horizontal .controls [type=email],
-form.form-horizontal .controls select {
+form.form-horizontal .controls select,
+form.form-horizontal .controls textarea {
   border: 2px solid #cccdd3;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3760,7 +3761,8 @@ form.form-horizontal .controls select {
 #bloc-commande form.form-horizontal .controls [type=text],
 #bloc-commande form.form-horizontal .controls [type=password],
 #bloc-commande form.form-horizontal .controls [type=email],
-#bloc-commande form.form-horizontal .controls select {
+#bloc-commande form.form-horizontal .controls select,
+#bloc-commande form.form-horizontal .controls textarea {
   height: 40px;
 }
 form.form-horizontal .controls input[type=number].taille1,
@@ -3768,7 +3770,8 @@ form.form-horizontal .controls [type=text].taille1,
 form.form-horizontal .controls [type=text].taille1,
 form.form-horizontal .controls [type=password].taille1,
 form.form-horizontal .controls [type=email].taille1,
-form.form-horizontal .controls select.taille1 {
+form.form-horizontal .controls select.taille1,
+form.form-horizontal .controls textarea.taille1 {
   width: 100px;
 }
 form.form-horizontal .controls input[type=number].taille2,
@@ -3776,15 +3779,44 @@ form.form-horizontal .controls [type=text].taille2,
 form.form-horizontal .controls [type=text].taille2,
 form.form-horizontal .controls [type=password].taille2,
 form.form-horizontal .controls [type=email].taille2,
-form.form-horizontal .controls select.taille2 {
+form.form-horizontal .controls select.taille2,
+form.form-horizontal .controls textarea.taille2 {
   width: 210px;
+}
+form.form-horizontal .controls input[type=number].taille3,
+form.form-horizontal .controls [type=text].taille3,
+form.form-horizontal .controls [type=text].taille3,
+form.form-horizontal .controls [type=password].taille3,
+form.form-horizontal .controls [type=email].taille3,
+form.form-horizontal .controls select.taille3,
+form.form-horizontal .controls textarea.taille3 {
+  width: 150px;
+}
+form.form-horizontal .controls input[type=number].taille4,
+form.form-horizontal .controls [type=text].taille4,
+form.form-horizontal .controls [type=text].taille4,
+form.form-horizontal .controls [type=password].taille4,
+form.form-horizontal .controls [type=email].taille4,
+form.form-horizontal .controls select.taille4,
+form.form-horizontal .controls textarea.taille4 {
+  width: 180px;
+}
+form.form-horizontal .controls input[type=number].taille5,
+form.form-horizontal .controls [type=text].taille5,
+form.form-horizontal .controls [type=text].taille5,
+form.form-horizontal .controls [type=password].taille5,
+form.form-horizontal .controls [type=email].taille5,
+form.form-horizontal .controls select.taille5,
+form.form-horizontal .controls textarea.taille5 {
+  width: 280px;
 }
 form.form-horizontal .controls input[type=number].input-inline-form,
 form.form-horizontal .controls [type=text].input-inline-form,
 form.form-horizontal .controls [type=text].input-inline-form,
 form.form-horizontal .controls [type=password].input-inline-form,
 form.form-horizontal .controls [type=email].input-inline-form,
-form.form-horizontal .controls select.input-inline-form {
+form.form-horizontal .controls select.input-inline-form,
+form.form-horizontal .controls textarea.input-inline-form {
   -webkit-border-top-right-radius: 0;
   -moz-border-radius-topright: 0;
   border-top-right-radius: 0;
@@ -3802,7 +3834,8 @@ form.form-horizontal .controls [type=text]:focus,
 form.form-horizontal .controls [type=text]:focus,
 form.form-horizontal .controls [type=password]:focus,
 form.form-horizontal .controls [type=email]:focus,
-form.form-horizontal .controls select:focus {
+form.form-horizontal .controls select:focus,
+form.form-horizontal .controls textarea:focus {
   border-color: #2947a0;
   outline: none;
 }
