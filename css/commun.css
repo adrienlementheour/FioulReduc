@@ -2947,7 +2947,7 @@ ul.liste-puces {
   position: relative;
   color: #fb8206;
   border-bottom: 1px solid #fb8206;
-  line-height: 1em;
+  line-height: 1.4em;
   text-decoration: none;
   text-shadow: none;
 }
@@ -2965,7 +2965,7 @@ ul.liste-puces {
 .btn.btn-link.btn-fleche .ic-arrow-right {
   display: block;
   position: absolute;
-  top: 0;
+  top: 5px;
   left: -12px;
   font-size: 0.8em;
   line-height: 1.1em;
@@ -3016,7 +3016,7 @@ ul.liste-puces {
 }
 .btn.btn-link.btn-plus .ic-plus {
   position: absolute;
-  top: 2px;
+  top: 5px;
   right: 0;
   font-size: 18px;
 }
@@ -3740,6 +3740,8 @@ form.form-horizontal .controls {
 form.form-horizontal .controls input[type=number],
 form.form-horizontal .controls [type=text],
 form.form-horizontal .controls [type=text],
+form.form-horizontal .controls [type=password],
+form.form-horizontal .controls [type=email],
 form.form-horizontal .controls select {
   border: 2px solid #cccdd3;
   -webkit-box-sizing: border-box;
@@ -3756,24 +3758,32 @@ form.form-horizontal .controls select {
 #bloc-commande form.form-horizontal .controls input[type=number],
 #bloc-commande form.form-horizontal .controls [type=text],
 #bloc-commande form.form-horizontal .controls [type=text],
+#bloc-commande form.form-horizontal .controls [type=password],
+#bloc-commande form.form-horizontal .controls [type=email],
 #bloc-commande form.form-horizontal .controls select {
   height: 40px;
 }
 form.form-horizontal .controls input[type=number].taille1,
 form.form-horizontal .controls [type=text].taille1,
 form.form-horizontal .controls [type=text].taille1,
+form.form-horizontal .controls [type=password].taille1,
+form.form-horizontal .controls [type=email].taille1,
 form.form-horizontal .controls select.taille1 {
   width: 100px;
 }
 form.form-horizontal .controls input[type=number].taille2,
 form.form-horizontal .controls [type=text].taille2,
 form.form-horizontal .controls [type=text].taille2,
+form.form-horizontal .controls [type=password].taille2,
+form.form-horizontal .controls [type=email].taille2,
 form.form-horizontal .controls select.taille2 {
   width: 210px;
 }
 form.form-horizontal .controls input[type=number].input-inline-form,
 form.form-horizontal .controls [type=text].input-inline-form,
 form.form-horizontal .controls [type=text].input-inline-form,
+form.form-horizontal .controls [type=password].input-inline-form,
+form.form-horizontal .controls [type=email].input-inline-form,
 form.form-horizontal .controls select.input-inline-form {
   -webkit-border-top-right-radius: 0;
   -moz-border-radius-topright: 0;
@@ -3790,6 +3800,8 @@ form.form-horizontal .controls select.input-inline-form {
 form.form-horizontal .controls input[type=number]:focus,
 form.form-horizontal .controls [type=text]:focus,
 form.form-horizontal .controls [type=text]:focus,
+form.form-horizontal .controls [type=password]:focus,
+form.form-horizontal .controls [type=email]:focus,
 form.form-horizontal .controls select:focus {
   border-color: #2947a0;
   outline: none;
@@ -5465,6 +5477,9 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   }
 }
 @media (max-width: 979px) {
+  .btn.btn-form {
+    padding: 20px 40px 16px 40px;
+  }
   /* @group responsive Home */
   #bloc-commande-graph .bloc-gauche {
     text-align: center;

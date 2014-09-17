@@ -191,6 +191,15 @@
 				top: -10px;
 				left: 0;
 			}
+			.picto-perso{
+				display: block;
+				width: 48px;
+				height: 59px;
+				background: url('../layoutImg/pictos-form/picto-perso.png') no-repeat center center;
+				position: absolute;
+				top: -20px;
+				left: 0;
+			}
 		}
 	}
 	.part-details{
@@ -537,6 +546,11 @@ ul#cuves{
 		overflow: hidden;
 		position: relative;
 		.lh-backface-visibility(hidden);
+		.touch &{
+			-webkit-clip-path: rectangle(0, 0, 100%, 50px);
+			-moz-clip-path: rectangle(0, 0, 100%, 50px);
+			clip-path: rectangle(0, 0, 100%, 50px);
+		}
 		#body-ticket{
 			display: block;
 			width: 302px;
@@ -907,7 +921,7 @@ ul#cuves{
 		line-height: 32px;
 		.ic-moins{
 			top: 50%;
-			margin-top: -9px;
+			margin-top: -11px;
 		}
 	}
 	.txt-code-reduction{

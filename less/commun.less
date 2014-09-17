@@ -508,7 +508,7 @@ ul.liste-puces{
 		position: relative;
 		color: @orangeFioulReduc;
 		border-bottom: 1px solid @orangeFioulReduc;
-		line-height: 1em;
+		line-height: 1.4em;
 		text-decoration: none;
 		text-shadow: none;
 		.ie7-inline-block();
@@ -522,7 +522,7 @@ ul.liste-puces{
 			.ic-arrow-right{
 				display: block;
 				position: absolute;
-				top: 0;
+				top: 5px;
 				left: -12px;
 				font-size: 0.8em;
 				line-height: 1.1em;
@@ -574,7 +574,7 @@ ul.liste-puces{
 			}
 			.ic-plus{
 				position: absolute;
-				top: 2px;
+				top: 5px;
 				right: 0;
 				font-size: 18px;
 			}
@@ -1185,7 +1185,7 @@ form{
 		.controls{
 			margin: 0 0 0 140px;
 			position: relative;
-			input[type=number], [type=text], [type=text], select{
+			input[type=number], [type=text], [type=text], [type=password], [type=email], select{
 				border: 2px solid #cccdd3;
 				.lh-box-sizing(border-box);
 				height: 36px;
@@ -2655,6 +2655,12 @@ ul#menu-top-bar{
 }
 
 @media (max-width: 979px) {
+	.btn{
+		&.btn-form{
+			padding: 20px 40px 16px 40px;
+		}
+	}
+
 	/* @group responsive Home */
 	#bloc-commande-graph{
 		.bloc-gauche{

@@ -90,6 +90,50 @@ function animTicket(){
 	  );
 }
 
+/////////////////////////////////////////////////////////
+// FONCTION POUR GERER LA POSITION DU TICKET AU SCROLL //
+/////////////////////////////////////////////////////////
+function positionTicketScroll(myScroll){
+	if($("body").hasClass("cycle")){
+		if($(window).width()>=768){
+			var debutScroll = ($("#top-body-ticket").offset().top)-($("header").height())+4;
+			var debutScrollResp = ($("#top-body-ticket").offset().top)+4;
+			var offsetBottomTicket = 310;
+			var finScroll = $("#avis-footer").offset().top-$("#ticket-fixed").height()-offsetBottomTicket;
+			if($(window).width()>1150){
+				TweenMax.set($("#content-ticket-fixed"), {rotation: 1.5});
+				if (myScroll>=debutScroll && myScroll<finScroll+$("header").height()) {
+					TweenMax.set($("#ticket-fixed"), {position: "fixed", top: "70px"});
+				} else {
+					$("#ticket-fixed").css("position","absolute");
+					TweenMax.set($("#ticket-fixed"), {position: "absolute"});
+					if (myScroll<debutScroll) {
+						TweenMax.set($("#ticket-fixed"), {top: "15px"});
+					} else {
+						TweenMax.set($("#ticket-fixed"), {top: finScroll-33-$("header").height()+"px"}); /* Je ne sais pas d'où viens le 33 :) */
+					}
+				}
+			}else{
+				TweenMax.set($("#content-ticket-fixed"), {rotation: 0});
+				if (myScroll>=debutScrollResp && myScroll<finScroll+$("header").height()) {
+					TweenMax.set($("#ticket-fixed"), {position: "fixed", top: "16px"});
+				} else {
+					$("#ticket-fixed").css("position","absolute");
+					TweenMax.set($("#ticket-fixed"), {position: "absolute"});
+					if (myScroll<debutScrollResp) {
+						TweenMax.set($("#ticket-fixed"), {top: "15px"});
+					} else {
+						TweenMax.set($("#ticket-fixed"), {top: finScroll-160}); /* Je ne sais pas d'où viens le 33 :) */
+					}
+				}
+			}
+		}else{
+			TweenMax.set($("#ticket-fixed"), {position: "relative", top: 0});
+			TweenMax.set($("#content-ticket-fixed"), {rotation: 0});
+		}
+	}
+}
+
 //////////////////////////////////////////////////
 ////////// FONCTION POUR FIXER UN BLOC ///////////
 //////////////////////////////////////////////////
@@ -345,8 +389,12 @@ function ouvertureFermetureBlocCommandeHome(type){
 	}
 }
 
+$(document).bind('touchmove', function(e) { 
+   var myScroll = $(document).scrollTop();
+   positionTicketScroll(myScroll);
+});
+
 function animer(myScroll){
-	
 	if(($(window).width()>1024)&&(!$("html").hasClass("lt-ie9"))) {
 		if (myScroll>=$(document).height()-$(window).height()-471) {
 			var xPos = -(myScroll-$(document).height()+$(window).height());
@@ -365,32 +413,7 @@ function animer(myScroll){
 		TweenMax.set($("#journal"), {y:0, rotation: 0});
 	}
 	
-	if($("body").hasClass("cycle")){
-		if($(window).width()>=768){
-			var debutScroll = ($("#top-body-ticket").offset().top)-($("header").height())+4;
-			var offsetBottomTicket = 310;
-			var finScroll = $("#avis-footer").offset().top-$("#ticket-fixed").height()-offsetBottomTicket;
-			if (myScroll>=debutScroll && myScroll<finScroll+$("header").height() && $(window).width()>979) {
-				TweenMax.set($("#ticket-fixed"), {position: "fixed", top: "70px"});
-			} else {
-				$("#ticket-fixed").css("position","absolute");
-				TweenMax.set($("#ticket-fixed"), {position: "absolute"});
-				if (myScroll<debutScroll) {
-					TweenMax.set($("#ticket-fixed"), {top: "15px"});
-				} else {
-					TweenMax.set($("#ticket-fixed"), {top: finScroll-33-$("header").height()+"px"}); /* Je ne sais pas d'où viens le 33 :) */
-				}
-			}
-			if($(window).width()>1150){
-				TweenMax.set($("#content-ticket-fixed"), {rotation: 1.5});
-			}else{
-				TweenMax.set($("#content-ticket-fixed"), {rotation: 0});
-			}
-		}else{
-			TweenMax.set($("#ticket-fixed"), {position: "relative", top: 0});
-			TweenMax.set($("#content-ticket-fixed"), {rotation: 0});
-		}
-	}
+	positionTicketScroll(myScroll);
 	
 	requestAnimFrame(function(){
 		myScroll = $(document).scrollTop();

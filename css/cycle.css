@@ -207,6 +207,15 @@
   top: -10px;
   left: 0;
 }
+.bloc-formulaire .part-form .titre-part-form .picto-perso {
+  display: block;
+  width: 48px;
+  height: 59px;
+  background: url('../layoutImg/pictos-form/picto-perso.png') no-repeat center center;
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
 .bloc-formulaire .part-details {
   display: inline-block;
   -webkit-box-sizing: border-box;
@@ -625,6 +634,11 @@ ul#cuves li.cuve .body-cuve .controls .taille2 {
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+.touch #ticket #masque-ticket {
+  -webkit-clip-path: rectangle(0, 0, 100%, 50px);
+  -moz-clip-path: rectangle(0, 0, 100%, 50px);
+  clip-path: rectangle(0, 0, 100%, 50px);
 }
 #ticket #masque-ticket #body-ticket {
   display: block;
@@ -1073,7 +1087,7 @@ ul#cuves li.cuve .body-cuve .controls .taille2 {
 }
 #code-reduction a.btn.btn-link.btn-moins .ic-moins {
   top: 50%;
-  margin-top: -9px;
+  margin-top: -11px;
 }
 #code-reduction .txt-code-reduction {
   margin-right: 10px;
