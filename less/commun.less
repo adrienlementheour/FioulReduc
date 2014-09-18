@@ -1169,6 +1169,83 @@ ul#select-paiement{
 	}
 }
 
+table.table-livraison{
+	border-collapse: separate;
+	border-spacing: 4px;
+	.table-1{
+		width: 125px;
+		text-align: right;
+		.lato-italic(1em);
+		color: @bleuFonceFioulReduc;
+		padding: 0 10px 0 0;
+	}
+	.table-2{
+		width: 45px;
+		height: 45px;
+		border: 1px solid #f4f4f6;
+		.lh-border-radius(3px);
+		text-align: center;
+	}
+	td{
+		.lh-box-sizing(border-box);
+		&.inactive{
+			border: none;
+			input{
+				display: none;
+			}
+		}
+		&.active{
+			background-color: #f4f4f6;
+		}
+	}
+	th{
+		.lh-box-sizing(border-box);
+	}
+	input[type=checkbox]{
+		margin: 0;
+	}
+}
+
+.jour-table{
+	display: block;
+	vertical-align: top;
+	width: 46px;
+	height: auto;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #f4f4f6;
+	.lh-box-sizing(border-box);
+	.mois{
+		display: block;
+		height: 18px;
+		line-height: 18px;
+		.lato-italic(0.813em);
+		.lh-border-top-left-radius(3px);
+		.lh-border-top-right-radius(3px);
+		background-color: @bleuFioulReduc;
+		color: @blanc;
+	}
+	.jour-inte{
+		display: block;
+		height: 40px;
+		line-height: 40px;
+		.lato-bold(1.875em);
+		.lh-border-bottom-left-radius(3px);
+		.lh-border-bottom-right-radius(3px);
+		background-color: @blanc;
+		color: @bleuFonceFioulReduc;
+	}
+	&.inactive{
+		.mois{
+			background-color: #cccdd3;
+		}
+		.jour-inte{
+			color: #cccdd3;
+		}
+	}
+}
+
 form{
 	color: @bleuFonceFioulReduc;
 	.control-group.error .control-label, .control-group.error .help-block, .control-group.error .help-inline, .indic-form.error{
@@ -1201,6 +1278,7 @@ form{
 				margin: 0;
 				padding: 10px 0 0 0;
 				line-height: 1.1em;
+				color: @bleuFonceFioulReduc;
 				#bloc-commande &{
 					height: 40px;
 				}
@@ -1238,7 +1316,7 @@ form{
 			&.small-margin{
 				margin: 0 0 0 75px;
 			}
-			.indic-facultatif{
+			.indic-gris{
 				.lato(0.813em);
 				color: #cccdd3;
 				margin: 3px 0 0 0;
@@ -1353,7 +1431,7 @@ form{
 							background-color: #7c8395;
 							color: @blanc;
 						}
-						.jour{
+						.jour-inte{
 							display: block;
 							height: 40px;
 							line-height: 40px;
@@ -1367,7 +1445,7 @@ form{
 							.mois{
 								background-color: #cccdd3;
 							}
-							.jour{
+							.jour-inte{
 								color: #cccdd3;
 							}
 						}
@@ -1395,7 +1473,7 @@ form{
 								background-color: @bleuFioulReduc;
 								color: @blanc;
 							}
-							.jour{
+							.jour-inte{
 								background-color: @blanc;
 								color: @bleuFonceFioulReduc;
 							}
@@ -1403,7 +1481,7 @@ form{
 								.mois{
 									background-color: #cccdd3;
 								}
-								.jour{
+								.jour-inte{
 									color: #cccdd3;
 								}
 							}

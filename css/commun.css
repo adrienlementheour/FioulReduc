@@ -3738,6 +3738,113 @@ ul#select-paiement li .content-input-select-custom a:hover {
 ul#select-paiement li .content-input-select-custom a:hover .icon-checked {
   background-image: url('../layoutImg/check-paiement.png');
 }
+table.table-livraison {
+  border-collapse: separate;
+  border-spacing: 4px;
+}
+table.table-livraison .table-1 {
+  width: 125px;
+  text-align: right;
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+  color: #0c1a4c;
+  padding: 0 10px 0 0;
+}
+table.table-livraison .table-2 {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #f4f4f6;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  text-align: center;
+}
+table.table-livraison td {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+table.table-livraison td.inactive {
+  border: none;
+}
+table.table-livraison td.inactive input {
+  display: none;
+}
+table.table-livraison td.active {
+  background-color: #f4f4f6;
+}
+table.table-livraison th {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+table.table-livraison input[type=checkbox] {
+  margin: 0;
+}
+.jour-table {
+  display: block;
+  vertical-align: top;
+  width: 46px;
+  height: auto;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #f4f4f6;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.jour-table .mois {
+  display: block;
+  height: 18px;
+  line-height: 18px;
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 0.813em;
+  text-rendering: optimizeLegibility;
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius-topright: 3px;
+  -moz-background-clip: padding;
+  border-top-right-radius: 3px;
+  background-clip: padding-box;
+  background-color: #2947a0;
+  color: #ffffff;
+}
+.jour-table .jour-inte {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.875em;
+  text-rendering: optimizeLegibility;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius-bottomright: 3px;
+  -moz-background-clip: padding;
+  border-bottom-right-radius: 3px;
+  background-clip: padding-box;
+  background-color: #ffffff;
+  color: #0c1a4c;
+}
+.jour-table.inactive .mois {
+  background-color: #cccdd3;
+}
+.jour-table.inactive .jour-inte {
+  color: #cccdd3;
+}
 form {
   color: #0c1a4c;
 }
@@ -3775,6 +3882,7 @@ form.form-horizontal label.control-label {
   margin: 0;
   padding: 10px 0 0 0;
   line-height: 1.1em;
+  color: #0c1a4c;
 }
 #bloc-commande form.form-horizontal label.control-label {
   height: 40px;
@@ -3809,7 +3917,7 @@ form.form-horizontal .controls {
 form.form-horizontal .controls.small-margin {
   margin: 0 0 0 75px;
 }
-form.form-horizontal .controls .indic-facultatif {
+form.form-horizontal .controls .indic-gris {
   font-family: 'lato', sans-serif;
   font-weight: normal;
   font-size: 0.813em;
@@ -4010,7 +4118,7 @@ form.form-horizontal .controls .radio.radio-block ul.jours li.jour .mois {
   background-color: #7c8395;
   color: #ffffff;
 }
-form.form-horizontal .controls .radio.radio-block ul.jours li.jour .jour {
+form.form-horizontal .controls .radio.radio-block ul.jours li.jour .jour-inte {
   display: block;
   height: 40px;
   line-height: 40px;
@@ -4033,7 +4141,7 @@ form.form-horizontal .controls .radio.radio-block ul.jours li.jour .jour {
 form.form-horizontal .controls .radio.radio-block ul.jours li.jour.inactive .mois {
   background-color: #cccdd3;
 }
-form.form-horizontal .controls .radio.radio-block ul.jours li.jour.inactive .jour {
+form.form-horizontal .controls .radio.radio-block ul.jours li.jour.inactive .jour-inte {
   color: #cccdd3;
 }
 form.form-horizontal .controls .radio.radio-block:hover {
@@ -4062,14 +4170,14 @@ form.form-horizontal .controls .radio.radio-block.active ul.jours li.jour .mois 
   background-color: #2947a0;
   color: #ffffff;
 }
-form.form-horizontal .controls .radio.radio-block.active ul.jours li.jour .jour {
+form.form-horizontal .controls .radio.radio-block.active ul.jours li.jour .jour-inte {
   background-color: #ffffff;
   color: #0c1a4c;
 }
 form.form-horizontal .controls .radio.radio-block.active ul.jours li.jour.inactive .mois {
   background-color: #cccdd3;
 }
-form.form-horizontal .controls .radio.radio-block.active ul.jours li.jour.inactive .jour {
+form.form-horizontal .controls .radio.radio-block.active ul.jours li.jour.inactive .jour-inte {
   color: #cccdd3;
 }
 form button.btn-inline-form {

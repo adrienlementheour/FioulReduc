@@ -363,6 +363,24 @@ function codeReduction(){
 	});
 }
 
+///////////////////////////////////////////////////////////////////////////
+// FONCTION POUR GERER LE CLIC SUR LES CHECKBOXS DU TABLEAU DE LIVRAISON //
+///////////////////////////////////////////////////////////////////////////
+function tableLivraison(){
+	TweenMax.set($(".table-livraison td:not(.inactive)"), {cursor: "pointer"});
+	$(".table-livraison td").click(function(){
+		if(!$(this).hasClass("inactive")) {
+			if(!$(this).hasClass("active")){
+				$("input[type=checkbox]", this).prop('checked', true);
+				$(this).addClass("active");
+			}else{
+				$("input[type=checkbox]", this).prop('checked', false);
+				$(this).removeClass("active");
+			}
+		}
+	});
+}
+
 
 /////////////////////////////////////////////////////////////////////////
 /////////// FONCTION POUR OUVRIR ET FERMER LE MENU RESPONSIVE //////////
@@ -584,6 +602,7 @@ $(document).ready(function(){
 		details();
 		customSelect();
 		overflowCuvesTicket();
+		tableLivraison();
 		$("label.radio").click(function(){
 			if (!$(this).hasClass("active")) {
 				$(".active", $(this).closest(".controls")).removeClass("active");

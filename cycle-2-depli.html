@@ -98,10 +98,10 @@
 		  		<section id="bloc-cycle">
 		  			<section id="bloc-etapes-cycle" class="bloc-full">
 		  				<ul id="etapes-cycle">
-		  					<li class="etape-cycle active">
-		  						<div class="bloc-titre-etape"><div class="titre-etape">Devis</div></div>
-		  						<div class="bloc-num-etape first"><span class="num-etape">1</span></div>
-		  					</li><li class="etape-cycle">
+		  					<li class="etape-cycle done">
+		  						<div class="bloc-titre-etape"><div class="titre-etape"><a href="#">Devis</a></div></div>
+		  						<div class="bloc-num-etape first"><span class="num-etape"></span></div>
+		  					</li><li class="etape-cycle active">
 		  						<div class="bloc-titre-etape"><div class="titre-etape">Coordonnées</div></div>
 		  						<div class="bloc-num-etape"><span class="num-etape">2</span></div>
 		  					</li><li class="etape-cycle">
@@ -118,132 +118,79 @@
 			  				<div class="bloc-blanc-ombre bloc-full">
 			  					<div class="part-form">
 			  						<div class="titre-part-form">
-			  							<div class="picto-commande"></div>
-			  							<h2>Quelle est votre commande ?</h2>
+			  							<div class="picto-perso"></div>
+			  							<h2>Vos informations personnelles</h2>
+			  						</div>
+			  						<div class="control-group">
+			  							<label class="control-label" for="order-email">E-mail:</label>
+			  							<div class="controls">
+			  								<input id="order-email" name="order-email" class="taille5" type="email" value="" title="">
+			  							</div>
+			  						</div>
+			  						<div class="control-group">
+			  							<label class="control-label" for="order-mdp">Mot de passe:</label>
+			  							<div class="controls">
+			  								<input id="order-mdp" name="order-mdp" class="taille4" type="password" value="" title="">
+			  								<label class="checkbox inline margin-left" for="afficher-order-mdp">
+			  									<input type="checkbox" name="afficher-order-mdp" class="afficher-mdp" id="afficher-order-mdp" value="Afficher">
+			  									Afficher
+			  								</label>
+			  								<div class="indic-gris">6 caractères minimum</div>
+			  							</div>
 			  						</div>
 									<div class="control-group">
-										<label class="control-label" for="">Type:</label>
+										<label class="control-label" for="">Civilité:</label>
 										<div class="controls">
-											<label class="radio inline radio-block first active" for="radio-individuelle">
-										      <input type="radio" name="radio-type" id="radio-individuelle" value="individuelle" checked="checked">
-										      Individuelle
+											<label class="radio inline radio-block first active" for="radio-monsieur">
+										      <input type="radio" name="radio-civilite" id="radio-monsieur" value="monsieur" checked="checked">
+										      Monsieur
 										    </label>
-										    <label class="radio radio-block inline" for="radio-groupee">
-										      <input type="radio" name="radio-type" id="radio-groupee" value="groupee">
-										      Groupée
+										    <label class="radio radio-block inline" for="radio-madame">
+										      <input type="radio" name="radio-civilite" id="radio-madame" value="madame">
+										      Madame
 										    </label>
 										</div>
 									</div>
 									<div class="control-group">
-										<label class="control-label" for="order-quantity">Quantité:</label>
+										<label class="control-label" for="order-prenom">Prénom:</label>
 										<div class="controls">
-											<input id="order-quantity" name="order-quantity" class="taille1" type="number" step="1" value="" title=""> <span class="suite-label">litres</span>
+											<input id="order-prenom" name="order-prenom" class="taille4" type="text" value="" title="">
 										</div>
 									</div>
 									<div class="control-group">
-										<label class="control-label" for="">Fioul:</label>
+										<label class="control-label" for="order-nom">Nom:</label>
 										<div class="controls">
-											<label class="radio inline radio-block first has-tooltip-fioul active" for="radio-ordinaire" data-toggle="tooltip" data-placement="bottom" data-original-title="- 100€">
-											  <input type="radio" name="radio-fioul" id="radio-ordinaire" value="ordinaire" checked="checked">
-											  Ordinaire
-											</label>
-											<label class="radio inline radio-block has-tooltip-fioul" for="radio-superieur" data-toggle="tooltip" data-placement="bottom" data-original-title="+ 100€">
-											  <input type="radio" name="radio-fioul" id="radio-superieur" value="superieur">
-											  Supérieur
-											</label>
+											<input id="order-nom" name="order-nom" class="taille4" type="text" value="" title="">
 										</div>
 									</div>
-									<ul id="cuves" style="display: none;">
-										<li class="cuve">
-											<div class="header-cuve">
-												<span class="picto-cuve"></span>
-												<span class="num-cuve">1</span>
-												Cuve n°1 - vous
-											</div>
-											<div class="body-cuve">
-												<div class="control-group">
-													<label class="control-label" for="order-quantity-group-1">Quantité:</label>
-													<div class="controls">
-														<input id="order-quantity-group-1" name="order-quantity" class="taille1" type="number" step="1" value="" title=""> <span class="suite-label">litres</span>
-													</div>
-												</div>
-												<div class="control-group">
-													<label class="control-label" for="order-product-group-1">Fioul:</label>
-													<div class="controls">
-														<select id="order-product" name="order-product-group-1" class="taille2" title="">
-															<option value="1">Ordinaire</option>
-															<option value="2">Supérieur</option>
-															<option value="3">GNR Ordinaire</option>
-															<option value="4">GNR Supérieur</option>
-														</select>
-													</div>
-												</div>
-											</div>
-										</li><li class="cuve">
-											<div class="header-cuve">
-												<span class="picto-cuve"></span>
-												<span class="num-cuve">2</span>
-												Cuve n°2
-											</div>
-											<div class="body-cuve">
-												<div class="control-group">
-													<label class="control-label" for="order-quantity-group-2">Quantité:</label>
-													<div class="controls">
-														<input id="order-quantity-group-2" name="order-quantity" class="taille1" type="number" step="1" value="" title=""> <span class="suite-label">litres</span>
-													</div>
-												</div>
-												<div class="control-group">
-													<label class="control-label" for="order-product-group-2">Fioul:</label>
-													<div class="controls">
-														<select id="order-product" name="order-product-group-2" class="taille2" title="">
-															<option value="1">Ordinaire</option>
-															<option value="2">Supérieur</option>
-															<option value="3">GNR Ordinaire</option>
-															<option value="4">GNR Supérieur</option>
-														</select>
-													</div>
-												</div>
-											</div>
-										</li><li class="cuve">
-											<div class="header-cuve">
-												<span class="picto-cuve"></span>
-												<span class="num-cuve">3</span>
-												Cuve n°3
-											</div>
-											<div class="body-cuve">
-												<div class="control-group">
-													<label class="control-label" for="order-quantity-group-3">Quantité:</label>
-													<div class="controls">
-														<input id="order-quantity-group-3" name="order-quantity" class="taille1" type="number" step="1" value="" title=""> <span class="suite-label">litres</span>
-													</div>
-												</div>
-												<div class="control-group">
-													<label class="control-label" for="order-product-group-3">Fioul:</label>
-													<div class="controls">
-														<select id="order-product" name="order-product-group-3" class="taille2" title="">
-															<option value="1">Ordinaire</option>
-															<option value="2">Supérieur</option>
-															<option value="3">GNR Ordinaire</option>
-															<option value="4">GNR Supérieur</option>
-														</select>
-													</div>
-												</div>
-											</div>
-										</li><li class="cuve add-cuve">
-											<a href="#" class="">
-												<span class="txt-add-cuve"><span class="ic-plus"></span><span class="txt">ajouter une cuve</span></span>
-											</a>
-										</li>
-									</ul>
+									<div class="control-group facultatif">
+										<label class="control-label" for="order-societe">Société:</label>
+										<div class="controls">
+											<input id="order-societe" name="order-societe" class="taille5" type="text" value="" title="">
+											<div class="indic-gris">Facultatif</div>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="order-tel1">Téléphone 1:</label>
+										<div class="controls">
+											<input id="order-tel1" name="order-tel1" class="taille3" type="text" value="" title="">
+										</div>
+									</div>
+									<div class="control-group facultatif">
+										<label class="control-label" for="order-tel2">Téléphone 2:</label>
+										<div class="controls">
+											<input id="order-tel2" name="order-tel2" class="taille3" type="text" value="" title="">
+											<div class="indic-gris">Facultatif</div>
+										</div>
+									</div>
 			  					</div><div class="part-details">
 			  						<div class="fond-part-details"></div>
 			  						<div class="detail-cycle">
-			  							Quantité ajustable à la livraison<br />
-			  							<a class="btn btn-link btn-plus has-modal" href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Lorem ipsum"><span class="txt-btn">En savoir</span><span class="ic-plus"></span></a>
+			  							Ces informations nous serviront à vous envoyer votre <strong>récapitulatif de commande</strong> et à prendre rendez-vous par téléphone pour <strong>organiser la livraison.</strong>
 			  						</div>
 			  						<div class="detail-cycle">
-			  							Fioul de qualité<br />
-			  							<a class="btn btn-link btn-plus has-tooltip" href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Lorem ipsum"><span class="txt-btn">En savoir</span><span class="ic-plus"></span></a>
+			  							Si vous avez déjà un compte FioulReduc, pour éviter de remplir à nouveau ce formulaire,<br />
+			  							<a class="btn btn-link" href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Lorem ipsum"><span class="txt-btn">Connectez-vous</span></a>
 			  						</div>
 			  					</div>
 			  				</div>
@@ -251,169 +198,186 @@
 			  					<div class="part-form">
 			  						<div class="titre-part-form">
 			  							<div class="picto-livraison"></div>
-			  							<h2>Quelle est l’urgence de votre livraison ?</h2>
+			  							<h2>Votre adresse de livraison</h2>
 			  						</div>
 									<div class="control-group">
-										<label class="control-label" for="radios">Délai de livraison:</label>
+									  <label class="control-label no-padding" for="order-adresse-livraison">Adresse de livraison:</label>
+									  <div class="controls">                     
+									    <textarea id="order-adresse-livraison" name="order-adresse-livraison" class="small-height taille5"></textarea>
+									  </div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="order-code-postal-livraison">Code postal:</label>
 										<div class="controls">
-											<label class="radio radio-block first margin-bottom active has-tooltip-livraison" for="radio-economique" data-toggle="tooltip" data-placement="bottom" data-original-title="- 100€">
-												<input type="radio" name="radio-livraison" id="radio-economique" value="Economique" checked="checked">
-												Économique – sous 5 jours<br />
-												<ul class="jours">
-													<div class="curseur-duree"><span class="indic-top">Au plus tard le <strong>10 juillet</strong></span></div>
-													<li class="jour"><div class="mois">juil.</div><div class="jour-inte">4</div></li><li class="jour inactive"><div class="mois">juil.</div><div class="jour-inte">5</div></li><li class="jour inactive"><div class="mois">juil.</div><div class="jour-inte">6</div></li><li class="jour"><div class="mois">juil.</div><div class="jour-inte">7</div></li><li class="jour"><div class="mois">juil.</div><div class="jour-inte">8</div></li><li class="jour"><div class="mois">juil.</div><div class="jour-inte">9</div></li><li class="jour"><div class="mois">juil.</div><div class="jour-inte">10</div></li><li class="jour"><div class="mois">juil.</div><div class="jour-inte">11</div></li>
-												</ul>
-											</label>
-											<label class="radio radio-block first margin-bottom has-tooltip-livraison" for="radio-standard" data-toggle="tooltip" data-placement="bottom" data-original-title="+ 100€">
-												<input type="radio" name="radio-livraison" id="radio-standard" value="Standard">
-												Standard – sous 3 jours<br />
-												<ul class="jours">
-													<div class="curseur-duree"><span class="indic-right">Au plus tard le <strong>8 juillet</strong></span></div>
-													<li class="jour"><div class="mois">juil.</div><div class="jour-inte">4</div></li><li class="jour inactive"><div class="mois">juil.</div><div class="jour-inte">5</div></li><li class="jour inactive"><div class="mois">juil.</div><div class="jour-inte">6</div></li><li class="jour"><div class="mois">juil.</div><div class="jour-inte">7</div></li><li class="jour"><div class="mois">juil.</div><div class="jour-inte">8</div></li>
-												</ul>
-											</label>
-											<label class="radio radio-block first has-tooltip-livraison" for="radio-express" data-toggle="tooltip" data-placement="bottom" data-original-title="+ 200€">
-												<input type="radio" name="radio-livraison" id="radio-express" value="Express">
-												Express – sous 24 heures<br />
-												<ul class="jours">
-													<div class="curseur-duree"><span class="indic-right">Au plus tard le <strong>4 juillet</strong></span></div>
-													<li class="jour"><div class="mois">juil.</div><div class="jour-inte">4</div></li>
-												</ul>
-											</label>
+											<input id="order-code-postal-livraison" name="order-code-postal-livraison" class="taille1" type="text" value="" title="">
 										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="order-ville-livraison">Ville:</label>
+										<div class="controls">
+											<select id="order-ville-livraison" name="order-ville-livraison" class="taille2" title="">
+												<option value="Bournand">Bournand</option>
+												<option value="Lorem Ipsum">Lorem Ipsum</option>
+											</select>
+										</div>
+									</div>
+									<div class="control-group facultatif has-detail-relie" id="precisions-livraison">
+									  <label class="control-label no-padding" for="order-adresse-livraison">Précisions sur la livraison:</label>
+									  <div class="controls">                     
+									    <textarea id="order-adresse-livraison" name="order-adresse-livraison" class="big-height taille-full"></textarea>
+									    <div class="indic-gris">Facultatif</div>
+									  </div>
 									</div>
 			  					</div><div class="part-details">
 			  						<div class="fond-part-details"></div>
-									<div class="detail-cycle">
-										Votre distributeur vous appelle pour convenir d’un créneau de livraison qui vous convient<br />
-										<a class="btn btn-link btn-plus has-tooltip" href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Lorem ipsum"><span class="txt-btn">En savoir</span><span class="ic-plus"></span></a>
-									</div>
-									<div class="detail-cycle">
-										Vous serez livré depuis <a target="_blank" href="https://www.google.com/maps/place/Poitiers/" class="ville">Poitiers</a>
-										<div class="map-livraison">
-											<a target="_blank" href="https://www.google.com/maps/place/Poitiers/"><img src="http://maps.googleapis.com/maps/api/staticmap?center=46.632608, -1.152499&zoom=6&scale=false&size=180x164&maptype=roadmap&sensor=false&format=png&visual_refresh=true&markers=size:mid%7Ccolor:red%7Clabel:%7CPoitiers&markers=size:mid%7Ccolor:gray%7Clabel:%7CNantes" alt="Google Map of Poitiers"></a>
-										</div>
+									<div class="detail-cycle detail-relie" id="detail-precisions-livraison">
+										Indiquez ici les informations utiles pour <strong>aider le livreur à organiser la livraison.</strong><br /> Vous pourrez compléter ces informations lorsque le chauffeur vous appellera pour prendre rendez-vous.
 									</div>
 			  					</div>
 			  				</div>
 			  				<div class="bloc-blanc-ombre bloc-full">
 			  					<div class="part-form">
 			  						<div class="titre-part-form">
-			  							<div class="picto-reglement"></div>
-			  							<h2>Comment souhaitez-vous la régler ?</h2>
+			  							<div class="picto-adresse"></div>
+			  							<h2>Votre adresse de facturation</h2>
 			  						</div>
-									<div class="control-group">
-										<label class="control-label" for="">Paiement:</label>
-										<div class="controls">
-											<label class="radio radio-block first margin-bottom active" for="radio-commande">
-											  <input type="radio" name="radio-paiement" id="radio-commande" class="has-detail radio-paiement" value="Commande" checked="checked">
-											  À la commande – en une ou plusieurs fois par CB :<br />
-												<select id="select-paiement-custom" class="select-customisable" name="select-paiement">
-													<option>En 1x</option>
-													<option>En 3x</option>
-													<option>En 5x</option>
-													<option>En 7x</option>
-													<option>En 10x</option>
-												</select>
-												<ul id="select-paiement" class="select-customise">
-													<li class="selected has-detail has-tooltip-commande" id="select-paiement-1x" data-toggle="tooltip" data-placement="bottom" data-original-title="">
-														<div class="content-input-select-custom">
-															<a class="clearfix" href="#">
-																<div class="icon-checked"></div>
-																en 
-																<span class="nb-fois">1<span>x</span></span>
-															</a>
-														</div>
-													</li><li class="has-detail has-tooltip-commande" id="select-paiement-3x" data-toggle="tooltip" data-placement="bottom" data-original-title="+ 10€">
-														<div class="content-input-select-custom">
-															<a class="clearfix" href="#">
-																<div class="icon-checked"></div>
-																en 
-																<span class="nb-fois">3<span>x</span></span>
-															</a>
-														</div>
-													</li><li class="has-detail has-tooltip-commande" data-toggle="tooltip" id="select-paiement-5x" data-placement="bottom" data-original-title="+ 15€">
-														<div class="content-input-select-custom">
-															<a class="clearfix" href="#">
-																<div class="icon-checked"></div>
-																en 
-																<div class="nb-fois">5<span>x</span></div>
-															</a>
-														</div>
-													</li><li class="has-detail has-tooltip-commande" data-toggle="tooltip" id="select-paiement-7x" data-placement="bottom" data-original-title="+ 20€">
-														<div class="content-input-select-custom">
-															<a class="clearfix" href="#">
-																<div class="icon-checked"></div>
-																en 
-																<span class="nb-fois">7<span>x</span></span>
-															</a>
-														</div>
-													</li><li class="has-detail has-tooltip-commande" data-toggle="tooltip" id="select-paiement-10x" data-placement="bottom" data-original-title="+ 25€">
-														<div class="content-input-select-custom">
-															<a class="clearfix" href="#">
-																<div class="icon-checked"></div>
-																en 
-																<span class="nb-fois decal">10<span>x</span></span>
-															</a>
-														</div>
-													</li>
-												</ul>
-											</label>
-											<label class="radio radio-block first" for="radio-a-la-livraison">
-											  <input class="has-detail" type="radio" name="radio-paiement" id="radio-a-la-livraison" value="Livraison">
-											  À la livraison – par chèque, cb ou espèces
-											</label>
-										</div>
-									</div>
-			  					</div><div class="part-details">
-			  						<div class="fond-part-details"></div>
-			  						<div class="detail-cycle optionnel active detail-radio-commande detail-select-paiement-1x detail-select-paiement-3x detail-select-paiement-5x detail-select-paiement-7x detail-select-paiement-10x">
-			  							Paiement sécurisé<br />
-			  							<ul class="liste-detail-cycle">
-			  								<li><span class="ic-cadenas"></span></li>
-			  								<li><img src="layoutImg/ticket/mastercard.png" alt="MasterCard" /></li>
-			  								<li><img src="layoutImg/ticket/visa.png" alt="Visa" /></li>
-			  							</ul>
+			  						<div class="control-group">
+			  						  <div class="controls small-margin">
+			  						    <label class="checkbox" for="order-checkbox-adresse-livraison">
+			  						      <input type="checkbox" name="checkboxes" id="order-checkbox-adresse-livraison" value="Adresse differente" checked="checked">
+			  						      Mon adresse de facturation est différente de mon adresse de livraison
+			  						    </label>
+			  						  </div>
 			  						</div>
-			  						<div class="detail-cycle optionnel active detail-radio-commande detail-select-paiement-1x">
-			  							Transaction assurée par<br />
-			  							<ul class="liste-detail-cycle">
-			  								<li><img src="layoutImg/ticket/cic.png" alt="CIC" /></li>
-			  								<li><img src="layoutImg/ticket/hipay.png" alt="hipay" /></li>
-			  							</ul>
-			  						</div>
-			  						<div class="detail-cycle optionnel detail-select-paiement-3x">
-			  							Votre échéancier :<br />
-			  							<div class="echeancier">
-			  								<div class="echeances">
-			  									<div class="echeance clearfix"><div class="pointilles"></div><div class="echeancier-date pull-left">10/07/14</div><div class="echeancier-prix pull-right">356,05&nbsp;€</div></div>
-			  									<div class="indic-echeance">(dont <strong>25,08€</strong> de frais de gestion)</div>
-			  									<div class="echeance clearfix"><div class="pointilles"></div><div class="echeancier-date pull-left">10/08/14</div><div class="echeancier-prix pull-right">336,05&nbsp;€</div></div>
-			  									<div class="echeance clearfix"><div class="pointilles"></div><div class="echeancier-date pull-left">10/09/14</div><div class="echeancier-prix pull-right">336,05&nbsp;€</div></div>
-			  								</div>
-			  								<div class="total clearfix"><div class="echeancier-total pull-left">Total</div><div class="echeancier-total-prix pull-right">1028,15 €</div></div>
-			  								<div class="assurance"><div class="assurance-txt">assuré par : </div><div class="assurance-logo"><img src="layoutImg/ticket/cofinoga.png" alt="Cofinoga" /></div></div>
-			  								<a class="btn btn-link" href="#">Mentions légales</a>
+			  						<div class="control-group">
+			  							<label class="control-label" for="">Civilité:</label>
+			  							<div class="controls">
+			  								<label class="radio inline radio-block first active" for="radio-facturation-monsieur">
+			  							      <input type="radio" name="radio-facturation-civilite" id="radio-facturation-monsieur" value="monsieur" checked="checked">
+			  							      Monsieur
+			  							    </label>
+			  							    <label class="radio radio-block inline" for="radio-facturation-madame">
+			  							      <input type="radio" name="radio-facturation-civilite" id="radio-facturation-madame" value="madame">
+			  							      Madame
+			  							    </label>
 			  							</div>
 			  						</div>
-			  						<div class="detail-cycle optionnel detail-radio-a-la-livraison">
-			  							<strong>Paiement comptant au livreur</strong> selon le mode de votre choix :<br />
-			  							<ul class="liste-puces">
-			  								<li>chèque</li>
-			  								<li>carte bancaire</li>
-			  								<li>espèces</li>
-			  							</ul>
+			  						<div class="control-group">
+			  							<label class="control-label" for="facturation-prenom">Prénom:</label>
+			  							<div class="controls">
+			  								<input id="facturation-prenom" name="facturation-prenom" class="taille4" type="text" value="" title="">
+			  							</div>
+			  						</div>
+			  						<div class="control-group">
+			  							<label class="control-label" for="facturation-nom">Nom:</label>
+			  							<div class="controls">
+			  								<input id="facturation-nom" name="facturation-nom" class="taille4" type="text" value="" title="">
+			  							</div>
+			  						</div>
+			  						<div class="control-group facultatif">
+			  							<label class="control-label" for="facturation-societe">Société:</label>
+			  							<div class="controls">
+			  								<input id="facturation-societe" name="facturation-societe" class="taille5" type="text" value="" title="">
+			  								<div class="indic-gris">Facultatif</div>
+			  							</div>
+			  						</div>
+			  						<div class="control-group">
+			  							<label class="control-label" for="facturation-tel1">Téléphone 1:</label>
+			  							<div class="controls">
+			  								<input id="facturation-tel1" name="facturation-tel1" class="taille3" type="text" value="" title="">
+			  							</div>
+			  						</div>
+			  						<div class="control-group facultatif">
+			  							<label class="control-label" for="facturation-tel2">Téléphone 2:</label>
+			  							<div class="controls">
+			  								<input id="facturation-tel2" name="facturation-tel2" class="taille3" type="text" value="" title="">
+			  								<div class="indic-gris">Facultatif</div>
+			  							</div>
+			  						</div>
+			  						<div class="control-group">
+			  						  <label class="control-label no-padding" for="facturation-adresse-livraison">Adresse de livraison:</label>
+			  						  <div class="controls">                     
+			  						    <textarea id="facturation-adresse-livraison" name="facturation-adresse-livraison" class="small-height taille5"></textarea>
+			  						  </div>
+			  						</div>
+			  						<div class="control-group">
+			  							<label class="control-label" for="facturation-code-postal-livraison">Code postal:</label>
+			  							<div class="controls">
+			  								<input id="facturation-code-postal-livraison" name="facturation-code-postal-livraison" class="taille1" type="text" value="" title="">
+			  							</div>
+			  						</div>
+			  						<div class="control-group">
+			  							<label class="control-label" for="facturation-ville-livraison">Ville:</label>
+			  							<div class="controls">
+			  								<select id="facturation-ville-livraison" name="facturation-ville-livraison" class="taille2" title="">
+			  									<option value="Bournand">Bournand</option>
+			  									<option value="Lorem Ipsum">Lorem Ipsum</option>
+			  								</select>
+			  							</div>
+			  						</div>
+			  					</div>
+			  				</div>
+			  				<div class="bloc-blanc-ombre bloc-full">
+			  					<div class="part-form">
+			  						<div class="titre-part-form">
+			  							<div class="picto-dispo"></div>
+			  							<h2>Vos disponibilités pour la livraison</h2>
+			  						</div>
+			  						<div class="control-group">
+			  						  <div class="controls small-margin">
+			  						    <label class="checkbox" for="order-checkbox-disponibilites-livraison">
+			  						      <input type="checkbox" name="checkboxes" id="order-checkbox-disponibilites-livraison" value="Disponibilites" checked="checked">
+			  						      Je souhaite indiquer mes disponibilités au distributeur
+			  						    </label>
+			  						  </div>
+			  						</div>
+			  						<table class="table-livraison">
+										<tr>
+											<th class="table-1"></th>
+											<th><div class="jour-table"><div class="mois">juil.</div><div class="jour-inte">4</div></div></th>
+											<th><div class="jour-table inactive"><div class="mois">juil.</div><div class="jour-inte">5</div></div></th> 
+											<th><div class="jour-table inactive"><div class="mois">juil.</div><div class="jour-inte">6</div></div></th>
+											<th><div class="jour-table"><div class="mois">juil.</div><div class="jour-inte">7</div></div></th>
+											<th><div class="jour-table"><div class="mois">juil.</div><div class="jour-inte">8</div></div></th> 
+											<th><div class="jour-table"><div class="mois">juil.</div><div class="jour-inte">9</div></div></th>
+											<th><div class="jour-table"><div class="mois">juil.</div><div class="jour-inte">10</div></div></th> 
+										</tr>
+										<tr>
+											<td class="table-1">Matin: </td>
+											<td class="table-2"><input type="checkbox" name="" value=""></td>
+											<td class="table-2 inactive"><input type="checkbox" name="" value=""></td>
+											<td class="table-2 inactive"><input type="checkbox" name="" value=""></td>
+											<td class="table-2"><input type="checkbox" name="" value=""></td>
+											<td class="table-2"><input type="checkbox" name="" value=""></td>
+											<td class="table-2"><input type="checkbox" name="" value=""></td>
+											<td class="table-2"><input type="checkbox" name="" value=""></td>
+										</tr>
+										<tr>
+											<td class="table-1">Après-midi: </td>
+											<td class="table-2"><input type="checkbox" name="" value=""></td>
+											<td class="table-2 inactive"><input type="checkbox" name="" value=""></td>
+											<td class="table-2 inactive"><input type="checkbox" name="" value=""></td>
+											<td class="table-2"><input type="checkbox" name="" value=""></td>
+											<td class="table-2"><input type="checkbox" name="" value=""></td>
+											<td class="table-2"><input type="checkbox" name="" value=""></td>
+											<td class="table-2"><input type="checkbox" name="" value=""></td>
+										</tr>
+			  						</table>
+			  					</div><div class="part-details">
+			  						<div class="fond-part-details"></div>
+			  						<div class="detail-cycle">
+			  							<strong>Veuillez cocher à titre indicatif au moins 3 créneaux où vous êtes disponible</strong> pour faciliter l’organisation de la livraison. Attention, la disponibilité du distributeur à l’un de ces créneaux <strong>n’est pas garantie.</strong>
+			  						</div>
+			  						<div class="detail-cycle">
+			  							Vous validerez votre créneau de livraison définitif <strong>par téléphone</strong> après votre commande.
 			  						</div>
 			  					</div>
 			  				</div>
 			  				<div class="bloc-btn-cycle">
 				  				<div class="controls">
-				  					<a class="btn btn-link btn-plus left" id="btn-code-reduction" href="#"><span class="ic-plus"></span><span class="txt-btn">Cliquez ici si vous avez un code de réduction</span></a><br />
-				  					<div id="code-reduction">
-					  					<a href="#" class="btn btn-link btn-moins left" id="btn-code-reduction-retour"><span class="ic-moins"></span></a> <span class="txt-code-reduction">Code de réduction:</span> 
-					  					<input type="text" class="input-medium input-inline-form"><button type="submit" class="btn-inline-form">OK</button><br />
-				  					</div>
-				  					<button type="submit" class="btn btn-form">Continuer<span class="ic-fleche-rond"></span></button>
+				  					<button type="submit" class="btn btn-form">Récapitulatif<span class="ic-fleche-rond"></span></button>
+				  					<br /><br />
+				  					<a class="btn btn-link btn-fleche no-margin" href="#"><span class="ic-arrow-left"></span>Retour au devis</a>
 				  				</div>
 			  				</div>
 		  				</form>
