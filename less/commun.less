@@ -2390,6 +2390,17 @@ ul#menu-top-bar{
 }
 
 @media (max-width: 1150px) {
+	form{
+		&.form-horizontal{
+			.controls{
+				input[type=number], [type=text], [type=text], [type=password], [type=email], select, textarea{
+					&.taille5{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
 	.alert{
 		&.alert-top{
 			.alert-content{
@@ -2707,6 +2718,17 @@ ul#menu-top-bar{
 }
 
 @media (max-width: 979px) {
+	form{
+		&.form-horizontal{
+			.controls{
+				input[type=number], [type=text], [type=text], [type=password], [type=email], select, textarea{
+					&.taille5{
+						width: 90%;
+					}
+				}
+			}
+		}
+	}
 	.btn{
 		&.btn-form{
 			padding: 20px 40px 16px 40px;
@@ -2784,6 +2806,18 @@ ul#menu-top-bar{
 }
 
 @media (max-width: 767px) {
+	form{
+		&.form-horizontal{
+			.controls{
+				input[type=number], [type=text], [type=text], [type=password], [type=email], select, textarea{
+					&.taille5{
+						width: 280px;
+					}
+				}
+			}
+		}
+	}
+
 	body {
 		padding-right: 0;
 		padding-left: 0;

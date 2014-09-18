@@ -5246,6 +5246,15 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   }
 }
 @media (max-width: 1150px) {
+  form.form-horizontal .controls input[type=number].taille5,
+  form.form-horizontal .controls [type=text].taille5,
+  form.form-horizontal .controls [type=text].taille5,
+  form.form-horizontal .controls [type=password].taille5,
+  form.form-horizontal .controls [type=email].taille5,
+  form.form-horizontal .controls select.taille5,
+  form.form-horizontal .controls textarea.taille5 {
+    width: 100%;
+  }
   .alert.alert-top .alert-content .container {
     margin: 0 auto 0 auto;
   }
@@ -5569,6 +5578,15 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   }
 }
 @media (max-width: 979px) {
+  form.form-horizontal .controls input[type=number].taille5,
+  form.form-horizontal .controls [type=text].taille5,
+  form.form-horizontal .controls [type=text].taille5,
+  form.form-horizontal .controls [type=password].taille5,
+  form.form-horizontal .controls [type=email].taille5,
+  form.form-horizontal .controls select.taille5,
+  form.form-horizontal .controls textarea.taille5 {
+    width: 90%;
+  }
   .btn.btn-form {
     padding: 20px 40px 16px 40px;
   }
@@ -5642,6 +5660,15 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   /* @end */
 }
 @media (max-width: 767px) {
+  form.form-horizontal .controls input[type=number].taille5,
+  form.form-horizontal .controls [type=text].taille5,
+  form.form-horizontal .controls [type=text].taille5,
+  form.form-horizontal .controls [type=password].taille5,
+  form.form-horizontal .controls [type=email].taille5,
+  form.form-horizontal .controls select.taille5,
+  form.form-horizontal .controls textarea.taille5 {
+    width: 280px;
+  }
   body {
     padding-right: 0;
     padding-left: 0;
