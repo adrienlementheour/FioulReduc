@@ -1037,6 +1037,24 @@ ul.select-customise{
 .radio.inline, .checkbox.inline {
 	vertical-align: top;
 }
+.taille1{
+	width: 100px;
+}
+.taille2{
+	width: 210px;
+}
+.taille3{
+	width: 150px;
+}
+.taille4{
+	width: 180px;
+}
+.taille5{
+	width: 280px;
+}
+.taille-full{
+	width: 100%;
+}
 ul#select-paiement{
 	width: 100%;
 	height: auto;
@@ -1225,6 +1243,9 @@ form{
 				color: #cccdd3;
 				margin: 3px 0 0 0;
 			}
+			.indic-form-lien{
+				margin: 3px 0 0 0;
+			}
 			input[type=number], [type=text], [type=text], [type=password], [type=email], select, textarea{
 				border: 2px solid #cccdd3;
 				.lh-box-sizing(border-box);
@@ -1234,24 +1255,6 @@ form{
 				position: relative;
 				#bloc-commande &{
 					height: 40px;
-				}
-				&.taille1{
-					width: 100px;
-				}
-				&.taille2{
-					width: 210px;
-				}
-				&.taille3{
-					width: 150px;
-				}
-				&.taille4{
-					width: 180px;
-				}
-				&.taille5{
-					width: 280px;
-				}
-				&.taille-full{
-					width: 100%;
 				}
 				&.small-height{
 					min-height: 50px;
@@ -2395,16 +2398,8 @@ ul#menu-top-bar{
 }
 
 @media (max-width: 1150px) {
-	form{
-		&.form-horizontal{
-			.controls{
-				input[type=number], [type=text], [type=text], [type=password], [type=email], select, textarea{
-					&.taille5{
-						width: 100%;
-					}
-				}
-			}
-		}
+	.taille5{
+		width: 100%;
 	}
 	.alert{
 		&.alert-top{
@@ -2723,21 +2718,8 @@ ul#menu-top-bar{
 }
 
 @media (max-width: 979px) {
-	form{
-		&.form-horizontal{
-			.controls{
-				input[type=number], [type=text], [type=text], [type=password], [type=email], select, textarea{
-					&.taille5{
-						width: 90%;
-					}
-				}
-			}
-		}
-	}
-	.btn{
-		&.btn-form{
-			padding: 20px 40px 16px 40px;
-		}
+	.taille5{
+		width: 90%;
 	}
 
 	/* @group responsive Home */
@@ -2811,16 +2793,8 @@ ul#menu-top-bar{
 }
 
 @media (max-width: 767px) {
-	form{
-		&.form-horizontal{
-			.controls{
-				input[type=number], [type=text], [type=text], [type=password], [type=email], select, textarea{
-					&.taille5{
-						width: 280px;
-					}
-				}
-			}
-		}
+	.taille5{
+		width: 280px;
 	}
 
 	body {

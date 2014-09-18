@@ -487,6 +487,7 @@ $(document).ready(function(){
 	animer(myScroll);
 	tooltip();
 	modal();
+	afficherMotDePasse();
 	
 	$("a#bouton-menu-responsive").click(function(){
 		ouvertureFermetureMenuResponsive();
@@ -583,7 +584,6 @@ $(document).ready(function(){
 		details();
 		customSelect();
 		overflowCuvesTicket();
-		afficherMotDePasse();
 		$("label.radio").click(function(){
 			if (!$(this).hasClass("active")) {
 				$(".active", $(this).closest(".controls")).removeClass("active");
