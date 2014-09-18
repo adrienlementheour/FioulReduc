@@ -3764,6 +3764,9 @@ form.form-horizontal label.control-label {
 form.form-horizontal label.control-label.no-padding {
   padding: 0;
 }
+form.form-horizontal label.inline.margin-left {
+  margin-left: 15px;
+}
 form.form-horizontal .suite-label {
   margin: 0 0 0 8px;
 }

@@ -271,6 +271,17 @@ function overflowCuvesTicket(){
 	});
 }
 
+function afficherMotDePasse(){
+	$(".afficher-mdp").click(function(){
+		var idInputMdp = $(this).attr("id").replace("afficher-","");
+        if ($(this).is(":checked")){
+			$("#"+idInputMdp).attr("type", "text");
+        }else{
+			$("#"+idInputMdp).attr("type", "password");
+        }
+    });
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////
 ////// FONCTION POUR GERER LA POSITION D'UN DETAIL RELIÉ À UN ELEMENT DE FORMULAIRE /////
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -572,6 +583,7 @@ $(document).ready(function(){
 		details();
 		customSelect();
 		overflowCuvesTicket();
+		afficherMotDePasse();
 		$("label.radio").click(function(){
 			if (!$(this).hasClass("active")) {
 				$(".active", $(this).closest(".controls")).removeClass("active");
