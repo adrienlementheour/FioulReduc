@@ -158,10 +158,11 @@
 											<input id="order-nom" name="order-nom" class="taille4" type="text" value="" title="">
 										</div>
 									</div>
-									<div class="control-group">
+									<div class="control-group facultatif">
 										<label class="control-label" for="order-societe">Société:</label>
 										<div class="controls">
 											<input id="order-societe" name="order-societe" class="taille5" type="text" value="" title="">
+											<div class="indic-facultatif">Facultatif</div>
 										</div>
 									</div>
 									<div class="control-group">
@@ -170,10 +171,11 @@
 											<input id="order-tel1" name="order-tel1" class="taille3" type="text" value="" title="">
 										</div>
 									</div>
-									<div class="control-group">
+									<div class="control-group facultatif">
 										<label class="control-label" for="order-tel2">Téléphone 2:</label>
 										<div class="controls">
 											<input id="order-tel2" name="order-tel2" class="taille3" type="text" value="" title="">
+											<div class="indic-facultatif">Facultatif</div>
 										</div>
 									</div>
 			  					</div><div class="part-details">
@@ -194,9 +196,9 @@
 			  							<h2>Votre adresse de livraison</h2>
 			  						</div>
 									<div class="control-group">
-									  <label class="control-label" for="order-adresse-livraison">Adresse de livraison:</label>
+									  <label class="control-label no-padding" for="order-adresse-livraison">Adresse de livraison:</label>
 									  <div class="controls">                     
-									    <textarea id="order-adresse-livraison" name="order-adresse-livraison" class="taille5"></textarea>
+									    <textarea id="order-adresse-livraison" name="order-adresse-livraison" class="small-height taille5"></textarea>
 									  </div>
 									</div>
 									<div class="control-group">
@@ -214,15 +216,16 @@
 											</select>
 										</div>
 									</div>
-									<div class="control-group">
-									  <label class="control-label" for="order-adresse-livraison">Précisions sur la livraison:</label>
+									<div class="control-group facultatif has-detail-relie" id="precisions-livraison">
+									  <label class="control-label no-padding" for="order-adresse-livraison">Précisions sur la livraison:</label>
 									  <div class="controls">                     
-									    <textarea id="order-adresse-livraison" name="order-adresse-livraison"></textarea>
+									    <textarea id="order-adresse-livraison" name="order-adresse-livraison" class="big-height taille-full"></textarea>
+									    <div class="indic-facultatif">Facultatif</div>
 									  </div>
 									</div>
 			  					</div><div class="part-details">
 			  						<div class="fond-part-details"></div>
-									<div class="detail-cycle">
+									<div class="detail-cycle detail-relie" id="detail-precisions-livraison">
 										Indiquez ici les informations utiles pour <strong>aider le livreur à organiser la livraison.</strong><br /> Vous pourrez compléter ces informations lorsque le chauffeur vous appellera pour prendre rendez-vous.
 									</div>
 			  					</div>
@@ -234,7 +237,7 @@
 			  							<h2>Votre adresse de facturation</h2>
 			  						</div>
 			  						<div class="control-group">
-			  						  <div class="controls">
+			  						  <div class="controls small-margin">
 			  						    <label class="checkbox" for="order-checkbox-adresse-livraison">
 			  						      <input type="checkbox" name="checkboxes" id="order-checkbox-adresse-livraison" value="Adresse differente">
 			  						      Mon adresse de facturation est différente de mon adresse de livraison
@@ -249,13 +252,21 @@
 			  							<div class="picto-dispo"></div>
 			  							<h2>Vos disponibilités pour la livraison</h2>
 			  						</div>
+			  						<div class="control-group">
+			  						  <div class="controls small-margin">
+			  						    <label class="checkbox" for="order-checkbox-disponibilites-livraison">
+			  						      <input type="checkbox" name="checkboxes" id="order-checkbox-disponibilites-livraison" value="Disponibilites">
+			  						      Je souhaite indiquer mes disponibilités au distributeur
+			  						    </label>
+			  						  </div>
+			  						</div>
 			  					</div>
 			  				</div>
 			  				<div class="bloc-btn-cycle">
 				  				<div class="controls">
 				  					<button type="submit" class="btn btn-form">Récapitulatif<span class="ic-fleche-rond"></span></button>
 				  					<br /><br />
-				  					<a class="btn btn-link" id="btn-code-reduction" href="#">&lt; <span class="txt-btn">Retour au devis</span></a>
+				  					<a class="btn btn-link btn-fleche no-margin" href="#"><span class="ic-arrow-left"></span>Retour au devis</a>
 				  				</div>
 			  				</div>
 		  				</form>

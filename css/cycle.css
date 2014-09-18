@@ -201,7 +201,7 @@
   padding: 40px 268px 40px 45px;
   display: table-cell;
   vertical-align: top;
-  width: 73%;
+  width: 72%;
   padding: 40px 45px 40px 45px;
 }
 .bloc-formulaire .part-form p {
@@ -289,7 +289,7 @@
   padding: 70px 20px;
   display: table-cell;
   vertical-align: top;
-  width: 27%;
+  width: 28%;
   position: relative;
   min-height: 100%;
   height: auto !important;
@@ -327,6 +327,13 @@
 }
 .detail-cycle.optionnel.active {
   display: block;
+}
+.detail-cycle.detail-relie {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  right: 20px;
+  width: auto;
 }
 .detail-cycle strong {
   font-family: 'lato-bold-italic', sans-serif;

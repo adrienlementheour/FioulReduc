@@ -527,6 +527,17 @@ ul.liste-puces{
 				font-size: 0.8em;
 				line-height: 1.1em;
 			}
+			.ic-arrow-left{
+				display: block;
+				position: absolute;
+				top: 5px;
+				left: -12px;
+				font-size: 0.8em;
+				line-height: 1.1em;
+			}
+			&.no-margin{
+				margin: 0;
+			}
 			
 		}
 		&.btn-moins{
@@ -1170,21 +1181,44 @@ form{
 				height: 36px;
 				margin: 0;
 				padding: 10px 0 0 0;
+				line-height: 1.1em;
 				#bloc-commande &{
 					height: 40px;
+				}
+				&.no-padding{
+					padding: 0;
 				}
 			}
 		}
 		.suite-label{
 			margin: 0 0 0 8px;
 		}
-		.control-group.error input, .control-group.error select, .control-group.error textarea {
-			.lh-box-shadow(inset 0 0 0 1px @rougeErreur);
-			background: #faf2eb;
+		.control-group{
+			&.error{
+				input, select, textarea{
+					.lh-box-shadow(inset 0 0 0 1px @rougeErreur);
+					background: #faf2eb;
+				}
+			}
+			&.facultatif{
+				label{
+					&.control-label{
+						.lato-light-italic(1em);
+					}
+				}
+			}
 		}
 		.controls{
 			margin: 0 0 0 140px;
 			position: relative;
+			&.small-margin{
+				margin: 0 0 0 75px;
+			}
+			.indic-facultatif{
+				.lato(0.813em);
+				color: #cccdd3;
+				margin: 3px 0 0 0;
+			}
 			input[type=number], [type=text], [type=text], [type=password], [type=email], select, textarea{
 				border: 2px solid #cccdd3;
 				.lh-box-sizing(border-box);
@@ -1209,6 +1243,15 @@ form{
 				}
 				&.taille5{
 					width: 280px;
+				}
+				&.taille-full{
+					width: 100%;
+				}
+				&.small-height{
+					min-height: 50px;
+				}
+				&.big-height{
+					min-height: 125px;
 				}
 				&.input-inline-form{
 					.lh-border-top-right-radius(0);

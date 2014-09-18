@@ -271,6 +271,24 @@ function overflowCuvesTicket(){
 	});
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////
+////// FONCTION POUR GERER LA POSITION D'UN DETAIL RELIÉ À UN ELEMENT DE FORMULAIRE /////
+//////////////////////////////////////////////////////////////////////////////////////////
+function detailRelie(){
+	if($(".has-detail-relie").length){
+		$(".has-detail-relie").each(function(index) {
+			var idDetailRelie = $(this).attr("id");
+			var detailRelie = $("#detail-"+idDetailRelie);
+			if($(window).width()>1200){
+				var positionTopElemForm = $(this).position().top-10;
+			}else{
+				var positionTopElemForm = $(this).position().top-40;
+			}
+			TweenMax.set(detailRelie, {top: positionTopElemForm+"px"});
+		});
+	}
+}
+
 ///////////////////////////////////////////////////////
 /////////// FONCTION POUR ANIMER LE COMPTEUR //////////
 ///////////////////////////////////////////////////////
@@ -414,6 +432,7 @@ function animer(myScroll){
 	}
 	
 	positionTicketScroll(myScroll);
+	detailRelie();
 	
 	requestAnimFrame(function(){
 		myScroll = $(document).scrollTop();
