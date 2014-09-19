@@ -65,6 +65,9 @@
 					.num-etape{
 						background: @bleuFioulReduc url('../layoutImg/check-nu.png') no-repeat center center;
 					}
+					&:before{
+						background-color: @bleuFioulReduc;
+					}
 					&:after{
 						background-color: @bleuFioulReduc;
 					}
@@ -100,12 +103,13 @@
 					position: relative;
 					a{
 						display: block;
+						position: relative;
 						width: 100%;
 						height: 100%;
 						background-color: @blanc;
 						color: @bleuFioulReduc;
 						.lh-box-sizing(border-box);
-						padding: 12px;
+						padding: 12px 0;
 						.lh-box-shadow(~"0 2px 0 #cbcdd3");
 						.lh-border-radius(3px);
 						&:hover{
@@ -1188,11 +1192,23 @@ ul#cuves{
 	#bloc-etapes-cycle{
 		ul#etapes-cycle{
 			li.etape-cycle{
+				&.done{
+					.bloc-titre-etape{
+						.titre-etape{
+							overflow: visible;
+						}
+					}
+				}
 				.bloc-titre-etape{
 					.titre-etape{
 						-o-text-overflow: ellipsis;
 						text-overflow: ellipsis;
 						overflow: hidden;
+						a{
+							-o-text-overflow: ellipsis;
+							text-overflow: ellipsis;
+							overflow: hidden;
+						}
 					}
 				}
 			}

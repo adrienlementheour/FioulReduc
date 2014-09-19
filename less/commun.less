@@ -499,6 +499,7 @@ ul.liste-puces{
 		padding: 20px 70px 14px 70px;
 		.lato(1.125em);
 		letter-spacing: 1px;
+		margin: 25px 0 0 0;
 		.txt-btn-form{
 			display: inline-block;
 			vertical-align: top;
@@ -1306,6 +1307,64 @@ form{
 		}
 		.suite-label{
 			margin: 0 0 0 8px;
+		}
+		.col-form{
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			.lh-box-sizing(border-box);
+			margin: 30px 0;
+			&.left{
+				padding-right: 8px;
+			}
+			&.right{
+				padding-left: 8px;
+			}
+			.col-form-content{
+				background-color: #f8f9fa;
+				padding: 10px 30px;
+				ul.liste-recap{
+					display: block;
+					width: 100%;
+					height: auto;
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					li{
+						display: block;
+						width: 100%;
+						height: auto;
+						margin: 10px 0;
+						padding: 0;
+						.label-recap{
+							display: block;
+							width: 90px;
+							float: left;
+							text-align: right;
+							.lato-italic(1em);
+							color: @bleuFioulReduc;
+							padding: 8px 0 0 0;
+						}
+						.content-recap{
+							display: block;
+							margin: 0 0 0 110px;
+							.content-recap-txt{
+								.lato-bold(0.938em);
+								color: @bleuFonceFioulReduc;
+								background-color: @blanc;
+								display: inline-block;
+								padding: 8px 10px;
+								margin: 0 0 2px 0;
+								.lh-border-radius(3px);
+								.indic-recap{
+									color: #9ca1b1;
+									.lato(1em);
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		.control-group{
 			&.error{
@@ -2488,6 +2547,18 @@ ul#menu-top-bar{
 }
 
 @media (max-width: 1150px) {
+	form.form-horizontal{
+		.col-form{
+			display: block;
+			width: 100%;
+			&.left{
+				padding-right: 0;
+			}
+			&.right{
+				padding-left: 0;
+			}
+		}
+	}
 	.masque-table-livraison{
 		table.table-livraison{
 			.table-1{
@@ -3134,6 +3205,25 @@ ul#menu-top-bar{
 		}
 	}
 	form.form-horizontal{
+		.col-form{
+			display: block;
+			width: 100%;
+			.col-form-content{
+				ul.liste-recap{
+					li{
+						.label-recap{
+							float: none;
+							text-align: left;
+							width: 100%;
+							margin: 0 0 5px 0;
+						}
+						.content-recap {
+							margin: 0;
+						}
+					}
+				}
+			}
+		}
 		.controls {
 			margin: 0;
 		}
