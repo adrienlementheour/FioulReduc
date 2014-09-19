@@ -496,9 +496,14 @@ ul.liste-puces{
 
 .btn{
 	&.btn-form{
-		padding: 20px 70px 16px 70px;
+		padding: 20px 70px 14px 70px;
 		.lato(1.125em);
 		letter-spacing: 1px;
+		.txt-btn-form{
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 5px;
+		}
 	}
 	&.btn-link{
 		margin: 0;
@@ -1169,40 +1174,46 @@ ul#select-paiement{
 	}
 }
 
-table.table-livraison{
-	border-collapse: separate;
-	border-spacing: 4px;
-	.table-1{
-		width: 125px;
-		text-align: right;
-		.lato-italic(1em);
-		color: @bleuFonceFioulReduc;
-		padding: 0 10px 0 0;
-	}
-	.table-2{
-		width: 45px;
-		height: 45px;
-		border: 1px solid #f4f4f6;
-		.lh-border-radius(3px);
-		text-align: center;
-	}
-	td{
-		.lh-box-sizing(border-box);
-		&.inactive{
-			border: none;
-			input{
-				display: none;
+.masque-table-livraison{
+	display: block;
+	width: 100%;
+	overflow-x: scroll;
+	table.table-livraison{
+		border-collapse: separate;
+		border-spacing: 4px;
+		width: 100%;
+		.table-1{
+			width: 125px;
+			text-align: right;
+			.lato-italic(1em);
+			color: @bleuFonceFioulReduc;
+			padding: 0 10px 0 0;
+		}
+		.table-2{
+			width: 45px;
+			height: 45px;
+			border: 1px solid #f4f4f6;
+			.lh-border-radius(3px);
+			text-align: center;
+		}
+		td{
+			.lh-box-sizing(border-box);
+			&.inactive{
+				border: none;
+				input{
+					display: none;
+				}
+			}
+			&.active{
+				background-color: #f4f4f6;
 			}
 		}
-		&.active{
-			background-color: #f4f4f6;
+		th{
+			.lh-box-sizing(border-box);
 		}
-	}
-	th{
-		.lh-box-sizing(border-box);
-	}
-	input[type=checkbox]{
-		margin: 0;
+		input[type=checkbox]{
+			margin: 0;
+		}
 	}
 }
 
@@ -1210,6 +1221,7 @@ table.table-livraison{
 	display: block;
 	vertical-align: top;
 	width: 46px;
+	min-width: 35px;
 	height: auto;
 	text-align: center;
 	margin: 0;
@@ -1527,7 +1539,7 @@ form{
 				display: inline-block;
 				vertical-align: top;
 				position: relative;
-				width: 23px;
+				width: 33px;
 				height: 23px;
 				margin: 0 0 0 5px;
 				padding: 0;
@@ -2476,6 +2488,20 @@ ul#menu-top-bar{
 }
 
 @media (max-width: 1150px) {
+	.masque-table-livraison{
+		table.table-livraison{
+			.table-1{
+				width: 105px;
+			}
+			.table-2{
+				width: auto;
+			}
+		}
+		.jour-table{
+			width: auto;
+		}
+	}
+	
 	.taille5{
 		width: 100%;
 	}
@@ -2745,6 +2771,14 @@ ul#menu-top-bar{
 }
 
 @media (max-width: 1024px) {
+	.masque-table-livraison{
+		table.table-livraison{
+			.table-1{
+				width: 85px;
+				padding: 0 5px 0 0;
+			}
+		}
+	}
 	#top-bar{
 		height: auto;
 	}
@@ -2796,6 +2830,11 @@ ul#menu-top-bar{
 }
 
 @media (max-width: 979px) {
+	.btn{
+		&.btn-form {
+			padding: 20px 60px 14px 60px;
+		}
+	}
 	.taille5{
 		width: 90%;
 	}
@@ -3070,6 +3109,30 @@ ul#menu-top-bar{
 }
 
 @media (max-width: 480px) {
+	.btn{
+		&.btn-form{
+			padding: 20px 50px 14px 50px;
+		}
+	}
+	form{
+		button.btn{
+			.ic-fleche-rond{
+				display: block;
+				margin: 0 auto 0 auto;
+			}
+		}
+	}
+	.taille5 {
+		width: 100%;
+	}
+	.masque-table-livraison{
+		table.table-livraison{
+			.table-1{
+				width: 70px;
+				padding: 0 5px 0 0;
+			}
+		}
+	}
 	form.form-horizontal{
 		.controls {
 			margin: 0;

@@ -2932,12 +2932,17 @@ ul.liste-puces {
   display: inline;
 }
 .btn.btn-form {
-  padding: 20px 70px 16px 70px;
+  padding: 20px 70px 14px 70px;
   font-family: 'lato', sans-serif;
   font-weight: normal;
   font-size: 1.125em;
   text-rendering: optimizeLegibility;
   letter-spacing: 1px;
+}
+.btn.btn-form .txt-btn-form {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 5px;
 }
 .btn.btn-link {
   margin: 0;
@@ -3738,11 +3743,17 @@ ul#select-paiement li .content-input-select-custom a:hover {
 ul#select-paiement li .content-input-select-custom a:hover .icon-checked {
   background-image: url('../layoutImg/check-paiement.png');
 }
-table.table-livraison {
+.masque-table-livraison {
+  display: block;
+  width: 100%;
+  overflow-x: scroll;
+}
+.masque-table-livraison table.table-livraison {
   border-collapse: separate;
   border-spacing: 4px;
+  width: 100%;
 }
-table.table-livraison .table-1 {
+.masque-table-livraison table.table-livraison .table-1 {
   width: 125px;
   text-align: right;
   font-family: 'lato-italic', sans-serif;
@@ -3752,7 +3763,7 @@ table.table-livraison .table-1 {
   color: #0c1a4c;
   padding: 0 10px 0 0;
 }
-table.table-livraison .table-2 {
+.masque-table-livraison table.table-livraison .table-2 {
   width: 45px;
   height: 45px;
   border: 1px solid #f4f4f6;
@@ -3764,32 +3775,33 @@ table.table-livraison .table-2 {
   background-clip: padding-box;
   text-align: center;
 }
-table.table-livraison td {
+.masque-table-livraison table.table-livraison td {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-table.table-livraison td.inactive {
+.masque-table-livraison table.table-livraison td.inactive {
   border: none;
 }
-table.table-livraison td.inactive input {
+.masque-table-livraison table.table-livraison td.inactive input {
   display: none;
 }
-table.table-livraison td.active {
+.masque-table-livraison table.table-livraison td.active {
   background-color: #f4f4f6;
 }
-table.table-livraison th {
+.masque-table-livraison table.table-livraison th {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-table.table-livraison input[type=checkbox] {
+.masque-table-livraison table.table-livraison input[type=checkbox] {
   margin: 0;
 }
 .jour-table {
   display: block;
   vertical-align: top;
   width: 46px;
+  min-width: 35px;
   height: auto;
   text-align: center;
   margin: 0;
@@ -4240,7 +4252,7 @@ form button.btn .ic-fleche-rond {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 23px;
+  width: 33px;
   height: 23px;
   margin: 0 0 0 5px;
   padding: 0;
@@ -5353,6 +5365,15 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   }
 }
 @media (max-width: 1150px) {
+  .masque-table-livraison table.table-livraison .table-1 {
+    width: 105px;
+  }
+  .masque-table-livraison table.table-livraison .table-2 {
+    width: auto;
+  }
+  .masque-table-livraison .jour-table {
+    width: auto;
+  }
   .taille5 {
     width: 100%;
   }
@@ -5629,6 +5650,10 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   /* @end */
 }
 @media (max-width: 1024px) {
+  .masque-table-livraison table.table-livraison .table-1 {
+    width: 85px;
+    padding: 0 5px 0 0;
+  }
   #top-bar {
     height: auto;
   }
@@ -5679,6 +5704,9 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   }
 }
 @media (max-width: 979px) {
+  .btn.btn-form {
+    padding: 20px 60px 14px 60px;
+  }
   .taille5 {
     width: 90%;
   }
@@ -5929,6 +5957,20 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   /* @end */
 }
 @media (max-width: 480px) {
+  .btn.btn-form {
+    padding: 20px 50px 14px 50px;
+  }
+  form button.btn .ic-fleche-rond {
+    display: block;
+    margin: 0 auto 0 auto;
+  }
+  .taille5 {
+    width: 100%;
+  }
+  .masque-table-livraison table.table-livraison .table-1 {
+    width: 70px;
+    padding: 0 5px 0 0;
+  }
   form.form-horizontal .controls {
     margin: 0;
   }
