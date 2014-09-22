@@ -2724,6 +2724,9 @@ body {
   display: table;
   table-layout: fixed;
 }
+.bloc-blanc-ombre.margin-bottom {
+  margin: 0 0 170px 0;
+}
 .small-padding {
   padding: 25px 0;
 }
@@ -5871,6 +5874,9 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   body {
     padding-right: 0;
     padding-left: 0;
+  }
+  .bloc-blanc-ombre.margin-bottom {
+    margin: 0 0 50px 0;
   }
   .part-commande {
     width: 100%;

@@ -53,6 +53,13 @@
 					}
 				}
 			}
+			&.inactive{
+				.bloc-num-etape{
+					.num-etape{
+						background: #cbcdd3 url('../layoutImg/check-nu.png') no-repeat center center;
+					}
+				}
+			}
 			&.done{
 				.bloc-titre-etape{
 					padding: 0;
@@ -203,6 +210,11 @@
 			padding: 0 0 0 75px;
 			margin: 0;
 			position: relative;
+			&.inline-block{
+				h2{
+					display: inline-block;
+				}
+			}
 			.picto-commande{
 				display: block;
 				width: 53px;
@@ -255,6 +267,15 @@
 				background: url('../layoutImg/pictos-form/picto-dispo.png') no-repeat center center;
 				position: absolute;
 				top: -8px;
+				left: 0;
+			}
+			.picto-check{
+				display: block;
+				width: 54px;
+				height: 54px;
+				background: url('../layoutImg/pictos-form/picto-check.png') no-repeat center center;
+				position: absolute;
+				top: -12px;
 				left: 0;
 			}
 		}
@@ -536,6 +557,89 @@ ul#cuves{
 				}
 				.taille2{
 					width: 135px;
+				}
+			}
+		}
+	}
+}
+
+.mascotte-experience{
+	display: block;
+	width: 363px;
+	height: 339px;
+	background: url('../layoutImg/pictos-form/mascotte-experience.png') no-repeat center center;
+	position: absolute;
+	top: -78px;
+	right: 0;
+	z-index: 2;
+}
+
+ul.social-form{
+	display: block;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	li{
+		display: inline-block;
+		vertical-align: top;
+		width: 46px;
+		height: 46px;
+		margin: 0 50px 0 0;
+		padding: 0;
+		&:last-child{
+			margin: 0;
+		}
+		a.social-link{
+			display: block;
+			width: 100%;
+			height: 100%;
+			.lh-border-radius(50%);
+			background-color: #e3e7ed;
+			position: relative;
+			.lh-transition(background-color 0.15s ease-in-out);
+			span{
+				.lh-transition(transform 0.1s ease-in-out);
+				.lh-backface-visibility(hidden);
+				.lh-transform-style(preserve-3d);
+			}
+			&.facebook{
+				span{
+					display: block;
+					width: 27px;
+					height: 51px;
+					background: url('../layoutImg/pictos-form/form-facebook.png') no-repeat center center;
+					position: absolute;
+					bottom: 0;
+					left: 7px;
+				}
+			}
+			&.twitter{
+				span{
+					display: block;
+					width: 56px;
+					height: 47px;
+					background: url('../layoutImg/pictos-form/form-twitter.png') no-repeat center center;
+					position: absolute;
+					bottom: 0;
+					left: -6px;
+				}
+			}
+			&.google-plus{
+				span{
+					display: block;
+					width: 58px;
+					height: 49px;
+					background: url('../layoutImg/pictos-form/form-googleplus.png') no-repeat center center;
+					position: absolute;
+					bottom: 0;
+					left: 8px;
+					.lh-transform-origin(28% 50%);
+				}
+			}
+			&:hover{
+				background-color: @orangeFioulReduc;
+				span{
+					.lh-rotate(-10deg);
 				}
 			}
 		}
@@ -998,6 +1102,12 @@ ul#cuves{
 /* @group Responsive horizontal */
 
 @media (max-width: 1250px) {
+	.mascotte-experience {
+		width: 130%;
+		height: 130%;
+		top: -30px;
+		background-size:  100% auto;
+	}
 	#bloc-cycle {
 		width: 68%;
 	}
@@ -1046,6 +1156,11 @@ ul#cuves{
 }
 
 @media (max-width: 1150px) {
+	ul.social-form{
+		li{
+			margin: 0 30px 0 0;
+		}
+	}
 	#bloc-cycle {
 		width: 63%;
 		form.form-horizontal label.control-label {
@@ -1053,6 +1168,9 @@ ul#cuves{
 		}
 		form.form-horizontal .controls {
 			margin: 0 0 0 120px;
+			&.small-margin{
+				margin: 0 0 0 75px;
+			}
 		}
 	}
 	#ticket{
@@ -1094,6 +1212,14 @@ ul#cuves{
 }
 
 @media (max-width: 1024px) {
+	.mascotte-experience {
+		width: 95%;
+		height: 100%;
+		top: 0;
+		background-position: center left;
+		background-size: 100% auto;
+		background-size: cover;
+	}
 	#bloc-cycle {
 		width: 60%;
 		form.form-horizontal label.control-label {
@@ -1167,9 +1293,19 @@ ul#cuves{
 }
 
 @media (max-width: 767px) {
+	ul.social-form{
+		li{
+			margin: 0 10px 0 0;
+		}
+	}
 	#bloc-cycle {
 		width: 100%;
 		float: none;
+		form.form-horizontal .controls {
+			&.small-margin {
+				margin: 0 0 0 65px;
+			}
+		}
 	}
 	.bloc-formulaire{
 		.part-form {

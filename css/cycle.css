@@ -46,6 +46,9 @@
 #bloc-etapes-cycle ul#etapes-cycle li.etape-cycle.active .bloc-num-etape:before {
   background-color: #2947a0;
 }
+#bloc-etapes-cycle ul#etapes-cycle li.etape-cycle.inactive .bloc-num-etape .num-etape {
+  background: #cbcdd3 url('../layoutImg/check-nu.png') no-repeat center center;
+}
 #bloc-etapes-cycle ul#etapes-cycle li.etape-cycle.done .bloc-titre-etape {
   padding: 0;
   -webkit-border-radius: 0;
@@ -231,6 +234,9 @@
   margin: 0;
   position: relative;
 }
+.bloc-formulaire .part-form .titre-part-form.inline-block h2 {
+  display: inline-block;
+}
 .bloc-formulaire .part-form .titre-part-form .picto-commande {
   display: block;
   width: 53px;
@@ -283,6 +289,15 @@
   background: url('../layoutImg/pictos-form/picto-dispo.png') no-repeat center center;
   position: absolute;
   top: -8px;
+  left: 0;
+}
+.bloc-formulaire .part-form .titre-part-form .picto-check {
+  display: block;
+  width: 54px;
+  height: 54px;
+  background: url('../layoutImg/pictos-form/picto-check.png') no-repeat center center;
+  position: absolute;
+  top: -12px;
   left: 0;
 }
 .bloc-formulaire .part-details {
@@ -632,6 +647,108 @@ ul#cuves li.cuve .body-cuve .controls .taille1 {
 }
 ul#cuves li.cuve .body-cuve .controls .taille2 {
   width: 135px;
+}
+.mascotte-experience {
+  display: block;
+  width: 363px;
+  height: 339px;
+  background: url('../layoutImg/pictos-form/mascotte-experience.png') no-repeat center center;
+  position: absolute;
+  top: -78px;
+  right: 0;
+  z-index: 2;
+}
+ul.social-form {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul.social-form li {
+  display: inline-block;
+  vertical-align: top;
+  width: 46px;
+  height: 46px;
+  margin: 0 50px 0 0;
+  padding: 0;
+}
+ul.social-form li:last-child {
+  margin: 0;
+}
+ul.social-form li a.social-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  background-color: #e3e7ed;
+  position: relative;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+ul.social-form li a.social-link span {
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+  -moz-transition: -moz-transform 0.1s ease-in-out;
+  -o-transition: -o-transform 0.1s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out,-moz-transform 0.1s ease-in-out,-o-transform 0.1s ease-in-out,transform 0.1s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+ul.social-form li a.social-link.facebook span {
+  display: block;
+  width: 27px;
+  height: 51px;
+  background: url('../layoutImg/pictos-form/form-facebook.png') no-repeat center center;
+  position: absolute;
+  bottom: 0;
+  left: 7px;
+}
+ul.social-form li a.social-link.twitter span {
+  display: block;
+  width: 56px;
+  height: 47px;
+  background: url('../layoutImg/pictos-form/form-twitter.png') no-repeat center center;
+  position: absolute;
+  bottom: 0;
+  left: -6px;
+}
+ul.social-form li a.social-link.google-plus span {
+  display: block;
+  width: 58px;
+  height: 49px;
+  background: url('../layoutImg/pictos-form/form-googleplus.png') no-repeat center center;
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  -webkit-transform-origin: 28% 50%;
+  -moz-transform-origin: 28% 50%;
+  -ms-transform-origin: 28% 50%;
+  -o-transform-origin: 28% 50%;
+  transform-origin: 28% 50%;
+}
+ul.social-form li a.social-link:hover {
+  background-color: #fb8206;
+}
+ul.social-form li a.social-link:hover span {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  transform: rotate(-10deg);
 }
 /* @end */
 /* @group Ticket */
@@ -1171,6 +1288,12 @@ ul#cuves li.cuve .body-cuve .controls .taille2 {
 /* @end */
 /* @group Responsive horizontal */
 @media (max-width: 1250px) {
+  .mascotte-experience {
+    width: 130%;
+    height: 130%;
+    top: -30px;
+    background-size: 100% auto;
+  }
   #bloc-cycle {
     width: 68%;
   }
@@ -1209,6 +1332,9 @@ ul#cuves li.cuve .body-cuve .controls .taille2 {
   }
 }
 @media (max-width: 1150px) {
+  ul.social-form li {
+    margin: 0 30px 0 0;
+  }
   #bloc-cycle {
     width: 63%;
   }
@@ -1217,6 +1343,9 @@ ul#cuves li.cuve .body-cuve .controls .taille2 {
   }
   #bloc-cycle form.form-horizontal .controls {
     margin: 0 0 0 120px;
+  }
+  #bloc-cycle form.form-horizontal .controls.small-margin {
+    margin: 0 0 0 75px;
   }
   #ticket #masque-ticket #body-ticket #top-body-ticket {
     -webkit-transform: rotate(0deg);
@@ -1252,6 +1381,14 @@ ul#cuves li.cuve .body-cuve .controls .taille2 {
   }
 }
 @media (max-width: 1024px) {
+  .mascotte-experience {
+    width: 95%;
+    height: 100%;
+    top: 0;
+    background-position: center left;
+    background-size: 100% auto;
+    background-size: cover;
+  }
   #bloc-cycle {
     width: 60%;
   }
@@ -1305,9 +1442,15 @@ ul#cuves li.cuve .body-cuve .controls .taille2 {
   }
 }
 @media (max-width: 767px) {
+  ul.social-form li {
+    margin: 0 10px 0 0;
+  }
   #bloc-cycle {
     width: 100%;
     float: none;
+  }
+  #bloc-cycle form.form-horizontal .controls.small-margin {
+    margin: 0 0 0 65px;
   }
   .bloc-formulaire .part-form {
     padding: 20px;
