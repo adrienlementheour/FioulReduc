@@ -507,6 +507,12 @@ $(document).ready(function(){
 	modal();
 	afficherMotDePasse();
 	
+	// Clic sur le bouton pour revenir en haut de la page
+	$("a#btn-retour-haut").click(function(){
+		$('html, body').animate({scrollTop : 0}, 300);
+		return false;
+	});
+	
 	$("a#bouton-menu-responsive").click(function(){
 		ouvertureFermetureMenuResponsive();
 		return false;
@@ -656,12 +662,6 @@ $(document).ready(function(){
 		// Clic sur les btn dropdown
 		$("a.btn-dropdown").click(function(){
 			$(this).parent().toggleClass("dd-open");
-			return false;
-		});
-		
-		// Clic sur le bouton pour revenir en haut de la page
-		$("a#btn-retour-haut").click(function(){
-			$('html, body').animate({scrollTop : 0}, 300);
 			return false;
 		});
 		

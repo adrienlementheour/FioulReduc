@@ -2789,6 +2789,61 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.alert.alert-error {
+  background-color: #faf2eb;
+  color: #e22a0c;
+}
+.alert.alert-error.alert-error-form {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  margin: 0 0 32px 0;
+  -webkit-border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 10px;
+  -moz-background-clip: padding;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 3px solid #cccdd3;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.938em;
+  text-rendering: optimizeLegibility;
+}
+.alert.alert-error.alert-error-form .ic-error {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.938em;
+  text-rendering: optimizeLegibility;
+  margin: 0 0 0 18px;
+}
+.alert.alert-error.alert-error-form .ic-error:before {
+  font-family: 'fioulreduc';
+}
+.alert.alert-error.alert-error-form:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e22a0c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 7px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 7px;
+  -moz-background-clip: padding;
+  border-radius: 7px;
+  background-clip: padding-box;
+}
 .grille {
   display: block;
   width: 100%;
@@ -3613,6 +3668,9 @@ ul.select-customise {
 .taille-full {
   width: 100%;
 }
+.error .taille-full {
+  width: 95%;
+}
 ul#select-paiement {
   width: 100%;
   height: auto;
@@ -3881,6 +3939,10 @@ form .ic-error:before {
   width: 16px;
   height: 16px;
   font-size: 16px;
+}
+form .ic-error.left:before {
+  left: -25px;
+  right: inherit;
 }
 form span {
   position: relative;
@@ -5465,6 +5527,9 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   .taille5 {
     width: 100%;
   }
+  .error .taille5 {
+    width: 95%;
+  }
   .alert.alert-top .alert-content .container {
     margin: 0 auto 0 auto;
   }
@@ -6057,6 +6122,9 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   }
   .taille5 {
     width: 100%;
+  }
+  .error .taille5 {
+    width: 95%;
   }
   .masque-table-livraison table.table-livraison .table-1 {
     width: 70px;
