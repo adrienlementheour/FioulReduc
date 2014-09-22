@@ -317,6 +317,12 @@ html, body{
 	&.margin-bottom{
 		margin: 0 0 170px 0;
 	}
+	.part-inte{
+		padding: 40px 45px;
+		h2{
+			margin: 50px 0 20px 0;
+		}
+	}
 }
 
 .small-padding{
@@ -416,6 +422,20 @@ html, body{
 	left: 0;
 	background: url('../layoutImg/grille.png') repeat left top;
 	.lh-opacity(0.02);
+}
+
+p{
+	.lato(0.938em);
+	strong{
+		.lato-bold(1em);
+	}
+}
+
+h1{
+	.lato-bold-italic(2.063em);
+	padding: 0;
+	margin: 0 0 40px 0;
+	color: @bleuFioulReduc;
 }
 
 h2{
@@ -680,6 +700,29 @@ ul.liste-puces{
 		}
 	}
 }
+
+/* @group Breadcrumb */
+
+ul.breadcrumb{
+	background: none;
+	margin: 10px 0 20px 0;
+	padding: 0;
+	>li{
+		text-shadow: none;
+		.lato-italic(0.813em);
+		a{
+			color: @orangeFioulReduc;
+		}
+		>.divider{
+			color: #373a3f;
+		}
+	}
+	>.active{
+		color: #373a3f;
+	}
+}
+
+/* @end */
 
 /* @group Actus */
 
