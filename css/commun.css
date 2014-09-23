@@ -2902,6 +2902,15 @@ h2.no-border {
   border: none;
   margin: 0 0 10px 0;
 }
+h3 {
+  font-family: 'lato-bold-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1.063em;
+  text-rendering: optimizeLegibility;
+  color: #373a3f;
+  line-height: 1.1em;
+  margin: 40px 0 20px 0;
+}
 h3.titre-item {
   color: #ffffff;
   font-family: 'lato-bold-italic', sans-serif;
@@ -2909,6 +2918,46 @@ h3.titre-item {
   font-size: 2em;
   text-rendering: optimizeLegibility;
   line-height: 1.1em;
+}
+ul,
+ol {
+  margin: 0 0 10px 40px;
+}
+ul li,
+ol li {
+  list-style-image: url("../layoutImg/list-style-image.png");
+}
+blockquote {
+  border: none;
+  position: relative;
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+  padding: 0 0 0 40px;
+}
+blockquote:before {
+  content: "“";
+  position: absolute;
+  top: 0;
+  left: 12px;
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 3.125em;
+  text-rendering: optimizeLegibility;
+  color: #2947a0;
+  line-height: 1em;
+}
+blockquote:after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: auto;
+  position: absolute;
+  background-color: #c0c2cc;
+  top: 24px;
+  bottom: 0;
+  left: 26px;
 }
 a.lien-video {
   position: relative;
@@ -3191,10 +3240,44 @@ ul.liste-puces {
 .btn.btn-link.btn-link-home {
   margin: 10px 40px 0 0;
 }
+.prix-bas {
+  font-family: 'Dancing Script', cursive;
+  color: #fb8206;
+  font-size: 1.375em;
+  display: block;
+  width: 120px;
+  height: auto;
+  position: absolute;
+  top: 23px;
+  right: 0px;
+  -webkit-transform: rotate(-8.2deg);
+  -moz-transform: rotate(-8.2deg);
+  -ms-transform: rotate(-8.2deg);
+  -o-transform: rotate(-8.2deg);
+  transform: rotate(-8.2deg);
+  color: #ffa800;
+  line-height: 0.8em;
+}
+.prix-bas .ic-sousligne:before {
+  font-size: 3.5em;
+  color: #ffa800;
+  -webkit-transform: rotate(8.2deg);
+  -moz-transform: rotate(8.2deg);
+  -ms-transform: rotate(8.2deg);
+  -o-transform: rotate(8.2deg);
+  transform: rotate(8.2deg);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.prix-bas .decal {
+  display: block;
+  margin-left: 12px;
+}
 /* @group Breadcrumb */
 ul.breadcrumb {
   background: none;
-  margin: 10px 0 20px 0;
+  margin: 8px 0 20px 0;
   padding: 0;
 }
 ul.breadcrumb > li {

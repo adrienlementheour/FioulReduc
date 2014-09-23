@@ -9,10 +9,18 @@
 
 #bloc-commande-inte{
 	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
 	.lh-box-sizing(border-box);
 	margin: 0;
 	width: 430px;
-	float: left;
+	.bloc-blanc-ombre{
+		padding: 20px 40px;
+		h2{
+			width: 73%;
+		}
+	}
 }
 
 /* @end */
@@ -36,19 +44,59 @@
 }
 
 @media (max-width: 1200px) {
-
+	#bloc-commande-inte{
+		width: 400px;
+		form.form-horizontal{
+			.controls {
+				margin: 0 0 0 135px;
+			}
+		}
+		.taille2 {
+			width: 100%;
+		}
+		.bloc-blanc-ombre{
+			h2{
+				width: 100%;
+			}
+		}
+		.prix-bas{
+			display: none;
+		}
+	}
+	#bloc-content-inte{
+		padding: 0 0 0 440px;
+	}
 }
 
 @media (max-width: 1150px) {
-
+	#bloc-commande-inte{
+		width: 380px;
+	}
+	#bloc-content-inte{
+		padding: 0 0 0 420px;
+	}
 }
 
 @media (max-width: 1024px) {
-
+	#bloc-commande-inte{
+		width: 360px;
+	}
+	#bloc-content-inte{
+		padding: 0 0 0 400px;
+	}
 }
 
 @media (max-width: 979px) {
-
+	#bloc-commande-inte{
+		width: 430px;
+		margin: 0 auto;
+		position: relative;
+		top: inherit;
+		left: inherit;
+	}
+	#bloc-content-inte{
+		padding: 0;
+	}
 }
 
 @media (max-width: 767px) {
@@ -56,7 +104,10 @@
 }
 
 @media (max-width: 480px) {
-
+	#bloc-commande-inte{
+		width: 100%;
+		margin: 0 auto;
+	}
 }
 
 /* @end */

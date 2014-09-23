@@ -10,40 +10,6 @@
 #bloc-commande-graph .bloc-gauche {
   padding: 0 52px 0 0;
 }
-.prix-bas {
-  font-family: 'Dancing Script', cursive;
-  color: #fb8206;
-  font-size: 1.375em;
-  display: block;
-  width: 120px;
-  height: auto;
-  position: absolute;
-  top: 23px;
-  right: 0px;
-  -webkit-transform: rotate(-8.2deg);
-  -moz-transform: rotate(-8.2deg);
-  -ms-transform: rotate(-8.2deg);
-  -o-transform: rotate(-8.2deg);
-  transform: rotate(-8.2deg);
-  color: #ffa800;
-  line-height: 0.8em;
-}
-.prix-bas .ic-sousligne:before {
-  font-size: 3.5em;
-  color: #ffa800;
-  -webkit-transform: rotate(8.2deg);
-  -moz-transform: rotate(8.2deg);
-  -ms-transform: rotate(8.2deg);
-  -o-transform: rotate(8.2deg);
-  transform: rotate(8.2deg);
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-.prix-bas .decal {
-  display: block;
-  margin-left: 12px;
-}
 .part-commande {
   display: inline-block;
   vertical-align: top;
