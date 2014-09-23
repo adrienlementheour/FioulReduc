@@ -33,6 +33,9 @@
   width: 100%;
   padding: 0 0 0 480px;
 }
+#bloc-content-inte .btn {
+  font-size: 1em;
+}
 /* @end */
 /* @group Responsive horizontal */
 @media (max-width: 1200px) {
@@ -47,6 +50,9 @@
   }
   #bloc-commande-inte .taille2 {
     width: 100%;
+  }
+  .error #bloc-commande-inte .taille2 {
+    width: 95%;
   }
   #bloc-commande-inte .bloc-blanc-ombre h2 {
     width: 100%;
@@ -103,6 +109,9 @@
   }
   #bloc-commande-inte #bloc-commande-inte-fixed {
     width: 100%;
+  }
+  #bloc-commande-inte form.form-horizontal .controls {
+    margin: 0;
   }
 }
 /* @end */
