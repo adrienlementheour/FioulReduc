@@ -2727,6 +2727,9 @@ body {
 .bloc-blanc-ombre.margin-bottom {
   margin: 0 0 170px 0;
 }
+.bloc-blanc-ombre.small-margin-bottom {
+  margin: 0 0 130px 0;
+}
 .bloc-blanc-ombre .part-inte {
   padding: 40px 45px;
 }

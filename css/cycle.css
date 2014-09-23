@@ -650,12 +650,12 @@ ul#cuves li.cuve .body-cuve .controls .taille2 {
 }
 .mascotte-experience {
   display: block;
-  width: 363px;
-  height: 339px;
-  background: url('../layoutImg/pictos-form/mascotte-experience.png') no-repeat center center;
+  width: 439px;
+  height: 304px;
+  background: url('../layoutImg/pictos-form/mascotte-experience.png') no-repeat bottom center;
   position: absolute;
-  top: -78px;
-  right: 0;
+  bottom: 0;
+  right: -30px;
   z-index: 2;
 }
 ul.social-form {
@@ -1299,9 +1299,8 @@ ul.social-form li a.social-link:hover span {
 /* @group Responsive horizontal */
 @media (max-width: 1250px) {
   .mascotte-experience {
-    width: 130%;
-    height: 130%;
-    top: -30px;
+    width: 165%;
+    height: 165%;
     background-size: 100% auto;
   }
   #bloc-cycle {
@@ -1394,10 +1393,10 @@ ul.social-form li a.social-link:hover span {
   .mascotte-experience {
     width: 95%;
     height: 100%;
-    top: 0;
-    background-position: center left;
+    background-position: bottom left;
     background-size: 100% auto;
     background-size: cover;
+    right: 0;
   }
   #bloc-cycle {
     width: 60%;
