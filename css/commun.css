@@ -5348,6 +5348,11 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   border-radius: 6px;
   background-clip: padding-box;
   background: #ffffff;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 #bloc-avis.avis-inline {
   padding: 30px;
