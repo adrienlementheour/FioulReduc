@@ -2704,6 +2704,17 @@ body {
   background-image: radial-gradient(65% 50%, 800px 800px, #457db7 0%, #071d63 100%);
   color: #ffffff;
 }
+.bloc-degrade-bleu .part-inte {
+  padding: 60px 45px;
+  border: 2px solid #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.bloc-degrade-bleu .part-inte h2 {
+  margin: 0 0 20px 0;
+  color: #ffffff;
+}
 .bloc-blanc-ombre {
   background-color: #ffffff;
   -webkit-border-radius: 10px;
@@ -2727,8 +2738,19 @@ body {
 .bloc-blanc-ombre.margin-bottom {
   margin: 0 0 170px 0;
 }
-.bloc-blanc-ombre.small-margin-bottom {
+.bloc-blanc-ombre.margin-mascotte {
   margin: 0 0 130px 0;
+}
+.bloc-blanc-ombre.no-margin {
+  margin: 0;
+}
+.bloc-blanc-ombre.no-border-radius-bottom {
+  -webkit-border-radius: 10px 10px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 10px 10px 0 0;
+  -moz-background-clip: padding;
+  border-radius: 10px 10px 0 0;
+  background-clip: padding-box;
 }
 .bloc-blanc-ombre .part-inte {
   padding: 40px 45px;
@@ -4652,6 +4674,11 @@ nav {
   height: 54px;
   margin: 0;
   padding: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 nav ul {
   margin: 0;
@@ -5613,6 +5640,9 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
     text-align: left;
     position: relative;
   }
+  .bloc-blanc-ombre.margin-mascotte {
+    margin: 0 0 60px;
+  }
   /* @group responsive Home */
   ul#points-illus li {
     padding: 20px 0 12px 115px;
@@ -5650,6 +5680,9 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
 @media (max-width: 1200px) {
   a.logo {
     margin: 5px 0 0 20px;
+  }
+  .bloc-blanc-ombre.margin-mascotte {
+    margin: 0 0 32px;
   }
 }
 @media (max-width: 1150px) {

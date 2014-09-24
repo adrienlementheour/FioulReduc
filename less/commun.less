@@ -302,6 +302,15 @@ html, body{
 	background-color: #071d63;
 	.lh-background-image(~"radial-gradient(65% 50%, 800px 800px, #457db7 0%, #071d63 100%)");
 	color: @blanc;
+	.part-inte{
+		padding: 60px 45px;
+		border: 2px solid @blanc;
+		.lh-box-sizing(border-box);
+		h2{
+			margin: 0 0 20px 0;
+			color: @blanc;
+		}
+	}
 }
 
 .bloc-blanc-ombre{
@@ -317,8 +326,14 @@ html, body{
 	&.margin-bottom{
 		margin: 0 0 170px 0;
 	}
-	&.small-margin-bottom{
+	&.margin-mascotte{
 		margin: 0 0 130px 0;
+	}
+	&.no-margin{
+		margin: 0;
+	}
+	&.no-border-radius-bottom{
+		.lh-border-radius(10px 10px 0 0);
 	}
 	.part-inte{
 		padding: 40px 45px;
@@ -1855,6 +1870,7 @@ nav{
 	height: 54px;
 	margin: 0;
 	padding: 0;
+	.lh-backface-visibility(hidden);
 	ul{
 		margin: 0;
 		padding: 12px 0 0 0;
@@ -2661,7 +2677,11 @@ ul#menu-top-bar{
 			}
 		}
 	}
-
+	.bloc-blanc-ombre{
+		&.margin-mascotte{
+			margin: 0 0 60px;
+		}
+	}
 	
 	/* @group responsive Home */
 	ul#points-illus{
@@ -2709,6 +2729,12 @@ ul#menu-top-bar{
 @media (max-width: 1200px) {
 	a.logo {
 		margin: 5px 0 0 20px;
+	}
+	
+	.bloc-blanc-ombre{
+		&.margin-mascotte{
+			margin: 0 0 32px;
+		}
 	}
 }
 
