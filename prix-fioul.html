@@ -25,13 +25,13 @@
 		<link rel="stylesheet" href="ie7/ie7.css">
 		<!--<![endif]-->
 		<script src="js/libs/modernizr.js" type="text/javascript" charset="utf-8"></script>
-		<link href='http://fonts.googleapis.com/css?family=Dancing+Script&text=Prixbasgnt!*' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
 		<!--[if lt IE 9]>
 	      <script src="js/libs/respond.js"></script>
 	    <![endif]-->
 	</head>
 	
-	<body class="interieure">
+	<body class="interieure page-prix">
 		<div class="big-container">
 	  	<header class="bloc-full bloc-blanc">
 	  		<div class="container">
@@ -107,9 +107,11 @@
 						</div>
 		  			</div>
 		  			<div class="bloc-degrade-bleu bloc-radius bloc-full">
+		  				<div class="grille"></div>
 		  				<div class="part-inte">
 		  					<h2>Évolution du prix du fioul</h2>
 		  					<p>Prix moyen national fioulreduc pour 1000 litres de fioul ordinaire.</p>
+		  					<div id="part-graph-inte"></div>
 		  				</div>
 		  			</div>
 		  			<div class="bloc-bleu bloc-radius bloc-full no-margin no-border-radius-bottom">
@@ -193,7 +195,7 @@
 		  					</form>
 		  				</div>
 		  			</div>
-		  			<div class="bloc-blanc-ombre bloc-full">
+		  			<div class="bloc-blanc-ombre bloc-full" id="bloc-prix-regions">
 		  				<div class="part-inte">
 		  					<h2>Le prix du fioul dans les régions de France</h2>
 		  					<div class="bloc-gauche-map">
@@ -217,9 +219,12 @@
 			  						<div class="prix-min-map">Prix minimum : 0,828€/L.</div>
 		  						</div>
 		  					</div>
+		  					<div class="connaitre-prix-fioul">
+		  						<p>Pour connaître le prix du fioul <br />dans votre commune immédiatement, <br />faites un devis !</p>
+		  					</div>
 		  				</div>
 		  			</div>
-		  			<div class="bloc-blanc-ombre bloc-full">
+		  			<div class="bloc-blanc-ombre bloc-full small-margin-bottom">
 		  				<div class="part-inte">
 		  					<h2>Nam venenatis fermentum nibh, vel iaculis felis luctus a</h2>
 		  					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras malesuada aliquet justo quis porttitor. Phasellus eros ipsum, ultricies non facilisis sit amet, interdum ac risus. Aliquam malesuada ipsum eu pharetra commodo.</p><br />
@@ -261,9 +266,9 @@
 		  							<label class="control-label" for="order-email">Mon email</label>
 		  							<div class="controls">
 		  								<input id="order-email" name="order-email" class="taille2" type="text" value="" title="">
-		  								
 		  							</div>
 		  						</div>
+		  						<div class="indic-form">Tous les champs sont obligatoires</div>
 		  						<div id="bloc-bouton">
 		  							<button type="submit" class="btn btn-block">Voir les prix<span class="ic-fleche-rond"></span></button>
 		  						</div>

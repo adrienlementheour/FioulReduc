@@ -169,6 +169,38 @@
 	}
 }
 
+.connaitre-prix-fioul{
+	display: block;
+	margin: 40px 0 10px 0;
+	padding: 0 0 0 120px;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100px;
+	.lh-box-sizing(border-box);
+	&:before{
+		content: "";
+		display: inline-block;
+		vertical-align: top;
+		width: 94px;
+		height: 29px;
+		background: url('../layoutImg/arrow-courbe.png') no-repeat center center;
+		position: absolute;
+		top: 50%;
+		margin-top: -15px;
+		left: 0;
+	}
+	p{
+		display: inline-block;
+		vertical-align: top;
+		font-family: 'Dancing Script', cursive;
+		font-size: 1.563em;
+		line-height: 1.1em;
+		.lh-rotate(-3deg);
+		color: #f88b02;
+	}
+}
+
 /* @end */
 
 /* @group Responsive horizontal */
@@ -246,6 +278,9 @@
 	}
 	#bloc-content-inte{
 		padding: 0;
+	}
+	.connaitre-prix-fioul{
+		display: none;
 	}
 }
 
