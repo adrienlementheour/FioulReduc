@@ -36,6 +36,172 @@
 #bloc-content-inte .btn {
   font-size: 1em;
 }
+.bloc-gauche-map {
+  display: inline-block;
+  vertical-align: top;
+  width: 70%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 30px 0 0 0;
+}
+.bloc-droite-map {
+  display: block;
+  width: 30%;
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
+  padding: 60px 0 0 0;
+}
+.bloc-droite-map .zone-map {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.375em;
+  text-rendering: optimizeLegibility;
+  color: #2947a0;
+  margin: 0 0 15px 0;
+}
+.bloc-droite-map .date-map {
+  display: block;
+  padding: 2px 0 1px 0;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 0.7em;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  background-color: #fb8206;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-border-radius: 3px 3px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px 3px 0 0;
+  -moz-background-clip: padding;
+  border-radius: 3px 3px 0 0;
+  background-clip: padding-box;
+}
+.bloc-droite-map ul.liste-prix-mille {
+  display: block;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bloc-droite-map ul.liste-prix-mille li {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
+  text-align: center;
+  border-bottom: 1px solid #898e9f;
+}
+.bloc-droite-map ul.liste-prix-mille li .prix-mille {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.375em;
+  text-rendering: optimizeLegibility;
+  color: #0c1a4c;
+  margin: 0 0 2px 0;
+  line-height: 1em;
+}
+.bloc-droite-map ul.liste-prix-mille li .prix-mille strong {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.364em;
+  text-rendering: optimizeLegibility;
+}
+.bloc-droite-map ul.liste-prix-mille li .prix-mille-desc {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.688em;
+  text-rendering: optimizeLegibility;
+  color: #898e9f;
+}
+.bloc-droite-map .zone-prix-map {
+  display: block;
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: 0 16px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.688em;
+  text-rendering: optimizeLegibility;
+}
+.bloc-droite-map .zone-prix-map .prix-max-map {
+  color: #ee5702;
+  display: block;
+  height: 34px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0 0 20px;
+  position: relative;
+}
+.bloc-droite-map .zone-prix-map .prix-max-map:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ee5702;
+  -webkit-border-radius: 5px 5px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px 5px 0 0;
+  -moz-background-clip: padding;
+  border-radius: 5px 5px 0 0;
+  background-clip: padding-box;
+}
+.bloc-droite-map .zone-prix-map .prix-moy-map {
+  color: #f88b02;
+  display: block;
+  height: 34px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 0 0 20px;
+  position: relative;
+}
+.bloc-droite-map .zone-prix-map .prix-moy-map:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f88b02;
+}
+.bloc-droite-map .zone-prix-map .prix-min-map {
+  color: #ffd63a;
+  display: block;
+  height: 34px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 18px 0 0 20px;
+  position: relative;
+}
+.bloc-droite-map .zone-prix-map .prix-min-map:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffd63a;
+  -webkit-border-radius: 0 0 5px 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0 5px 5px;
+  -moz-background-clip: padding;
+  border-radius: 0 0 5px 5px;
+  background-clip: padding-box;
+}
 /* @end */
 /* @group Responsive horizontal */
 @media (max-width: 1200px) {

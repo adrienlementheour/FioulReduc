@@ -42,6 +42,133 @@
 	}
 }
 
+.bloc-gauche-map{
+	display: inline-block;
+	vertical-align: top;
+	width: 70%;
+	height: auto;
+	.lh-box-sizing(border-box);
+	padding: 30px 0 0 0;
+}
+
+.bloc-droite-map{
+	display: block;
+	width: 30%;
+	height: auto;
+	display: inline-block;
+	vertical-align: top;
+	padding: 60px 0 0 0;
+	.zone-map{
+		.lato-bold(1.375em);
+		color: @bleuFioulReduc;
+		margin: 0 0 15px 0;
+	}
+	.date-map{
+		display: block;
+		padding: 2px 0 1px 0;
+		.lato(0.7em);
+		color: @blanc;
+		background-color: @orangeFioulReduc;
+		text-transform: uppercase;
+		text-align: center;
+		.lh-border-radius(3px 3px 0 0);
+	}
+	ul.liste-prix-mille{
+		display: block;
+		width: 100%;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li{
+			display: block;
+			width: 100%;
+			padding: 10px 0;
+			margin: 0;
+			text-align: center;
+			border-bottom: 1px solid #898e9f;
+			.prix-mille{
+				.lato-bold(1.375em);
+				color: @bleuFonceFioulReduc;
+				margin: 0 0 2px 0;
+				line-height: 1em;
+				strong{
+					.lato-bold(1.364em);
+				}
+			}
+			.prix-mille-desc{
+				.lato-bold(0.688em);
+				color: #898e9f;
+			}
+				
+		}
+	}
+	
+	.zone-prix-map{
+		display: block;
+		width: 100%;
+		margin: 10px 0 0 0;
+		padding: 0 16px;
+		.lh-box-sizing(border-box);
+		.lato-bold(0.688em);
+		.prix-max-map{
+			color: #ee5702;
+			display: block;
+			height: 34px;
+			.lh-box-sizing(border-box);
+			padding: 0 0 0 20px;
+			position: relative;
+			&:before{
+				content: "";
+				display: block;
+				width: 10px;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: #ee5702;
+				.lh-border-radius(5px 5px 0 0);
+			}
+		}
+		.prix-moy-map{
+			color: #f88b02;
+			display: block;
+			height: 34px;
+			.lh-box-sizing(border-box);
+			padding: 10px 0 0 20px;
+			position: relative;
+			&:before{
+				content: "";
+				display: block;
+				width: 10px;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: #f88b02;
+			}
+		}
+		.prix-min-map{
+			color: #ffd63a;
+			display: block;
+			height: 34px;
+			.lh-box-sizing(border-box);
+			padding: 18px 0 0 20px;
+			position: relative;
+			&:before{
+				content: "";
+				display: block;
+				width: 10px;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: #ffd63a;
+				.lh-border-radius(0 0 5px 5px);
+			}
+		}
+	}
+}
+
 /* @end */
 
 /* @group Responsive horizontal */

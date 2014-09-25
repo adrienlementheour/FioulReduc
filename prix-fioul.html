@@ -100,58 +100,123 @@
 		  			  <li><a href="#">Accueil</a> <span class="divider">›</span></li>
 		  			  <li class="active">Prix du fioul</li>
 		  			</ul>
-		  			<div class="bloc-blanc-ombre bloc-full no-margin no-border-radius-bottom">
+		  			<div class="bloc-blanc-ombre bloc-full">
 		  				<div class="part-inte">
 							<h1>Le prix du fioul en France</h1>
 							<p>Retrouvez le <strong>prix du fioul domestique aujourd'hui en France</strong> et dans votre région. Nous mettons à jour quotidiennement les prix du fioul de chaque région. Ce prix moyen du fioul domestique est calculé à partir des moyennes des prix observées dans les différentes villes de France.</p>
 						</div>
 		  			</div>
-		  			<div class="bloc-degrade-bleu bloc-full">
+		  			<div class="bloc-degrade-bleu bloc-radius bloc-full">
 		  				<div class="part-inte">
 		  					<h2>Évolution du prix du fioul</h2>
 		  					<p>Prix moyen national fioulreduc pour 1000 litres de fioul ordinaire.</p>
 		  				</div>
 		  			</div>
+		  			<div class="bloc-bleu bloc-radius bloc-full no-margin no-border-radius-bottom">
+		  				<div class="part-inte no-padding-bottom">
+			  				<h2>Tendance d’évolution des prix du fioul</h2>
+							<ul class="nav nav-tabs full-width-tabs">
+								<li class="active">
+									<a href="#aujourdhui" class="first" data-toggle="tab"><span class="periode-evolution-tab">Aujourd’hui</span><br /><span class="evolution-tab positive">+0,02%</span></a>
+								</li>
+								<li>
+									<a href="#cette-semaine" data-toggle="tab"><span class="periode-evolution-tab">Cette semaine</span><br /><span class="evolution-tab positive">+0,03%</span></a>
+								</li>
+								<li>
+									<a href="#ce-mois" data-toggle="tab"><span class="periode-evolution-tab">Ce mois</span><br /><span class="evolution-tab negative">-1,2%</span></a>
+								</li>
+								<li>
+									<a href="#ce-trimestre" class="last" data-toggle="tab"><span class="periode-evolution-tab">Ce trimestre</span><br /><span class="evolution-tab neutral">+0</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="tab-content">
+							<div id="aujourdhui" class="tab-pane active clearfix">
+								<div class="bloc-gauche-tab">
+									<div class="date-tab">Aujourd'hui 7 juillet 2014,<span> le prix du fioul est stable.</span></div>
+									<p>Malgré les tensions géopolitiques pesant en Ukraine, les stocks de pétrole sont toujours en hausse aux Etats-Unis. Le prix du fioul devrait évoluer vers une stabilité ou une légère hausse cette semaine.</p>
+									<div class="detail-tab">via le fil info de l’AFP en direct <a href="#" class="ic-icon-plus"></a></div>
+								</div>
+								<div class="bloc-droite-tab">
+									<ul class="details-tab">
+										<li>
+											<div class="titre-detail-tab">Cours du baril de Brent</div>
+											<div class="content-detail-tab">102,90$</div>
+										</li>
+										<li>
+											<div class="titre-detail-tab">Cours du baril de WTI</div>
+											<div class="content-detail-tab">95,09$</div>
+										</li>
+										<li class="last">
+											<div class="titre-detail-tab">Parité Euro/Dollar</div>
+											<div class="content-detail-tab">$1.3256</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div id="cette-semaine" class="tab-pane">
+								<ul class="liste-evolution-prix">
+									<li class="clearfix"><div class="periode-evolution-prix">du 23 au 27 juin</div><div class="etat-evolution-prix"><div class="evolution-prix">Stabilisation des prix</div></div></li>
+									<li class="clearfix"><div class="periode-evolution-prix">du 16 au 20 juin</div><div class="etat-evolution-prix"><div class="evolution-prix">Stabilisation des prix</div></div></li>
+									<li class="clearfix"><div class="periode-evolution-prix">du 09 au 13 juin</div><div class="etat-evolution-prix"><div class="evolution-prix">Stabilisation des prix</div></div></li>
+								</ul>
+							</div>
+							<div id="ce-mois" class="tab-pane">
+								<ul class="liste-evolution-prix">
+									<li class="clearfix"><div class="periode-evolution-prix">Juin 2014</div><div class="etat-evolution-prix"><div class="evolution-prix">Stabilisation des prix</div></div></li>
+									<li class="clearfix"><div class="periode-evolution-prix">Mai 2014</div><div class="etat-evolution-prix"><div class="evolution-prix">Stabilisation des prix</div></div></li>
+									<li class="clearfix"><div class="periode-evolution-prix">Avril 2014</div><div class="etat-evolution-prix"><div class="evolution-prix">Stabilisation des prix</div></div></li>
+								</ul>
+							</div>
+							<div id="ce-trimestre" class="tab-pane">
+								<div class="date-tab">1er trimestre 2014</div>
+								<p>Des prix en forte baisse au cours du trimestre, malgré les événements en Ukraine.</p>
+								<div class="detail-tab">via l’Observatoire du 1er trimestre 2014 <a href="#" class="ic-icon-plus"></a></div>
+							</div>
+						</div>
+		  			</div>
+		  			<div class="bloc-blanc-ombre bloc-full no-border-radius-top">
+		  				<div class="part-inte">
+		  					<div class="alerte-tab"><span class="ic-alerte"></span>Inscrivez-vous aux alertes prix Fioulreduc</div>
+		  					<form class="form-inline" action="" method="post">
+		  						<div class="block-form">
+		  							<div class="control-group-inline">
+	  									<label for="alert-email">E-mail&nbsp;:</label>
+	  									<input id="alert-email" name="alert-email" class="taille2" type="text" value="" title="">
+	  								</div>
+	  								<div class="control-group-inline">
+	  									<label for="alert-zipcode">Code postal&nbsp;:</label>
+	  									<input id="alert-zipcode" name="alert-zipcode" class="taille1" type="text" value="" title="">
+	  								</div>
+		  							<button type="submit" class="btn btn-small no-margin">OK</button>
+		  						</div>
+		  					</form>
+		  				</div>
+		  			</div>
 		  			<div class="bloc-blanc-ombre bloc-full">
 		  				<div class="part-inte">
-		  					<h2>Et chez vous, dans votre commune, quel est le prix du fioul ?</h2>
-		  					<form class="form-horizontal" action="" method="post">
-		  						<fieldset>
-		  							 <div class="control-group">
-		  								<label class="control-label" for="order-inte-zipcode">Mon code postal : </label>
-		  								<div class="controls">
-		  									<input id="order-inte-zipcode" name="order-inte-zipcode" class="taille1" type="text" value="" title="">
-		  								</div>
-		  							</div>
-		  							<div class="control-group">
-		  								<label class="control-label" for="order-inte-quantity">Quantité : </label>
-		  								<div class="controls">
-		  									<input id="order-inte-quantity" name="order-inte-quantity" class="taille1" type="number" step="1" value="" title=""> <span>litres</span>
-		  								</div>
-		  							</div>
-		  							<div class="control-group">
-		  								<label class="control-label" for="order-inte-product">Produit</label>
-		  								<div class="controls">
-		  									<select id="order-inte-product" name="order-inte-product" class="taille2" title="">
-		  										<option value="1">Fioul Ordinaire</option>
-		  										<option value="2">Fioul Supérieur</option>
-		  										<option value="3">GNR Ordinaire</option>
-		  										<option value="4">GNR Supérieur</option>
-		  									</select>
-		  								</div>
-		  							</div>
-		  							<div class="control-group">
-		  								<label class="control-label" for="order-inte-email">Mon email</label>
-		  								<div class="controls">
-		  									<input id="order-inte-email" name="order-inte-email" class="taille2" type="text" value="" title="">
-		  									
-		  								</div>
-		  							</div>
-		  							<div class="controls">
-		  								<button type="submit" class="btn btn-form">Voir les prix<span class="ic-fleche-rond"></span></button>
-		  							</div>
-		  						</fieldset>
-		  					</form>
+		  					<h2>Le prix du fioul dans les régions de France</h2>
+		  					<div class="bloc-gauche-map">
+		  						<img src="layoutImg/france.png" alt="" />
+		  					</div><div class="bloc-droite-map">
+		  						<div class="zone-map">En France</div>
+		  						<div class="date-map">Aujourd’hui, le 7/07/2014</div>
+		  						<ul class="liste-prix-mille">
+		  							<li>
+			  							<div class="prix-mille"><strong>836€</strong> / 1000&nbsp;L.</div>
+			  							<div class="prix-mille-desc">Fioul ordinaire livré sous 5 jours</div>
+			  						</li>
+			  						<li>
+			  							<div class="prix-mille"><strong>886€</strong> / 1000&nbsp;L.</div>
+			  							<div class="prix-mille-desc">Fioul ordinaire livré sous 5 jours</div>
+			  						</li>
+		  						</ul>
+		  						<div class="zone-prix-map">
+			  						<div class="prix-max-map">Prix maximum : 0,844€/L.</div>
+			  						<div class="prix-moy-map">Prix moyen : 0,836€/L.</div>
+			  						<div class="prix-min-map">Prix minimum : 0,828€/L.</div>
+		  						</div>
+		  					</div>
 		  				</div>
 		  			</div>
 		  			<div class="bloc-blanc-ombre bloc-full">
