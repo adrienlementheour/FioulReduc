@@ -6734,6 +6734,60 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   .bloc-blanc-ombre.margin-bottom {
     margin: 0 0 50px 0;
   }
+  .bloc-blanc-ombre .part-inte {
+    padding: 20px;
+  }
+  .bloc-degrade-bleu .part-inte {
+    padding: 20px;
+  }
+  .bloc-bleu .part-inte {
+    padding: 20px;
+  }
+  .bloc-bleu .part-inte.no-padding-bottom {
+    padding: 20px 20px 0 20px;
+  }
+  form.form-inline label {
+    display: block;
+    padding: 0;
+    height: auto;
+    margin: 0 0 10px 0;
+  }
+  form.form-inline .control-group-inline {
+    display: block;
+    margin: 0 0 20px 0;
+  }
+  .nav.nav-tabs.full-width-tabs {
+    display: block;
+  }
+  .nav.nav-tabs.full-width-tabs > li {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+  .nav.nav-tabs > li > a {
+    padding: 10px 0;
+    top: 0;
+  }
+  .nav.nav-tabs > li > a br {
+    display: none;
+  }
+  .nav.nav-tabs > li > a .periode-evolution-tab {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+  }
+  .nav.nav-tabs > li > a .evolution-tab {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+  }
+  .nav.nav-tabs > .active > a {
+    padding: 10px 0;
+  }
+  .nav.nav-tabs > .active > a .periode-evolution-tab {
+    padding: 0;
+    border-bottom: none;
+  }
   .part-commande {
     width: 100%;
   }
@@ -6742,6 +6796,38 @@ ul#menu-top-bar li a .zone-texte-menu .indic-menu.underline {
   }
   .part-commande ol.liste-num {
     margin: 30px 0 0 10px;
+  }
+  .tab-content .bloc-gauche-tab {
+    margin: 0;
+    min-height: inherit;
+  }
+  .tab-content .bloc-droite-tab {
+    position: relative;
+    top: inherit;
+    right: inherit;
+    width: 190px;
+    margin: 10px auto 0 auto;
+  }
+  .tab-content ul.liste-evolution-prix li {
+    text-align: center;
+    margin: 30px 0;
+  }
+  .tab-content ul.liste-evolution-prix li:before {
+    display: none;
+  }
+  .tab-content ul.liste-evolution-prix li:after {
+    display: none;
+  }
+  .tab-content ul.liste-evolution-prix li .periode-evolution-prix {
+    float: none;
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin: 0 0 10px;
+  }
+  .tab-content ul.liste-evolution-prix li .etat-evolution-prix {
+    float: none;
+    padding: 0;
   }
   footer {
     padding: 66px 0 120px 0;

@@ -132,8 +132,11 @@
 			  							<a href="#" class="btn-slider-graph-inte btn-plus">+</a>
 			  						</div>
 			  						<div class="container-intitules-slider-graph">
+			  							<ul class="separations-slider-graph">
+			  								<li></li><li></li><li></li><li></li><li class="last"></li>
+			  							</ul>
 				  						<ul class="intitules-slider-graph">
-				  							<li>1 semaine</li><li>1 mois</li><li>3 mois</li><li>1 an</li><li class="last">3 ans</li>
+				  							<li class="active">1 semaine</li><li>1 mois</li><li>3 mois</li><li>1 an</li><li class="last">3 ans</li>
 				  						</ul>
 			  						</div>
 			  					</div>
@@ -143,7 +146,7 @@
 		  			<div class="bloc-bleu bloc-radius bloc-full no-margin no-border-radius-bottom">
 		  				<div class="part-inte no-padding-bottom">
 			  				<h2>Tendance d’évolution des prix du fioul</h2>
-							<ul class="nav nav-tabs full-width-tabs">
+							<ul class="nav nav-tabs full-width-tabs" id="tabs-tendance">
 								<li class="active">
 									<a href="#aujourdhui" class="first" data-toggle="tab"><span class="periode-evolution-tab">Aujourd’hui</span><br /><span class="evolution-tab positive">+0,02%</span></a>
 								</li>
@@ -158,7 +161,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="tab-content">
+						<div class="tab-content" id="tabs-tendance-content">
 							<div id="aujourdhui" class="tab-pane active clearfix">
 								<div class="bloc-gauche-tab">
 									<div class="date-tab">Aujourd'hui 7 juillet 2014,<span> le prix du fioul est stable.</span></div>

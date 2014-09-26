@@ -3641,7 +3641,77 @@ ul#menu-top-bar{
 		&.margin-bottom{
 			margin: 0 0 50px 0;
 		}
+		.part-inte{
+			padding: 20px;
+		}
 	}
+	
+	.bloc-degrade-bleu{
+		.part-inte {
+			padding: 20px;
+		}
+	}
+	
+	.bloc-bleu{
+		.part-inte {
+			padding: 20px;
+			&.no-padding-bottom {
+				padding: 20px 20px 0 20px;
+			}
+		}
+	}
+	
+	form.form-inline{
+		label{
+			display: block;
+			padding: 0;
+			height: auto;
+			margin: 0 0 10px 0;
+		}
+		.control-group-inline{
+			display: block;
+			margin: 0 0 20px 0;
+		}
+	}
+	
+	.nav.nav-tabs.full-width-tabs{
+		display: block;
+		> li {
+			float: none;
+			display: block;
+			width: 100%;
+		}
+	}
+	.nav.nav-tabs{
+		> li{
+			> a{
+				padding: 10px 0;
+				top: 0;
+				br{
+					display: none;
+				}
+				.periode-evolution-tab{
+					display: inline-block;
+					vertical-align: top;
+					width: 50%;
+				}
+				.evolution-tab{
+					display: inline-block;
+					vertical-align: top;
+					width: 50%;
+				}
+			}
+		}
+		> .active{
+			> a {
+				padding: 10px 0;
+				.periode-evolution-tab {
+					padding: 0;
+					border-bottom: none;
+				}
+			}
+		}
+	} 
 	
 	.part-commande{
 		width: 100%;
@@ -3650,6 +3720,43 @@ ul#menu-top-bar{
 		}
 		ol.liste-num {
 			margin: 30px 0 0 10px;
+		}
+	}
+	
+	.tab-content{
+		.bloc-gauche-tab {
+			margin: 0;
+			min-height: inherit;
+		}
+		.bloc-droite-tab {
+			position: relative;
+			top: inherit;
+			right: inherit;
+			width: 190px;
+			margin: 10px auto 0 auto;
+		}
+		ul.liste-evolution-prix{
+			li{
+				text-align: center;
+				margin: 30px 0;
+				&:before{
+					display: none;
+				}
+				&:after{
+					display: none;
+				}
+				.periode-evolution-prix{
+					float: none;
+					width: 100%;
+					display: block;
+					padding: 0;
+					margin: 0 0 10px;
+				}
+				.etat-evolution-prix {
+					float: none;
+					padding: 0;
+				}
+			}
 		}
 	}
 	

@@ -87,10 +87,13 @@ function sliderGraphInte(){
       value: select[ 0 ].selectedIndex + 1,
       slide: function( event, ui ) {
         select[0].selectedIndex = ui.value - 1;
+        $("ul.intitules-slider-graph li.active").removeClass("active");
+        $("ul.intitules-slider-graph li:eq("+(select[0].selectedIndex)+")").addClass("active");
       }
     });
     $("#select-graph-inte").change(function() {
       slider.slider( "value", this.selectedIndex + 1 );
+      
     });
     $("a.btn-slider-graph-inte").click(function() {
     	var indexSelec = select[0].selectedIndex;
@@ -98,11 +101,15 @@ function sliderGraphInte(){
     		if(indexSelec>0){
     			$("option:eq("+(indexSelec-1)+")",select[0]).prop('selected', true);
     			slider.slider( "value", (indexSelec+1)-1 );
+    			$("ul.intitules-slider-graph li.active").removeClass("active");
+    			$("ul.intitules-slider-graph li:eq("+(indexSelec-1)+")").addClass("active");
     		}
     	}else{
     		if(indexSelec<4){
     			$("option:eq("+(indexSelec+1)+")",select[0]).prop('selected', true);
     			slider.slider( "value", (indexSelec+1)+1);
+    			$("ul.intitules-slider-graph li.active").removeClass("active");
+    			$("ul.intitules-slider-graph li:eq("+(indexSelec+1)+")").addClass("active");
     		}
     	}
     	return false;
@@ -127,12 +134,21 @@ function animer(myScroll){
 $(document).ready(function(){	
 	if($("body").hasClass("interieure")){
 		if ($("body").hasClass("page-prix")) {
-			//slider-graph-inte
 			sliderGraphInte();
 		
+			// Par défaut masquer le texte "Pour connaître le prix du fioul dans votre commune immédiatement, faites un devis !"
 			TweenMax.set($(".connaitre-prix-fioul"), {height: "0px"});
 			TweenMax.set($(".connaitre-prix-fioul p"), {opacity: 0, y: "-100px"});
 			TweenMax.set($(".connaitre-prix-fioul:before"), {opacity: 0, y: "-100px"});
+			
+			// Au clic sur une tab tendance, on scroll jusqu'au contenu (sur mobile)
+			$("#tabs-tendance li a").click(function() {
+				if($(window).width()<768){
+					$('html, body').animate({
+						scrollTop: $("#tabs-tendance-content").offset().top-100
+					}, 500);
+				}
+			});
 			
 			// création du graphe
 			var myChart = new Highcharts.Chart({

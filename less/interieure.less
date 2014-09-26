@@ -48,11 +48,10 @@
 	width: 70%;
 	height: auto;
 	.lh-box-sizing(border-box);
-	padding: 30px 0 0 0;
+	padding: 30px 20px 0 20px;
 }
 
 .bloc-droite-map{
-	display: block;
 	width: 30%;
 	height: auto;
 	display: inline-block;
@@ -305,6 +304,29 @@
 	.lh-box-sizing(border-box);
 	padding: 0 8px;
 	margin: 0;
+	position: relative;
+	ul.separations-slider-graph{
+		display: block;
+		width: auto;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		left: 8px;
+		right: 8px;
+		top: -25px;
+		li{
+			display: inline-block;
+			vertical-align: top;
+			.lh-box-sizing(border-box);
+			width: 20%;
+			height: 4px;
+			border-left: 1px solid #8596b8;
+			&.last{
+				border-right: 1px solid #8596b8;
+			}
+		}
+	}
 	ul.intitules-slider-graph{
 		display: block;
 		width: 100%;
@@ -322,19 +344,6 @@
 			.lato-light-italic(0.938em);
 			color: #adcce7;
 			position: relative;
-			&:before{
-				content: "";
-				display: block;
-				width: 100%;
-				height: 4px;
-				border-left: 1px solid #8596b8;
-				position: absolute;
-				.lh-box-sizing(border-box);
-				margin: 0;
-				padding: 0;
-				left: -1px;
-				top: -25px;
-			}
 			&.last{
 				border-right: 1px solid #8596b8;
 			}
@@ -391,6 +400,28 @@
 	#bloc-content-inte{
 		padding: 0 0 0 420px;
 	}
+	.connaitre-prix-fioul{
+		p{
+			font-size: 1.4em;
+			br{
+				display: none;
+			}
+		}
+	}
+	.bloc-gauche-map {
+		display: block;
+		width: 100%;
+		padding: 30px 0 0 0;
+	}
+	.bloc-droite-map {
+		width: 90%;
+		max-width: 200px;
+		display: block;
+		margin: 0 auto;
+		.zone-map{
+			text-align: center;
+		}
+	}
 }
 
 @media (max-width: 1024px) {
@@ -426,7 +457,31 @@
 }
 
 @media (max-width: 767px) {
-
+	.zone-slider-graph-inte{
+		.bloc-gauche-zone-slider-graph-inte {
+			display: block;
+			width: 100%;
+			text-align: left;
+		}
+		.bloc-droite-zone-slider-graph-inte {
+			display: block;
+			width: 100%;
+			padding: 0;
+		}
+	}
+	.container-intitules-slider-graph{
+		ul.intitules-slider-graph{
+			li{
+				display: none;
+				&.active{
+					display: block;
+					width: 100%;
+					border-left: 1px solid #8596b8;
+					border-right: 1px solid #8596b8;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 480px) {
