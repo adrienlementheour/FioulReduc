@@ -2974,6 +2974,7 @@ body {
   -webkit-opacity: 0.02;
   -moz-opacity: 0.02;
   opacity: 0.02;
+  pointer-events: none;
 }
 p {
   font-family: 'lato', sans-serif;

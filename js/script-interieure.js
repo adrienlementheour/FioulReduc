@@ -78,6 +78,37 @@ function positionBlocCommandeInte(myScroll){
 	}
 }
 
+function sliderGraphInte(){
+	var select = $("#select-graph-inte");
+    var slider = $( "<div id='slider-graph-inte'></div>" ).appendTo($("#slider-graph-inte-container")).slider({
+      min: 1,
+      max: 5,
+      range: "min",
+      value: select[ 0 ].selectedIndex + 1,
+      slide: function( event, ui ) {
+        select[0].selectedIndex = ui.value - 1;
+      }
+    });
+    $("#select-graph-inte").change(function() {
+      slider.slider( "value", this.selectedIndex + 1 );
+    });
+    $("a.btn-slider-graph-inte").click(function() {
+    	var indexSelec = select[0].selectedIndex;
+    	if($(this).hasClass("btn-moins")){
+    		if(indexSelec>0){
+    			$("option:eq("+(indexSelec-1)+")",select[0]).prop('selected', true);
+    			slider.slider( "value", (indexSelec+1)-1 );
+    		}
+    	}else{
+    		if(indexSelec<4){
+    			$("option:eq("+(indexSelec+1)+")",select[0]).prop('selected', true);
+    			slider.slider( "value", (indexSelec+1)+1);
+    		}
+    	}
+    	return false;
+    });
+}
+
 $(document).bind('touchmove', function(e) { 
    var myScroll = $(document).scrollTop();
    positionBlocCommandeInte(myScroll);
@@ -96,6 +127,9 @@ function animer(myScroll){
 $(document).ready(function(){	
 	if($("body").hasClass("interieure")){
 		if ($("body").hasClass("page-prix")) {
+			//slider-graph-inte
+			sliderGraphInte();
+		
 			TweenMax.set($(".connaitre-prix-fioul"), {height: "0px"});
 			TweenMax.set($(".connaitre-prix-fioul p"), {opacity: 0, y: "-100px"});
 			TweenMax.set($(".connaitre-prix-fioul:before"), {opacity: 0, y: "-100px"});

@@ -16,6 +16,7 @@
 	  	<link rel="stylesheet" href="css/libs/normalize.css">
 	  	<link rel="stylesheet" media="screen" href="js/libs/bootstrap/bootstrap.min.css">
 	  	<link rel="stylesheet" media="screen" href="js/libs/bootstrap/bootstrap-responsive.min.css">
+	  	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
 	  	<link rel="stylesheet" href="css/interieure.css">
 	  	<link rel="stylesheet" href="css/commun.css">
 		<!--[if lt IE 7]>
@@ -112,6 +113,31 @@
 		  					<h2>Évolution du prix du fioul</h2>
 		  					<p>Prix moyen national fioulreduc pour 1000 litres de fioul ordinaire.</p>
 		  					<div id="part-graph-inte"></div>
+		  					<div class="zone-slider-graph-inte">
+		  						<div class="bloc-gauche-zone-slider-graph-inte">
+		  							Période&nbsp;: 
+			  						<form>
+			  						  <!-- SELECT MASQUÉ QUI CONTIENT LA VALEUR DE PÉRIODE SELECTIONNEE  -->
+			  						  <select name="select-graph-inte" id="select-graph-inte">
+			  						    <option selected="selected">1 semaine</option>
+			  						    <option>1 mois</option>
+			  						    <option>3 mois</option>
+			  						    <option>1 an</option>
+			  						    <option>3 ans</option>
+			  						  </select>
+			  						</form>
+		  						</div><div class="bloc-droite-zone-slider-graph-inte">
+			  						<div id="slider-graph-inte-container">
+			  							<a href="#" class="btn-slider-graph-inte btn-moins">-</a>
+			  							<a href="#" class="btn-slider-graph-inte btn-plus">+</a>
+			  						</div>
+			  						<div class="container-intitules-slider-graph">
+				  						<ul class="intitules-slider-graph">
+				  							<li>1 semaine</li><li>1 mois</li><li>3 mois</li><li>1 an</li><li class="last">3 ans</li>
+				  						</ul>
+			  						</div>
+			  					</div>
+		  					</div>
 		  				</div>
 		  			</div>
 		  			<div class="bloc-bleu bloc-radius bloc-full no-margin no-border-radius-bottom">
@@ -400,6 +426,7 @@
 		<![endif]-->
 		<!-- jQuery -->
 		<script src="js/libs/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 		<!-- Tweens -->
 		<script src="js/libs/greensock/TweenMax.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/libs/greensock/TimelineMax.min.js" type="text/javascript" charset="utf-8"></script>
