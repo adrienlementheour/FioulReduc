@@ -532,7 +532,7 @@ $(document).ready(function(){
                         mouseOut: function () {
                             // afficher la dernière bulle par défaut
                             this.chart.tooltip.refresh(this.chart.series[0].data[this.chart.series[0].data.length-1]);
-                            this.series.chart.tooltip.show();
+                            try { this.series.chart.tooltip.show(); } catch (exception) {}
                         }
                     }
                 } 

@@ -21,6 +21,7 @@
 }
 #bloc-commande-inte #bloc-commande-inte-fixed {
   width: 430px;
+  display: block;
 }
 /* @end */
 /* @group Bloc content inte */

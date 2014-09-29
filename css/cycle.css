@@ -1093,7 +1093,7 @@ ul.social-form li a.social-link:hover span {
   padding-bottom: 10px;
 }
 #ticket #masque-ticket #body-ticket #ticket-fixed #bloc-prix-ticket ul.details-ticket {
-  list-style-type: none;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
